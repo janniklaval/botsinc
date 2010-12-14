@@ -1,0 +1,468 @@
+This is pdfTeX, Version 3.14159-1.00b-pretest-20020211 (Web2C 7.3.7x) (format=pdflatex 2004.8.20)  8 MAR 2005 10:39
+\write18 enabled.
+**FunWithRobots.tex
+(./FunWithRobots.tex{/usr/local/teTeX/share/texmf.local/pdftex/config/pdftex.cf
+g}
+LaTeX2e <2001/06/01>
+Babel <v3.7h> and hyphenation patterns for american, french, german, ngerman, d
+utch, nohyphenation, loaded.
+(../Common.tex (/usr/local/teTeX/share/texmf/tex/latex/base/book.cls
+Document Class: book 2001/04/21 v1.4e Standard LaTeX document class
+(/usr/local/teTeX/share/texmf/tex/latex/base/bk11.clo
+File: bk11.clo 2001/04/21 v1.4e Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/teTeX/share/texmf/tex/latex/base/makeidx.sty
+Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
+)
+(/usr/local/teTeX/share/texmf/tex/latex/psnfss/times.sty
+Package: times 2002/04/24 PSNFSS-v9.0 (SPQR) 
+)
+(/usr/local/teTeX/share/texmf/tex/latex/misc/a4wide.sty
+Package: a4wide 1994/08/30
+
+(/usr/local/teTeX/share/texmf/tex/latex/ntgclass/a4.sty
+Package: a4 1999/03/03 v1.2f A4 based page layout
+)) (./pdfsync.sty
+Package: pdfsync 2003/12/08 v0.3
+\PDFPOS=\write3
+\PDFSYNC@folio=\count88
+\PDFSYNC@rder=\count89
+
+(/usr/local/teTeX/share/texmf/tex/latex/ms/everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+)
+\openout3 = `FunWithRobots.pdfsync'.
+
+)
+(/usr/local/teTeX/share/texmf/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/teTeX/share/texmf/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/teTeX/share/texmf/tex/latex/graphics/graphics.sty
+Package: graphics 2001/07/07 v1.0n Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/teTeX/share/texmf/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/teTeX/share/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2001/08/31 v1.1 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 80.
+
+(/usr/local/teTeX/share/texmf/tex/latex/graphics/pdftex.def
+File: pdftex.def 2001/11/29 v0.03i graphics/color for pdftex
+\Gread@gobject=\count90
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/local/teTeX/share/texmf/tex/latex/tools/calc.sty
+Package: calc 1998/07/07 v4.1b Infix arithmetic (KKT,FJ)
+\calc@Acount=\count91
+\calc@Bcount=\count92
+\calc@Adimen=\dimen105
+\calc@Bdimen=\dimen106
+\calc@Askip=\skip43
+\calc@Bskip=\skip44
+LaTeX Info: Redefining \setlength on input line 59.
+LaTeX Info: Redefining \addtolength on input line 60.
+\calc@denominator=\count93
+)
+(/usr/local/teTeX/share/texmf/tex/latex/psnfss/pifont.sty
+Package: pifont 2002/04/24 PSNFSS-v9.0 Pi font support (SPQR) 
+LaTeX Font Info:    Try loading font information for U+pzd on input line 62.
+
+(/usr/local/teTeX/share/texmf/tex/latex/psnfss/upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Try loading font information for U+psy on input line 63.
+
+(/usr/local/teTeX/share/texmf/tex/latex/psnfss/upsy.fd
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+))
+(/usr/local/teTeX/share/texmf/tex/latex/base/t1enc.sty
+Package: t1enc 1994/06/01 Standard LaTeX package
+)
+(/usr/local/teTeX/share/texmf/tex/latex/fancyheadings/fancyheadings.sty
+\headrulewidth=\dimen107
+\footrulewidth=\dimen108
+\plainheadrulewidth=\dimen109
+\plainfootrulewidth=\dimen110
+\headwidth=\dimen111
+\footruleskip=\dimen112
+)
+(/usr/local/teTeX/share/texmf/tex/latex/tools/xspace.sty
+Package: xspace 1997/10/13 v1.06 Space after command names (DPC)
+)
+(/usr/local/teTeX/share/texmf/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/local/teTeX/share/texmf/tex/latex/base/alltt.sty
+Package: alltt 1997/06/16 v2.0g defines alltt environment
+)
+(/usr/local/teTeX/share/texmf/tex/latex/tools/theorem.sty
+Package: theorem 1995/11/23 v2.2c Theorem extension package (FMi)
+\theorem@style=\toks15
+\theorem@bodyfont=\toks16
+\theorempreskipamount=\skip45
+\theorempostskipamount=\skip46
+
+(/usr/local/teTeX/share/texmf/tex/latex/tools/thp.sty
+File: thp.sty 1995/11/23 v2.2c Theorem extension package (FMi)
+))) (../macroes.tex
+(/usr/local/teTeX/share/texmf/tex/latex/tools/thb.sty
+File: thb.sty 1995/11/23 v2.2c Theorem extension package (FMi)
+)
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 14.
+
+(/usr/local/teTeX/share/texmf/tex/latex/psnfss/t1ptm.fd
+File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
+)
+\c@privScript=\count94
+\c@privExercise=\count95
+\c@privMethod=\count96
+\c@privClassDef=\count97
+\c@privTemplate=\count98
+\ScriptFigure=\box26
+\ScriptWidth=\skip47
+\FigureWidth=\skip48
+\lineWidth=\skip49
+\scriptindent=\skip50
+\methodindent=\skip51
+\methodwordlength=\skip52
+\aftermethod=\skip53
+\c@fonction=\count99
+\fminibox=\box27
+\fminilength=\skip54
+\c@stefscript=\count100
+\c@decompo=\count101
+\c@exampleScript=\count102
+\c@bigstepnumber=\count103
+\c@exercisenumber=\count104
+) (./FunWithRobots.aux)
+\openout1 = `FunWithRobots.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+ABD: EveryShipout initializing macros
+(/usr/local/teTeX/share/texmf/tex/context/base/supp-pdf.tex
+(/usr/local/teTeX/share/texmf/tex/context/base/supp-mis.tex
+loading : Context Support Macros / Missing
+\protectiondepth=\count105
+\scratchcounter=\count106
+\scratchtoks=\toks17
+\scratchdimen=\dimen113
+\scratchskip=\skip55
+\scratchmuskip=\muskip10
+\scratchbox=\box28
+\scratchread=\read1
+\scratchwrite=\write4
+\zeropoint=\dimen114
+\nextbox=\box29
+\nextdepth=\dimen115
+\everyline=\toks18
+\!!counta=\count107
+\!!countb=\count108
+\recursecounter=\count109
+)
+loading : Context Support Macros / PDF
+\nofMPsegments=\count110
+\nofMParguments=\count111
+\everyMPtoPDFconversion=\toks19
+)
+Chapter 1.
+<beasts.pdf, id=1, 230.8625pt x 116.435pt>
+File: beasts.pdf Graphic file (type pdf)
+ <use beasts.pdf>
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 18.
+
+<picaAllHaloAnnotated.pdf, id=2, 367.72382pt x 181.67976pt>
+File: picaAllHaloAnnotated.pdf Graphic file (type pdf)
+
+<use picaAllHaloAnnotated.pdf>
+LaTeX Font Info:    Try loading font information for T1+phv on input line 30.
+
+(/usr/local/teTeX/share/texmf/tex/latex/psnfss/t1phv.fd
+File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
+)
+Overfull \vbox (1.59999pt too high) has occurred while \output is active []
+
+
+[1
+
+
+{/usr/local/teTeX/share/texmf/dvips/config/pdftex.map}{/usr/local/teTeX/share/t
+exmf.os/dvips/config/Ttbbold.map}{/usr/local/teTeX/share/texmf.os/dvips/config/
+wolfram.map} <./beasts.pdf> <./picaAllHaloAnnotated.pdf>]
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 36.
+LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <10.95> not available
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 36.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 36.
+
+(/usr/local/teTeX/share/texmf/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 39.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 43.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 43.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 43.
+
+Overfull \hbox (8.5359pt too wide) in paragraph at lines 36--43
+[][]| 
+ []
+
+<turtleMPenSize.pdf, id=35, 180.675pt x 20.075pt>
+File: turtleMPenSize.pdf Graphic file (type pdf)
+ <use turtleMPenSize.pdf>
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 53.
+
+Overfull \hbox (8.5359pt too wide) in paragraph at lines 66--72
+[][]| 
+ []
+
+
+Overfull \vbox (1.59999pt too high) has occurred while \output is active []
+
+
+[2 <./turtleMPenSize.pdf>]
+<colorFromUser.pdf, id=50, 290.08376pt x 81.30376pt>
+File: colorFromUser.pdf Graphic file (type pdf)
+ <use colorFromUser.pdf>
+<shapeAndSize.pdf, id=51, 271.0125pt x 171.64125pt>
+File: shapeAndSize.pdf Graphic file (type pdf)
+ <use shapeAndSize.pdf>
+Overfull \vbox (1.59999pt too high) has occurred while \output is active []
+
+
+[3 <./colorFromUser.pdf> <./shapeAndSize.pdf>]
+Overfull \hbox (8.5359pt too wide) in paragraph at lines 115--134
+[][]| 
+ []
+
+<picaHaloAnnotated.pdf, id=63, 246.9215pt x 171.64125pt>
+File: picaHaloAnnotated.pdf Graphic file (type pdf)
+
+<use picaHaloAnnotated.pdf>
+Overfull \vbox (1.59999pt too high) has occurred while \output is active []
+
+
+[4 <./picaHaloAnnotated.pdf>] <paintOpen.pdf, id=82, 637.38126pt x 475.7775pt>
+File: paintOpen.pdf Graphic file (type pdf)
+
+<use paintOpen.pdf>
+Overfull \vbox (1.59999pt too high) has occurred while \output is active []
+
+
+[5 <./paintOpen.pdf>] <editingSpider.pdf, id=90, 568.1225pt x 419.5675pt>
+File: editingSpider.pdf Graphic file (type pdf)
+
+<use editingSpider.pdf> <zoomButton.pdf, id=91, 253.94875pt x 121.45375pt>
+File: zoomButton.pdf Graphic file (type pdf)
+
+<use zoomButton.pdf> <rotateButton.pdf, id=92, 217.81375pt x 102.3825pt>
+File: rotateButton.pdf Graphic file (type pdf)
+
+<use rotateButton.pdf>
+Overfull \vbox (1.59999pt too high) has occurred while \output is active []
+
+
+[6 <./editingSpider.pdf> <./zoomButton.pdf> <./rotateButton.pdf>]
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 216.
+
+<PicaHaloSaveAndLoadAnnotated.pdf, id=111, 270.00774pt x 167.62625pt>
+File: PicaHaloSaveAndLoadAnnotated.pdf Graphic file (type pdf)
+
+<use PicaHaloSaveAndLoadAnnotated.pdf>
+<nameOfSaveAnnotated.pdf, id=112, 497.86603pt x 169.63274pt>
+File: nameOfSaveAnnotated.pdf Graphic file (type pdf)
+
+<use nameOfSaveAnnotated.pdf>
+Overfull \hbox (55.21106pt too wide) in paragraph at lines 231--232
+ [] 
+ []
+
+
+Overfull \vbox (1.59999pt too high) has occurred while \output is active []
+
+
+[7 <./PicaHaloSaveAndLoadAnnotated.pdf> <./nameOfSaveAnnotated.pdf>]
+<allGraphics2.pdf, id=153, 678.541pt x 504.89427pt>
+File: allGraphics2.pdf Graphic file (type pdf)
+ <use allGraphics2.pdf>
+Overfull \hbox (12.59033pt too wide) in paragraph at lines 246--247
+ [] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (1.59999pt too high) has occurred while \output is active []
+
+
+[8 <./allGraphics2.pdf>]
+Overfull \hbox (8.5359pt too wide) in paragraph at lines 260--271
+[][]| 
+ []
+
+
+Overfull \hbox (8.5359pt too wide) in paragraph at lines 276--278
+[][]| 
+ []
+
+
+Overfull \hbox (8.5359pt too wide) in paragraph at lines 283--303
+[][]| 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (1.59999pt too high) has occurred while \output is active []
+
+
+[9]
+Overfull \hbox (8.5359pt too wide) in paragraph at lines 323--346
+[][]| 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (1.59999pt too high) has occurred while \output is active []
+
+
+[10]
+Underfull \hbox (badness 1874) in paragraph at lines 371--371
+[]/phvr8t@10.95pt/Bot load-Im-age: 'spi-der' /ptmr8t@10.95pt/or
+ []
+
+
+Underfull \hbox (badness 1354) in paragraph at lines 373--373
+[]/phvr8t@10.95pt/Bot saveIm-age: 'spi-der' /ptmr8t@10.95pt/or
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 374--374
+[]/phvr8t@10.95pt/Bot saveIm-age /ptmr8t@10.95pt/or /phvr8t@10.95pt/aBot
+ []
+
+
+Overfull \hbox (52.59033pt too wide) in paragraph at lines 359--388
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \vbox (1.59999pt too high) has occurred while \output is active []
+
+
+[11]
+Overfull \vbox (1.59999pt too high) has occurred while \output is active []
+
+
+[12] (./FunWithRobots.aux)
+
+ *File List*
+../Common.tex
+    book.cls    2001/04/21 v1.4e Standard LaTeX document class
+    bk11.clo    2001/04/21 v1.4e Standard LaTeX file (size option)
+ makeidx.sty    2000/03/29 v1.0m Standard LaTeX package
+   times.sty    2002/04/24 PSNFSS-v9.0 (SPQR) 
+  a4wide.sty    1994/08/30
+      a4.sty    1999/03/03 v1.2f A4 based page layout
+ pdfsync.sty    2003/12/08 v0.3
+everyshi.sty    2001/05/15 v3.00 EveryShipout Package (MS)
+graphicx.sty    1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+  keyval.sty    1999/03/16 v1.13 key=value parser (DPC)
+graphics.sty    2001/07/07 v1.0n Standard LaTeX Graphics (DPC,SPQR)
+    trig.sty    1999/03/16 v1.09 sin cos tan (DPC)
+graphics.cfg    2001/08/31 v1.1 graphics configuration of teTeX/TeXLive
+  pdftex.def    2001/11/29 v0.03i graphics/color for pdftex
+    calc.sty    1998/07/07 v4.1b Infix arithmetic (KKT,FJ)
+  pifont.sty    2002/04/24 PSNFSS-v9.0 Pi font support (SPQR) 
+    upzd.fd    2001/06/04 font definitions for U/pzd.
+    upsy.fd    2001/06/04 font definitions for U/psy.
+   t1enc.sty    1994/06/01 Standard LaTeX package
+fancyheadings.sty    
+  xspace.sty    1997/10/13 v1.06 Space after command names (DPC)
+  ifthen.sty    2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+   alltt.sty    1997/06/16 v2.0g defines alltt environment
+ theorem.sty    1995/11/23 v2.2c Theorem extension package (FMi)
+     thp.sty    1995/11/23 v2.2c Theorem extension package (FMi)
+../macroes.tex
+     thb.sty    1995/11/23 v2.2c Theorem extension package (FMi)
+   t1ptm.fd    2001/06/04 font definitions for T1/ptm.
+supp-pdf.tex
+  beasts.pdf    Graphic file (type pdf)
+picaAllHaloAnnotated.pdf    Graphic file (type pdf)
+   t1phv.fd    2001/06/04 scalable font definitions for T1/phv.
+   t1pcr.fd    2001/06/04 font definitions for T1/pcr.
+turtleMPenSize.pdf    Graphic file (type pdf)
+colorFromUser.pdf    Graphic file (type pdf)
+shapeAndSize.pdf    Graphic file (type pdf)
+picaHaloAnnotated.pdf    Graphic file (type pdf)
+paintOpen.pdf    Graphic file (type pdf)
+editingSpider.pdf    Graphic file (type pdf)
+zoomButton.pdf    Graphic file (type pdf)
+rotateButton.pdf    Graphic file (type pdf)
+PicaHaloSaveAndLoadAnnotated.pdf    Graphic file (type pdf)
+nameOfSaveAnnotated.pdf    Graphic file (type pdf)
+allGraphics2.pdf    Graphic file (type pdf)
+ ***********
+
+ )
+(\end occurred when \ifx on line 390 was incomplete) 
+Here is how much of TeX's memory you used:
+ 1811 strings out of 60917
+ 23458 string characters out of 1188883
+ 4071769 words of memory out of 6527126
+ 4753 multiletter control sequences out of 10000+50000
+ 42337 words of font info for 54 fonts, out of 500000 for 1000
+ 54 hyphenation exceptions out of 1000
+ 27i,11n,27p,731b,823s stack positions out of 1500i,500n,5000p,200000b,5000s
+ 221 PDF objects out of 300000
+ 0 named destinations out of 131072
+ 65 words of extra memory for PDF output out of 65536
+{/usr/local/teTeX/share/tex
+mf/dvips/psnfss/8r.enc}</usr/local/teTeX/share/texmf/fonts/type1/bluesky/cm/cmb
+x12.pfb>
+Output written on FunWithRobots.pdf (12 pages, 331002 bytes).

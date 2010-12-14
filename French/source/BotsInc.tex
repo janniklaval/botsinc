@@ -1,0 +1,235 @@
+% $Author$
+% $Date$
+% $Revision$
+% relecture: martial + rene Tue Dec 25 12:46:57 CET 2007
+% relecture: martial + rene Sun Jan 13 12:46:57 CET 2008
+% relecture; martial Mon Feb 11 11:39:32 CET 2008 (ajout: titre
+%=================================================================
+% This is the main file for the Squeak By Example book.
+% The individual chapters can also be latexed by themselves.
+%=================================================================
+\documentclass[a4paper,10pt,twoside]{book}
+\usepackage[
+	papersize={6in,9in},
+	hmargin={.75in,.75in},
+	vmargin={.75in,1in},
+	ignoreheadfoot
+]{geometry}
+\input{common.tex}
+\setboolean{lulu}{true}
+
+%=================================================================
+% A4
+%\documentclass[a4paper,11pt,twoside]{book}
+%\input{common.tex}
+%\usepackage{a4wide}
+%=================================================================
+% Add the path for the figures of each chapter here:
+\graphicspath{
+	{figures/}
+	{-00-Introduction/figures/}
+	{-01-Installation/figures/}
+	{-02-FirstScript/figures/}
+	{-03-Turtle/figures/}
+	{-04-Turning/figures/}
+	{-05-Environment/figures/}
+	{-06-FunWithRobots/figures/}
+	{-07-Looping/figures/}
+	{-08-Variables/figures/}
+	{-09-DeeperVariables/figures/}
+	{-10-LoopsAndVariables/figures/}
+	{-11-ComposingMessages/figures/}
+	{-12-Methods/figures/}
+	{-13-CombiningMethods/figures/}
+}
+%=================================================================
+\let\wholebook=\relax
+\makeindex
+\makeglossary
+%=================================================================
+\renewcommand{\nnbb}[2]{} % Disable editorial comments
+%=================================================================
+\begin{document}
+\frontmatter
+%=================================================================
+\setcounter{page}{1}
+\pagestyle{headings}
+%=================================================================
+%:Inside cover
+\author{
+	St\'ephane Ducasse\\[1ex]
+%Ajout des traducteurs
+	\\[4ex]
+%Traduit en fran\c{c}ais par :\\[2ex]
+%		Serge Stinckwich\quad
+%		....
+	}
+% (to be updated at the end)
+\title{\Huge\bf BotsInc: Learn programming with robots}
+%\isodate
+\numdate
+%\selectlanguage{french}
+\date{\emph{Version du \today}}
+\maketitle
+%=================================================================
+%:Copyright notice
+~ % force the vfill
+\vfill
+\begin{footnotesize}
+\setlength{\parindent}{0pt}
+Ce livre est disponible en libre t\'el\'echargement depuis
+\url{http://}. L'édition originale de ce livre est
+disponible depuis \url{http://} sous le titre
+\emph{Squeak par l'exemple}, ISBN 978-3-9523341-3-3. La première édition
+a été publié en Avril 2008 par 
+\emph{Square Bracket Associates}, Suisse
+(\sba). Vous pouvez vous procurer une
+copie à l'adresse: \spe.\\[1cm]
+
+Copyright \copyright~2007 by St\'ephane Ducasse.\\[1cm]
+
+Le contenu de ce livre est prot\'eg\'e par la licence Creative Commons
+Paternit\'e Version 3.0 de la licence g\'en\'erique - Partage des Conditions Initiales \`a l'Identique.
+
+\emph{Vous \^etes libres :}
+\begin{description}
+  \item de reproduire, distribuer et communiquer cette cr\'eation au public
+  \item de modifier cette cr\'eation
+\end{description}
+\emph{Selon les conditions suivantes :}
+\begin{description}
+  \item[Paternit\'e.] Vous devez citer le nom de l'auteur original de la mani\`ere indiqu\'ee par l'auteur de l'\oe{}uvre ou le titulaire des droits qui vous conf\`ere cette autorisation (mais pas d'une mani\`ere qui sugg\'ererait qu'ils vous soutiennent ou approuvent votre utilisation de l'\oe{}uvre).
+  \item[Partage des Conditions Initiales \`a l'Identique.] Si vous transformez ou modifiez cette \oe{}uvre pour en cr\'eer une nouvelle, vous devez la distribuer selon les termes du m\^eme contrat ou avec une licence similaire ou compatible.
+\end{description}
+\begin{itemize}
+  \item \`A chaque r\'eutilisation ou distribution de cette cr\'eation, vous devez faire appara\^itre clairement au public les conditions contractuelles de sa mise \`a disposition. La meilleure mani\`ere de les indiquer est un lien vers cette page web:\\
+  \url{http://creativecommons.org/licenses/by-sa/3.0/deed.fr}
+  \item Chacune de ces conditions peut \^etre lev\'ee si vous obtenez l'autorisation du titulaire des droits sur cette \oe{}uvre.
+  \item Rien dans ce contrat ne diminue ou ne restreint le droit moral de l'auteur ou des auteurs.
+\end{itemize}
+\raisebox{-0.25cm}{\includegraphics[width=2cm]{CreativeCommons-BY-SA}}\quad
+\parbox{\textwidth-2cm-1em}{
+	Ce qui pr\'ec\`ede n'affecte en rien vos droits en tant qu'utilisateur (exceptions au droit d'auteur: copies r\'eserv\'ees \`a l'usage priv\'e du copiste, courtes citations, parodie, \ldots).
+	Ceci est le R\'esum\'e Explicatif du Code Juridique (la version int\'egrale du contrat):\\
+\url{http://creativecommons.org/licenses/by-sa/3.0/legalcode}}
+\end{footnotesize}
+\vfill
+%=================================================================
+%:TOC
+\pagestyle{newheadings}
+\tableofcontents
+% \listoffigures
+% \listoftables
+% \lstlistoflistings
+\sloppy % To avoid LaTeX's annoying habit of letting lines stick over the margins!
+
+Working on chapter 11. Composing messages p125 of pdf
+%=================================================================
+%:Preface
+\input{00-Introduction/Introduction.tex}
+\mainmatter
+
+%=================================================================
+%:PART 1 -- Getting Started
+\part{Getting Started}
+\pagestyle{headings}
+%:Quick Tour
+\input{-01-Installation/Installation.tex}
+
+%:First Application
+\input{-02-FirstScript/FirstScript.tex}
+
+%:Turtle
+\input{-03-Turtle/Turtle.tex}
+
+%:Turning
+\input{-04-Turning/Turning.tex}
+
+%:Environment
+\input{-05-Environment/Environment.tex}
+
+%:Fun With Robots
+\input{-06-FunWithRobots/FunWithRobots.tex}
+
+%=================================================================
+%:PART 2 -- Elementary Programming Concepts
+\part{Elementary Programming Concepts}
+
+\input{-07-Looping/Looping.tex}
+
+\input{-08-Variables/Variables.tex}
+
+\input{-09-DeeperVariables/DeeperVariables.tex}
+
+\input{-10-LoopsAndVariables/10-LoopsAndVariables.tex}
+
+\input{-11-ComposingMessages/ComposingMessages.tex}
+
+%=================================================================
+%:PART 3 -- Bringing Abstraction into Play 
+\part{Bringing Abstraction into Play}
+
+\input{-12-Methods/Methods.tex}
+\input{-13-CombiningMethods/CombiningMethods.tex}
+% \input{14-ParametersAndArguments/ParametersAndArguments.tex}
+% \input{15-ErrorsAndDebugging/ErrorsAndDebugging.tex}
+% \input{16-DecomposingToRecompose/DecomposingToRecompose.tex}
+% \input{17-StringsAndTools/StringsAndTools.tex}
+
+%=================================================================
+%:PART 4 -- Conditionals 
+% \part{Conditionals}
+
+% \input{18-Conditions/Conditions.tex}
+% \input{19-ConditionalLoops/ConditionalLoops.tex}
+% \input{20-BooleanAndBooleanExpressions/BooleanAndBooleanExpressions.tex}
+% \input{21-CoordinatesPointsAndAbsoluteMoves/CoordinatesPointsAndAbsoluteMoves.tex}
+% \input{22-AdvancedRobotBehavior/AdvancedRobotBehavior.tex}
+% \input{23-SimulatingAnimalBehavior/SimulatingAnimalBehavior.tex}
+
+%=================================================================
+%:PART 5 -- Other Squeak Worlds 
+% \part{Other Squeak Worlds}
+% 
+% \input{24-ATourOfeToy/ATourOfeToy.tex}
+% \input{25-ATourOfAlice/ATourOfAlice.tex}
+
+\end{document}
+
+
+%:Syntax
+\appendix
+\part{Annexes}
+%:FAQ
+\input{FAQ/FAQ.tex}
+%=================================================================
+%:BIBLIOGRAPHY
+% \printglossary
+\pagestyle{newheadings}
+\bibliographystyle{jurabib}
+\bibliography{scg}
+\cleardoublepage
+%=================================================================
+%:INDEX
+{\small\raggedright\printindex}
+%\printindex
+%=================================================================
+% Round out to multiple of 4 pages
+\newcommand{\pagefinale}{\cleardoublepage\thispagestyle{empty}
+~ % Force some space
+}
+\pagefinale % une seule feuille blanche
+%\pagefinale
+\cleardoublepage
+%=================================================================
+\end{document}
+%=================================================================
+% NB: For extra material, see SBE-etc.tex
+%=================================================================
+%%% Local Variables:
+%%% coding: utf-8
+%%% mode: latex
+%%% TeX-master: t
+%%% TeX-PDF-mode: t
+%%% ispell-local-dictionary: "english"
+%%% End:

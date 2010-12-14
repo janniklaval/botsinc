@@ -1,0 +1,338 @@
+\select@language {catalan}
+\contentsline {chapter}{Prefaci}{xiii}
+\contentsline {chapter}{Sobre l'autor}{xix}
+\contentsline {chapter}{Agra\IeC {\@umlaut \i }ments}{xxi}
+\contentsline {chapter}{Nota del traductor}{xxiii}
+\contentsline {chapter}{Pr\IeC {\`o}leg}{xxv}
+\contentsline {paragraph}{Comen\IeC {\c c}ar.}{xxvii}
+\contentsline {paragraph}{Conceptes elementals de programaci\IeC {\'o}.}{xxvii}
+\contentsline {paragraph}{Posar en joc l'abstracci\IeC {\'o}.}{xxvii}
+\contentsline {paragraph}{Condicionals.}{xxviii}
+\contentsline {paragraph}{Altres Mons Squeak.}{xxviii}
+\contentsline {part}{I\hspace {1em}Comen\IeC {\c c}ar}{1}
+\contentsline {chapter}{\numberline {1}Instal\IeC {\textperiodcentered }laci\IeC {\'o} i creaci\IeC {\'o} de robots}{3}
+\contentsline {section}{Instal\IeC {\textperiodcentered }lar l'entorn}{3}
+\contentsline {subsection}{Instal\IeC {\textperiodcentered }laci\IeC {\'o} en un Macintosh}{4}
+\contentsline {subsection}{Instal\IeC {\textperiodcentered }laci\IeC {\'o} en Windows}{4}
+\contentsline {section}{Obrir l'entorn}{5}
+\contentsline {subsection}{Ajuts a la instal\IeC {\textperiodcentered }laci\IeC {\'o}}{7}
+\contentsline {section}{Primeres interaccions amb un robot}{7}
+\contentsline {subsection}{Enviar missatges al robot}{7}
+\contentsline {section}{Crear un nou robot}{10}
+\contentsline {section}{Sortir i guardar}{10}
+\contentsline {section}{Problemes amb la instal\IeC {\textperiodcentered }laci\IeC {\'o}}{12}
+\contentsline {section}{Resum}{14}
+\contentsline {chapter}{\numberline {2}Un primer \emph {script} i les seves implicacions}{15}
+\contentsline {section}{Utilitzar una cascada per enviar m\IeC {\'u}ltiples missatges}{15}
+\contentsline {section}{Primer \emph {script}}{17}
+\contentsline {section}{Squeak i Smalltalk}{19}
+\contentsline {subsection}{Llenguatges de programaci\IeC {\'o}}{19}
+\contentsline {subsection}{Smalltalk i Squeak}{19}
+\contentsline {section}{Programes, expressions i missatges}{20}
+\contentsline {subsection}{Escriure i executar programes}{20}
+\contentsline {subsection}{Anatomia d'un \emph {script}}{21}
+\contentsline {subsection}{Sobre els p\IeC {\'\i }xels}{22}
+\contentsline {subsection}{Expressions, missatges i m\IeC {\`e}todes}{23}
+\contentsline {subsection}{Separaci\IeC {\'o} de missatges}{24}
+\contentsline {subsection}{M\IeC {\`e}tode}{25}
+\contentsline {subsection}{Cascada}{25}
+\contentsline {subsection}{Crear nous robots}{26}
+\contentsline {section}{Errors als programes}{27}
+\contentsline {subsection}{Escriure malament un selector de missatge}{28}
+\contentsline {subsection}{Escriure malament el nom d'una variable}{28}
+\contentsline {subsection}{Variables no utilitzades}{29}
+\contentsline {subsection}{Maj\IeC {\'u}scules o min\IeC {\'u}scules?}{29}
+\contentsline {subsection}{Oblidar un punt}{31}
+\contentsline {subsection}{Paraules que canvien de color}{31}
+\contentsline {section}{Resum}{33}
+\contentsline {chapter}{\numberline {3}Homes i robots}{35}
+\contentsline {section}{Crear robots}{35}
+\contentsline {section}{Dibuixar segments de l\IeC {\'\i }nia}{37}
+\contentsline {section}{Canviar de direcci\IeC {\'o}}{38}
+\contentsline {section}{L'ABC del dibuix}{41}
+\contentsline {section}{Controlar la visibilitat del robot}{42}
+\contentsline {section}{Resum}{43}
+\contentsline {chapter}{\numberline {4}Direccions i angles}{45}
+\contentsline {section}{Dreta o esquerra?}{45}
+\contentsline {subsection}{Una convenci\IeC {\'o} direccional}{47}
+\contentsline {section}{Orientaci\IeC {\'o} absoluta vs. orientaci\IeC {\'o} relativa}{48}
+\contentsline {section}{L'enfocament adequat}{50}
+\contentsline {section}{Un rellotge robot}{54}
+\contentsline {section}{Dibuixos senzills}{55}
+\contentsline {section}{Pol\IeC {\'\i }gons regulars}{56}
+\contentsline {section}{Resum}{58}
+\contentsline {chapter}{\numberline {5}L'entorn de Pica}{61}
+\contentsline {section}{El men\IeC {\'u} principal}{61}
+\contentsline {subsection}{Obtenir un \textsf {Espai de Treball Bot}}{62}
+\contentsline {section}{Interaccionar amb Squeak}{63}
+\contentsline {section}{Utilitzar l'\textsf {Espai de Treball Bot} per guardar un \emph {script}}{65}
+\contentsline {section}{Carregar un \emph {script}}{65}
+\contentsline {section}{Capturar un dibuix}{66}
+\contentsline {section}{Resultat dels missatges}{67}
+\contentsline {section}{Executar un \emph {script}}{69}
+\contentsline {subsection}{Consells}{69}
+\contentsline {subsection}{Dos exemples}{70}
+\contentsline {section}{Resum}{72}
+\contentsline {chapter}{\numberline {6}Divertim-nos amb els robots}{73}
+\contentsline {section}{Nanses del robot}{73}
+\contentsline {section}{Mida del llapis i color}{74}
+\contentsline {section}{M\IeC {\'e}s sobre els colors}{76}
+\contentsline {section}{Canviar la forma i la mida dels robots}{77}
+\contentsline {section}{Dibuixar el vostre propi robot}{79}
+\contentsline {section}{Guardar i restaurar dibuixos}{81}
+\contentsline {subsection}{La nansa ``Guardar Gr\IeC {\`a}fic''}{81}
+\contentsline {subsection}{Re-equipar la f\IeC {\`a}brica de robots}{82}
+\contentsline {subsection}{Operacions gr\IeC {\`a}fiques utilitzant \emph {scripts}}{83}
+\contentsline {section}{Resum}{88}
+\contentsline {part}{II\hspace {1em}Conceptes elementals de programaci\IeC {\'o}}{89}
+\contentsline {chapter}{\numberline {7}Repetir}{91}
+\contentsline {section}{Ha nascut una estrella}{91}
+\contentsline {subsection}{Bucles al rescat}{93}
+\contentsline {subsection}{Repeticions en marxa}{94}
+\contentsline {subsection}{Sagnat de codi}{95}
+\contentsline {section}{Dibuixar figures geom\IeC {\`e}triques regulars}{96}
+\contentsline {section}{Redescobrir les pir\IeC {\`a}mides}{97}
+\contentsline {section}{M\IeC {\'e}s experiments amb repeticions}{99}
+\contentsline {section}{Resum}{101}
+\contentsline {chapter}{\numberline {8}Variables}{103}
+\contentsline {section}{Per cortesia de la lletra A}{104}
+\contentsline {subsection}{Variacions sobre el tema de la A}{104}
+\contentsline {section}{Variables al rescat}{106}
+\contentsline {subsection}{Declarar una variable}{107}
+\contentsline {subsection}{Assignar un valor a una variable}{107}
+\contentsline {subsection}{Referir-nos a les variables}{108}
+\contentsline {subsection}{I qu\IeC {\`e} passa amb Pica?}{108}
+\contentsline {section}{Utilitzar variables}{108}
+\contentsline {subsection}{La pot\IeC {\`e}ncia de les variables}{110}
+\contentsline {subsection}{Expressar les relacions entre variables}{110}
+\contentsline {section}{Experimentar amb variables}{111}
+\contentsline {subsection}{Les pir\IeC {\`a}mides redescobertes}{113}
+\contentsline {section}{Pol\IeC {\'\i }gons automatitzats utilitzant variables}{114}
+\contentsline {section}{Pol\IeC {\'\i }gons regulars de mida fixa}{115}
+\contentsline {section}{Resum}{116}
+\contentsline {chapter}{\numberline {9}Aprofundir en les variables}{117}
+\contentsline {section}{Anomenar les variables}{117}
+\contentsline {section}{Variables com a contenidors}{118}
+\contentsline {section}{Assignaci\IeC {\'o}: L'esquerra i la dreta de :=}{119}
+\contentsline {section}{Analitzar alguns \emph {scripts} senzills}{120}
+\contentsline {section}{Resum}{125}
+\contentsline {chapter}{\numberline {10}Repeticions i variables}{127}
+\contentsline {section}{Una escala estranya}{128}
+\contentsline {section}{Pr\IeC {\`a}ctiques amb repeticions i variables: laberints, espirals i altres.}{131}
+\contentsline {section}{Alguns aspectes importants d'utilitzar variables i repeticions}{134}
+\contentsline {subsection}{Inicialitzaci\IeC {\'o} de variables}{134}
+\contentsline {subsection}{Utilitzar i canviar el valor d'una variable}{134}
+\contentsline {section}{Experiments avan\IeC {\c c}ats}{136}
+\contentsline {section}{Resum}{137}
+\contentsline {chapter}{\numberline {11}Compondre missatges}{139}
+\contentsline {section}{Els tres tipus de missatges}{140}
+\contentsline {section}{Identificar missatges}{141}
+\contentsline {section}{Els tres tipus de missatges en detall}{143}
+\contentsline {subsection}{Missatges unaris}{143}
+\contentsline {subsection}{Missatges binaris}{144}
+\contentsline {subsection}{Missatges de paraula-clau}{145}
+\contentsline {section}{Ordre d'execuci\IeC {\'o}}{146}
+\contentsline {subsection}{Regla 1: Unari $>$ Binari $>$ Paraula-Clau}{147}
+\contentsline {subsection}{Regla 2: Primer els par\IeC {\`e}ntesis}{150}
+\contentsline {subsection}{Regla 3: D'esquerra a dreta}{151}
+\contentsline {section}{Resum}{155}
+\contentsline {part}{III\hspace {1em}Posar en joc l'abstracci\IeC {\'o}}{157}
+\contentsline {chapter}{\numberline {12}M\IeC {\`e}todes: seq\IeC {\@umlaut u}\IeC {\`e}ncies de missatges amb nom}{159}
+\contentsline {section}{\emph {Scripts} versus m\IeC {\`e}todes}{160}
+\contentsline {section}{Com definir un m\IeC {\`e}tode?}{161}
+\contentsline {subsection}{\textsf {Explorador de la classe Bot}}{162}
+\contentsline {subsection}{Crear una nova categoria de m\IeC {\`e}todes}{163}
+\contentsline {subsection}{Definir el vostre primer m\IeC {\`e}tode}{165}
+\contentsline {section}{Qu\IeC {\`e} hi ha en un m\IeC {\`e}tode?}{166}
+\contentsline {subsection}{\emph {Scripts} versus m\IeC {\`e}todes: An\IeC {\`a}lisi}{168}
+\contentsline {section}{Retornar un valor}{169}
+\contentsline {section}{Dibuixar figures}{170}
+\contentsline {section}{Resum}{172}
+\contentsline {section}{Glossari}{173}
+\contentsline {chapter}{\numberline {13}Combinar m\IeC {\`e}todes}{175}
+\contentsline {section}{Res de nou: Revisitar el m\IeC {\`e}tode \textsf {quadrat}}{176}
+\contentsline {section}{Altres patrons gr\IeC {\`a}fics}{176}
+\contentsline {section}{Qu\IeC {\`e} us diuen aquests experiments?}{178}
+\contentsline {section}{Quadrats a tot arreu}{179}
+\contentsline {section}{Resum}{181}
+\contentsline {chapter}{\numberline {14}Par\IeC {\`a}metres i arguments}{183}
+\contentsline {section}{Qu\IeC {\`e} \IeC {\'e}s un par\IeC {\`a}metre?}{184}
+\contentsline {subsection}{Un m\IeC {\`e}tode per dibuixar quadrats}{184}
+\contentsline {section}{Practiqueu amb els par\IeC {\`a}metres}{186}
+\contentsline {section}{Variables en m\IeC {\`e}todes}{187}
+\contentsline {section}{Experimentar amb m\IeC {\'u}ltiples arguments}{189}
+\contentsline {section}{Par\IeC {\`a}metres i variables}{191}
+\contentsline {section}{Arguments i par\IeC {\`a}metres}{193}
+\contentsline {subsection}{Sobre l'execuci\IeC {\'o} dels m\IeC {\`e}todes}{195}
+\contentsline {section}{Resum}{196}
+\contentsline {chapter}{\numberline {15}Errors i depuraci\IeC {\'o}}{197}
+\contentsline {section}{El valor per defecte d'una variable}{197}
+\contentsline {section}{Examinar l'execuci\IeC {\'o} d'un missatge}{199}
+\contentsline {section}{Una primera ullada al depurador}{202}
+\contentsline {section}{Anar pas a pas per la pila}{206}
+\contentsline {section}{Corregir els errors}{209}
+\contentsline {subsection}{Exemple 1}{209}
+\contentsline {subsection}{Exemple 2}{210}
+\contentsline {section}{Resum}{212}
+\contentsline {chapter}{\numberline {16}Descompondre per recompondre}{213}
+\contentsline {section}{Laberints i espirals}{214}
+\contentsline {subsection}{Quadrats centrats}{214}
+\contentsline {subsection}{Espirals}{216}
+\contentsline {section}{Rectangles d'or}{219}
+\contentsline {subsection}{Una soluci\IeC {\'o} d'un-rectangle-per-l\IeC {\'\i }nia}{220}
+\contentsline {section}{Enrajolar}{224}
+\contentsline {section}{Resum}{227}
+\contentsline {chapter}{\numberline {17}Cadenes, i eines per entendre programes}{229}
+\contentsline {section}{Cadenes}{229}
+\contentsline {section}{La comunicaci\IeC {\'o} amb l'usuari}{230}
+\contentsline {section}{Cadenes i car\IeC {\`a}cters}{231}
+\contentsline {section}{Cadenes i nombres}{233}
+\contentsline {section}{Utilitzar el \emph {Transcript}}{234}
+\contentsline {section}{Generar i comprendre una tra\IeC {\c c}a}{235}
+\contentsline {section}{Resum}{239}
+\contentsline {part}{IV\hspace {1em}Condicionals}{241}
+\contentsline {chapter}{\numberline {18}Condicions}{243}
+\contentsline {section}{Els aut\IeC {\`e}ntics colors d'un robot}{243}
+\contentsline {subsection}{Afegir una tra\IeC {\c c}a per veure qu\IeC {\`e} va passant}{245}
+\contentsline {subsection}{El valor retornat per un m\IeC {\`e}tode}{246}
+\contentsline {section}{Expressions condicionals amb una sola bifurcaci\IeC {\'o}}{247}
+\contentsline {subsection}{Triar el m\IeC {\`e}tode condicional adequat}{248}
+\contentsline {section}{Imbricar expressions condicionals}{248}
+\contentsline {subsection}{Acolorir robots amb tres colors}{248}
+\contentsline {section}{Aprendre dels errors}{250}
+\contentsline {section}{Interpretar un petit llenguatge}{252}
+\contentsline {subsection}{M\IeC {\'e}s experiments}{254}
+\contentsline {section}{Resum}{255}
+\contentsline {chapter}{\numberline {19}Repeticions condicionals}{257}
+\contentsline {section}{Repeticions condicionals}{257}
+\contentsline {subsection}{Un exemple}{258}
+\contentsline {section}{Experi\IeC {\`e}ncies amb traces}{260}
+\contentsline {section}{Aturar un bucle infinit}{263}
+\contentsline {section}{Aprofundir en els bucles condicionals}{264}
+\contentsline {section}{Una aplicaci\IeC {\'o} interactiva senzilla}{265}
+\contentsline {section}{Quan hem d'utilitzar claud\IeC {\`a}tors}{267}
+\contentsline {section}{Resum}{267}
+\contentsline {chapter}{\numberline {20}Booleans i expressions booleanes}{269}
+\contentsline {section}{Valors booleans i expressions booleanes}{269}
+\contentsline {subsection}{Valors booleans}{269}
+\contentsline {subsection}{Expressions booleanes}{270}
+\contentsline {section}{Combinar expressions booleanes b\IeC {\`a}siques}{271}
+\contentsline {subsection}{Negaci\IeC {\'o} (no)}{272}
+\contentsline {subsection}{Conjunci\IeC {\'o} (i)}{273}
+\contentsline {subsection}{Disjunci\IeC {\'o} (o)}{273}
+\contentsline {subsection}{Tot junt}{274}
+\contentsline {section}{Alguns aspectes d'Smalltalk}{274}
+\contentsline {section}{Oblidar par\IeC {\`e}ntesis (un error freq\IeC {\@umlaut u}ent)}{274}
+\contentsline {subsection}{Cas d'estudi}{275}
+\contentsline {subsection}{Utilitzar el depurador}{275}
+\contentsline {subsection}{Entendre el problema}{276}
+\contentsline {subsection}{Problemes semblants i solucions}{277}
+\contentsline {section}{Resum}{278}
+\contentsline {chapter}{\numberline {21}Coordenades, punts i moviments absoluts}{279}
+\contentsline {section}{Punts}{280}
+\contentsline {section}{Utilitzar quadr\IeC {\'\i }cules}{282}
+\contentsline {section}{Una font d'errors amb els punts}{283}
+\contentsline {subsection}{Descompondre \textsf {50@60 + 200@400}}{284}
+\contentsline {subsection}{Descompondre \textsf {(50@60) + (200@400)}}{284}
+\contentsline {section}{Moviments absoluts}{285}
+\contentsline {section}{Moviment relatiu versus moviment absolut}{285}
+\contentsline {section}{Alguns experiments}{288}
+\contentsline {section}{Translacions}{288}
+\contentsline {subsection}{Traslladar triangles}{290}
+\contentsline {subsection}{Oques volant}{291}
+\contentsline {section}{Utilitzar moviments absoluts}{292}
+\contentsline {section}{Bucles i translacions}{295}
+\contentsline {section}{M\IeC {\'e}s experiments}{296}
+\contentsline {section}{Resum}{297}
+\contentsline {chapter}{\numberline {22}Comportament avan\IeC {\c c}at dels robots}{299}
+\contentsline {section}{Obtenir la direcci\IeC {\'o} d'un robot}{299}
+\contentsline {section}{Apuntar en una direcci\IeC {\'o}}{300}
+\contentsline {section}{Dist\IeC {\`a}ncia des d'un punt}{301}
+\contentsline {section}{Tornar al centre de la pantalla}{301}
+\contentsline {section}{Posici\IeC {\'o} si es mogu\IeC {\'e}s}{301}
+\contentsline {subsection}{En una capsa}{302}
+\contentsline {section}{Apuntar cap a un punt}{303}
+\contentsline {section}{Centre versus posici\IeC {\'o}}{305}
+\contentsline {section}{Resum}{305}
+\contentsline {chapter}{\numberline {23}Simular comportament animal}{307}
+\contentsline {section}{Vagar}{307}
+\contentsline {subsection}{Separar influ\IeC {\`e}ncies}{309}
+\contentsline {subsection}{Estudiar la influ\IeC {\`e}ncia de la longitud}{309}
+\contentsline {subsection}{Estudiar la influ\IeC {\`e}ncia del costat cap a on gira l'animal}{310}
+\contentsline {section}{Atrapat dins una capsa}{312}
+\contentsline {subsection}{Resseguir els costats}{313}
+\contentsline {subsection}{Volar al costat oposat}{314}
+\contentsline {subsection}{Direcci\IeC {\'o} aleat\IeC {\`o}ria}{314}
+\contentsline {subsection}{Afegir una sortida a la capsa}{315}
+\contentsline {section}{Romandre en un entorn segur}{316}
+\contentsline {subsection}{M\IeC {\'e}s experiments}{319}
+\contentsline {section}{Trobar menjar}{319}
+\contentsline {subsection}{Comparar la dist\IeC {\`a}ncia}{319}
+\contentsline {subsection}{M\IeC {\'e}s experiments}{321}
+\contentsline {subsection}{Mantenir l'orientaci\IeC {\'o}}{322}
+\contentsline {subsection}{Simular la visi\IeC {\'o}}{324}
+\contentsline {section}{Resum}{326}
+\contentsline {part}{V\hspace {1em}Altres mons Squeak}{327}
+\contentsline {chapter}{\numberline {24}Un recorregut per eToy}{329}
+\contentsline {section}{Pilotar un avi\IeC {\'o}}{330}
+\contentsline {subsection}{Pas 1: Dibuixar un avi\IeC {\'o}}{330}
+\contentsline {subsection}{Pas 2: Jugar amb l'halo}{330}
+\contentsline {subsection}{Pas 3: Arrossegar i deixar un m\IeC {\`e}tode per crear nous \emph {scripts}}{335}
+\contentsline {subsection}{Pas 4: Afegir m\IeC {\`e}todes}{337}
+\contentsline {section}{\emph {Joysticks} en acci\IeC {\'o}}{339}
+\contentsline {subsection}{Pas 1: Crear un \emph {joystick}}{339}
+\contentsline {subsection}{Pas 2: Experimentar amb un \emph {joystick}}{339}
+\contentsline {subsection}{Pas 3: Vincular el \emph {joystick} i l'\emph {script}}{339}
+\contentsline {section}{Crear una animaci\IeC {\'o}}{341}
+\contentsline {subsection}{Pas 1: Crear el contenidor}{341}
+\contentsline {subsection}{Pas 2: Dibuixar els elements de l'animaci\IeC {\'o}}{342}
+\contentsline {subsection}{Pas 3: Deixar els dibuixos dins del contenidor}{343}
+\contentsline {subsection}{Pas 4: Crear un dibuix senzill com a base de l'animaci\IeC {\'o}}{343}
+\contentsline {subsection}{Pas 5: Crear un \emph {script} amb \textsf {lookLike}}{344}
+\contentsline {subsection}{Pas 6: Mostrar l'element seleccionat de l'animaci\IeC {\'o}}{344}
+\contentsline {subsection}{Pas 7: Canviar l'element seleccionat d'un contenidor}{345}
+\contentsline {subsection}{Una altra manera}{346}
+\contentsline {section}{Cotxes i conductors}{347}
+\contentsline {subsection}{Pas 1: Dibuixar un cotxe i un volant}{347}
+\contentsline {subsection}{Pas 2: Girar el cotxe en un cercle}{347}
+\contentsline {subsection}{Pas 3: Utilitzar la direcci\IeC {\'o} del volant}{348}
+\contentsline {subsection}{Pas 1: Sensors}{350}
+\contentsline {subsection}{Pas 2: La carretera}{350}
+\contentsline {subsection}{Pas 3: Condicions i tests a eToy}{350}
+\contentsline {subsection}{Pas 4: Personalitzar els tests basats en colors}{351}
+\contentsline {subsection}{Pas 5: Afegir accions}{352}
+\contentsline {section}{Alguns trucs}{353}
+\contentsline {subsection}{Executar diversos \emph {scripts}}{354}
+\contentsline {subsection}{Eliminar}{355}
+\contentsline {subsection}{Crear una icona}{355}
+\contentsline {subsection}{Internacionalitzaci\IeC {\'o}}{356}
+\contentsline {section}{Resum}{356}
+\contentsline {chapter}{\numberline {25}Un Recorregut per Alice}{357}
+\contentsline {section}{Comen\IeC {\c c}ar amb Alice}{357}
+\contentsline {section}{Interactuar directament amb els actors}{359}
+\contentsline {section}{L'entorn}{361}
+\contentsline {section}{\emph {Scripts}}{362}
+\contentsline {subsection}{Analitzar el primer \emph {script}}{364}
+\contentsline {subsection}{Moure, girar i rodar}{365}
+\contentsline {section}{Parts dels actors}{366}
+\contentsline {section}{Altres operacions}{368}
+\contentsline {subsection}{Fer-se gran}{368}
+\contentsline {subsection}{Moviments quantificats}{368}
+\contentsline {subsection}{Mantenir-se dret}{368}
+\contentsline {subsection}{Acolorir}{368}
+\contentsline {subsection}{Destrucci\IeC {\'o}}{369}
+\contentsline {subsection}{Visibilitat}{369}
+\contentsline {subsection}{Moviments absoluts i rotacions}{369}
+\contentsline {subsection}{Apuntar}{369}
+\contentsline {subsection}{Posicionament relatiu dels actors.}{370}
+\contentsline {section}{Accions relacionades amb el temps}{370}
+\contentsline {section}{Animaci\IeC {\'o}}{371}
+\contentsline {section}{El vostre propi \emph {Wonderland}}{372}
+\contentsline {section}{M\IeC {\'u}ltiples c\IeC {\`a}meres i altres efectes especials}{373}
+\contentsline {section}{Alarmes}{374}
+\contentsline {section}{Introduir la interacci\IeC {\'o} amb l'usuari}{375}
+\contentsline {section}{Aspectes ocults d'Alice i Pooh}{376}
+\contentsline {subsection}{Projectar \emph {morphs} 2D en 3D}{377}
+\contentsline {section}{Pooh: generar formes 3D a partir de 2D}{378}
+\contentsline {section}{Resum}{380}
+\contentsline {chapter}{\IeC {\'I}ndex Alfab\IeC {\`e}tic}{381}

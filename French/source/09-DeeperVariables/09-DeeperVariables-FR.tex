@@ -1,0 +1,252 @@
+% $Author: stef $
+% $Date: 2008-04-04 17:14:31 +0200 (Fri, 04 Apr 2008) $
+% $Revision: 318 $
+%=================================================================
+\ifx\wholebook\relax\else
+% --------------------------------------------
+% Lulu:
+    \documentclass[a4paper,10pt,twoside]{book}
+    \usepackage[
+        papersize={6in,9in},
+        hmargin={.75in,.75in},
+        vmargin={.75in,1in},
+        ignoreheadfoot
+    ]{geometry}
+    \input{../common.tex}
+    \pagestyle{headings}
+    \setboolean{lulu}{true}
+% --------------------------------------------
+% A4:
+%   \documentclass[a4paper,11pt,twoside]{book}
+%   \input{../common.tex}
+%   \usepackage{a4wide}
+% --------------------------------------------
+    \graphicspath{{figures/} {../figures/}}
+    \begin{document}
+%   \renewcommand{\nnbb}[2]{} % Disable editorial comments
+    \sloppy
+\fi
+
+\chapter{Digging Deeper into Variables}\label{cha:deeperVariable}
+
+
+Dans le chapitre pr\'ec\'edent, j'ai introduit les variables. Dans ce chapitre, je vais aller un peu plus loin dans le sujet de mani\`ere \`a ce que vous puissiez en apprendre davantage sur la fa\c con dont les variables sont utilis\'ees. \'Etant donn\'e que ce chapitre est de nature un peu technique, vous pouvez l'omettre pour une premi\`ere lecture.
+
+Avant d'illustrer en d\'etail comment les variables fonctionnent, je tiens \`a souligner de nouveau l'importance de choisir des bons noms pour les variables. 
+
+\section*{Nommer les variables}
+
+Vous \^etes libre de choisir pratiquement n'importe quel nom pour une variable. Toutefois, donner des noms significatifs \`a vos variables est tr\`es important, car cela vous aidera \`a la fois \`a l'\'ecriture de vos programmes et \`a la compr\'ehension des programmes que vous avez \'ecrit. Pour illustrer ce point, lisez le script~\ref{scr:meaningless}, qui est en fait le script 8-10 r\'e\'ecrit en utilisant les noms de variables d\'epourvus de sens. \sd{fix 8-10}
+
+\begin{script}[meaningless]{Des noms de variables incompr\'ehensibles rendent un programme difficile \`a comprendre. }
+	| x y z| 
+	x := Bot new. 
+	y := 6. 
+	z := 360 / y. 
+	y timesRepeat: 
+		[ x go: 100. 
+		x turnLeft: z ]. 
+\end{script}
+
+Comme vous pouvez le d\'ecouvrir en l'essayant, le script 1.9 est parfaitement correct, et Squeak peut l'ex\'ecuter sans aucun probl\`eme. Mais je suis s\^ur que vous savez lequel des scripts 8-10 ou 9-1 est le plus compr\'ehensible. 
+
+
+En Smalltalk, le nom d'une variable peut \^etre compos\'e de n'importe quelle s\'equence de caract\`eres alphab\'etiques et num\'eriques (alphanum\'eriques) commen\c cant par une lettre minuscule. Il est habituel d'utiliser des long noms de variables indiquant clairement la fonction de la variable dans le programme. Ceci vous permet, ainsi qu'\`a d'autres programmeurs, de comprendre vos scripts plus facilement. 
+
+
+\^Etre capable de comprendre ce qu'un programme fait est tr\`es important, car comme vous le verrez plus tard, un programme n\'ecessite g\'en\'eralement une combinaison de plusieurs scripts.\footnote{Ceci est, en fait, une simplification. Bient\^ot, vous \'etudierez les m\'ethodes, qui sont les v\'eritables blocs de construction de la programmation avec objets.} Quand viendra le moment ou vous devrez comprendre un script \'ecrit par quelqu'un d'autre, ou m\^eme un script \'ecrit par vous-m\^eme, peut-\^etre m\^eme il ya plusieurs mois, vous serez heureux d'avoir adopt\'e l'habitude de choisir des noms de variables significatifs. 
+
+Maintenant que vous avez \'et\'e convaincu par l'importance de choisir des noms significatifs pour les variables, je vais discuter des variables en d\'etail.
+
+\section*{Des variables comme des bo\^ites}
+
+Les variables sont des param\`etres fictifs  r\'ef\'erant \`a des objets. Une fa\c con courante d'expliquer la notion de variable est d'utiliser une notation graphique dans laquelle les variables sont repr\'esent\'ees par des bo\^ites. Nous allons illustrer cette id\'ee dans le script 9-2 et la figure 9-1. 
+
+Dans le script 9-2 (\'etape a dans le script et sur la figure), deux variables, \ct{pica} et \ct{pablo}, sont d\'eclar\'ees. Puis \`a l'\'etape (b) nous cr\'eons un robot et nous l'assignons \`a la variable \ct{pica}; c'est \`a dire, la variable \ct{pica} r\'ef\`ere maintenant au robot nouvellement cr\'e\'e. Puis, en (c) la variable \ct{pablo} est assign\'ee \`a la valeur de la variable \ct{pica}, et donc \ct{pablo} pointe maintenant sur le m\^eme objet que la variable  \ct{pica}, c'est \`a dire, au robot nouvellement cr\'e\'e. Lorsque nous envoyons un message en utilisant l'une des deux variables, nous sommes en train d'envoyer un message au m\^eme objet, \`a savoir le robot cr\'e\'e \`a l'\'etape (b), puisque les deux variables font r\'ef\'erence au m\^eme objet. Par cons\'equent, dans (d), le message envoy\'e \`a \ct{pica} l'am\`ene \`a se d\'eplacer de 100 pixels, tandis que le message dans (e), qui est adress\'e \`a \ct{pablo}, provoque le m\^eme robot \`a changer sa couleur en jaune. 
+
+Une autre fa\c con de dire cela est que le robot a deux noms :  \ct{pica} et \ct{pablo}.  C'est comme si la m\`ere de l'artiste Pablo Picasso avait dit : "Picasso, viens ici" \ct{(pica go: 100)}, puis dit : "Tr\`es bien, Pablo, voici ta chemise jaune. Met-la"\ct{(pablo color: yellow)}. 
+
+\begin{script}[scr:twovariables]{Deux variables pointent vers le m\^eme robot. }
+	(a)  | pica pablo |          
+	(b)  pica:= Bot new. 
+	(c)  pablo := pica. 
+	(d)  pica go: 100. 
+	(d)  pablo color: Color yellow.
+\end{script}
+
+\begin{figure}
+\begin{center}
+\centerline{\includegraphics[width=10cm]{boxesPointer}}
+\caption{Deux variables, \ct{pica} et \ct{pablo}, sont d\'eclar\'ees. (b) Un robot est cr\'e\'e et la variable pica est associ\'ee \`a ce nouvel objet. (c) La variable pablo est affect\'ee \`a la valeur de la variable \ct{pica}, et donc \ct{pablo} pointe maintenant sur  le m\^eme objet que pica. (d) Lorsque nous envoyons le message \ct{go: 100} en utilisant \ct{pica}, le robot se d\'eplace. (e) Lorsque nous envoyons le message \ct{color: Color yellow} \`a \ct{pablo}, le m\^eme robot change de couleur. En somme, si nous envoyons un message \`a l'une des deux variables, nous sommes en train d'envoyer ce message au m\^eme objet. \label{fig:boxesPointerRepresentation}}
+\end{center}
+\end{figure}
+
+\section*{Assignement: Les parties droite et gauche de := }
+
+Il y a deux fa\c cons tr\`es diff\'erentes d'utiliser le nom d'une variable dans un script. Parfois, le nom est utilis\'e pour se r\'ef\'erer \`a sa valeur, comme dans des expressions telles que \ct{walkLength + 100} et \ct{pica go: 100}. D'autres fois, le nom d'une variable est utilis\'e pour d\'esigner l'objet lui-m\^eme afin de l'initialiser ou de modifier sa valeur, comme dans \ct{walkLength := 100} et \ct{pica := Bot new}. 
+
+La chose essentielle \`a comprendre sur les variables, est que l'utilisation d'un nom de variable se r\'ef\`ere toujours \`a la valeur qui lui est associ\'ee, sauf dans le cas o\`u la variable est dans la partie gauche d'une expression d'assignation, c'est \`a dire, \`a gauche du symbole :=. Dans ce cas, le nom de la variable repr\'esente l'objet lui-m\^eme et non pas la valeur de la variable. Une autre fa\c con de dire cela est que la valeur d'une variable est toujours en lecture, sauf quand elle appara\^it \`a gauche du :=, auquel cas elle est \'ecrite, c'est-\`a dire, modifi\'ee. Le script~\ref{scr:incr} montre un exemple. 
+
+
+\begin{script}[incr]La variable \ct{walkLength} est modifi\'ee \`a la ligne 3, puis est lue \`a la ligne 4. }
+(1)  | walkLength pica | 
+(2)  pica := Bot new. 
+(3)  walkLength := 100. 
+(4)  walkLength + 150. 
+(5)  pica go: walkLength
+\end{script}
+
+A la ligne 3 du script 9-3, le variable nomm\'ee \ct{walkLength} apparait \`a gauche du :=, donc elle r\'ef\`ere \`a l'objet, et la valeur 100 est assign\'ee \`a la variable walkLength. Apr\`es que la ligne 3 ait a \'et\'e ex\'ecut\'ee, la variable \ct{walkLength} se r\'ef\`ere au nombre 100. A la ligne 4, \ct{walkLength + 150} ne fait pas partie d'une expression d'assignation, et donc, le nom de la variable se r\'ef\`ere \`a la valeur de la variable. (Notez qu'\`a la ligne 4, une addition est effectu\'ee, mais le r\'esultat de l'addition n'est pas utilis\'e. Par cons\'equent, cette ligne ne fait rien et peut \^etre supprim\'ee.) A la ligne 5, les deux variables \ct{pica} et \ct{walkLength} sont utilis\'ee pour se r\'ef\'erer \`a leurs valeurs, c'est \`a dire, les objets auxquelles elles se rapportent. Par cons\'equent, la variable \ct{walkLength} se rapporte ici \`a sa valeur 100, alors que pica se r\'ef\`ere au robot cr\'e\'e plus t\^ot dans le script. Ainsi la ligne (5) a pour effet que le message \ct{go: 100} est envoy\'e au robot cr\'e\'e la ligne 2. 
+
+\important{Une variable est un "placeholder" \`a une valeur, qui est, un objet. Utiliser une variable retourne sa valeur, sauf lorsque la variable est situ\'ee sur le c\^ot\'e gauche d'une expression d'assignation, qui est, \`a la gauche du symbole :=. Dans un tel cas, la valeur de la variable est modifi\'ee \`a la valeur de l'expression de la partie droite de l'expression d'affectation. Par exemple, \ct{walkLength + 150} retourne 150 ajout\'e \`a la valeur de la variable walkLength, tandis que \ct{walkLength := 100} modifie la valeur de \ct{walkLength} \`a 100.}
+
+
+\section*{Analyse de quelques scripts simples }
+
+Pour mieux comprendre comment les variables sont manipul\'ees, je vais vous d\'ecrire une s\'erie de scripts. Tout d'abord, lisez le script et devinez ce qu'il fait; puis \'evaluez attentivement le script afin de d\'eterminer son r\'esultat. Je vous sugg\`ere de tracer une bo\^ite de repr\'esentation si vous pensez que cela peut \^etre utile, et v\'erifiez votre dessin avec celui indiqu\'e sur la figure. Comme vous le verrez, je donne une petite explication de chaque script. Notez que les explications d'un script ne sont pas r\'ep\'et\'ees dans les scripts ult\'erieurs, alors faites-les dans l'ordre, et revenez sur les scripts pr\'ec\'edents pour obtenir des pr\'ecisions sur les points qui sont d\'eroutants.
+
+
+% \begin{scriptfigwithsize}[0.4]{\includegraphics[width=5cm]{boxOne2}}{Two variables are declared and initialized,and then their values are used.}\label{scr:letterA}
+% 	| pica walkLength | 
+% 	pica := Bot new. 
+% 	walkLength := 100. 
+% 	pica go: walkLength
+% \end{scriptfigwithsize}
+
+\paragraph{Using two variables.}
+
+Dans le script~\ref{scr:incr2}, les variables \ct{pica} et \ct{walkLength} sont d\'eclar\'ees. Un nouveau robot est cr\'e\'e et  assign\'e \`a la variable \ct{pica}. Puis \ct{100} est assign\'e \`a la variable walkLength. Le robot (valeur assign\'ee \`a la variable \ct{pica}) re\c coit le message \ct{go:} avec la valeur de la variable \ct{walkLength} comme argument qui, dans ce cas, est \ct{100}.
+
+\begin{script}[incr2]{Deux variables sont d\'eclar\'ees et initialis\'ees, et alors leurs valeurs sont utilis\'ees. (voire la figure~\ref{fig:boxOne2}).}
+	| pica walkLength | 
+	pica := Bot new. 
+	walkLength := 100. 
+	pica go: walkLength
+\end{script}
+
+\begin{figure}[h]
+	\centerline{\includegraphics[width=10cm]{boxOne2}}
+	\caption{Deux variables sont d\'eclar\'ees et initialis\'ees, et alors leurs valeurs sont utilis\'ees.  
+	\label{fig:boxOne2}}
+\end{figure}
+
+
+
+\begin{script}[incr3]{Comme le script~\ref{scr:incr2}, except\'e qu'une variable est utilis\'ee comme une partie d'une expression  (voire la figure~\ref{fig:boxOne3}).}
+	| pica walkLength | 
+	pica := Bot new. 
+	walkLength := 100. 
+	pica go: walkLength + 170. 
+\end{script}
+
+\begin{figure}[h]
+	\centerline{\includegraphics[width=10cm]{boxSize2}}
+	\caption{Utiliser une nouvelle variable pour maintenir la valeur de la longueur du d\'eplacement de pica.  
+	\label{fig:boxOne3}}
+\end{figure}
+
+Dans le script~\ref{scr:incr3}, pour d\'eterminer le nombre de pixels dont le robot doit avancer, l'expression \ct{walkLength + 170} est \'evalu\'ee. Comme \ct{walkLength} a \'et\'e initialis\'e \`a la valeur \ct{100} et que sa valeur n'a pas \'et\'e modifi\'e par la suite, la valeur de \ct{walkLength} est \ct{100}. Par cons\'equent, \ct{walkLength + 170} a la valeur \ct{270}, et le robot se d\'eplace vers l'avant de 270 pixels. 
+
+\paragraph{D\'efinition de nouvelles valeurs de variables}
+L'expression \ct{pica go: walkLength + 170} du script~\ref{scr:incr3} est \'equivalente \`a l'expression \ct{pica go: walkLength2} du script~\ref{scr:incr4}. En effet, la valeur de la variable \ct{walkLength2} est la valeur de la variable \ct{walkLength} plus 170.
+
+\begin{script}[incr4]{Utiliser une nouvelle variable pour maintenir la valeur de la longueur du d\'eplacement de pica  (voire la figure~\ref{fig:boxOne3}).}
+	| pica walkLength walkLength2 | 
+	pica := Bot new. 
+	walkLength := 100. 
+	walkLength2 := walkLength + 170. 
+	pica go: walkLength2. 
+\end{script}
+
+
+\paragraph{Changement de la valeur d'une variable.}
+
+La valeur d'une variable peut, en effet, \^etre modifi\'ee en utilisant \ct{:=}. Dans le script~\ref{scr:incr5}, pour commencer, la variable \ct{walkLength} est d\'eclar\'ee, puis nous lui assignons 100, puis nous lui assignons 300 (la fl\`eche en pointill\'e, dans la figure, pointant vers 100 indique que la variable ne pointe plus vers 100). Puis la variable est ensuite utilis\'ee dans la derni\`ere expression du script, sa valeur est  300. En cons\'equence, le robot se d\'eplace vers l'avant de 300 pixels.
+
+
+\begin{script}[incr5]{Changer \ct{walkLength} deux fois (voire la figure~\ref{fig:boxThree}).}
+	| pica walkLength | 
+	pica := Bot new. 
+	walkLength := 100. 
+	walkLength := 300. 
+	pica go: walkLength 
+\end{script}
+
+\begin{figure}[h]
+	\centerline{\includegraphics[width=10cm]{boxThree}}
+	\caption{Changer la valeur de \ct{walkLength} deux fois.\label{fig:boxThree}}
+\end{figure}
+
+\newpage
+\paragraph{Utiliser une variable sans lui assigner de valeur n'a aucun effet sur sa valeur.}
+Le script~\ref{scr:incrNoChange} montre que l'utilisation de la valeur d'une variable, de toute autre mani\`ere qu'en lui assignant une nouvelle valeur, n'a aucun effet sur la valeur de la variable. La seule mani\`ere de modifier la valeur d'une variable est d'utiliser une expression d'assignation. Dans le script~\ref{scr:incrNoChange}, la variable \ct{walkLength} est initialis\'ee avec la valeur 100. Puis, la valeur de \ct{walkLength}, ici 100, est ajout\'ee \`a 200, mais aucune expression d'assignation n'est impliqu\'ee, et donc la valeur de la variable n'est pas modifi\'ee. Ainsi, lorsque la valeur de \ct{walkLength}, qui est ici 100, est utilis\'ee dans la derni\`ere ligne pour pr\'eciser de combien le robot doit avancer, le robot se d\'eplace de 100 pixels.
+
+\begin{script}[incrNoChange]{Utiliser une variable sans lui assigner de valeur n'a aucun effet sur sa valeur.  (voire la figure~\ref{fig:boxNoChange}).}
+	| walkLength pica | 
+	pica := Bot new. 
+	walkLength := 100. 
+	walkLength + 200. 
+	pica go: walkLength 
+\end{script}
+
+\begin{figure}[h]
+	\centerline{\includegraphics[width=10cm]{boxNoChange2}}
+	\caption{Utiliser une variable sans lui assigner de valeur n'a aucun effet sur sa valeur.   
+	\label{fig:boxNoChange}}
+\end{figure}
+
+
+\paragraph{Utiliser la valeur d'une variable pour lui d\'efinir sa propre valeur.}
+Dans le script~\ref{scr:incr9} la variable \ct{walkLength} est initialis\'ee \`a \ct{100}. Puis, sa valeur est modifi\'ee \`a la valeur de l'expression \ct{walkLength + 50}. \`A ce stade, la valeur de walkLength est \ct{100}, donc l'expression \ct{walkLength + 50} retourne \ct{150}, puis la valeur \ct{150} est assign\'ee \`a la variable  \ct{walkLength}. Donc, dans la derni\`ere \'etape, le robot se d\'eplace vers l'avant de 150 pixels. 
+
+Il est important, ici, de noter que dans l'expression \ct{walkLength := walkLength + 50}, la variable \ct{walkLength} est utilis\'ee de deux mani\`eres diff\'erentes: d'abord, l'expression \`a droite de := est \'evalu\'ee, dans lequel \ct{walkLength} repr\'esente une valeur, puis le r\'esultat de cette \'evaluation est assign\'e \`a la variable \ct{walkLength} \`a gauche du \ct{:=}, qui de ce c\^ot\'e repr\'esente la variable comme un "placeholder".
+
+
+\begin{script}[incr9]{La valeur de la variable walkLength est utilis\'ee pour d\'efinir la variable elle-m\^eme.  (voire la figure~\ref{fig:boxOne4}).}
+	| pica walkLength | 
+	pica := Bot new. 
+	walkLength := 100. 
+	walkLength := walkLength + 50. 
+	pica go: walkLength
+\end{script}
+
+\begin{figure}[h]
+	\centerline{\includegraphics[width=10cm]{boxFour}}
+	\caption{La valeur de la variable \ct{walkLength} est utilis\'ee pour d\'efinir la variable elle-m\^eme. 
+	\label{fig:boxOne4}}
+\end{figure}
+
+
+
+\paragraph{Utiliser deux fois la m\^eme variable pour modifier sa propre valeur.}
+Dans le script~\ref{scr:incr10}, la variable \ct{walkLength} est initialis\'ee \`a \ct{150}. Puis, la valeur de \ct{walkLength} est r\'eassign\'ee pour se r\'ef\'erer \`a la valeur de l'expression \ct{walkLength + walkLength}. Dans le calcul de la valeur de l'expression \ct{walkLength + walkLength}, la valeur de \ct{walkLength} est \ct{150}. Par cons\'equent, l'expression retourne 300, qui devient la nouvelle valeur de la variable \ct{walkLength}. Et donc, le robot avance de 300 pixels. 
+
+\begin{script}[incr10]{Utiliser deux fois la m\^eme variable pour modifier sa propre valeur. (voire la figure~\ref{fig:boxOne4}).}
+	| pica walkLength | 
+	pica := Bot new. 
+	walkLength := 150. 
+	walkLength := walkLength + walkLength. 
+	pica go: walkLength 
+\end{script}
+
+
+\section*{R\'esum\'e}
+
+\begin{itemize}
+\item Une variable est un objet qui sert de "placeholder" pour une valeur. Vous pouvez consid\'erer une variable comme une bo\^ite se r\'ef\'erant \`a un objet.
+
+\item L'utilisation d'une variable retourne sa valeur, except\'e lorsque la variable est situ\'ee sur la gauche d'une expression d'affectation \ct{:=}. Dans un tel cas, sa valeur est modifi\'ee pour devenir la valeur de l'expression situ\'ee sur la droite de l'expression d'affectation \ct{:=}. Par exemple, \ct{walkLength + 100} retourne 100 ajout\'e \`a la valeur de la variable \ct{walkLength}. D'autre part, \ct{walkLength := 100} modifie la valeur de \ct{walkLength} \`a \ct{100}. 
+
+\end{itemize}
+\ifx\wholebook\relax\else
+    \end{document}
+\fi
+
+
+%%% Local Variables:
+%%% coding: utf-8
+%%% mode: latex
+%%% TeX-master: t
+%%% TeX-PDF-mode: t
+%%% ispell-local-dictionary: "english"
+%%% End:

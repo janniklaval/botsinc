@@ -1,0 +1,161 @@
+
+About this Book
+***************
+Stephane, we talked about revising or ommiting this section? You didn't seem happy with it, and it is a little bit of a dry start :) Any further thoughts on that presently?
+
+>>
+I would like to have a much better selling chapter with some cool pictures to invite the reader to really get into 
+the book. 
+
+I also got this nice quote about one teacher using my book: 
+
+"I'm using the Bot Lab environment for three years and found it really
+valuable in teaching computer science concepts for a young audience
+(and even less young !). The bots commanded through balloon (as in
+comic strips) is a very nice introduction for young children, and when
+this aspect is well understood, you can use the Bot Workspace to teach
+the notion of script, a first step in programming languages. The Micro
+Browser allows children to add new behavior for their bots, and have
+fun with their creation. This three-layers tool - Balloon, Micro
+Workspace, Micro Browser - offers to the teacher a funny way to
+introduce gently the basis of object-oriented programming
+concepts. And Joe the Miner adds infinite possibility to play with OO
+concepts. With Bot Lab, learning is playing ! ;-)"
+
+
+
+
+
+For the pictures misplacement: there are lot of stuff that I cannot do in LaTeX because it does it automatically. So what I will try is to reduce the pictures so that they fit where I indicate and then after the copy edit phase or when the book is ported into another document editing system then we will fix the placement. 
+
+
+
+
+
+Chapter 1 - Getting Started
+****************************
+
+Ed summary: nice in shape and scope, I am just a little worried you go too fast for *some* of your readers, although ultimately this is your call Stephane. It's just very early days in these opening chapters for some readers, I wonder if we should be slightly kinder to them here near the beginning? Some concepts, and some phrases slip in, imo, that are beyond some of your possible readers - might want to recheck those? I've mentioned the ones that struck me as candidates below.
+
+>> ok I will have a look
+
+
+p17
+- A key question is whether to have that Appendix stuck out there in Appendix 26. I think it would be better to draw that material into the start of the book, and make a very friendly installation and orientation chapter. Keep it light and simple, and very congratulatory at setting the environment up etc.?  As it is now, it's like looking left as a right hand swipe comes in - it can be disorienting for those readers not already set up. For your readers who ARE already set up, well they could scan that prelim installation chapter and feel happy they are all set already :)
+
+
+>> Exact
+in the previous version of the book this was like that and my previous editor asked me to change it but I always felt that this was an error. I will put it back: because the message was: get ready in 10 min. 
+
+
+p17
+- There is another forward reference very quickly: flaps. I think this is fine, but you could be even kinder to the reader and even more explicitly let them know that they needn't worry until Ch5 etc. Not a strong point, but something to consider, as there is a slight sense of dislocation as you mention Ch5, even though you do say a flap is a drawer etc. it's a bit mysterious still!
+
+>> fixed
+
+p17
+- "you should have other values" --> "you may have" recommended, so it sounds less like an imperative.
+
+>> done
+
+p18
+- "robot" - most people will think of a robot as a physical thing with arms and stuff. Do you think it is OK to go like this, or the need to explain that this is also a robot (even though it appears to be a square blob on their screen :)
+
+>> done
+
+
+p18
+- general question, when you say "clicking on the robot with the mouse" and generally going forwards, do we need to say "left clicking" to be explicit, or not? I wonder if we should.
+
+>> done
+
+p18
+- general comment that may be for the Copy Editor to consider: I notice a fair amount of early use of the "it" pronoun rather than the noun itself... of course this is fine, but sometimes it may help the reader to use the full noun. We should consider this imo if this continues. E.G. "It indicates that you can type..." would be better as "The balloon with the red border..." imo, and others like this may follow.
+
+p18 (PIC-PLACEMENT)
+Please note that Figures 1.3-1.5 are not in right position relative to the text, and that Fig 1.4 isn't referenced in the body text!! It's obviously the 20+70 example, but we should make that explicit, and place the Figures right next to their references I think. Stephane you may want some grouping of the figures, but please consider this - it's a bit odd at the moment the way the text runs on its own, and then the figures run on their own etc.
+
+>> this is a latex problem and I would like the final version to fix that.
+
+p18
+Does the reader know what an "expression" is Stephane?
+
+>> fixed
+
+p18
+General comment: Stephane you use "we", but usually Apress tries to use a very direct "you" when refering to what the reader will do, and "I" when refering to the author. Can we use these conventions through the book?
+
+>>OK I will. 
+
+
+p19
+Reference to Squeak, or here, "Squeak jargon"... are you happy for the reader to read this without in this book formally being introduced to what Squeak might be, even briefly, so far? You call on this - it's a reader assumption thing, I raise for discussion.
+
+>> done
+
+p19 (PIC-PLACEMENT)
+Please note again that where the text and corresponding figure aren't next to each other it can create some cognitive anxiety... for instance, you talk about creating a new Bot by sending a message, and suddenly the reader may not themselves extrapolate the "send a message" mini-lesson in the previous sequence discussing red bordered balloons, and wonder how they are going to send this message... of course, the diagram 1.7 is a beautiful reminder, but it is WAY off from the paragraph where the reader may start to wonder how to issue that send command. This just reinforces my feeling that were it makes sense to do so, we move the diagrams closer to the particular text that references them. If that disrupts other things, fair enough, but in this instance, it definitely creates cognitive anxiety, or forces some readers to travel backwards to try to remember how to send... etc. Make sense?
+
+>> We will have to see that when we will be able to control picture placement in a much finer way.
+Now I could lose hors without any result.
+So I tagged your text
+
+
+
+p19/20
+Also regarding that "send" command to create the new bot, is it totally clear they user must click on the factory and then enter text into the red balloon? And does Figure 1.7 make it totally obvious that the new Bot will then appear? It looks from Fig 1.7 as if both exist at the same time - the sequencing is of course missed out on the 1-step diagram presentation, of something that takes a few steps... Your call, Stephane, on whether you think this is an issue for your readers. (note that Fig 1.8 overcomes this by saying "Left..Right" etc.
+
+>> done
+
+p20
+use of "i.e" --> I recommend full use of "that is" esp. given breadth of possible readership
+
+p20 (ANIBOT)
+This sentence is potentially very mysterious to your readers imo:
+"The robot with which you just interacted was not animated i.e., you could not see how the messages
+were performed." Since they will not have a precedent, they may have no idea what you mean by animated, or by "see how the messages were performned." How do you see a message performed? they may wonder etc. I recommend clarifying what you mean here!
+
+p20 (ANIBOT)
+This sentence includes the word "class" -- does your reader know this word yet??? Confusing for them?
+"by sending the message new to the class AniBot as you did previously to get new robots."
+
+If they don't know about classes, does this confuse them to hear they did so previously? And since they haven't seen you mention "AniBot" before, this compounds the cognitive work you are asking them to do in this sentence I think. Again, recommend clarifying this whole sentence area and point?
+
+p20 (ANIBOT)
+Figure 1.8 and creating the AniBot - is it clear to the reader just browsing what is going on here? What animation do they see from the AniBot?? Perhaps make this clearer and nail it unambiguously for the reader?
+
+>> removed all the animation related stuff
+
+
+p20
+The concept "background" - does this need explaining? As in:
+"The background of the Squeak window application is called..."
+
+p20
+The concept "desktop" ditto background in the above point. "Just click on the desktop" you say - do you mean the Windows desktop, if I've heard of that? Or is there a Squeak desktop? etc. etc. In these early stages, I'm not sure we're being kind enough to the reader on some of these basic references?
+
+p20
+The concepts of "Quitting and Saving" - want to assume the reader knows what these are? These are more familiar to most, I acknowledge... depends on age of reader at that point?
+
+p21
+Figure 1.9 would benefit from being closer to the text that references it imo back on page 20.
+
+p21
+The reader may have forgotten they already accessed it, and may therefore be confused by your sudden very familiar reference to the filenames here:
+"This is this way that we created the files ReadyToUse.image and ReadyToUse.changes."
+
+>> we should not exagerate
+
+
+p21
+This whole sequence here could use a little polishing? It is talking about file names, drags and drops, executables... yikes!!!  And what does "(See 26)" mean?
+"To open the environment you saved with a new name, drag and drop the file with the new name which has the extension .image on the squeak executable as you did to start the environment by dragging and dropping the file ReadyToUse.image (See 26)."
+
+p21 (ANIBOT)
+The summary doesn't mention AniBot and animation. Might want to seal that closed for the reader too?
+
+>> I'm currently checking with a programmer if there will be animation or not. 
+So I will have to fix that in the future. This is a vicious programming problem that will have an impact so I will treat that at the end. 
+
+
+

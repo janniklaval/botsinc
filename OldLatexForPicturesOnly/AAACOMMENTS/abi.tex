@@ -1,0 +1,264 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{calc}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage[normalem]{ulem}
+%% Please set your language here
+\usepackage[english]{babel}
+\usepackage{color}
+\usepackage{hyperref}
+
+
+
+\begin{document}
+
+[DAK: Hello, Dr. Ducasse.  I will insert each comment after the sentence or phrase it refers to.  I will enclose each comment within square brackets and my initials.  Iwill explain each kind of markup where I first use it.  I{f the system is unsatisfactory, p}lease describe its shortcomings, or suggest how to improve it. /DAK]
+
+
+
+
+
+About this book 
+
+
+
+
+
+Knowledge is only one part of understanding. Genuine understanding comes from hands on experience.  S. Papert 
+
+
+
+
+
+
+
+
+Goal 
+
+
+
+
+
+The goal of this book is to explain elementary programming concepts\textbf{ [}such as loops, abstractions, composition, and conditionals\textbf{] }to novices of all ages. 
+
+
+
+
+
+[DAK:  Before I comment on a phrase{ in your text, I will mark it }by {bolding it, and either underlining it or }enclosing it in square brackets.  {I will mark suggested deletions by bracketing, bolding, underlining and striking out.  Generally I will insert further comment for a suggestion only if I think some explanation is necessary. }
+
+
+
+
+
+The introduction of technical terms in the first sentence of your introduction seems unnecessary and possibly intimidating.  I suggest
+
+
+
+
+
+The goal of this book is to explain elementary programming concepts to novices of all ages. 
+
+
+\begin{flushleft}
+
+\end{flushleft}
+
+
+\begin{flushleft}
+{(I will highlight my suggested rewording by bolding the font.)  Or  to suggest the relative unimportance of the sub-clause, make it an aside by parenthesizing it:}
+\end{flushleft}
+
+
+\begin{flushleft}
+
+\end{flushleft}
+
+
+\begin{flushleft}
+The goal of this book is to explain elementary programming concepts (such as loops, abstractions, composition, and conditionals) to novices of all ages. 
+\end{flushleft}
+
+
+\begin{flushleft}
+
+\end{flushleft}
+
+
+\begin{flushleft}
+{The original sentence is linguistically and logically correct in your original, so with this comment I am acting more like an 'editor' than a 'proofreader'.  }
+\end{flushleft}
+
+
+\begin{flushleft}
+{However I shouldn't presume to offer editorial comment until you invite it, or before I understand what tone and style you want.  From here on I will restrict my role to proofreader for language and readability issues (grammar, confusing or unclear phrasing, vocabulary, usage, meaning, connotation, idiom etc.) until you ask otherwise. /DAK]}
+\end{flushleft}
+
+
+\begin{flushleft}
+
+\end{flushleft}
+
+
+I also believe that learning by experimenting and solving problems is \textbf{[}\textbf{the}\textbf{]}
+
+
+central to human knowledge acquisition. 
+
+
+
+
+
+Therefore I propose to \textbf{[understand] present }the concepts \textbf{[based on] through} simple problems. 
+
+
+
+
+
+[DAK: 'understand' applies to the student, not the teacher.  I suggest 'explain', 'present' or 'introduce'.  'Based on' is a static relationship that isn't appropriate to the active concept in this sentence.  I suggest 'through' or 'using'.  So the sentence might read
+
+
+
+
+
+\textbf{Therefore I propose to present the concepts through simple problems.} /DAK]
+
+
+
+
+
+My ultimate goal is to teach you object-oriented programming because it provides an excellent metaphor for teaching programming. However, teaching object-oriented programming requires some basic notions of abstraction\textbf{[}\textbf{s}\textbf{]}. 
+
+
+
+
+
+Therefore, I wrote this book to present these basic programming concepts with the special perspective that this book is the first of a series of two books. The current book is completely self-contained and does not require\textbf{ [] you }to read {the next one. }
+
+
+
+
+
+[DAK: I mark suggested insertions in-line and bolded, immediately following empty brackets. /DAK]
+
+
+
+
+
+
+
+
+The second book introduces a new robot that can be programmed. It focuses on\textbf{ [intermediary] intermediate-level }topics such as\textbf{ [finding path in maze] finding a path through a maze }{or drawing fractals. }
+
+
+
+
+
+It also acts as a companion book for\textbf{ [the persons] people }who want {to know more, who want to adapt the environment to their own needs. It introduces object-oriented programming. }
+
+
+\begin{flushleft}
+
+\end{flushleft}
+
+
+[DAK: 'the persons' is permissible but unidiomatic.  'people who want', or 'those who want' are more common.  Other phrases are also possible.  The meanings are nearly the same; the tone varies slightly, mostly in formality. /DAK]
+
+
+
+
+
+\begin{flushleft}
+
+\end{flushleft}
+
+
+Audience 
+
+
+
+
+
+The ideal reader I have in mind is a person that wants to have fun programming. This person may be a teenager or an adult, a teacher in high-school, or somebody willing to teach programming to kids in any organization. This person does not have to be fluent in programming in any language. 
+
+
+
+
+
+The material of this book has been primarily developed for my\textbf{ [wife who] wife, who }is a \textbf{[physic] physics }and mathematics teacher in a\textbf{ [french] French }school (\textbf{[] where the }students are between 11\textbf{ [to] and }15 years old). 
+
+
+
+
+
+\textbf{[Late] In late }1998, my wife had to teach computer\textbf{ [sciences] science }and we got frustrated by the lack of\textbf{ [adapted] appropriate }material. 
+
+
+We were dreaming about a way to teach a process of facing problems and finding solutions. My wife started to teach HTML, Word and similar \textbf{[not exciting] }\textbf{{unexciting }}topics\textbf{ [], }and she was \textbf{\uline{absolutely not satisfied}}. 
+
+
+
+
+
+{[DAK: 'not exciting' and '}{absolutely not satisfied' are }{slangy.  The first  doesn't read smoothly in this sentence, so I suggested a change. } The second reads OK, and seems to fit your desired tone, so I didn't suggest a change.  If you ask me to eliminate slang I will try, but it would be difficult to remove all slang and still be informal and idiomatic.  See my comment and question at the end of this doc. /DAK]
+
+
+\begin{flushleft}
+
+\end{flushleft}
+
+
+She was surprised by the fact that a lot of material was simply ad-hoc and \textbf{[not promoting] }\textbf{{didn't promote }}any scientific attitude.
+
+
+
+
+
+In addition we were aware of the work on Logo and liked the idea of \textbf{[}\textbf{the}\textbf{]}
+
+
+experimentation as a basis for learning. We were aware that Smalltalk was influenced by the ideas of Papert and Logo\textbf{[], }and \textbf{[}by the fact\textbf{]} that it originated from\textbf{ [a research project to teach] }research on teaching programming to kids. Moreover Smalltalk has a simple syntax that mimics natural language. [] \{paragraph break\}
+
+
+[DAK: I will mark suggested insertions of non-textual items like breaks by inserting the name in curly braces. /DAK]
+
+
+
+
+
+At that time Squeak arrived\textbf{ [in] at }a mature state and books started to\textbf{ [be] become }available in late 1999. So I started and wrote the present book. 
+
+
+
+
+
+The environments I use in this book and its companion book\textbf{ [is] are }fully working\textbf{[], }and went\textbf{ [over] through }several iterations\textbf{ [and] of }improvements based on the feedback we got from teachers.  A\textbf{ [constant point] guiding rule }in our work has been to modify\textbf{ [as few as possible the Squeak environment as] the Squeak environment as little as possible, as }our goal is that readers \textbf{[can extend and develop other ideas] will be able to extend these ideas and develop others}.
+
+
+
+
+
+\begin{flushleft}
+in Squeak.  \textbf{[Still has] This has had }for example the consequence that we did not provide an adapted debugger that\textbf{ [would] could }have hidden some irrelevant details. 
+\end{flushleft}
+
+
+\begin{flushleft}
+
+\end{flushleft}
+
+
+
+
+
+[DAK; Please send me your feedback about these comments, and your instructions and preferences for how I proofread later pages.  I am interested in your suggestions about formatting, which issues you are interested in and which I shouldn't waste my time on, etc.  /DAK]
+
+
+\begin{flushleft}
+
+\end{flushleft}
+
+\end{document}
+{\rtf1\ansi\ansicpg1252\deff0 {\fonttbl {\f0\fnil\fcharset0\fprq0\fttruetype Times New Roman;} {\f1\fnil\fcharset0\fprq0\fttruetype NULL;} {\f2\fnil\fcharset0\fprq0\fttruetype Dingbats;} {\f3\fnil\fcharset0\fprq0\fttruetype Symbol;} {\f4\fnil\fcharset0\fprq0\fttruetype Chapter;} {\f5\fnil\fcharset0\fprq0\fttruetype Bitstream Vera Sans;} {\f6\fnil\fcharset0\fprq0\fttruetype Courier New;} {\f7\fnil\fcharset0\fprq0\fttruetype Section;}} {\colortbl \red0\green0\blue0; \red255\green255\blue255;} {\stylesheet {\s19\sl240\slmult1\fi-431\li720\sbasedon20 Lower Roman List;} {\s21\sl240\slmult1\tx431\sbasedon13\snext20 Numbered Heading 1;} {\s22\sl240\slmult1\tx431\sbasedon14\snext20 Numbered Heading 2;} {\s28\sl240\slmult1\fi-431\li720 Square List;} {\*\cs9\sl240\slmult1\sbasedon20 Endnote Text;} {\s23\sl240\slmult1\tx431\sbasedon15\snext20 Numbered Heading 3;} {\s24\sl240\slmult1\fi-431\li720 Numbered List;} {\*\cs8\sl240\slmult1\fs20\super Endnote Reference;} {\s4\sl240\slmult1\tx1584\sbasedon21\snext20 Chapter Heading;} {\s7\sl240\slmult1\fi-431\li720 Diamond List;} {\s5\sl240\slmult1\fi-431\li720 Dashed List;} {\s34\sl240\slmult1\fi-431\li720\sbasedon24 Upper Roman List;} {\s16\sl240\slmult1\fi-431\li720 Heart List;} {\*\cs30\sl240\slmult1\f0\fs28\b\lang1033\sbasedon20 Suggestion;} {\s1\sl240\slmult1\li1440\ri1440\sa117\sbasedon20 Block Text;} {\*\cs26\sl240\slmult1\f0\fs28\b\ul\lang1033\sbasedon20 Referent;} {\s33\sl240\slmult1\fi-431\li720\sbasedon24 Upper Case List;} {\s3\sl240\slmult1\fi-431\li720 Bullet List;} {\s12\sl240\slmult1\fi-431\li720 Hand List;} {\*\cs11\sl240\slmult1\fs20\sbasedon20 Footnote Text;} {\s13\sl240\slmult1\sb440\sa60\f5\fs34\b\sbasedon20\snext20 Heading 1;} {\s14\sl240\slmult1\sb440\sa60\f5\fs28\b\sbasedon20\snext20 Heading 2;} {\s15\sl240\slmult1\sb440\sa60\f5\fs24\b\sbasedon20\snext20 Heading 3;} {\s31\sl240\slmult1\fi-431\li720 Tick List;} {\s20\sl240\slmult1\f0\fs24\lang1033 Normal;} {\s18\sl240\slmult1\fi-431\li720\sbasedon24 Lower Case List;} {\*\cs6\sl240\slmult1\f0\fs28\b\ul\strike\lang1033\sbasedon20 Deletion;} {\*\cs10\sl240\slmult1\fs20\super Footnote Reference;} {\s27\sl240\slmult1\tx1584\sbasedon21\snext20 Section Heading;} {\s17\sl240\slmult1\fi-431\li720 Implies List;} {\s2\sl240\slmult1\fi-431\li720 Box List;} {\s29\sl240\slmult1\fi-431\li720 Star List;} {\s25\sl240\slmult1\f6\sbasedon20 Plain Text;} {\s32\sl240\slmult1\fi-431\li720 Triangle List;}} \kerning0\cf0\ftnbj\fet2\ftnstart1\ftnnar\aftnnar\ftnstart1\ftnrestart\ftnrstpg\aftnstart1\aftnrestart\aendnotes\aenddoc{\info}\deftab720\viewkind1\paperw12240\paperh15840\margl1440\margr1440\widowctl \sectd\sbknone\colsx360\pgncont\ltrsect \pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0}\ltrch [DAK: Hello, Dr. Ducasse.  I will insert each comment after the sentence or phrase it refers to.  I will enclose each comment within square brackets and my initials.  Iwill explain each kind of markup where I first use it.  I}{\f0\fs24\lang1033{\*\listtag0}f the system is unsatisfactory, p}{\f0\fs24\lang1033{\*\listtag0}lease describe its shortcomings, or suggest how to improve it. /DAK]} \par\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0} \par}\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0}\ltrch About this book } \par\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0} \par}\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0}\ltrch Knowledge is only one part of understanding. Genuine understanding comes from hands on experience.  S. Papert } \par\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0} \par}\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0} \par}\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0}\ltrch Goal } \par\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0} \par}\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0}\ltrch The goal of this book is to explain elementary programming concepts}{\f0\fs24\b\lang1033{\*\listtag0} [}{\f0\fs28\b\ul\strike\lang1033{\*\listtag0}such as loops, abstractions, composition, and conditionals}{\f0\fs24\b\lang1033{\*\listtag0}] }{\f0\fs24\lang1033{\*\listtag0}to novices of all ages. } \par\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0} \par}\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0}\ltrch [DAK:  Before I comment on a phrase}{\f0\fs24\lang1033{\*\listtag0} in your text, I will mark it }{\f0\fs24\lang1033{\*\listtag0}by }{\f0\fs24\lang1033{\*\listtag0}bolding it, and either underlining it or }{\f0\fs24\lang1033{\*\listtag0}enclosing it in square brackets.  }{\f0\fs24\lang1033{\*\listtag0}I will mark suggested deletions by bracketing, bolding, underlining and striking out.  Generally I will insert further comment for a suggestion only if I think some explanation is necessary. } \par\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0} \par}\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0}\ltrch The introduction of technical terms in the first sentence of your introduction seems unnecessary and possibly intimidating.  I suggest} \par\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0} \par}\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\b\lang1033{\*\listtag0}\ltrch The goal of this book is to explain elementary programming concepts to novices of all ages. } \par\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0} \par}\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0}\ltrch (I will highlight my suggested rewording by bolding the font.)  Or  to suggest the relative unimportance of the sub-clause, make it an aside by parenthesizing it:} \par\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0} \par}\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\b\lang1033{\*\listtag0}\ltrch The goal of this book is to explain elementary programming concepts (such as loops, abstractions, composition, and conditionals) to novices of all ages. } \par\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0} \par}\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0}\ltrch The original sentence is linguistically and logically correct in your original, so with this comment I am acting more like an 'editor' than a 'proofreader'.  } \par\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0}\ltrch However I shouldn't presume to offer editorial comment until you invite it, or before I understand what tone and style you want.  From here on I will restrict my role to proofreader for language and readability issues (grammar, confusing or unclear phrasing, vocabulary, usage, meaning, connotation, idiom etc.) until you ask otherwise. /DAK]} \par\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0} \par}\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0}\ltrch I also believe that learning by experimenting and solving problems is }{\f0\fs24\b\lang1033{\*\listtag0}[}{\f0\fs28\b\ul\strike\lang1033{\*\listtag0}the}{\f0\fs24\b\lang1033{\*\listtag0}]} \par\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0}\ltrch central to human knowledge acquisition. } \par\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0} \par}\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0}\ltrch Therefore I propose to }{\f0\fs24\b\lang1033{\*\listtag0}[understand] present }{\f0\fs24\lang1033{\*\listtag0}the concepts }{\f0\fs24\b\lang1033{\*\listtag0}[based on] through}{\f0\fs24\lang1033{\*\listtag0} simple problems. } \par\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs28\b\ul\lang1033{\*\listtag0} \par}\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0}\ltrch [DAK: 'understand' applies to the student, not the teacher.  I suggest 'explain', 'present' or 'introduce'.  'Based on' is a static relationship that isn't appropriate to the active concept in this sentence.  I suggest 'through' or 'using'.  So the sentence might read} \par\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0} \par}\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\b\lang1033{\*\listtag0}\ltrch Therefore I propose to present the concepts through simple problems.}{\f0\fs24\lang1033{\*\listtag0} /DAK]} \par\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0} \par}\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0}\ltrch My ultimate goal is to teach you object-oriented programming because it provides an excellent metaphor for teaching programming. However, teaching object-oriented programming requires some basic notions of abstraction}{\f0\fs24\b\lang1033{\*\listtag0}[}{\f0\fs28\b\ul\strike\lang1033{\*\listtag0}s}{\f0\fs24\b\lang1033{\*\listtag0}]}{\f0\fs24\lang1033{\*\listtag0}. } \par\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0} \par}\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0}\ltrch Therefore, I wrote this book to present these basic programming concepts with the special perspective that this book is the first of a series of two books. The current book is completely self-contained and does not require}{\f0\fs24\b\lang1033{\*\listtag0} [] you }{\f0\fs24\lang1033{\*\listtag0}to read }{\f0\fs24\lang1033{\*\listtag0}the next one. } \par\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0} \par}\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0}\ltrch [DAK: I mark suggested insertions in-line and bolded, immediately following empty brackets. /DAK]} \par\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0} \par}\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0} \par}\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0}\ltrch The second book introduces a new robot that can be programmed. It focuses on}{\f0\fs24\b\lang1033{\*\listtag0} [intermediary] intermediate-level }{\f0\fs24\lang1033{\*\listtag0}topics such as}{\f0\fs24\b\lang1033{\*\listtag0} [finding path in maze] finding a path through a maze }{\f0\fs24\lang1033{\*\listtag0}or drawing fractals. } \par\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0} \par}\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0}\ltrch It also acts as a companion book for}{\f0\fs24\b\lang1033{\*\listtag0} [the persons] people }{\f0\fs24\lang1033{\*\listtag0}who want }{\f0\fs24\lang1033{\*\listtag0}to know more, who want to adapt the environment to their own needs. It introduces object-oriented programming. } \par\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0} \par}\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0}\ltrch [DAK: 'the persons' is permissible but unidiomatic.  'people who want', or 'those who want' are more common.  Other phrases are also possible.  The meanings are nearly the same; the tone varies slightly, mostly in formality. /DAK]} \par\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0} \par}\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0} \par}\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0}\ltrch Audience } \par\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0} \par}\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0}\ltrch The ideal reader I have in mind is a person that wants to have fun programming. This person may be a teenager or an adult, a teacher in high-school, or somebody willing to teach programming to kids in any organization. This person does not have to be fluent in programming in any language. } \par\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0} \par}\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0}\ltrch The material of this book has been primarily developed for my}{\f0\fs24\b\lang1033{\*\listtag0} [wife who] wife, who }{\f0\fs24\lang1033{\*\listtag0}is a }{\f0\fs24\b\lang1033{\*\listtag0}[physic] physics }{\f0\fs24\lang1033{\*\listtag0}and mathematics teacher in a}{\f0\fs24\b\lang1033{\*\listtag0} [french] French }{\f0\fs24\lang1033{\*\listtag0}school (}{\f0\fs24\b\lang1033{\*\listtag0}[] where the }{\f0\fs24\lang1033{\*\listtag0}students are between 11}{\f0\fs24\b\lang1033{\*\listtag0} [to] and }{\f0\fs24\lang1033{\*\listtag0}15 years old). } \par\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0} \par}\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\b\lang1033{\*\listtag0}\ltrch [Late] In late }{\f0\fs24\lang1033{\*\listtag0}1998, my wife had to teach computer}{\f0\fs24\b\lang1033{\*\listtag0} [sciences] science }{\f0\fs24\lang1033{\*\listtag0}and we got frustrated by the lack of}{\f0\fs24\b\lang1033{\*\listtag0} [adapted] appropriate }{\f0\fs24\lang1033{\*\listtag0}material. } \par\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0}\ltrch We were dreaming about a way to teach a process of facing problems and finding solutions. My wife started to teach HTML, Word and similar }{\f0\fs24\b\lang1033{\*\listtag0}[not exciting] }{\f0\fs24\b\lang1033{\*\listtag0}unexciting }{\f0\fs24\lang1033{\*\listtag0}topics}{\f0\fs24\b\lang1033{\*\listtag0} [], }{\f0\fs24\lang1033{\*\listtag0}and she was }{\f0\fs24\b\ul\lang1033{\*\listtag0}absolutely not satisfied}{\f0\fs24\lang1033{\*\listtag0}. } \par\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0} \par}\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0}\ltrch [DAK: 'not exciting' and '}{\f0\fs24\lang1033{\*\listtag0}absolutely not satisfied' are }{\f0\fs24\lang1033{\*\listtag0}slangy.  The first  doesn't read smoothly in this sentence, so I suggested a change. }{\f0\fs24\lang1033{\*\listtag0} The second reads OK, and seems to fit your desired tone, so I didn't suggest a change.  If you ask me to eliminate slang I will try, but it would be difficult to remove all slang and still be informal and idiomatic.  See my comment and question at the end of this doc. /DAK]} \par\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0} \par}\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0}\ltrch She was surprised by the fact that a lot of material was simply ad-hoc and }{\f0\fs24\b\lang1033{\*\listtag0}[not promoting] }{\f0\fs24\b\lang1033{\*\listtag0}didn't promote }{\f0\fs24\lang1033{\*\listtag0}any scientific attitude.} \par\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0} \par}\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0}\ltrch In addition we were aware of the work on Logo and liked the idea of }{\f0\fs24\b\lang1033{\*\listtag0}[}{\f0\fs28\b\ul\strike\lang1033{\*\listtag0}the}{\f0\fs24\b\lang1033{\*\listtag0}]} \par\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0}\ltrch experimentation as a basis for learning. We were aware that Smalltalk was influenced by the ideas of Papert and Logo}{\f0\fs24\b\lang1033{\*\listtag0}[], }{\f0\fs24\lang1033{\*\listtag0}and }{\f0\fs24\b\lang1033{\*\listtag0}[}{\f0\fs28\b\ul\strike\lang1033{\*\listtag0}by the fact}{\f0\fs24\b\lang1033{\*\listtag0}]}{\f0\fs24\lang1033{\*\listtag0} that it originated from}{\f0\fs24\b\lang1033{\*\listtag0} [a research project to teach] }{\f0\fs24\lang1033{\*\listtag0}research on teaching programming to kids. Moreover Smalltalk has a simple syntax that mimics natural language. [] \{paragraph break\}} \par\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0}\ltrch [DAK: I will mark suggested insertions of non-textual items like breaks by inserting the name in curly braces. /DAK]} \par\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0} \par}\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0}\ltrch At that time Squeak arrived}{\f0\fs24\b\lang1033{\*\listtag0} [in] at }{\f0\fs24\lang1033{\*\listtag0}a mature state and books started to}{\f0\fs24\b\lang1033{\*\listtag0} [be] become }{\f0\fs24\lang1033{\*\listtag0}available in late 1999. So I started and wrote the present book. } \par\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0} \par}\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0}\ltrch The environments I use in this book and its companion book}{\f0\fs24\b\lang1033{\*\listtag0} [is] are }{\f0\fs24\lang1033{\*\listtag0}fully working}{\f0\fs24\b\lang1033{\*\listtag0}[], }{\f0\fs24\lang1033{\*\listtag0}and went}{\f0\fs24\b\lang1033{\*\listtag0} [over] through }{\f0\fs24\lang1033{\*\listtag0}several iterations}{\f0\fs24\b\lang1033{\*\listtag0} [and] of }{\f0\fs24\lang1033{\*\listtag0}improvements based on the feedback we got from teachers.  A}{\f0\fs24\b\lang1033{\*\listtag0} [constant point] guiding rule }{\f0\fs24\lang1033{\*\listtag0}in our work has been to modify}{\f0\fs24\b\lang1033{\*\listtag0} [as few as possible the Squeak environment as] the Squeak environment as little as possible, as }{\f0\fs24\lang1033{\*\listtag0}our goal is that readers }{\f0\fs24\b\lang1033{\*\listtag0}[can extend and develop other ideas] will be able to extend these ideas and develop others}{\  f0\fs24\lang1033{\*\listtag0}.} \par\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0} \par}\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0}\ltrch in Squeak.  }{\f0\fs24\b\lang1033{\*\listtag0}[Still has] This has had }{\f0\fs24\lang1033{\*\listtag0}for example the consequence that we did not provide an adapted debugger that}{\f0\fs24\b\lang1033{\*\listtag0} [would] could }{\f0\fs24\lang1033{\*\listtag0}have hidden some irrelevant details. } \par\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0} \par}\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0} \par}\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0}\ltrch [DAK; Please send me your feedback about these comments, and your instructions and preferences for how I proofread later pages.  I am interested in your suggestions about formatting, which issues you are interested in and which I shouldn't waste my time on, etc.  /DAK]} \par\pard\plain\ltrpar\ql\s20\sl240\slmult1\itap0{\f0\fs24\lang1033{\*\listtag0}}} 

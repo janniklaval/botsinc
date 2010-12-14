@@ -1,0 +1,243 @@
+% $Author: stef $
+% $Date: 2008-04-04 17:14:31 +0200 (Fri, 04 Apr 2008) $
+% $Revision: 318 $
+%=================================================================
+\ifx\wholebook\relax\else
+% --------------------------------------------
+% Lulu:
+    \documentclass[a4paper,10pt,twoside]{book}
+    \usepackage[
+        papersize={6in,9in},
+        hmargin={.75in,.75in},
+        vmargin={.75in,1in},
+        ignoreheadfoot
+    ]{geometry}
+    \input{../common.tex}
+    \pagestyle{headings}
+    \setboolean{lulu}{true}
+% --------------------------------------------
+% A4:
+%   \documentclass[a4paper,11pt,twoside]{book}
+%   \input{../common.tex}
+%   \usepackage{a4wide}
+% --------------------------------------------
+    \graphicspath{{figures/} {../figures/}}
+    \begin{document}
+%   \renewcommand{\nnbb}[2]{} % Disable editorial comments
+    \sloppy
+\fi
+
+\chapter{L'environment pica}\label{cha:environment}
+
+
+Dans ce chapitre, je vais pr\'esenter l'environnement pica et  vous montrer comment obtenir des outils et sauvegarder vos scripts. Je vais aussi revenir sur la notion de messages et  montrer que vous pouvez demander \`a l'environnement, non seulement comment ex\'ecuter un message, mais aussi comment imprimer le r\'esultat d'un message d'ex\'ecution. 
+
+
+\section{Le menu principal }
+
+Lorsque vous cliquez sur l'arri\`ere plan, vous obtenez le menu principal de l'environnement, comme le montre la Figure~\ref{fig:allmenus}.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[!h]
+	\centerline{\includegraphics[width=\textwidth]{allMenu}}
+	\caption{Les options du menu de l'environnement\label{fig:allmenus}}
+\end{figure}
+
+Si vous voulez savoir ce que fait un \'el\'ement particulier du menu, d\'eplacez simplement le pointeur de la souris dessus pendant une seconde, et voil\`a! Une bulle devrait appara\^itre d\'ecrivant l'\'el\'ement. Le menu principal donne acc\`es \`a cinq principaux groupes de fonctionnalit\'es: acc\`es aux outils, capture d'\'ecran, acc\`es \`a certains comportements de robots, apparence, et sauvegarde de l'environnement. Les sous-menus sont regroup\'es comme suit: 
+\begin{itemize}
+\item Le menu \menu{open} recueille plusieurs outils tels que le navigateur de code pour robot, l'espace de travail Bot, un navigateur de fichiers, et d'autres outils que je pr\'esenterai si besoin. 
+
+\item Le menu \menu{BotsInc actions} recueille plusieurs actions telles que d'indiquer la version de l'environnement ou supprimer tous les robots et leurs traces, ainsi que certaines actions pour r\'einstaller l'environnement en cas de besoin: la r\'einstallation par d\'efaut des pr\'ef\'erences r\'einitialise les pr\'ef\'erences que vous avez modifi\'e \`a l'aide du menu apparence \`a leurs valeurs par d\'efaut. 
+
+\item  Le menu \menu{appearance}  recueille les actions qui modifient l'apparence de l'environnement telles que les polices utilis\'ees, le mode plein \'ecran et la couleur de l'arri\`ere plan. 
+\end{itemize}
+
+
+\section{L'obtention d'un espace de travail Bot }
+
+S'il vous arrive de fermer l'espace de travail Bot  par d\'efaut, ne vous inqui\'etez pas. Vous pouvez en obtenir facilement un nouveau \`a partir du volet bleu fonc\'e, comme le montre (mais pas en bleu) le c\^ot\'e gauche de la figure~\ref{fig:caroflaps}, ou \`a partir du menu principal, comme le montre la figure~\ref{fig:allmenus}. Pour installer un nouvel espace de travail Bot dans le volet de travail, ouvrez le volet de travail (volet inf\'erieur) et d\'eposez l'espace de travail Bot du volet bleu dans le volet inf\'erieur.
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=7cm]{smallcaroflap}\hfill\includegraphics[width=7cm]{FullTurtleWorkspace}
+\caption{L'obtention d'un nouvel espace de travail Bot depuis les volets \label{fig:caroflaps}}
+\end{center}
+\end{figure}
+
+Le volet bleu fonc\'e contient d'autres outils que nous allons utiliser plus tard. Le second outil est, en fait, un navigateur de code que vous allez utiliser lorsque vous d\'efinirez de nouvelles  m\'ethodes aux robots. 
+
+L'environnement contient un outil simple (Figure~\ref{fig:rohals}) qui r\'epertorie les messages les plus importants qu'un robot peut comprendre. Vous pouvez obtenir l'acc\`es \`a cet outil via le menu \menu{open} vocabulary ou le menu help (open vocabulary). Le volet vocabulaire r\'epertorie les messages, regroup\'es selon leur type. Par exemple, les messages \ct{east}, \ct{north}, etc sont \'enum\'er\'es selon  les directions absolues. 
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=8cm]{picaAllHaloAnnotated}
+\caption{Le clic droit sur un robot apporte son halo de handles.\label{fig:rohals}}
+\end{center}
+\end{figure}
+
+
+\section{Interaction avec Squeak }
+
+L'interaction avec Squeak est bas\'ee sur l'hypoth\`ese que vous avez une souris \`a trois boutons, mais il existe des \'equivalents "bouton" pour une souris Windows  \`a deux boutons ou une souris Macintosh \`a un bouton, comme indiqu\'e dans le tableau 5-1. Chaque bouton est associ\'e \`a un ensemble logique d'op\'erations. Le bouton de gauche permet d'obtenir des menus contextuels, de pointer ou de s\'electionner, le bouton du milieu permet la manipulation de fen\^etres (mettre une fen\^etre en avant ou la d\'eplacer), et le bouton droit permet d'obtenir des " handles", qui sont des boutons ronds peu color\'es flottants autour d'\'el\'ements graphiques (comme le montre la figure~\ref{sketchWithHalo}). Conjointement, les " handles" sont appel\'es \emph{halo}.  Les " handles" sont utiles car ils vous permettent d'interagir directement avec le robot. Je vais les pr\'esenter en d\'etail dans le chapitre suivant. 
+
+\noindent
+\setlength{\extrarowheight}{1mm}
+{\small \begin{tabular}{p{22mm}p{25mm}p{25mm}p{25mm}}
+\hline
+&\textbf{\textsf{Pointing and Selecting}}&\textbf{\textsf{Context-Sensitive Menus}}&\textbf{\textsf{Open the Halo}}\\ \hline
+Three Buttons:&Left click&Center click&Right click\\ 
+Windows 2-button equivalent: &Left click &Alt-left click&Right click\\ 
+Mac 1-Button equivalent:&Click&Option-click&Command-click\\ \hline
+\end{tabular}}
+Mouse Button and Key Combinations 
+
+
+
+\section{Utilisation de l'espace de travail Bot pour enregistrer un script }
+
+L'espace de travail Bot poss\`ede cinq boutons et un menu qui vous permet de sauvegarder des scripts.Le bouton \menu{Do It All} ex\'ecute enti\`erement  le script contenu dans l'espace de travail. Le bouton \menu{Do It} ex\'ecute la partie du script qui est  s\'electionn\'e dans l'espace de travail. Le bouton \menu{Clear Trails} efface seulement les traces de robots sans enlever les robots eux-m\^emes. Le bouton Clear Robots supprime uniquement les robots sans effacer leurs traces. Le bouton \menu{Clear All} supprime tous les robots et leurs traces. 
+
+Une fois que vous avez \'ecrit un script, vous pouvez l'enregistrer dans un fichier pour une utilisation future. L'espace de travail Bot offre un moyen pour sauvegarder et charger des fichiers via le menu espace de travail. Cliquez sur le contenu de l'espace de travail pour faire appara\^itre son menu associ\'e, comme le montre la figure~\ref{fig:turtleMenu}. L'\'el\'ement \menu{save contents} du menu sauvegardera enti\`erement le contenu  de l'espace de travail dans un fichier. La s\'election de cette option du menu affiche une bo\^ite de dialogue, comme le montre la figure. Notez que le syst\`eme v\'erifie si un fichier portant le m\^eme nom existe d\'ej\`a. Si un tel fichier existe d\'ej\`a, le syst\`eme vous donne le choix de remplacer le fichier ou de l'enregistrer sous un autre nom. 
+
+\begin{figure}[h]
+\includegraphics[width=6cm]{saveContents}\includegraphics[width=3cm]{enteringFileName}\includegraphics[width=3cm]{overwrite}
+\caption{A gauche : Les options du menu de l'espace de travail Bot. Au milieu :  Sp\'ecification du nom du fichier dans lequel le script va \^etre enregistr\'e. A droite: Si un fichier existe d\'ej\`a, vous pouvez le remplacer ou le renommer. \label{fig:turtleMenu} \label{fig:enteringFileName}}
+\end{figure}
+
+
+\section{Chargement d'un script }
+
+Pour charger un script, vous devez utiliser une liste de fichiers et un outil vous permettant de s\'electionner et de charger diff\'erents fichiers dans Squeak. Vous pouvez obtenir une liste de fichiers en s\'electionnant l'\'el\'ement du menu \menu{open file list} \`a partir du menu principal. Une liste de fichiers comprend plusieurs volets. Le volet en haut \`a gauche vous permet de naviguer dans les "volumes" et les dossiers; \`a chaque fois que vous s\'electionnez un \'el\'ement dans ce volet, le volet en haut \`a droite est mis \`a jour. Il affiche tous les fichiers contenus dans le dossier que vous avez s\'electionn\'e dans le volet gauche. Lorsque vous s\'electionnez un fichier dans le volet de droite, le panneau du bas affiche automatiquement son contenu. La figure~\ref{fig:filelistOpen} montre que nous sommes dans le dossier "Bot testing", dans lequel le fichier \textsf{square.text} fichier est s\'electionn\'e. 
+
+
+\begin{figure}[h]\begin{center}
+\includegraphics[width=12cm]{filelistOpenAnnotated}
+\caption{La liste de fichiers est ouverte pour le script  \ct{square.text}.\label{fig:filelistOpen}}\end{center}
+\end{figure}
+
+ 
+
+Pour charger un script, il vous suffit simplement de copier le contenu du volet bas en utilisant l'\'el\'ement du menu copy et de le coller dans l'espace de travail Bot \`a l'aide de paste, comme vous le feriez dans n'importe quel \'editeur de texte. 
+
+\section{La capture d'\'ecran }
+
+Pour conserver une trace de vos dessins, vous pouvez utiliser la fonctionnalit\'e de capture d'\'ecran de votre ordinateur. Cependant, avec certains ordinateurs, la capture d'\'ecran est probl\'ematique. Pour \'eviter ces probl\`emes, l'environnement offre un m\'ecanisme de capture d'\'ecran simple qui fonctionne sur n'importe quel ordinateur. Affichez le menu principal en cliquant sur l'arri\`ere plan de l'environnement. Le menu propose deux \'el\'ements pour la capture, \menu{capture screen} et \menu{capture and save image}, comme le montre la figure~\ref{screenCapture}. 
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=7cm]{screenCapture}\includegraphics[width=7cm]{positioningScreen}
+\caption{A gauche: Deux possibilit\'es pour capturer et sauvegarder une capture d'\'ecran. A droite : Le curseur a chang\'e, indiquant que Squeak est pr\^et pour la capture d'\'ecran. Maintenant, cliquez pour positionner un coin de la zone rectangulaire que vous voulez capturer. }\label{screenCapture}
+\end{center}
+\end{figure}
+
+
+La plus facile des deux options consiste \`a utiliser l'\'el\'ement capture and save image du menu. Lorsque vous s\'electionnez cet \'el\'ement, Squeak montre qu'il est pr\^et pour la capture d'\'ecran en changeant la forme du curseur (un coin), comme le montre la partie droite de la figure~\ref{screenCapture}. Placez le curseur dans le coin de la zone rectangulaire que vous voulez capturer, cliquez et faites glisser la souris pour d\'elimiter la r\'egion que vous voulez. La r\'egion est affich\'ee dans le coin inf\'erieur gauche de la fen\^etre de Squeak, et Squeak vous invite \`a entrer le nom du fichier sans extension qu'il va sauvegarder. 
+
+
+Si vous voulez capturer une r\'egion de l'\'ecran, utiliser l'\'el\'ement capture screen du menu. Dans ce cas, Squeak ne vous invite pas \`a enregistrer le fichier mais cr\'ee, \`a la place, une image sur le bureau Squeak, que vous pouvez enregistrer en appelant d'abord le "handles" par un clic droit sur la capture d'\'ecran. Un certain nombre de diff\'erents "handles" devrait appara\^itre autour de l'image, comme le montre la figure~\ref{sketchWithHalo}. Une fois que le halo, qui est un groupe de "handles" , apparait autour de votre image, cliquez sur le "handle" rouge, qui ouvre un menu d'actions que vous pouvez appliquer \`a l'image. S\'electionnez \menu{export} et le format dans lequel l'image doit \^etre sauvegard\'ee. Squeak vous demandera le nom du fichier. Notez que vous pouvez importer ces fichiers dans Squeak en les d\'eposant depuis le bureau vers le bureau Squeak. 
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=4cm]{sketchWithHalo}\includegraphics[width=9cm]{sketchExportMenu}
+\caption{Appelez le halo et choisissez l'\'el\'ement \menu{export}  du menu de l'handle rouge pour enregistrer l'image sur le disque.} \label{sketchWithHalo}
+\end{center}
+\end{figure}
+
+
+
+\section{R\'esultats de messages}
+
+En Smalltalk, les objets ne communiquent qu'en envoyant et recevant des messages en provenance et vers d'autres objets. Une fois qu'un objet re\c coit un message, il l'ex\'ecute, et en plus, renvoie un r\'esultat. Un r\'esultat est un objet que l'objet destinataire a retourn\'e \`a l'exp\'editeur. La communication entre objets au moyen de messages est similaire \`a la communication entre personnes en envoyant des lettres: Des lettres que nous recevons nous obligent \`a effectuer certaines actions (comme un avertissement du ramasseur d'animaux pour maintenir notre chien en laisse), tandis que d'autres pourraient nous obliger \`a signer un accus\'e de r\'eception pour  la lettre re\c cue (lettre recommand\'ee).
+
+
+En Squeak, le destinataire d'un message renvoie toujours un r\'esultat, qui par d\'efaut est le destinataire du message. Toutefois, ce r\'esultat n'a pas souvent d'int\'er\^et. Par exemple, envoyer le message \ct{go: 100} \`a un robot indique au robot de se d\'eplacer de 100 pixels dans sa direction actuelle. Mais nous n'avons pas besoin du r\'esultat retourn\'e, qui dans ce cas est le robot lui-m\^eme, donc dans ce cas, on ignore le r\'esultat. Dans de nombreux cas, cependant, le r\'esultat d'une ex\'ecution message est important. Par exemple, l'expression \ct{2 + 3} envoie le message + 3 \`a l'objet 2, qui renvoie l'objet 5. L'envoi du message color \`a un robot retourne sa couleur actuelle. Le r\'esultat d'un message peut \^etre utilis\'e dans le cadre d'un autre message pour cr\'eer un message compos\'e. Par exemple, lorsque l'expression \ct{(2 + 3) * 10} est ex\'ecut\'ee, l'expression \ct{2 + 3} est ex\'ecut\'ee, le message + 3 est envoy\'e \`a l'objet 2, et cela retourne 5. Le r\'esultat 5 est alors utilis\'e en tant qu'objet et un second message, * 10, est envoy\'e. Ainsi 5 est le destinataire du message, puis il renvoie le r\'esultat 50. 
+
+L'environnement Squeak vous permet d'ex\'ecuter des messages sans traiter avec le r\'esultat de messages, et il vous permet \'egalement d'ex\'ecuter des messages et d'imprimer la valeur des messages retourn\'es. La section suivante illustrent cette diff\'erence en d\'etail. 
+
+%Note
+\note{
+Un r\'esultat est un objet que l'objet destinataire renvoie \`a l'objet qui a envoy\'e le message. Par exemple, \ct{2 + 5} renvoie 7 et  pica color retourne la couleur de pica, un objet color. }
+ 
+
+Dans la figure~\ref{fig:printitMenu}, l'expression \ct{50 + 90} est s\'electionn\'ee, puis en utilisant le menu l'expression est ex\'ecut\'ee, et le r\'esultat, 140, est imprim\'e sur l'\'ecran. 
+
+\begin{figure}[h]
+\includegraphics[width=3.8cm]{selectingExp}\hfill \includegraphics[width=3.5cm]{selectMenu}\hfill\includegraphics[width=3.5cm]{resultExpression}
+\caption{A gauche: La s\'election de l'expression 50 + 90. Au milieu : Ouverture du menu. A droite: L'ex\'ecution du message et le r\'esultat imprim\'e. \label{fig:printitMenu}}
+\end{figure}
+
+\section{L'ex\'ecution d'un script }
+Il existe trois fa\c cons d'ex\'ecuter un script.  
+
+\begin{enumerate}
+\item En utilisant les boutons de l'\'editeur de l'espace de travail Bot. Dans le chapitre 2, vous avez vu un moyen simple pour ex\'ecuter votre premier script en pressant le bouton Do It All de l'espace de travail Bot. Mais pour ex\'ecuter un script, vous pouvez \'egalement s\'electionner le texte que vous voulez ex\'ecuter avec la souris (la s\'election devient verte) et appuyez sur le bouton \menu{Do It} de l'espace de travail Bot. 
+
+\item En utilisant le menu. S\'electionnez la partie du script que vous voulez ex\'ecuter, comme le montre, par exemple, la figure~\ref{fig:doitMenu}. Ensuite, ouvrez le menu en appuyant sur le bouton du milieu de votre souris (ou appuyez sur la touche Option  tout en cliquant avec le bouton gauche), puis choisissez l'\'el\'ement do it (d) ou print it (p) du menu comme le montre la figure~\ref{fig:printitMenu}.
+
+\item En utilisant les raccourcis clavier. S\'electionnez un morceau de texte, puis appuyez sur Commande + D sur un Mac ou Alt + D sur un PC. 
+
+\end{enumerate}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=8cm]{doitViaMenu}
+\caption{S\'election d'un morceau d'un script et ex\'ecution en utilisant explicitement le menu.\label{fig:doitMenu}}
+\end{center}
+\end{figure}
+
+
+
+\section{Astuces}
+
+Pour s\'electionner automatiquement tout le texte d'un script, vous pouvez simplement cliquer au d\'ebut du texte (avant le premier caract\`ere), \`a la fin du texte, ou sur la ligne apr\`es la derni\`ere expression. Si vous voulez s\'electionner un mot, vous pouvez double-cliquer n'importe o\`u sur le mot. Si vous voulez s\'electionner une ligne, double-cliquez simplement au d\'ebut (avant le premier caract\`ere) ou \`a la fin (apr\`es le dernier caract\`ere) de la ligne. 
+
+\section{Deux exemples }
+
+Lorsque vous ex\'ecutez l'expression \ct{pica color}, qui demande au robot sa couleur en utilisant l'\'el\'ement do it (d) du menu, le message color est envoy\'e et ex\'ecut\'e. Cependant, vous avez l'impression que rien arrive. C'est parce que vous n'avez pas demand\'e au syst\`eme de faire quelque chose avec le r\'esultat de l'ex\'ecution message. Si vous \^etes int\'eress\'es par le r\'esultat d'un message, vous devez utiliser l'\'el\'ement \menu{print it (p)} du menu, comme le montre la figure~\ref{fig:colorPrintIt}. Cela a pour effet d'ex\'ecuter le morceau de code s\'electionn\'e \emph{et} d'afficher le r\'esultat retourn\'e par le dernier message dans le code. Dans la figure, l'expression \ct{Bot new} est ex\'ecut\'ee, puis le message color est envoy\'e au robot nouvellement cr\'e\'e. Le message \ct{color} est ex\'ecut\'e, et la couleur du robot destinataire est renvoy\'ee et affich\'ee, comme le montre la figure~\ref{fig:resultColorPrintIt}. Le texte \ct{(TranslucentColor r: 0.0 g: 0.0 b: 1.0 alpha: 0.847)} nous dit que la couleur du robot est une couleur transparente compos\'ee des trois composantes rouge, vert et bleu. 
+
+\begin{figure}
+\centerline{\includegraphics[width=8cm]{colorPrintIt}} 
+\caption{Ouvrez le menu et s\'electionnez l'\'el\'ement Print it (d) pour ex\'ecuter le morceau de code s\'electionn\'e et afficher le r\'esultat retourn\'e.  \label{fig:colorPrintIt}}
+\end{figure}
+
+
+
+\begin{figure}
+\centerline{\includegraphics[width=8cm]{resultColorPrintIt}} 
+\caption{Le r\'esultat du message est affich\'e comme une repr\'esentation textuelle d'une couleur.  \label{fig:resultColorPrintIt}}
+\end{figure}
+
+Regardons un dernier exemple pour s'assurer que vous comprenez lorsque vous utilise print it. Lorsque vous ex\'ecutez l'expression \ct{100 + 20} en utilisant le menu do it (d), le message \ct{+ 20} est envoy\'e \`a l'objet 100, ce qui ajoute 20. Toutefois, vous ne voyez rien. C'est normal, parce que dans un tel cas, l'ex\'ecution du message \ct{+ 20} renvoie un nouveau num\'ero correspondant \`a la somme, mais vous n'avez pas demand\'e \`a Squeak de l'afficher. Pour voir le r\'esultat, vous devez afficher le r\'esultat de l'ex\'ecution du message en utilisant l'\'el\'ement print it du menu. A partir de maintenant, nous allons \'ecrire "-Affichage de la valeur retourn\'ee:" pour indiquer que nous utilisons la commande "print" pour ex\'ecuter une expression et afficher le r\'esultat, comme le montre le script~\ref{scr:expression}. Notez que nous allons utiliser cette convention uniquement lorsque le r\'esultat est important. 
+
+\begin{script}[expression]{Affichage du r\'esultat d'ex\'ecution d'une expression }
+(100 + 20) * 10 
+-Printing the returned value: 1200
+\end{script}
+
+Il y a deux fa\c cons d'ex\'ecuter une expression: (1) en utilisant l'\'el\'ement Do It du menu pour ex\'ecuter une expression, et (2) en utilisant l'\'el\'ement \menu{Print it} du menu pour l'ex\'ecuter et afficher le r\'esultat retourn\'e. 
+
+\section{R\'esum\'e}
+
+\begin{itemize}
+\item Pour ex\'ecuter une expression, s\'electionnez une partie de texte repr\'esentant une ou plusieurs expressions et appuyez sur le bouton \menu{Do It} ou s\'electionnez l'\'el\'ement do it du menu  \`a partir du menu d'ex\'ecution. 
+
+\item  Un r\'esultat est un objet que vous obtenez \`a partir d'un message. Par exemple, \ct{pica color} renvoie la couleur du robot. 
+
+\item  Il y a deux fa\c cons d'ex\'ecuter une expression: (1) en utilisant l'\'el\'ement \menu{do it} du menu pour ex\'ecuter une expression, et (2) en utilisant l'\'el\'ement \menu{print it} du menu pour l'ex\'ecuter et afficher le r\'esultat retourn\'e. 
+
+
+\end{itemize}
+
+
+\ifx\wholebook\relax\else
+    \end{document}
+\fi
+
+%%% Local Variables:
+%%% coding: utf-8
+%%% mode: latex
+%%% TeX-master: t
+%%% TeX-PDF-mode: t
+%%% ispell-local-dictionary: "english"
+%%% End:

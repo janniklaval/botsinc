@@ -1,0 +1,54 @@
+
+Ducasse Ch6
+
+p58 Fig 6.2
+It may not be clear to all readers why that thickening line (which looks more like a wedge!) does what it is doing? I wonder if more clarity would be good here?
+
+>> I do not really know what I can do. 
+I stressed the instructions in the code.
+
+
+p58
+"using the method color: (pica color..."
+The brackets here are misleading to the reader as they look like syntax
+
+>> fixed
+
+p58
+"h:s:v" and "r:g:b" aren't explained clearly enough for some of your reader base imo. Consider slowing this little bit down?
+
+>> I removed hsv and explained.
+
+
+
+p58
+"For example the expression Color r: 1 g:0 b:0" 
+also confuses the reader as you are sending mixed messages re: the syntax -- is there a space or not after the colon ??
+
+>> fixed but this makes no dfference
+
+
+p58
+Script 6.4 - has the same problem as the above comment re: colon and spaces in the "r: 1 g:0 b:0" statement
+
+p58 Script 6.4
+"Produce a pure red"
+"To choose your color directlty" [sic]
+
+1) there is a typo on "directl
+2) does your reader know what this means with text in quotes in the scripts like this? I think it will confuse them - is it part of the script or not??
+
+>> fixed
+
+p59
+PLEASE NOTE YOU HAVE LEFT YOURSELF A FLAG HERE TO CHANGE IT LATER
+
+
+p59 - through to the end of Ch6:
+I will wait until you update this section as you say you are going to... my impression on this section is that it looks great fun :) but that it doesn't quite step the reader through each step of what to do closely and step-by-step enough? Please be careful of that? The pretty pictures are enticing but the steps of EXACTLY what to do to are less obvious and could lead to frustration quickly. 
+
+>> I will.
+
+d
+
+

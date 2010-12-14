@@ -1,0 +1,90 @@
+% $Author: stef $
+% $Date: 2008-04-04 17:14:31 +0200 (Fri, 04 Apr 2008) $
+% $Revision: 318 $
+%=================================================================
+\ifx\wholebook\relax\else
+% --------------------------------------------
+% Lulu:
+    \documentclass[a4paper,10pt,twoside]{book}
+    \usepackage[
+        papersize={6in,9in},
+        hmargin={.75in,.75in},
+        vmargin={.75in,1in},
+        ignoreheadfoot
+    ]{geometry}
+    \input{../common.tex}
+    \pagestyle{headings}
+    \setboolean{lulu}{true}
+% --------------------------------------------
+% A4:
+%   \documentclass[a4paper,11pt,twoside]{book}
+%   \input{../common.tex}
+%   \usepackage{a4wide}
+% --------------------------------------------
+    \graphicspath{{figures/} {../figures/}}
+    \begin{document}
+%   \renewcommand{\nnbb}[2]{} % Disable editorial comments
+    \sloppy
+\fi
+
+\chapter{}\label{cha:}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[h]
+	\centerline{\includegraphics{}}
+	\caption{Ready-to-use files for the Macintosh.  
+	\label{fig:macfiles}}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exofigwithsize}[0.5]{\includegraphics[width=3cm]{turtleMSmallStairs}}{A Staircase}\label{xp:letterA}
+You are not limited in your robot drawings to squares. You can create a wide range of geometrical figures.
+For example, here is a drawing of a small staircase. Write a script to reproduce this drawing. 
+\end{exofigwithsize}
+
+\begin{exonofigtitle}{Moving Clock Hands}
+Experiment with different angle values for each of the two robots; that is,change the angle values for the two turn 
+methods. Then, compare the effect of the method \ct{turnLeft: 60} (for pica) and \ct{turnRight: 300} (for daly). 
+You can see that turning left 60 degrees yields the same result as turning right 300 degrees. This is so because 
+the sum of the two values is 360 degrees, that is, a full circle. 
+\end{exonofigtitle}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{scriptfigwithsize}[0.4]{\includegraphics[width=5cm]{turtleMLetterA}}{The letter A}\label{scr:letterA}
+	| pica | 
+	pica := Bot new. 
+	pica north. 
+	pica go: 100. 
+	pica east. 
+	pica go: 100. 
+	pica south. 
+	pica go: 100. 
+	pica north. 
+	pica go: 50. 
+	pica west. 
+	pica go: 100
+\end{scriptfigwithsize}
+
+\begin{script}[myster1]{What does pica do? (Problem 1)}
+	| pica | 
+	pica := Bot new. 
+	pica go: 100. 
+	pica turnLeft: 45. 
+	pica go: 50. 
+	pica turnLeft: 45. 
+	pica go: 100 
+\end{script}
+
+
+
+\ifx\wholebook\relax\else
+    \end{document}
+\fi
+
+%%% Local Variables:
+%%% coding: utf-8
+%%% mode: latex
+%%% TeX-master: t
+%%% TeX-PDF-mode: t
+%%% ispell-local-dictionary: "english"
+%%% End:

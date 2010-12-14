@@ -1,0 +1,52 @@
+\section{Lazy Boolean Operations}
+For completeness we show you now a particular aspects of boolean methods in \st. In a first reading, we suggest you to skip this part. In \st, booleans offers another kind of conjunction and alternative messages named \index{or:}\ct{or:} and \index{and:}\ct{and:}. They are called lazy because they only execute their argument if required. The lazy and (\index{and:}\ct{and:}) only evaluates its argument if the receiver is true. The lazy or (\index{or:}\ct{or:}) only evaluates its argument if its receiver is false. 
+As the arguments may not be executed, the arguments of these lazy message are expressed as blocks as we explained in the section~\ref{sec:useOfparent} of the Chapter~\ref{ch:ConditionalLoops}.
+
+
+
+
+\paragraph{Lazy And.}
+The following examples illustrate the difference between lazy and normal messages (see~\ref{scr:lazyand}). In the first line, the first expression \ct{(1=2)}, the receiver of the message \ct{and:} is false because 1 is not equals to 2, so the argument is not evaluated because the two conditions will never be true together regardless the value of the argument. Therefore it does not raise a division by zero error. The second line uses the \ct{\&} message. This message evaluates both the receiver and the argument automatically regardless the receiver value so the division by zero raises an error.  In the third line, the expression raises an error because the receiver is true and we have to evaluate the argument to determine the value of the composed expression.
+
+\begin{scriptwithtitle}{Lazy and non lazy and.}\label{scr:lazyand}
+(1=2) and: [10 / 0]
+\textrm{Does not raise a division by zero error because the receiver is false so the conjunction will never be true therefore there is no need to evaluate the argument.}
+
+(1=2) & (10 / 0)
+\textrm{Raise a division by zero error.}
+
+(1=1) and: [10 / 0]
+\textrm{Raise a division by zero error because 1=1 is true and the second condition is evaluated.}
+\end{scriptwithtitle}
+
+\begin{template}
+\textit{aBooleanExpression} \textbf{and: [} \textit{anotherBooleanExpression} \textbf{]}
+\end{template}
+
+
+\paragraph{Lazy Or.} Similarly for the lazy \ct{or:}, one does not need to evaluate the second condition if the receiver is true (see~\ref{scr:lazyor}). Therefore, the first example does not raise an error because the receiver is true. In the second example \ct{$\dim$} evaluates the receiver and the argument regardless the value of the receiver, so an error is raised. In the third example, the receiver is false so we need to evaluate the argument to get the value of the composed expression. So an error is raised. 
+
+\begin{scriptwithtitle}{Lazy and non lazy or.}\label{scr:lazyor}
+(1=1) or: [10 / 0]
+\textrm{Does not raise a division by zero error because the receiver is true and there is no need to evaluate the argument as at least one true is enough for an alternative to be true.}
+
+(1=1) | (10 / 0)
+\textrm{Raise a division by zero error.}
+
+(1=2) or: [10 / 0]
+\textrm{Raise a division by zero error.}
+\end{scriptwithtitle}
+
+\begin{template}
+\textit{aBooleanExpression} \textbf{or: [} \textit{anotherBooleanExpression} \textbf{]}
+\end{template}
+
+Lazy messages are interesting because they allow one to express conditions in easier way. The 
+second condition does not have to be valid all the time. Moreover, they are useful to avoid to compute unnecessary computation and are good to optimizing conditions. The method \ct{containsPoint: aPoint} defined for rectangles illustrates this behavior. This method determines whether a rectangle contains a point.
+
+\begin{method}
+Rectangle>>containsPoint: aPoint    "Answer whether aPoint is within the receiver."   ^origin <= aPoint and: [aPoint < corner]
+\end{method}
+
+If the origin (the topleft corner) of the rectangle is bigger than the point, there is no point to check whether the point is smaller that the rectangle corner (bottom right corner). 
+ 

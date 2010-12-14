@@ -1,0 +1,90 @@
+
+
+Bots inc.
+
+Ch13
+My impression in this whole sequence is that you've jumped and left some readers behind. Maybe you mean to do this. But so far, Part III seems to have made an uneven jump to me with sentences like this, and thoseI outline below. The sequence on introducing methods is lovely. It's just some of the parts around it, some of the difficult sentences and concepts you bring in casually that I feel are going to be hard for some readers. I therefore worry that you should be gentler in this chapter - you seem casual on some elements, as if you suddenly expect hte reader to run hard to keep up with you after the gentler curve of Part II.
+
+
+p117
+First paragraph seems overly complex in its concepts - is the reader really ready for "script calling another script", "script reuse", and "decompose a complex problem into simpler ones" at this point? these seem quite hefty jumps to me, from the material we just left at end end of Part 2. Do you need to introduce these more gently, and only introduce what you need to?
+
+
+>> I simplify a bit
+
+
+The second paragraph seems like a MUCH friendlier way to start the chapter and Part 2?? Nail the concept of a "method" and get going  ...
+
+
+p117
+"all robot messages used so far .... any robot" --> this is also quite a hard thing for your audience to realise, but you introduce it very quickly --- too quickly?
+
+>> Changed a bit sentences.
+
+
+p118-119
+"...we programming some simple.... dark blue flap"
+I'm worried you are going to lose your reader with this sentence - what are you referring to at this point??
+
+p119-120
+Continuity: "regular shapes" but you create the category "regular polygons"... reader may not appreciate any intended humour there.
+
+>> fixed
+
+p120
+"The type in your the method as shown by Method 13.1"
+Just another place to make sure the method is right next to its reference here. I read to quickly and went back to Figure 13.1 by mistake since there was nothing else nearby. Please make sure that Method 13.1 is directly below this text in the final printed book!
+
+>> fixed
+
+
+p120
+"for that, you can simply select the previous text and start typing"
+You may want to go further to make sure everyone knows how to start entering text into the code editor pane. You may laugh, but I recently tried to get someone psuedo-computer-literate to type text into the Excel VBA text pane, and they had a REAL problem getting going by just telling them to do it - I had to show them in the end (like move the cursor in the pain, click one, start typing etc...) It again depends on what exactly your reader assumptions are. 
+***ADDENDUM****
+OH YOU DO DO THIS but it comes later! right at the bootom of page 121... too late imo.
+       --
+
+>> ok 
+
+p121
+note ref to "Figure ??" which is presumably 13.4 (which doesn't sit next to the relevant text by the way)
+
+>> fixed
+
+p122
+"Execute script 13.3" --> "...and watch two squares etc." --> tell the reader what to expect so they can verify if it has indeed worked for them on their first method :)
+
+>> yes good idea. 
+
+p123
+Script v Method
+If this is an important distinction, I suggest bringing together again right in this section the examples 13.1 so the reader doesn't have to flick all over the place to make the distinctions clear to them.
+
+>> Done
+
+p123
+"This should not be a surprise..... receiving a message" (whole paragraph)
+This paragraph reads as rambling and too hard for your audience to digest in my opinion. The things you say in it aren't hard in themselves, but it's cognitively demanding.
+
+>> I changed
+
+
+p124
+box "Inside a method... messages to self"
+My impression in this whole sequence is that you've jumped and left some readers behind. Maybe you mean to do this. But so far, Part III seems to have made an uneven jump to me with sentences like this, and those above I outlined.
+
+>> I do not really see your point since this is what I said previously.
+
+
+
+p124
+The introduction of ^self isn't clear enough imo. Explain what happens more explicitly??
+
+>> I can't
+
+Good exercises!!!!
+
+
+
+

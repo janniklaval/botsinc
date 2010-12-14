@@ -1,0 +1,21 @@
+Chapter 19
+==========
+
+bottom of 171 - I'm not sure I understand point #2
+
+174 - there is a large gap in the middle of the page.  are we missing something here?
+
+>> no this is a latex problem
+
+175 - please tigthen up your explanation of how to debug/avoid endless conditional loops.  first, you say it's a difficult point to make, and then in the next paragraph you say it is trivial.  i wasn't able to follow the explanation very well and as we both know loop avoidance is a very significant element of programming basics.
+
+>> I could not find where I say that it was trivial to avoid loops. I said that we look at the trivial example, but I never said that avoiding loop is trivial. So I fixed it. 
+
+
+176 - section 5 seems more like a sidebar to me.  is there a specific reason you choose to include this discussion right here?  if so, try to link it more to the text.  it seems very choppy and out of place now.
+
+>> I presented all the constructs requiring or not [] so this is important to explain how to deal with [ ] since this may be confusing.
+
+177 - the summary section should include dialog and not just a table.  go over the salient points in the chapter once more, and then include your table.
+
+>> done

@@ -1,0 +1,211 @@
+% $Author: stef $
+% $Date: 2008-04-04 17:14:31 +0200 (Fri, 04 Apr 2008) $
+% $Revision: 318 $
+%=================================================================
+\ifx\wholebook\relax\else
+% --------------------------------------------
+% Lulu:
+    \documentclass[a4paper,10pt,twoside]{book}
+    \usepackage[
+        papersize={6in,9in},
+        hmargin={.75in,.75in},
+        vmargin={.75in,1in},
+        ignoreheadfoot
+    ]{geometry}
+    \input{../common.tex}
+    \pagestyle{headings}
+    \setboolean{lulu}{true}
+% --------------------------------------------
+% A4:
+%   \documentclass[a4paper,11pt,twoside]{book}
+%   \input{../common.tex}
+%   \usepackage{a4wide}
+% --------------------------------------------
+    \graphicspath{{figures/} {../figures/}}
+    \begin{document}
+%   \renewcommand{\nnbb}[2]{} % Disable editorial comments
+    \sloppy
+\fi
+
+\chapter{Installation et cr\'eation d'un robot}\label{cha:installation}
+
+R\'eglez votre chronom\`etre ! Cinq minutes d\`es maintenant, la cour de jeu de robot, appel\'e l'environnement, que vous emploierez dans ce livre sera en service et pr\^ets pour que vous puissiez vous amuser. Dans ce chapitre, vous apprendrez comment installer l'environnement, ferez la connaissance avec ses diff\'erentes parties, et commencerez \`a agir en interaction avec les robots se trouvant dans cet environnement. Vous apprendrez comment programmer ces robots pour accomplir des t\^aches exaltantes en leur envoyant des messages.
+
+Commen\c cons \`a installer l'environnement et pr\'eparons nous pour tous les d\'efis dans le reste du livre. Si votre environnement est d\'ej\`a install\'e, alors arr\^etez votre chronom\`etre, sautez la premi\`ere section, et plongez directement dans les sections suivantes, qui donnent une vue d'ensemble de l'environnement. Apr\`es que vous ayez acquis plus de facilit\'e avec les robots en chapitres ~\ref{cha:script} \`a ~\ref{cha:turning}, j'entrerai dans plus de d\'etail sur l'utilisation de l'environnement en chapitre \ref{cha:environment}.
+
+
+\newpage
+\section{Installation de l'environnement}
+
+L'environnement utilis\'e dans ce livre a \'et\'e d\'evelopp\'e pour fonctionner sur \Squeak. \Squeak est un environnement riche et puissant multim\'edia Open Source et est \'ecrit enti\`erement en Smalltalk et disponible librement pour la plupart des syst\`emes d'exploitation de l'ordinateur sur \url{http://www.squeak.org}. Notons, cependant, que vous n'emploierez pas la distribution par d\'efaut de \Squeak. En revanche, vous emploierez une distribution que j'ai pr\'epar\'ee pour utiliser avec ce livre. Il peut \^etre t\'el\'echarg\'e chez l'\'editeur de ce livre sur \url{http://www.apress.com}, dans la section de t\'el\'echargements.
+
+\Squeak fonctionne exactement pareil sur toutes les plates-formes. Cependant, pour faciliter un peu votre vie, j'ai dispos\'e plusieurs fichiers compress\'es plate-forme-d\'ependants. Le principe est exactement le m\^eme sur un Mac, PC, ou n'importe quelle autre plate-forme. Les seules diff\'erences sont dans les outils pour la d\'ecompression des fichiers et la mani\`ere dont vous appellerez \Squeak. Une fois que vous avez obtenu un dossier appel\'e \ct{ReadyToUse.zip}, vous le d\'ecompresserez et glisserez le dossier appel\'e \ct{Ready.image} (Mac) ou \ct{Ready[.image]} (PC) sur l'application \Squeak, et c'est fait ! Le fichier Ready[.image] contient l'environnement complet utilis\'e dans ce livre. Notez que vous pouvez obtenir des fichiers de lecture avec des noms l\'eg\`erement diff\'erents, mais cela ne devrait exercer aucun effet sur la fa\c con dont tout fonctionne.
+
+\subsection{Installation sur Macintosh}
+
+Pour l'installation sur Macintosh, vous devriez avoir un fichier d'archives ZIP nomm\'e \ct{readyToUse.zip}. Normalement, en double cliquant sur l'ic\^one du dossier devrait appeler le logiciel appropri\'e de d\'ecompression, tel que Stuffit Expander. Une fois que ces archives ont \'et\'e d\'ecompress\'ees, vous devriez finir avec quatre fichiers, suivant les indications du sch\'ema~\ref{fig:macfiles}. Vous devriez identifier deux fichiers : le fichier appel\'e \ct{Ready.image} et le fichier \emph{Squeak application} (celui sans extension de fichier sur la figure~\ref{fig:macfiles} ; appel\'e \Squeak).
+
+\begin{figure}[h]\centerline{\includegraphics{1-ReadyToUseMacZip2}\includegraphics[width=8cm]{2-macFiles2}}
+\caption{Dossiers pr\^ets \`a employer pour Macintosh. A gauche : les archives Zip. A droite : les fichiers d\'ecompress\'es.\label{fig:macfiles}}\end{figure}
+
+\subsection{Installation sur Windows}
+
+Pour l'installation sous Windows, vous devriez avoir un fichier d'archives ZIP nomm\'e \ct{readyToUse.zip}. Une fois que ces archives ont \'et\'e d\'ecompress\'ees en utilisant WinZip, vous devriez finir avec quatre fichiers, suivant les indications de la figure~\ref{fig:pcfiles}. Vous devriez identifier deux fichiers: le fichier appel\'e \ct{Ready} et le fichier \emph{Squeak application} (celui sans extension du fichier sur la figure~\ref{fig:pcfiles} ; appel\'e \Squeak).
+
+\begin{figure}[h]\centerline{\includegraphics{3-zipPC}\includegraphics[width=8cm]{4-readyPC}} 
+\caption{Dossiers pr\^ets \`a employer pour Windows. A gauche : les archives ZIP. A droite : les fichiers d\'ecompress\'es. \label{fig:pcfiles}}
+\end{figure}
+
+
+\section{Ouverture de l'environnement}
+
+Pour ouvrir l'environnement, glissez le dossier Ready[.image] sur l'application Squeak, c'est \`a dire, sur le fichier nomm\'e Squeak, suivant les indications de la figure~\ref{fig:dropImage}. Vous devriez obtenir l'environnement montr\'e sur la figure~\ref{fig:firstEnvironment}. Si vous n'obtenez pas cet environnement, alors lisez la section `` d\'epannage d'installation '' \`a la fin de ce chapitre.
+
+\begin{figure}[!h]\centerline{\includegraphics[width=6cm]{5-dropImage2} \hfill{ \  } \includegraphics[width=6cm]{6-readyDD}} 
+\caption{Glissement et chute du fichier image sur le dossier d'application Squeak ouvre l'environnement sur un Mac (gauche) ou sur un PC (droit).}
+\end{figure}
+
+
+\subsection{Astuces pour l'installation.}
+L'environnement peut \^etre ouvert simplement en double cliquant sur le fichier image. Cependant, il y a plusieurs inconv\'enients \`a ceci : Vous devrez identifier l'application Squeak, et parfois une autre application peut s'y m\^eler et essayer d'utiliser le fichier image. D'ailleurs, vous pouvez vous trouver embarrass\'e si vous avez de multiples installations de versions diff\'erentes de Squeak. Ainsi je propose que vous ouvriez toujours l'environnement en glissant et en laissant tomber le fichier image sur le dossier d'application de Squeak ou un nom d'emprunt.
+
+Notez que si vous n'avez pas assez d'espace pour l'installation sur votre disque dur, vous pouvez employer un nom d'emprunt au dossier de \ct{SqueakV3.sources}, qui peut \^etre mis en commun entre plusieurs installations.
+
+\important{Pour commencer l'environnement, glissez et laissez tomber le fichier Ready (avec l'extension \ct{.image} pour le Mac) sur l'application Squeak.} 
+
+
+
+
+\section{Premi\`eres interactions avec un robot}
+
+Une fois que vous avez ouvert l'environnement en glissant le appel\'e \ct{Ready[.image]} sur l'application Squeak comme expliqu\'e pr\'ec\'edemment, l'environnement que vous obtenez devrait ressembler \`a celui pr\'esent\'e sur la figure~\ref{fig:firstEnvironment}.
+
+\begin{figure}[!h]\centerline{\includegraphics[width=10cm]{7-firstEnvironmentAnnotated}} 
+\caption{L'environnement est pr\^et \`a \^etre utilis\'e.\label{fig:firstEnvironment}}
+\end{figure}
+
+L'environnement se compose d'une fabrique de robot et de deux volets. Un volet est un tiroir contenant des outils de programmation. Vous n'aurez pas besoin de ces derniers pendant un moment, et ainsi je les d\'ecrirai dans un autre chapitre. Vous devriez voir un petit robot bleu au milieu de l'\'ecran. Ce n'est pas un robot fait de fils et de m\'etal, mais un robot de logiciel, repr\'esent\'e vu du dessus, pointant vers le bord droit de l'\'ecran. Un robot est un cercle bleu rond ; il a deux roues et une petite t\^ete rouge qui pointe dans sa direction courante. Vous travaillez \`a travers ce livre, vous enverrez des ordres aux robots. Ces ordres sont appell\'es des \emph{messages}, et nous disons que les robots \emph{ex\'ecute} ces messages.
+
+Placez la souris au-dessus du robot et attendez une seconde. Une bulle s'affiche vers le haut avec quelques informations sur le robot, telle que sa situation actuelle et sa direction, omme le montre la figure ~\ref{fig:firstBalloon}.
+Puisque les moniteurs des ordinateurs ont des tailles et des r\'esolutions variables, la position de votre robot peut avoir d'autres valeurs.
+
+
+\begin{figure}[h]\centerline{\includegraphics[width=5cm]{8-firstBalloon2}}
+\caption{Placez la souris au-dessus d'un robot pour afficher vers le haut une bulle avec des informations sur le robot. \label{fig:firstBalloon}}
+\end{figure}
+
+
+\subsection{Envoi des messages \`a un robot}
+
+Vous pouvez interagir directement avec un robot en cliquant gauche sur le robot avec la souris (ou juste en cliquant avec un des boutons de la souris). Une bulle de transmission de messages appara\^it vers le haut, comme le montre l'image \`a gauche sur la figure~\ref{fig:go}. Dans cette bulle vous pouvez introduire des messages \`a envoyer au robot. Apr\`es avoir introduit vos messages, vous les envoyez au robot en appuyant sur la touche de retour, et le robot les ex\'ecutera.
+
+\begin{figure}[h]\centerline{\includegraphics[width=\linewidth]{9-sendingAMsg2}}
+\caption{\'etape 1 : Le clique gauche sur un robot fait appara\^itre une bulle de transmission de messages. \'etape 2 : Vous pouvez introduire un message au robot pour le faire avancer de 200 Pixel puis  appuyer sur la touche de retour. \'etape 3 : Le robot ex\'ecute le message ; il s'est d\'eplac\'e, laissant une trace sur l'\'ecran derri\`ere lui.\label{fig:go}}
+\end{figure}
+
+Par exemple, si vous introduisez le message \ct{go: 200} suivis de la touche de retour, vous avez dit au robot d'avancer de 200 Pixel dans sa direction courante. Si vous introduisez le message \ct{turnLeft: 20 + 70}, vous demandez au robot de se tourner \`a sa gauche (dans le sens contraire des aiguilles d'une montre)  de 20 + 70 = 90 degr\'es, comme le montre la figure~\ref{fig:turned}. Ce deuxi\`eme message est plus complexe que le pr\'ec\'edent, parce que la valeur repr\'esentant le nombre de degr\'es que le robot doit tourner est lui-m\^eme un message (que j'expliquerai bient\^ot), \`a savoir, \ct{20 + 70}. Nous appellerons de tels messages des \emph{messages compos\'es}.
+
+
+\begin{figure}[h]\begin{center}{\hfill\includegraphics[width=4cm]{10-turn20+702}\hfill\includegraphics[width=1.6cm]{11-turned2}\hfill}\end{center}
+\caption{A gauche: Envoie d'un message compos\'e. A droite: Le message \`a fait en sorte que le robot tourne sur sa gauche de 90 degr\'es.\label{fig:turned}}
+\end{figure}
+
+Quand le message \ct{color: Color green} est envoy\'ee au robot, il change sa couleur, comme nous pouvons le voir figure~\ref{fig:green}. (Vous aurez \`a imaginer la couleur verte dans l'image de couleur grise.)
+
+
+\begin{figure}[!h]\centerline{\hfill\includegraphics[width=4cm]{12-colorGreen2}\hfill\includegraphics[width=1.6cm]{13-green2}\hfill}
+\caption{A gauche: le robot est charg\'e de changer sa couleur \`a "vert". A droite: la couleur \`a chang\'ee.\label{fig:green}}
+\end{figure}
+
+
+Vous pouvez ne pas \`a comprendre le format des messages que je viens de pr\'esenter. Certains d'entre eux peuvent para\^itre un peu complexe. En fait,  \ct{color: Color green} est un autre composant d'un message. Je vous expliquerai plus tard comment vous pourrez d\'evelopper vos propres messages. Pour l'instant, il suffit de saisir les messages qui vous sont pr\'esent\'es afin que vous puissiez vous familiariser avec le robot de l'environnement. Si vous souhaitez r\'ep\'eter un message pr\'ec\'edent, vous n'avez pas \`a le retaper. Utilisez simplement les fl\`eches haut et bas pour naviguer sur les messages pr\'ec\'edents que vous avez envoy\'e au robot. Dans les chapitres ult\'erieures , vous apprendrez, \'etape par \'etape, tous les messages qu'un robot peut comprendre, et qui plus est, vous apprendrez \`a d\'efinir de nouveaux comportements pour vos robots. 
+
+%was note
+\important{Pour interagir avec un robot, cliquer dessus, \'ecrivez un message, et appuyez sur la touche "retour".}
+
+
+
+\section{Cr\'eer un nouveau robot}
+L'environnement contient d\'ej\`a un robot, mais maintenant je vais vous expliquer comment cr\'eer de nouveaux robots. Si vous n'\^etes pas satisfaits d'avoir seulement un robot, vous pouvez en cr\'eer un nouveau en envoyant le message appropri\'e \`a l'\emph{usine} de robots. Un robot usine est graphicalement repr\'esent\'e comme une bo\^ite orange, entour\'e d'une bo\^ite bleu clair, au milieu de laquelle le mot "Bot" est \'ecrit, comme le montre la figure~\ref{fig:classBalloon}. Dans le jargon Squeak, et en g\'en\'eral de le jargon de la programmation orient\'ee objet, un robot usine est appel\'e \emph{classe}. Les classes (usines produisant des objets, tels que les robots) ont un nom commen\c cant par une majuscule. Ainsi, c'est la classe \ct{Bot} et non \ct{bot}.
+
+\begin{figure}[!h]\centerline{\includegraphics[width=6cm]{14-classBalloon2}}
+\caption{Dans le jargon Squeak, un robot usine est appel\'e une classe. Les classes produisent des objets. La classe "Bot" produit de nouveaux robots. 
+ \label{fig:classBalloon}}
+\end{figure}
+
+Tout comme vous l'avez fait pour les robots, vous pouvez interagir avec un robot usine en lui envoyant des messages. Le message pour cr\'eer un nouveau robot est le message "new", comme le montre la figure~\ref{fig:turtleBoxNew}. Notez que les nouveaux robots cr\'e\'es, tel que votre robot original, pointent \`a la droite de l'\'ecran. Chacun des deux robots a une existence ind\'ependante, et vous pouvez envoyer des messages \`a chacun d'eux \`a tour de r\^ole. 
+
+
+\begin{figure}[!h]\centerline{\includegraphics[width=14cm]{15-creatingARobot2}}
+\caption{Etape 1: Commencez par saisir un message. Etape 2: Le message "new" a \'et\'e envoy\'e au robot usine. \'etape 3: En r\'eponse, l'usine a cr\'e\'e un robot et vous l'a d\'elivr\'e. 
+\label{fig:turtleBoxNew}}
+\end{figure}
+
+
+
+
+%was ddouble bar
+\important{Pour cr\'eer un nouveau robot, envoyer le message \emph{new} au robot usine, qui est la classe \ct{Bot}. Quand un robot est cr\'e\'e, il pointe toujours vers l'est, qui est, \`a la droite de l'\'ecran. }
+
+\section{Quitter et sauvegarder}
+
+L'arri\`ere plan de la fen\^etre de l'application Squeak est appel\'e le Monde. Le monde a un menu proposant un certain nombre de diff\'erentes options. Pour afficher le menu "monde", juste (\`a gauche), cliquez sur l'arri\`ere-plan. Vous devriez avoir un menu similaire \`a celui montr\'e dans la Figure~\ref{fig:worldMenu}. Le dernier groupe d'options se compose de toutes les actions que vous pouvez prendre pour quitter l'environnement ou  sauvegarder votre travail. 
+
+
+\begin{figure}[!h]
+\center{\includegraphics[width=8cm]{16-worldMenuAnnotated}}
+\caption{Le menu "Monde" inclus des actions pour quitter et sauvegarder.\label{fig:worldMenu}}
+\end{figure}
+
+En s\'electionnant l'\'el\'ement \menu{quit}, vous quitez simplement l'environnement sans sauvegarder votre travail. Le r\'esultat est que la prochaine fois que vous lancerez l'environnement, il sera exactement dans le m\^eme \'etat que la derni\`ere fois o\`u vous l'avez enregistr\'e. En s\'electionnant l'\'el\'ement \menu{save}, vous sauvegarderez enti\`erement l'environnement. La prochaine fois que vous d\'emarrez l'environnement, il sera exactement dans le m\^eme \'etat que la derni\`ere fois o\`u vous l'avez enregistr\'e.
+Enfin, si vous s\'electionnez l'\'el\'ement \menu{save as \ldots}, l'environnement vous invite \`a cr\'eer un nouveau nom, et il cr\'eera alors deux nouveaux fichiers avec ce nom: un avec l'extension .image et un autre avec l'extention \ct{.changes}. Voil\`a comment j'ai cr\'e\'e les fichiers \ct{Ready[.image]} et \ct{Ready.changes}. Pour ouvrir l'environnement que vous avez enregistr\'e avec un nouveau nom, faites glisser le fichier avec le nouveau nom qui a l'extension \ct{.image} sur le fichier 'ic\^one de l'application Squeak comme vous avez d\'emarer l'environnement avec un glisser-d\'eposer du fichier \ct{Ready[.image]}.
+
+
+\subsection{D\'epannage durant l'installation}
+Parfois, les choses ne vont pas comme elles devraient, donc dans cette section, je pr\'esenterai quelques informations qui pourraient vous aider si vous rencontrez des probl\`emes lors de l'installation. Tout d'abord, je vais vous expliquer le r\^ole des principaux fichiers que vous avez obtenu lorsque vous d\'ecompress\'e l'archive.
+Pour ex\'ecuter l'environnement fourni avec ce livre ou avec toutes les distributions Squeak, quatre fichirs sont n\'ecessaires. Les conna\^itre peut vous aider \`a r\'esoudredes probl\`emes que vous pouvez rencontrez. 
+
+\begin{description}
+\item{\textbf{Image and changes.}} Le fichier \ct{Ready[.image]}, appel\'e simplement le fichier image, ainsi que le fichier \ct{Ready.changes}, appel\'e simplement le fichier "changes", contiennent des informations sur votre syst\`eme actuel \Squeak. Ces deux fichiers sont automatiquement synchronis\'es par \Squeak et devrait \^etre en \'ecriture (qui est, non lecture seule). Chaque fois que vous enregistrez votre environnement, ces deux fichiers sont synchronis\'es. Vous ne devez pas les modifier avec un \'editeur de fichier ou changer le nom du fichier manuellement. Si vous souhaitez utiliser des noms diff\'erents, il suffit d'utiliser \menu{save as\ldots} de l'\'el\'ement menu du menu monde. \Squeak cr\'eera alors une nouvelle paire de fichiers pour vous. 
+
+\item{\textbf{Source.}} Le fichier nomm\'e \ct{SqueakV3.sources}, appel\'e le fichier \emph{sources}, contient le code source d'une partie de l'environnement Squeak. Vous n'aurez pas besoin de travailler \`a travers ce livre, donc n'essayer pas de le modifier manuellement. Toutefois, ce fichier doit toujours \^etre dans le m\^eme r\'epertoire que celui contenant le fichier "image".  
+
+\item{\textbf{Application.}} Les fichiers d'applications \ct{Squeak} pour Mac et \ct{Squeak.exe} pour PC sont l'application \Squeak. Chacun de ces fichiers est l'application qui s'ex\'ecute lorsque vous programmez en \Squeak. Il doit \^etre ex\'ecutable. Ce fichier est d\'enomm\'e \emph{application} \Squeak. Dans le jargon de l'informatique, cette application est appel\'ee \emph{virtual machine}, ou VM en plus court.
+\end{description}
+
+Gardez \`a l'esprit que les fichiers "'image" et "changes" doivent \^etre en \'ecriture. Certains syst\`emes d'exploitation modifient les propri\'et\'es des fichiers \`a "lecture seule" quand ils sont copi\'es \`a partir d'une source externe. Si cela se produit, Squeak vous avertit par un message, comme le montre la Figure~\ref{fig:readonlyfile}. Si vous recevez un tel message, il suffit de quitter Squeak sans sauvegarder, changer les propri\'et\'es du fichier pour permettre d'\'ecrire l'acc\`es, et de red\'emarrer.
+
+\begin{figure}[!h]\centerline{\includegraphics[width=\linewidth]{17-changesNotWritable}}\caption{Ce message appara\^it si le fichier "image" (Ready. [image]) ou "changes" (Ready.changes) n'est pas accessible en \'ecriture.\label{fig:readonlyfile}}
+\end{figure}
+
+Une autre probl\`eme possible que vous pouvez  rencontrez est li\'ee au fichier sources \ct{SqueakV3.sources}. Ce fichier ou un alias pointant vers ce fichier doit \^etre pr\'esent dans le r\'epertoire dans lequel le fichier "image" se trouve. Si le fichier lui-m\^eme n'est pas pr\'esent, vous pouvez recevoir le message montr\'e dans la figure~\ref{fig:sourcesMissing}. 
+Pour rem\'edier \`a ce probl\`eme, cr\'eez un alias pour le fichier source (\ct{SqueakV3.sources}) dans le r\'epertoire contenant le fichier "image", ou copier simplement le fichier "sources" dans le r\'epertoire qui contient le fichier image. Vous ne devriez pas avoir ce probl\`eme si vous utilisez la distribution de ce livre. 
+
+\begin{figure}[!h]%\center{\includegraphics{sourcesMissing}}
+\center{\includegraphics[width=\linewidth]{18-sourcesmissing2}}\caption{Messages possibles indiquant que le fichier "sources" (SqueakV3.sources) est manquant au r\'epertoire contenant le fichier "image".\label{fig:sourcesMissing}}
+\end{figure}
+
+
+\section{Conclusion}
+Pour d\'emarrer l'environnement, faites glisser le fichier \ct{Ready[.image]} ou un autre fichier que vous avez enregistr\'e avec l'extension \ct{.image} dans l'application Squeak. 
+
+\begin{itemize}
+\item Pour envoyer un message \`a un robot, faites un clic gauche sur celui-ci, \'ecrivez le message, et appuyez sur la touche "retour". 
+\item Pour cr\'eer un nouveau robot, envoyer le message \ct{new} \`a la classe \ct{Bot}, lequel est votre robot "usine".
+\item Quand un robot est cr\'e\'e, il pointe toujours vers l'est, qui est, \`a la droite de l'\'ecran. 
+\item Pour obtenir le menu permettant la sauvegarde de l'environnement, cliquez sur l'arri\`ere-plan.
+\end{itemize}
+
+
+
+\ifx\wholebook\relax\else
+    \end{document}
+\fi
+
+%%% Local Variables:
+%%% coding: utf-8
+%%% mode: latex
+%%% TeX-master: t
+%%% TeX-PDF-mode: t
+%%% ispell-local-dictionary: "english"
+%%% End:

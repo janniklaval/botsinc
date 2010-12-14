@@ -1,0 +1,84 @@
+23-Dec-04
+
+
+Ducasse Ch4
+***********
+
+p41
+"As the semicolon at the end of the names suggests" --> colon, not semicolon
+>> done
+
+
+
+p41
+Figure 4.1 next to its text please
+>> PIC-PLACEMENT
+
+
+
+
+p42 [diagram]
+Do you need to let hte reader know why East is the zero-direction? Did you tell them newly created objects always point East? I don't recall that. The heading "some angles" doesn't help much !! You don't mention absolute and relative orientation til a page or so later after all.... reader may need some help from you on this diagram therefore
+
+>> good catch it seems I removed this important information some time ago. I will add it to different chapters. 
+and say it again here. 
+I added some better pictures too and changes the caption headings
+
+
+p42
+script 4.1 and 4.2
+Perhaps worth adding right by the script a reminder of why these are here or what hte reader is supposed to do with them, e.g. "(Problem One: What do you think the robot will do here?")
+
+>> done
+
+p43
+Script 4.3 mentions "Caro turnleft:33" but the body text suggests "pica turnLeft:33" etc.
+CARO/PICA mix?
+>> fixed
+
+
+p43
+The two bullets where you explain the difference of results between absolutes and left/rights is not as clear as it could be imo -- consider clarifying some more? just you ask the reader to use their "mind's eye" quite a lot here and it's a tough concept... all a little too hard work on this little section of absolute/relative in my view Stephane
+
+>> The idea is to provide material for parents so I do not want to be too baby here. 
+
+Scripts 
+
+4.3 and 4.4
+Are hard to follow the diagrams from... this is because it isn't clear where the bot started? which is the start and which is the end of the diagram's journey? think it would help to make that clearer???
+
+>>I added for the second one a robot indicating the start but not for the first one since this is part of the exercise. I also added some comments in the code and some annotations in the 
+
+Script 4.5
+Odd that Pica jumps 200 then creates that horizontal line? fair enough, but the extra step might confuse the reader etc. Just a passing thought, probably nothing
+
+>> this is like that because else we would have to do the jump in the other direction anyway
+
+
+Script 4.6
+This feels like a REALLY important script to me... first time the reader is seeing that a script can be morphed to produce different results... do you agree? If so, I wonder if it would be worth strengthening the pedagogy in the section around and explaining Script 4.6... really step through it a little - - I get a feeling you may be losing up to 40%-50% of your readers here, if they are on their own. I guarantee they will have to be pouring over the current text quite carefully to follow it 100%. Consider really showing the full journey of the bots through this script for instance?
+
+>> I would not be that passionate since we asked all the time the people to change values and 
+experiment with the scripts. 
+
+
+p45
+"we have mentioned... time watch" --- easily missed, is that ref really there?
+
+>> fixed
+
+p46
+Asking the reader to draw a clock -- might need to make clear you are just showing them how to calculate the offset angles and drawing a particular time? don't let hte reader get confused and think they are drawing a close that updates itself etc. ??
+
+p46 want to define a polygon? ditto equilateral?
+
+p46
+I think this polygon challenge is a little too hard !!
+Perhaps give the equation written out at least??
+
+>> No readers should get challenged. Previous reviewers complained about having too much solutions. 
+
+p47
+"pace symbol" ?
+
+>> fixed

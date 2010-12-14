@@ -1,0 +1,139 @@
+
+\documentclass[a4paper,10pt,twoside]{book}
+\usepackage[
+	papersize={7.444in,9.681in}, %Crown Quarto
+	hmargin={.75in,.75in},
+	%vmargin={.75in,1in},
+	vcentering,
+	ignoreheadfoot
+]{geometry}
+
+%The actual font provided is URW Palladio (LaTex Font Catalogue)
+% Clon de Palatino (sans serif pel codi)
+\usepackage[T1]{fontenc}
+\usepackage[sc]{mathpazo}
+\linespread{1.05} 
+
+\usepackage{ccaption}
+\captionnamefont{\bfseries}
+\captiontitlefont{\itshape}
+\captiondelim{ --- }
+
+\usepackage[utf8]{inputenc} 
+\usepackage[catalan]{babel}
+\usepackage{amsmath} 
+\usepackage{amssymb} 
+\usepackage{makeidx}
+\usepackage{graphicx} 
+\usepackage{multicol}
+\usepackage{array}
+
+\usepackage{color}
+\definecolor{gris}{rgb}{0.85,0.85,0.85} 
+
+\pagestyle{myheadings}
+
+\usepackage{rotating}
+
+%\usepackage{pdfdraftcopy}
+%\draftstring{ESBORRANY}
+
+\makeindex
+
+\setcounter{secnumdepth}{0}
+
+\makeatletter
+\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
+\hbox{}
+\vspace*{\fill}
+\begin{center} \end{center}
+\vspace{\fill}
+\thispagestyle{empty}
+\newpage
+\if@twocolumn\hbox{}\newpage\fi\fi\fi}
+\makeatother
+
+\begin{document} 
+\frontmatter 
+
+\author{\Large{\bf Stéphane Ducasse}} 
+\title{{\huge \bf Squeak: Aprèn a Programar amb Robots}} 
+\date{{\vspace*{7cm} \bf Traducció de Jordi Delgado\\  Octubre 2008}} 
+\maketitle
+
+%----------------------------------------------
+\vfill
+\begin{footnotesize}
+\setlength{\parindent}{0pt}
+
+\textbf{\small Aquest llibre està disponible per ser descarregat a \textsf{http://gforge.inria.fr/projects/botsinc/}, hostatjat per Inria.}\\[0.5cm]
+
+\textbf{\small Copyright \copyright~2005, St\'ephane Ducasse.}\\[0.5cm]
+\textbf{\small Copyright \copyright~2008 de la traducció, Jordi Delgado.}\\[0.5cm]
+
+Els continguts d'aquest llibre estan protegits sota la llicència Creative Commons
+Reconeixement-Compartir amb la mateixa llicència 3.0 No adaptada.
+\newline
+\newline
+\emph{Sou lliure de:}
+\begin{description}
+  \item[Compartir: ] copiar, distribuir i comunicar públicament l'obra
+  \item[Modificar: ]fer-ne obres derivades
+\end{description}
+\emph{Amb les condicions següents:}
+\begin{description}
+  \item[Reconeixement.] Heu de reconèixer els crèdits de l'obra de la manera especificada per l'autor o el llicenciador (però no d'una manera que suggereixi que us donen suport o rebeu suport per l'ús que feu l'obra).
+  \item[Compartir amb la mateixa llicència. ] Si transformeu o modifiqueu aquesta obra per generar-ne una obra derivada, només podreu distribuir l'obra resultant amb la mateixa llicència, una de similar o una de compatible.
+  \end{description}
+\begin{itemize}
+  \item Quan reutilitzeu o distribuïu l'obra, heu de deixar ben clar els termes de la llicència de l'obra. Podeu posar un link a aquesta web:
+  \textsf{creativecommons.org/licenses/by-sa/3.0/deed.ca}
+  \item Alguna d'aquestes condicions pot no aplicar-se si obteniu el permís del titular dels drets d'autor.
+  \item No hi ha res en aquesta llicència que menyscabi o restringeixi els drets morals de l'autor.
+\end{itemize}
+\raisebox{-0.25cm}{\includegraphics[width=2cm]{Imatges/CreativeCommons-BY-SA}}\quad
+\parbox{15cm}{
+Els drets derivats d'usos legítims o altres limitacions reconegudes per llei no queden\\ afectats per l'anterior.\\
+Això és un resum fàcilment llegible del text legal, la llicència completa la podeu trobar a\\
+\textsf{creativecommons.org/licenses/by-sa/3.0/legalcode}}\\[1cm]
+
+\raisebox{-0.5cm}{\includegraphics[width=1.5cm]{Imatges/citilab.png}}\quad
+\parbox{15cm}{
+	\textbf{\small Traducció realitzada amb la col·laboració del Citilab-Cornellà.}\\
+	\textsf{citilab.eu}}\\[1cm]
+
+
+Publicat per ??\\
+ISBN xxx-x-xxxxxxx\\
+Primera edició, Tardor 2008.
+\end{footnotesize}
+\vfill
+%----------------------------------------------
+
+\tableofcontents
+
+\include{preface} 
+
+\mainmatter 
+
+\renewcommand{\chaptermark}[1]{
+\markboth{\fontfamily{phv}\selectfont  \upshape \chaptername
+\ \thechapter.\ #1}{\fontfamily{phv}\selectfont  \upshape \chaptername
+\ \thechapter.\ #1}
+}
+
+\include{part1} 
+\include{part2} 
+\include{part3} 
+\include{part4} 
+\include{part5} 
+
+\addcontentsline{toc}{chapter}{Índex Alfabètic}
+
+\backmatter 
+
+\markboth{\fontfamily{phv}\selectfont  \upshape \indexname}{\fontfamily{phv}\selectfont  \upshape \indexname}
+{\small\raggedright\printindex}
+
+\end{document} ********End of master.tex 
+

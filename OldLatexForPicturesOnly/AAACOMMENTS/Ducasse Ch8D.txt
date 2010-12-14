@@ -1,0 +1,98 @@
+24 Dec 04
+
+
+Ducasse Ch8
+***********
+
+p75 "mandatory" - simpler word? "necessary" ?
+
+>> fixed
+
+    
+
+p75 "correlated" - simpler word? that I can't think of a corresponding word here suggests the sentence itself needs rewriting Stephane - the concept and point of the sentence must be too opaque if I cannot quickly find a replacement word?
+
+>> linked
+
+
+p75
+"dependencies between numbers" - this is a difficult concept also, and linked to the previous point I made. Please consider making this sequence simpler/more down to earth for some of your readers?
+
+>> I did my best
+
+
+p75
+Note the reference to Chapter ?? etc.
+
+>> fixed
+
+
+p76
+The "middle" thing isn't clear to me what you mean etc.
+
+>> changed the pic and added an explanattion
+
+p76
+"By synchronously, we mean that 100 should become 200, 70 100 ...without mixing them."
+I think it would be clearer if you arrowed to the places int he script where these numbers are, and say "replace this number" etc. It is a little abstract like this how it relate dto the script?
+
+>> I do not see what I can really do. If people do it they will automatically ace the problem and I chose on purpose these values. 
+
+
+p76 Experiment 8.3
+Just brilliant.
+
+p77 "errorprone" - why? you didn't nail that at all. "Tiresome"? what if the reader loved every minute?
+I recommend instead of these negatives, to say more neutrally "you have to change the numbers each time, which sometimes can be very repetitive - especially when we have lots of repeated tasks to do " or something? Oh I don't know - perhaps your more emotional words are better :-)
+
+>> yes. Because if you try to recreate all the letters then this is a real pain.
+
+
+p77 "i.e." please remember to use "that is" instead
+
+>> fixed
+
+
+p77 "vertical bars"
+worth mentioning where htey have seen these before re: robots etc. {Oh you do this a little later}
+
+>> ;)
+on purpose also because I could have develop an environment which does not require variable declarations.
+
+
+p78
+"using a variable" --> refering to a variable; you think that is made clear enough?
+
+>> changed 
+
+p78 "About Pica"
+I think maybe spend longer on this robots/variables point. It's quite deep and the reader may need more time.
+
+>> but there is nothing special here.
+So it would make it longer and there is the following chapter for that purpose.
+
+
+p79 Script 8.2
+I'm not sure you really nail this one Stephane. The example feels a little weak/obscure and lacks a dynamic delivery to the reader. How could you make it more engaging -- it's SUCH an important moment in the reader's scripting, but NOTHING happens much when you introduce it - no reward, no visual, no explanation afterwards etc. Feels like an anti-climax and thus a shadow-moment for your reader.
+
+
+>>  I added another script, used emphasis in the text, added a new visual, and  finally I added a paragraph at the end.
+
+
+
+p79 
+"To be read efficiently or simply nice to look at, a letter should respect certain proportions, i.e., the
+lengths that describe it are not freely chosen but maintain certain proportions between them. Let us
+decide that the width should be 2/3 of the height and that the middle should be at 3/5 of the height."
+--->
+This is too obscure! at least a visual nearby to show what you are talking about? Especially given the wonderful importance of Script 8.3 in the reader's learning??
+
+>> I revised it
+
+p80
+tough math !
+
+>>really one addition and one division
+
+
+

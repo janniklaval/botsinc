@@ -1,0 +1,25 @@
+Chapter 20
+==========
+
+This chapter strikes me as oddly placed, as you've been talking about booleans and their use throughout the entire book. 
+
+>> Where? I would be curious to know where. The only place where I talked about booleans was in the two previous conditional chapters. 
+
+
+ At a minimum, the introduction is not giving the reader any indication of what further information they'll learn from this chapter.  If I believed from reading the first part of the manuscript that I knew booleans and their uses fairly well, and I read the introduction to this chapter, I would probably skip it.
+
+>> I said that I will go into the details and explain how to express more complex expressions. 
+
+If this is not what you want the reader to do, then I recommend you give the reader more of a "what more will I get out of this chapter" type of introduction.
+
+180 your explanation of context has lost the reader.  Please refine and make clearer.
+
+183 I am assuming that by "confirmed programmer" you mean "experienced programmer" or "professional programmer"
+
+>> fixed
+
+184 I don't recall being introduced to the term "unary expression" - the reader may feel lost and discount this entire paragraph.  Either introduce here or add a refresher sentence that jogs the reader's memory
+
+>> chapter 12.
+>> there is a reference to that chapter the line above.
+

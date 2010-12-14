@@ -1,0 +1,604 @@
+\ifx\wholebook\relax\else
+\input{../Common.tex}
+\input{../macroes.tex}
+\begin{document}
+\fi
+
+
+\chapter{A Tour of Alice}\label{cha:alice}
+
+Alice is an authoring environment for building interactive 3D worlds in Squeak. Alice is a research project whose goal is to provide abstractions and environment that is easy for novices to learn and use.  Squeak-Alice is a port of Alice in Squeak made by Jeff Pierce. A detailled description of the system is given in one of the chapters of the book "Squeak --- Open Personal Computing and Multimedia" by M. Guzdial and K. Rose. Squeak-Alice is built on, Balloon, the 3D engine of Squeak which runs on any platform without hardware requirement.  This chapter presents Squeak-Alice but within the context of this book.  
+
+%%We do not present the actions for placing at specific location actors. The interested reader should read the above mentioned chapter.
+
+Squeak-Alice comes with a complete environment for manipulating 3D objects. To develop scripts or interact with 3D objects, you can either create a new environment as I explain later or use the predefined environment that is provided per default in the Squeak environment. To get started faster we suggest you to use the predefined environment first, then later on to open and use your own 3D characters. We  follow this strategy in this chapter.
+
+\section{Getting Started with Alice}
+
+When you start a standard Squeak environment, there is one window called Worlds of Squeak shown in Figure~\ref{fig:worldOfSqueak}. Click on this window, you arrive into a place containing several small windows each of them representing a demo related to an aspect of Squeak. 
+
+\begin{figure}[h]
+\begin{center}\includegraphics[width=7cm]{worldsOfSqueak}\hspace{0.5cm}\includegraphics[width=7cm]{premadeAlice}\caption{The world of Squeak severals environment to play with the multimedia aspects of Squeak. \label{fig:worldOfSqueak}}\end{center}
+\end{figure}
+
+Click on the window named 3D, you arrive to the predefined Squeak Alice environment as shown in the Figure~\ref{fig:wonderlandWithBunny}.  There are four windows on the desktop: the \textit{top right one} is just a window containing some notes indicating where to find the 3D objects and other information. The \textit{top left window}, which contains a bunny in 3D, is the 3D world in which 3D objects, called actors, evolve. The \textit{bottom right} window is the script editor of Squeak-Alice. This is using this window that we create 3D objects, define scripts to control 3D objects. The script editor contains already a long list of interesting scripts that we suggest you to try later. The \textit{bottom left} part
+shows a hierarchically list of all the actors currently created in the 3D world.
+
+\begin{figure}[h]
+\begin{center}\includegraphics[width=14cm]{wonderlandWithBunny}
+\caption{The predefined Squeak Alice environment available in Squeak. \label{fig:wonderlandWithBunny}}\end{center}\end{figure}
+
+Before starting we suggest you to check the display depth of your environment. The display depth represents the number of colors you can have. To change it, select \menu{appearance...} in the world menu then \menu{set display depth...} we suggest you to try 32 but the result may depend on the capacity of your graphical card. When the display depth is not the one of your card, \sq has to transform in permanence the rendering of the 3D objects, so Alice gets slowler. Once you have done this we also suggest you to enlarge a bit the left window by bringing the halo on the complete window and selecting the yellow halo. Note that the complete window is called camera when we bring  the halos because this window displays what a camera is seeing in the 3D world. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Directly Interacting with Actors}
+With Squeak Alice you can directly interact with the 3D objects that exist in the 3D world such as the bunny. 
+
+\begin{itemize}
+\item To move horizontally an actor click on it in the 3D world. This way we can bring the bunny closer or farer in the world. 
+\item To move  vertically an actor hold shift and click on it (see Figure~\ref{fig:translateRotate} (a)).
+\item To rotate vertically an actor hold ctrl and click on it (see Figure~\ref{fig:translateRotate} (b)).
+\item To rotate freely  an actor hold ctrl and shift then click on it (see Figure~\ref{fig:translateRotate} (c)).
+\end{itemize}
+
+Note that if you want that an actor gets back its stable position use the method \ct{standUp}. This is extremely useful when experimenting with actions performed in parallel.
+
+
+\begin{figure}
+\begin{center}\includegraphics[width=4.5cm]{translationY}\hspace{0.2cm}\includegraphics[width=4.5cm]{rotateV}\hspace{0.2cm}\includegraphics[width=4.5cm]{rotated}\end{center} \caption{Move up and down the bunny (shift-click), vertical rotation (Ctrl-click), and  free rotation (shift-Ctrl-click)\label{fig:translateRotate}}
+\end{figure}
+
+You can also interact with the actors via the list of all the actors available in the world as shown in the Figures~\ref{fig:hierarchical} and \ref{fig:wonderlandWithBunny}. The list contains all the actors. You can see that the light, the camera as well as the ground are actors. You can apply some predefined actions such as growing, shrinking, or stretching by selecting the actor and bring the popup menu (see Figure~\ref{fig:hierarchical} (right)). Actors can be composed of other objects. The actor parts are hierarchically structured. For example, the bunny is composed of a head and a body. The head is composed of glasses and ears. The parts are displayed in the list as well, therefore you can apply the actions to them too. The Figure~\ref{fig:monster} presents the bunny after the following transformation: we shrunk the drum, grow the head, and squashed the left ear. 
+
+\begin{figure}
+\begin{center}\includegraphics[width=4.5cm]{hierarchicalView}\hspace{0.2cm}\includegraphics[width=4.5cm]{commonActions}\end{center}
+\caption{The list of all the actors and their hierarchical structure. \label{fig:hierarchical}}\end{figure}
+
+\begin{figure}
+\begin{center}\includegraphics[width=4.5cm]{monsterBunny}\end{center}
+\caption{A transformed bunny. \label{fig:monster}}
+\end{figure}
+
+\section{The Environment}
+As we already mentioned the environment is composed mainly by three graphical component: the scene or camera window that displays the 3D world (top left window in Figure~\ref{fig:wonderlandWithBunny}), the actor list (See Figure~\ref{fig:hierarchical}), and the script editor (area at the right of the scene actor list in Figure~\ref{fig:wonderlandWithBunny}). We now detail the script editor.
+There are  three buttons at its top: \textbf{Script}, \textbf{Actor Info}, and \textbf{Quick Reference} (see Figure~\ref{fig:editorScript}). 
+
+\begin{itemize}
+\item The button \textbf{Script} allows one to edit and execute scripts.
+\item The button \textbf{Actor Info} shows information related to the actor currently selected in the actor list (See Figure~\ref{fig:info}).
+\item The Button \textbf{Quick Reference} lists all the possible actions and the default constants defined 
+for each kind of actions. This is a really useful online help.
+\end{itemize}
+
+\begin{figure}[h]
+\begin{center}\includegraphics[width=\linewidth]{editorScript}\end{center}
+\caption{The script editor. \label{fig:editorScript}}
+\end{figure}
+
+\begin{figure}[h]
+\begin{center}\includegraphics[width=\linewidth]{info}\end{center}
+\caption{Actor Information. \label{fig:info}}
+\end{figure}
+
+When the \textbf{Script} button is selected you can define scripts and execute them using the traditional do it action from the menu or the command-d/alt-d shortcut. In fact the script editor is an extended workspace dedicaced to Alice scripts execution. 
+This extended workspace contains predefined variables as explained in the Quick Reference.  For our current exploration it is only worth to know that  \ct{camera} refers to the default camera, \ct{cameraWindow} to the scene morph itself, and \ct{w} the wonderland, \textit{i.e.,} the complete alice system. 
+
+
+Note that Squeak-Alice runs without using hardware accelaration which is disable by default. As such Squeak-Alice runs on any platform. If you want to set the hardware acceleration, bring the menu (red halo) on the camera morph and select the item having the evoking name \textbf{hardware acceleration}.  
+
+\section{Scripts}
+Before starting we suggest you to open the camera controls, this way you will be able to follow the actor if they exist the vision angle. 
+
+\begin{scriptwithtitle}{Adding a camera control.}
+cameraWindow showCameraControls
+\end{scriptwithtitle}
+
+\begin{figure}
+\begin{center}\includegraphics{cameraControls}\end{center}
+\caption{\ct{cameraWindow showCameraControls} \label{fig:cameraControls}}
+\end{figure}
+
+You can move the camera by clicking on the cameraControls widget shown in Figure~\ref{fig:cameraControls}. Note that you can move the camera up and down 
+by holding the shift key while moving the mouse on the cameraControls widget. 
+If by accident you press the reset button and you do not want to restart the system
+from the start you can load the bunny as explained in Section~\ref{}. 
+
+\subsection*{Analyzing A First Script}
+To be able to compose actions and even change their execution speed, the authors of Alice change the model of execution of the messages. The model of execution of the actors is different than the one we saw in this book until now. Even if the syntax is the same, sending multiple messages to an actor does not get executed in sequence but combined all together. Compare the execution of the script \scrref{scr:ssactions} executing it line by line separately and by selecting all the three lines to really get the difference.
+
+\begin{scriptwithtitle}{Some simple actions}\label{scr:ssactions}
+bunny move: forward.
+bunny turn: left.
+bunny move: back. 
+bunny roll: left
+\end{scriptwithtitle}
+
+To execute a script composed of a sequence of actions we should use the method
+\ct{doInOrder:} as shown by the script~\ref{scr:seqactions}. 
+
+\begin{scriptwithtitle}{Executing a sequence of messages one after the other.}\label{scr:seqactions}
+w doInOrder: \{
+   bunny move: forward.
+   bunny turn: left.
+   bunny move: back.
+   bunny roll: left\}
+\end{scriptwithtitle}
+
+As you see this difference is quite important. The other important point 
+we should stress is that  for programming the actors, the Wonderland environment provides some useful predefined constants such as \ct{left}, \ct{back}, and  \ct{forward} in the previous script. Here is the selected list of available constant for movement as presented in the Quick Reference pane. We do not present actions related to location in this chapter
+
+\begin{itemize}
+\item direction: \ct{left}, \ct{right}, \ct{up}, \ct{down}, \ct{forward}, and \ct{back}.
+\item duration: \ct{rightNow} and \ct{eachFrame}.
+\item style: \ct{gently}, \ct{abruptly}, \ct{beginGently}, and \ct{endGently}.
+\item position: \ct{asIs}
+\item location: \ct{onTopOf}, \ct{below}, \ct{beneath}, \ct{inFrontOf}, \ct{inBackOf}, \ct{behind}, \ct{toLeftOf},
+\ct{toRightOf}, \ct{onFloorOf}, and \ct{onCeilingOf}.
+\end{itemize}
+
+These constants are used to specify variations of the methods to manipulate actors. 
+Read the Quick Reference to see the possible combinations.
+
+\subsection{Moving, turning, and rolling}
+Actors can be manipulated to move, turn, and roll using the methods \ct{move:}, \ct{turn:}, and \ct{roll:} as shown in the \scrref{scr:seqactions}. 
+The Quick Reference pane shows that these methods can be further 
+parametrized to obtain various results. Here are some examples, we suggest you read the chapter of Jeff Pierce and the Quick Reference to learn all the possibilities. 
+Note that there are some inconsistencies between the description and the implementation so do not hesitate to experiment. 
+
+Here is the list as presented in the Quick Reference: 
+\begin{scriptwithtitle}{\ct{move:} variations}
+move: aDirection
+move: aDirection distance: aNumber
+move: aDirection distance: aNumber
+move: aDirection distance: aNumber duration: aNumber
+move: aDirection distance: aNumber duration: aNumber style: aStyle
+move: aDirection asSeenBy: anActor
+move: aDirection distance: aNumber asSeenBy: anActor
+move: aDirection distance: aNumber duration: aNumber asSeenBy: anActor
+move: aDirection distance: aNumber duration: aNumber asSeenBy: anActor style: aStyle
+
+move: aDirection speed: aNumber
+move: aDirection speed: aNumber for: aNumber
+move: aDirection speed: aNumber until: aBlock
+move: aDirection speed: aNumber asSeenBy: anActor
+move: aDirection speed: aNumber asSeenBy: anActor for: aNumber
+move: aDirection speed: aNumber asSeenBy: anActor until: aBlock
+\end{scriptwithtitle}
+
+Here are some explanations:  first you can specify a \textit{distance} using \ct{distance:}.  Then you should know that basically an animation takes one second to execute. To change this default behavior you can then specify another \textit{duration} using \ct{duration:} and given the number of seconds that the animation should last.  In fact even if you define a duration of zero, it may not be executed instantaneously by the Wonderland, if you want really instantaneous animations use the \ct{rightNow} constant. You can also specify a \textit{style} which describes how the animation should start or end by using \ct{style:} and the associated constants \ct{gently}, \ct{abruptly}, \ct{beginGently}, and \ct{endGently}.
+
+Actions are normally time-dependent, this means that they start and end. You can also specify that actors move at constant speed, creating persistent actions using the 
+ \ct{speed:} that specifies that actors move at constant rate. Pay attention that if you use \ct{speed:} but omit a distance the actor will move forever. The argument of speed for the \ct{move:} method is meter per second while that for the method \ct{turn:} is it the number of turns per second. The argument specified by \ct{for:} allows one to specify a duration for the message when using speed. \ct{until:} allows one to specify a condition expressed by means of a block, during which the action will last. 
+Note that you can stop animation using the message \ct{stop}.
+
+By default, actions such as \ct{move:} or \ct{turn:} take as reference the actor itself. Therefore when we say \ct{bunny turn: left} the bunny will turn on its left. Sometimes we want to specify another frame of reference, in such a case we use 
+\ct{asSeenBy:} which allows one to specify another frame of reference as shown by the following examples.
+
+\begin{scriptwithtitle}{Examples of Message Variations}
+bunny move: forward distance: 3 duration: rightNow style: endGently
+
+bunny move: forward distance: 3 duration: 0
+
+bunny move: forward distance: 3 duration: rightNow
+
+bunny move: forward distance: 5 speed: 1
+
+bunny move: left distance: 3 duration: 3 asSeenBy: camera
+
+bunny turn: left turns: 3 speed: 1
+
+bunny roll: right turns: 2
+\end{scriptwithtitle}
+
+\section{Actor Parts}
+Actors are composed of parts in a parent-child relationship. Parts belongs to only one parent. This relationship is important because the actions sent to a parent affect its part. For example, when we ask 
+the bunny to move, its head which is part of the bunny moves too, the glasses which are part of the head moves too...
+
+
+The parts are not special, they are plain actors to which we can send the same messages as before as illustrated by the script \scrref{scr:parts}. 
+
+\begin{scriptwithtitle}{Sending messages to parts}\label{scr:parts}
+bunny drum roll: left
+
+bunny drum roll: left speed: 1
+
+w doInOrder: \{
+bunny head glasses move: forward.
+bunny head glasses move: back\}
+
+bunny drum stop
+\end{scriptwithtitle}
+
+In fact all the actors are parts of a super parent called the scene. If you look at the hierarchical list
+showing all the actors in the world, you see the scene and below and indented the bunny but also the ground, the light, and the camera. 
+
+Sometimes we need to be able to send a message to an object affecting only certain of its parts. For example, 
+we want to be able to change the color of the bunny without changing the color of its left ear but still been able to tell it to change its color and that its head and legs would change. To do this Alice introduces the notion of \textit{first class} objects. A first class parts belongs to its parent but is not affected when its parent changes. 
+
+Two methods allows one to control whether an object is part or not of another one. 
+The method \ct{becomeFirstClass} makes the receiver a first class object while the method 
+\ct{becomePart} makes the receiver been a part of its parent. Execute line by line the  script \ref{scr:parts2} to understand the difference. 
+
+\begin{scriptwithtitle}{First Class Part Examples}\label{scr:parts2}
+bunny setColor: green.
+bunny head  becomeFirstClass.
+bunny setColor: red.
+bunny head  becomePart.
+bunny setColor: pink
+\end{scriptwithtitle}
+
+We can also change the parent-child relationship between objects using the method \ct{becomeChildOf}
+(See script \ref{scr:parts3}). 
+
+\begin{scriptwithtitle}{Sending messages to parts}\label{scr:parts3}
+bunny head becomeChildOf: ground
+
+bunny move: forward
+
+ground head turn: left
+\end{scriptwithtitle}
+
+\begin{figure}
+\begin{center}\includegraphics{independentBody}\end{center}
+\caption{An independent body for cartoon-like animations. \label{fig:independentBody}}
+\end{figure}
+
+
+
+\section{Other Operations}
+Actors understand a lot more messages that what we have been showing so far. Here we give a 
+simple description of the other methods. 
+
+\paragraph{Getting Bigger.} The method \ct{resize:} changes the size of the receiver. It exists in multiple variations such as \ct{resize:duration:}, \ct{resizeTopToBottom:leftToRight:frontToBack:}, and \ct{resizeLikeRubber:dimension:} as shown in the script \ref{scr:resize}.
+
+\begin{scriptwithtitle}{Resize Experiments.}\label{scr:resize}
+bunny resize: 1/2
+bunny resizeTopToBottom: 2 leftToRight: 1 frontToBack: 3
+bunny resizeLikeRubber: 2 dimension: topToBottom
+\end{scriptwithtitle}
+
+\paragraph{Quantified Moves.} The method \ct{nudge:} moves an actor in multiples of their length, width, or height depending to the direction chosen. 
+
+\begin{scriptwithtitle}{Nudge Experiments.}\label{scr:nudge}
+bunny nudge: up distance: 2 duration: 2
+\end{scriptwithtitle}
+
+\paragraph{Standing Up.} The methods \ct{standUp} and  \ct{standUpWithDuration: aNumber} allow one to 
+get actor in a stand up position which is really useful after certain experimentation.
+
+\paragraph{Coloring.} The method \ct{setColor:} changes the size of the receiver. It exists in multiple
+variations such as \ct{setColor:duration:}, and \ct{setColor:duration:style:}. Look at the script \ref{scr:parts2} for an example. 
+
+\paragraph{Destruction.} The method \ct{destroy} destroys with a nice animation an actor. Note that the powerful undo mechanism of the Wonderland environment 
+\paragraph{Visibility.} The methods \ct{hide} and \ct{show}  manage the visibility of an object. 
+
+\paragraph{Absolute Moves or Rotations.} Up until now we only used actions that change the location or direction of the actors. 
+The method \ct{moveTo:}  moves  the receiver to a given location and the method \ct{turnTo:} makes the receiver 
+pointing into the specified direction.  The position and direction may be a triple in the form \{ right . up . forward\} or an anActor. 
+The triple values may be a number or \ct{asIs} (ex. \{ asIs. 0. asIs \}). Pay attention that the triple describe a location in the actor's parent's reference frame. Hence \ct{bunny moveTo: \{1 . 1 . 0 \}} means that the bunny would move to the location 1 meter to the right, 1 meter above the origin of the scene's, which is the parent of the bunny actor. The same triple in the following expression 
+\ct{bunny head moveTo:  \{1 . 1 . 0 \}} refers to the location which is at: 1 meter right and 1 meter above the bunny origin. 
+
+Compare actions of \ct{moveTo:} and \ct{move:} in the script \ref{scr:moveto}.
+
+\begin{scriptwithtitle}{Absolute Move Experiments.}\label{scr:moveto}
+bunny moveTo: \{0 . 0 .0\}
+bunny head moveTo: \{0. 1 .0\}.
+bunny head moveTo: \{0. -1. 0\}
+
+bunny head move: up.
+bunny head move: down
+
+bunny head turnTo: camera duration: 1 style: abruptly
+bunny  turnTo: camera duration: 1 style: abruptly
+\end{scriptwithtitle}
+
+Note that the method \ct{alignWith: anActor} is equivalent to \ct{turnTo:}.
+
+\paragraph{Pointing At.} 
+The method \ct{pointAt: aTarget} allows us to make actor facing each other, where a target may be an actor, a \ct{\{ right . up . forward \}} trip, or a \ct{x@y} pixel value.
+
+\begin{scriptwithtitle}{Point At Experiments.}\label{scr:pointat}
+bunny pointAt: camera.
+bunny turn: left.
+bunny move: forward.
+camera pointAt: bunny.
+\end{scriptwithtitle}
+
+\paragraph{Actor Relative Placement.} Finally we can place actor relatively to each other using the method \ct{place: aLocation object: anActor}. The location are specified using the constant:   \ct{onTopOf}, \ct{below}, \ct{beneath}, \ct{inFrontOf}, \ct{inBackOf}, \ct{behind}, \ct{toLeftOf}, \ct{toRightOf}, \ct{onFloorOf}, and \ct{onCeilingOf}. We suggest to load multiple actor as explained in Section~\ref{sec:yourown}. Play with the expressions presented in the script \ref{scr:placing}.
+
+
+\begin{scriptwithtitle}{Placing Actors}\label{scr:placing}
+camera place: inFrontOf object: bunny.
+camera move: up.
+bunny move: back distance: 2.
+camera pointAt: bunny.
+bunny head place: toRightOf object: bunny
+\end{scriptwithtitle}
+
+\section{Time-related Actions}
+We can also define actions that are related to the time flow using the \ct{eachFrame} constant as argument of \ct{duration:} as shown in 
+the script \scrref{scr:eachFrame}. You can use the method \ct{stop} to stop the animation (see Section~\ref{sec:animation}).
+
+\begin{scriptwithtitle}{Charming the  camera}\label{scr:eachFrame}
+bunny head pointAt: camera duration: eachFrame.
+bunny move: forward
+\end{scriptwithtitle}
+
+We can also specify the length in seconds of an action when the action specifies the \ct{eachFrameFor: aNumber} 
+possibility as shown in the script \scrref{scr:eachFrameFor}.
+
+\begin{scriptwithtitle}{Constraining during a certain amount of time}\label{scr:eachFrameFor}
+bunny moveTo: \{asIs . 0 . asIs\} eachFrameFor: 10
+\end{scriptwithtitle}
+
+The method \ct{eachFrameFor: aNumber} makes the the actions repeat for the specified 
+number of seconds. The method \ct{eachFrameUntil:} aBlock repeats the actions 
+until the block returns true.
+
+Note that \ct{asIs} is a special constant which states that the method currently executed 
+will not modified the value. It lets the value as is. However others methods can changed this value. 
+Here the script constrains the bunny to follow the ground, remember that the triplet means \{Left . Up . Forward\} therefore here the bunny cannot move up or down during 10 seconds. 
+
+
+\section{Animation}\label{sec:animation}
+To define an animation we just assign to a variable. For example, we declare 
+that \ct{spin} make the bunny turns twice to the left for a duration of 2 seconds. 
+
+\begin{scriptwithtitle}{A simple animation}
+spin := bunny turn: left turns: 2 duration: 2.
+\end{scriptwithtitle}
+
+We can then pause an animation (\ct{spin pause}), resume it (\ct{spin resume}), stop it (\ct{spin stop}), or start it again (\ct{spin start}).
+
+Animations can also loop using the methods \ct{loop}, \ct{loop: aLoopNumber}, or be stopped using \ct{stopLooping}. 
+
+\begin{scriptwithtitle}{A simple animation}
+flip := bunny turn: forward turns: 1 duration: 2.
+\end{scriptwithtitle}
+
+Now we can compose animation using the methods \ct{doInOrder:} that executes a sequence of messages in sequence or \ct{doTogether:} that executes a sequence of messages combined. 
+
+\begin{scriptwithtitle}{Two simple animations executed in sequence}
+w doInOrder: \{spin start . flip loop:2\}
+\end{scriptwithtitle}
+
+\begin{scriptwithtitle}{Two simple animations composed together}
+w doTogether: \{spin start . flip loop:2\}
+\end{scriptwithtitle}
+
+Note that some combinations do not work and you can get a walkback. 
+
+The composition can also be named and compose with other animations.
+\begin{scriptwithtitle}{Two simple animations composed in sequence}
+bla := w doInOrder: \{spin start . flip loop:2\}.
+bla start
+\end{scriptwithtitle}
+
+Remember that the method \ct{standUp} makes an actor \textit{standing up} on its feet which is useful after unexpected results of action combination. 
+
+
+\section{Your own Wonderland}\label{sec:yourown}
+
+You can create your own wonderland as follow: 
+
+\begin{scriptwithtitle}{Opening a new Wonderland}
+Wonderland new
+\end{scriptwithtitle}
+
+
+Once you created your own wonderland or after pressing the reset button,
+you should load some 3D objects. The team that develops Alice provides 
+a zip archive full of 3D characters \ct{http://www.cs.cmu.edu/~jpierce/squeak/SqueakObjects.zip} or one the site web of this book. Note that these objects are represented in an old format, therefore trying to load the new Alice objects won't work in Squeak. 
+
+To make some simple experiment you can also create simple plane using the expression \ct{w makePlaneNamed: 'myPlane'}.
+
+\begin{scriptwithtitle}{Loading new 3D Objects on PC}
+w makeActorFrom: 'Objects\verb=\=Animals\verb=\=Bunny.mdl'
+\end{scriptwithtitle}
+
+\begin{scriptwithtitle}{Loading new 3D Objects on Mac OSX}
+w makeActorFrom: ':Objects:Animals:PurpleDinosaur.mdl'
+
+"if you have some problems on mac use the full path name"
+w makeActorFrom: 'OSX:Users:ducasse:Alice:Objects:Animals:PurpleDinosaur.mdl'
+\end{scriptwithtitle}
+
+\begin{figure}
+\begin{center}\includegraphics{threeAmigos}\end{center}
+\caption{The three amigos \ct{w makeActorFrom: 'PurpleDinosaur.mdl'}.\label{fig:threeAmigos}}
+\end{figure}
+
+Load multiple characters such as the snowman and the purple dinosaur to get the 
+following scripts done. 
+
+\begin{scriptwithtitle}{Multiple Actor Script}
+bunny turn: left
+bunny turn: left asSeenBy: snowman
+snowman place: inFrontOf object: purpleDinosaur.
+\end{scriptwithtitle}
+
+\begin{scriptwithtitle}{Quick Glance At Bunny}
+w doInOrder: \{
+   purpleDinosaur head pointAt: bunny
+   purpleDinosaur head alignWith:  purpleDinosaur \}
+\end{scriptwithtitle}
+
+
+\section{Multiple Cameras and Other Special Effects}
+
+Having multiple cameras can slow down the 3D rendering of Alice but it 
+is worth to understand how to build animation. When a new camera is created
+a new view is created. A new 3D object representing the new camera is also created. Changing the location of a camera by clicking on it changes automatically the view that displays what the camera sees. Reciprocally, changing the position of the camera using the camera controls widget modifies the location of the camera object.
+
+ In the Figure~\ref{fig:threecamera}, there are three cameras. We chose to use the 
+right camera to have a overall view of the the scene, while the two left cameras and set up to have different close up of the bunny. 
+
+\begin{scriptwithtitle}{Creating another camera window}
+w makeCamera
+\end{scriptwithtitle}
+
+\begin{figure}
+\begin{center}\includegraphics{threeCameras}\end{center}
+\caption{The left windows display what the cameras shown in the right windows
+see.  \label{fig:threecamera}}
+\end{figure}
+
+Note that a camera is an actors as any other 3D objects therefore we can 
+move it using the same messages as shown by the \scrref{scr:scriptingCamera}.
+
+\begin{scriptwithtitle}{Scripting camera}\label{scr:scriptingCamera}
+w doInOrder: \{
+   camera roll: left.
+   camera move: back distance: 4.
+   camera standUp.\}
+\end{scriptwithtitle}
+
+\section{Alarms}
+Each Wonderland keeps track of the time passing via a scheduler object. When a Wonderland is created the time is set to zero and 
+the scheduler starts to update this time every frame. You  can get the current time using the following expression \ct{scheduler getTime}.
+What is interesting is that we can set \textit{alarm} to execute certain action at a specific point in time using the method \ct{do:at:inScheduler:} or once a given period of time is passed using the method \ct{do:in:inScheduler:}. 
+The script \ref{scr:twoscripts} defines two alarms. 
+
+\begin{scriptwithtitle}{Two Alarms}\label{scr:twoscripts}
+Alarm
+    do: 
+       [bunny head turn: left turns: 3. 
+       bunny setColor: red]
+    at: (scheduler getTime + 5)
+    inScheduler: scheduler.
+    
+Alarm
+    do: [bunny setColor: pink]
+    in:  8
+    inScheduler: scheduler.
+\end{scriptwithtitle}
+
+You can send the following messages to an alarm: \ct{checkTime} that returns when the alarm should be executed and \ct{stop}
+that will stop the alarm if it does not already got executed.
+
+\section{Introducing User-Interaction}
+Until now we can program animations but we could not define interactions with the user.  
+Squeak-Alice allows one to attach actions to actors when certain event such as mouse clicks occur.
+For example, the script~\ref{scr:rightMouseClick} makes the bunny turning its head when clicked with the 
+right mouse button.
+
+\begin{scriptwithtitle}{Defining an Action associated with Right Mouse Click}\label{scr:rightMouseClick}
+bunny respondWith: [:event | bunny head turn: left turns: 1] to: rightMouseClick
+\end{scriptwithtitle}
+
+The three methods \ct{addResponse: aBlock to: eventType}, \ct{removeResponse: aBlock to: event Type}, and \ct{respondWith: aBlock to: eventType} manage the definition of actions. The actions are expressed using blocks and are associated with event type among the following one  \ct{keyPress}, \ct{leftMouseDown}, \ct{leftMouseUp}, \ct{leftMouseClick}, \ct{rightMouseDown}, \ct{rightMouseUp}, and \ct{rightMouseClick}. 
+
+The difference between the methods \ct{addResponse:to:} and \ct{respondWith:to:} is that the first one allows one to define several 
+different actions with the same type of event, while the second one erases the previously defined actions and defines a new one. The method \ct{removeResponse:to:} remove the corresponding actions.
+
+\begin{scriptwithtitle}{Defining an Action associated with Left Mouse Click}\label{scr:leftMouseClick}
+bunny 
+   respondWith: 
+      [:event | 
+         bunny head turn: left turns: 2 duration: 2.
+         w doInOrder: \{ 
+            bunny head move: up.
+            bunny head move: down\}]
+	to: leftMouseClick
+\end{scriptwithtitle}
+
+In the script \ref{scr:rightMouseClick2}, we add two reactions then remove the first one so only the second is executed when 
+we click on the bunny. 
+
+\begin{scriptwithtitle}{Managing Responses}\label{scr:rightMouseClick2}
+reaction := bunny 
+   addResponse:  [:event | bunny head turn: left turns: 1] 
+   to: rightMouseClick.
+bunny 
+   addResponse: [:event | bunny head pointTo: \{ 0. 0. 0\}] 
+   to: rightMouseClick.
+bunny removeResponse: reaction to: rightMouseClick
+\end{scriptwithtitle}
+
+
+
+
+
+
+
+
+
+\section{Hidden Aspects of Alice and Pooh}
+We want to finish this short presentation of Squeak Alice by showing you 
+some fun aspects that also illustrate the power of Alice. 
+
+\subsection*{Mapping 2D Morph to 3D}
+You can put 2D morphs into 3D objects. The process is the following one.
+\begin{itemize}
+\item First bring the red halo named menu on the camera window and select the 
+item named \textbf{accept drops} as shown in the Figure~\ref{fig:acceptDrop}.
+\item Then create a living morph, for example bring the object panel using the main Squeak menu item \textbf{objects (o)} or cmd-O, and create a boucing atom morph
+as shown by the Figure~\ref{fig:bouncingMorph}.
+\item Drop the newly created bouncing atoms morph 
+on top of a part of the bunny. Normally the morph should be mapped into the 3D object as shown by the Figure~\ref{fig:bouncingMorph} (middle).
+\end{itemize}
+
+\begin{figure}[h]
+\begin{center}\includegraphics[width=5cm]{beforeBouncingOnDrim}\hspace{0.5cm}\includegraphics[width=6cm]{acceptDrop}\end{center}\caption{Left: The bunny before. Right: Telling the camera to accept other dropped objects.\label{fig:acceptDrop}}
+\end{figure}
+
+
+\begin{figure}[h]
+\begin{center}\includegraphics[width=5cm]{demoMorph}\hspace{0.2cm}\includegraphics[width=5cm]{atomMorph}\hspace{0.2cm}\includegraphics[width=5cm]{atomsOnDrum}\caption{Left: The objects panel. Middle: A bouncing atoms morph. Right: A living morph mapped into a 3D object.\label{fig:bouncingMorph}} \end{center}
+\end{figure}
+
+%\begin{figure}[h]
+%\begin{center}\includegraphics[width=6cm]{atomsOnDrum}\end{center}
+%\caption{A living morph mapped into a 3D object.\label{fig:atomsOnDrum}}
+%\end{figure}
+
+Finally the script \scrref{scr:planealice} shows a fun and poweful aspect of Alice and \sq. It creates a plane and displays what the mouse is pointing at.  
+
+\begin{scriptwithtitle}{Fun with Alice.}\label{scr:planealice}
+w makePlaneNamed: 'test'.
+test  
+   doEachFrame: 
+      [ test setTexturePointer: 
+      (Form fromDisplay: ((Sensor mousePoint) extent: 50@50)) asTexture]
+\end{scriptwithtitle}
+
+
+\subsection*{Pooh: Generating 3D Forms from 2D}
+Pooh is a system that allows one to generate 3D forms by drawing 2D forms within 
+an Alice world. If you want to try follow the steps:
+
+\begin{itemize}
+\item Open new wonderland (\ct{Wonderland new}).
+\item Bring the halos on the camera window as shown by the Figure~\ref{fig:pooh}.
+\item Select the middle right white halo with the small bear icon.
+\item Draw a closed curve directly on the camera window. When you have finished, Pooh generates a 3D form as shown in the Figure~\ref{fig:poohPaint} (right).
+\item Now you can paint the form by getting the halo on the new form and selecting the pen halo that appears in the center as shown by the Figure~\ref{fig:poohPaint} (left). This opens a Paint Box. Once you are done press the Keep button of the Paint Box. The Figure~\ref{fig:paintCow} shows the previous shape painted. It also shows that we can rotate the shape and any other one.
+\end{itemize}
+
+Finally we just want to show you some experimental aspects of Squeak. You can use eToy presented in the previous chapter with the 3D objects of Alice. Get an eToy viewer using the turquoise halo on the 3D object and use the same techniques as presented in the Chapter~\ref{cha:etoy}. The Figure~\ref{fig:aliceEtoy} shows a simple script. 
+
+\begin{figure}[h]
+\begin{center}\includegraphics[width=8cm]{poohHalo}\end{center}
+\caption{Bringing the halo on the Alice camera to get access to Pooh. \label{fig:pooh}}
+\end{figure}
+
+\begin{figure}[h]
+\begin{center}\includegraphics[width=6cm]{cow}\includegraphics[width=6cm]{cowHalos}\end{center}\caption{Left: Getting a 3D form. Right: Getting the Paint Editor on the 3D form.\label{fig:poohPaint}}
+\end{figure}
+
+\begin{figure}[h]
+\begin{center}\includegraphics[width=6cm]{paintCow}\includegraphics[width=6cm]{rotatedCow} \end{center}\caption{Left: A painted cow. Right: the same painted cow rotated.\label{fig:paintCow}}\end{figure}
+
+\begin{figure}[h]\begin{center}\includegraphics[width=6cm]{aliceEtoy} \end{center}\caption{Using an eToy script to control a 3D object\label{fig:aliceEtoy}}\end{figure}
+
+
+\section{Conclusion}
+Alice is a powerful environment that can serve as a basis for building lectures. We only shows some of the most important aspect. The interested reader should read 
+the chapter dedicaced on Alice in the collective book on Squeak: "Squeak --- Open Personal Computing and Multimedia" by M. Guzdial and K. Rose.
+
+
+\ifx\wholebook\relax\else\end{document}\fi
+
+

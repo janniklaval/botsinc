@@ -1,0 +1,30 @@
+This is pdfTeX, Version 3.14159-1.00b-pretest-20020211 (Web2C 7.3.7x) (format=pdflatex 2004.6.21)  2 JUL 2004 15:08
+\write18 enabled.
+**Installation.tex
+(./Installation.tex{/usr/local/teTeX/share/texmf.local/pdftex/config/pdftex.cfg
+}
+LaTeX2e <2001/06/01>
+Babel <v3.7h> and hyphenation patterns for american, french, german, ngerman, d
+utch, nohyphenation, loaded.
+! Undefined control sequence.
+l.2 \section
+            {Installing The Environment}
+? 
+! Emergency stop.
+l.2 \section
+            {Installing The Environment}
+End of file on the terminal!
+
+ 
+Here is how much of TeX's memory you used:
+ 5 strings out of 60917
+ 72 string characters out of 1188883
+ 4044644 words of memory out of 6500001
+ 3104 multiletter control sequences out of 10000+50000
+ 3640 words of font info for 14 fonts, out of 500000 for 1000
+ 54 hyphenation exceptions out of 1000
+ 5i,0n,1p,62b,7s stack positions out of 1500i,500n,5000p,200000b,5000s
+ 0 PDF objects out of 300000
+ 0 named destinations out of 131072
+ 0 words of extra memory for PDF output out of 65536
+No pages of output.

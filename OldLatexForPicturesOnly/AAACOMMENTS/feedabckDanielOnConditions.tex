@@ -1,0 +1,122 @@
+Hello Stef,
+
+I don't have the TeX source for these chapters:
+String.tex, Installation.tex,
+InstallationTroubleShootings.tex.  Please send me a
+copy if you want my suggestions.
+
+==================================================
+
+In previous chapters I have hesitated to offer
+suggestions for "heavy" revision for several reasons:
+
+1. I can't mimic your style and voice very well, so
+the contrast would distract readers.  It would be best
+for you to rewrite my rewrites --- but that puts more
+work on you.
+
+2. The issues in heavy revision are quite debatable,
+and the discussions they are likely to provoke could
+be inconclusive.  We might spend time without reaching
+an agreement or resulting in any improvement.
+
+3. I greatly respect your classroom experience
+(directly and through teachers you know personally)
+and your feel for students reactions to the material,
+specific orders of presentation, and wordings.  I do
+not have that experience, so my rewrites will be blind
+to many merits of your original, and to many defects
+in my suggestions.  My high-level suggestions are
+riskier, and will require more cautious consideration
+from you, than my (relatively safe) low-level edits
+for language and vocabulary issues.
+
+However since time is running out, if you don't object
+I will start including more rewritten paragraphs.  I
+will mark them with @@dank: ...@@ and insert them as
+alternate versions, adjacent  to my low-level edits
+(marked as before).  
+
+Here's a sample from the first paragraph of Chapter
+18, "Conditions".
+
+Original version:
+-----------------
+Up until now the programs we defined were executing
+\textit{all} the messages that composed them one after
+the other. We had no way to define that certain
+messages could only be executed when certain
+conditions were met. In this chapter and the following
+one we introduce an important programming concept: the
+notion of \emph{conditional} \index{condition}
+execution, \ie\ the fact a certain piece of code is
+executed when a given condition holds.
+
+Suggested "light" revision, addressing language and
+wording issues only (this is the level of editing I
+have been doing):
+------------------------------------------------------
+Up until now the programs we defined \replace{were
+executing}{executed} \textit{all} the messages
+\replace{that composed them}{they contained,} one
+after the other. We had no way to
+\replace{define}{say} that certain messages
+\replace{could}{should} only be executed \replace{when
+certain}{under some} conditions\replace{ were met}{,
+but not in others}. \replace{In this}{This} chapter
+and the \replace{following one we}{next} introduce an
+important programming concept: the notion of
+\emph{conditional} \index{condition} execution,
+\replace{\ie\}{i.e.} the fact \add{that} a certain
+piece of code \replace{is executed}{executes only}
+when a \replace{given}{specified} condition
+\replace{holds}{is true}. 
+
+The result of the "light" revision (so you don't have
+to run tex to read it):
+-----------------------------------------------------
+Up until now the programs we defined executed
+\textit{all} the messages they contained, one after
+the other. We had no way to say that certain messages
+should only be executed under some conditions, but not
+in others. This chapter and the next introduce an
+important programming concept: the notion of
+\emph{conditional} \index{condition} execution, i.e.
+the fact that a certain piece of code executes only
+when a specified condition is true. 
+
+"Heavy" revision, addressing pedagogical issues,
+content, order etc.:
+-----------------------------------------------------
+@@dank: I think this paragraph could be simpler,
+clearer, livelier, and fit its emphases more closely
+to the essential details.  Here's a possible revision:
+"All of the programs we have seen so far executed
+\textit{all} the code they contained \textit{every
+time} they ran. They did not make any decisions about
+whether or not to execute an expression, or send a
+message. This chapter shows a way a program can make a
+choice: it can decide to execute an expression one
+time, and not execute it another time, depending on
+the situation when the program runs.  Programmers call
+this general idea \emph{conditional execution}
+\index{condition}, because some code executes only
+when a specified condition occurs."@@
+
+======================================================
+
+I will summarize the issues and possible solutions
+abstractly in the introduction, but describing them
+completely would be a daunting, lengthy job; and I
+would still need to supplement any abstract
+description with a specific proposal to make my
+meaning clear.  One danger then is that my rewrite
+will seem too assertive and prescriptive.  I hope we
+both remember that even if I identify a problem or
+issue that we agree on --- there are always
+alternative solutions that are about equally good.  I
+hope to provoke you to your own improvements.
+
+More later
+- Daniel K.
+ 

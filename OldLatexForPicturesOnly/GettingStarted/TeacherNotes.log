@@ -1,0 +1,271 @@
+This is pdfTeX, Version 3.14159-1.00b-pretest-20020211 (Web2C 7.3.7x) (format=pdflatex 2003.12.8)  16 APR 2004 13:14
+\write18 enabled.
+**TeacherNotes.tex
+(./TeacherNotes.tex{/usr/local/teTeX/share/texmf.local/pdftex/config/pdftex.cfg
+}
+LaTeX2e <2001/06/01>
+Babel <v3.7h> and hyphenation patterns for american, french, german, ngerman, d
+utch, nohyphenation, loaded.
+(../Common.tex (/usr/local/teTeX/share/texmf/tex/latex/base/book.cls
+Document Class: book 2001/04/21 v1.4e Standard LaTeX document class
+(/usr/local/teTeX/share/texmf/tex/latex/base/bk11.clo
+File: bk11.clo 2001/04/21 v1.4e Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/teTeX/share/texmf/tex/latex/base/makeidx.sty
+Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
+)
+(/usr/local/teTeX/share/texmf/tex/latex/psnfss/times.sty
+Package: times 2002/04/24 PSNFSS-v9.0 (SPQR) 
+)
+(/usr/local/teTeX/share/texmf/tex/latex/misc/a4wide.sty
+Package: a4wide 1994/08/30
+
+(/usr/local/teTeX/share/texmf/tex/latex/ntgclass/a4.sty
+Package: a4 1999/03/03 v1.2f A4 based page layout
+))
+(/usr/local/teTeX/share/texmf/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/teTeX/share/texmf/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/teTeX/share/texmf/tex/latex/graphics/graphics.sty
+Package: graphics 2001/07/07 v1.0n Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/teTeX/share/texmf/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/teTeX/share/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2001/08/31 v1.1 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 80.
+
+(/usr/local/teTeX/share/texmf/tex/latex/graphics/pdftex.def
+File: pdftex.def 2001/11/29 v0.03i graphics/color for pdftex
+\Gread@gobject=\count88
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/local/teTeX/share/texmf/tex/latex/tools/calc.sty
+Package: calc 1998/07/07 v4.1b Infix arithmetic (KKT,FJ)
+\calc@Acount=\count89
+\calc@Bcount=\count90
+\calc@Adimen=\dimen105
+\calc@Bdimen=\dimen106
+\calc@Askip=\skip43
+\calc@Bskip=\skip44
+LaTeX Info: Redefining \setlength on input line 59.
+LaTeX Info: Redefining \addtolength on input line 60.
+\calc@denominator=\count91
+)
+(/usr/local/teTeX/share/texmf/tex/latex/psnfss/pifont.sty
+Package: pifont 2002/04/24 PSNFSS-v9.0 Pi font support (SPQR) 
+LaTeX Font Info:    Try loading font information for U+pzd on input line 62.
+
+(/usr/local/teTeX/share/texmf/tex/latex/psnfss/upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Try loading font information for U+psy on input line 63.
+
+(/usr/local/teTeX/share/texmf/tex/latex/psnfss/upsy.fd
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+))
+(/usr/local/teTeX/share/texmf/tex/latex/base/t1enc.sty
+Package: t1enc 1994/06/01 Standard LaTeX package
+)
+(/usr/local/teTeX/share/texmf/tex/latex/fancyheadings/fancyheadings.sty
+\headrulewidth=\dimen107
+\footrulewidth=\dimen108
+\plainheadrulewidth=\dimen109
+\plainfootrulewidth=\dimen110
+\headwidth=\dimen111
+\footruleskip=\dimen112
+)
+(/usr/local/teTeX/share/texmf/tex/latex/tools/xspace.sty
+Package: xspace 1997/10/13 v1.06 Space after command names (DPC)
+)
+(/usr/local/teTeX/share/texmf/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/local/teTeX/share/texmf/tex/latex/base/alltt.sty
+Package: alltt 1997/06/16 v2.0g defines alltt environment
+)
+(/usr/local/teTeX/share/texmf/tex/latex/tools/theorem.sty
+Package: theorem 1995/11/23 v2.2c Theorem extension package (FMi)
+\theorem@style=\toks15
+\theorem@bodyfont=\toks16
+\theorempreskipamount=\skip45
+\theorempostskipamount=\skip46
+
+(/usr/local/teTeX/share/texmf/tex/latex/tools/thp.sty
+File: thp.sty 1995/11/23 v2.2c Theorem extension package (FMi)
+))) (../macroes.tex
+(/usr/local/teTeX/share/texmf/tex/latex/tools/thb.sty
+File: thb.sty 1995/11/23 v2.2c Theorem extension package (FMi)
+)
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 14.
+
+(/usr/local/teTeX/share/texmf/tex/latex/psnfss/t1ptm.fd
+File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
+)
+\c@privScript=\count92
+\c@privExercise=\count93
+\c@privMethod=\count94
+\c@privClassDef=\count95
+\c@privTemplate=\count96
+\ScriptFigure=\box26
+\ScriptWidth=\skip47
+\FigureWidth=\skip48
+\scriptindent=\skip49
+\methodindent=\skip50
+\methodwordlength=\skip51
+\aftermethod=\skip52
+\c@fonction=\count97
+\fminibox=\box27
+\fminilength=\skip53
+\c@stefscript=\count98
+\c@exampleScript=\count99
+\c@bigstepnumber=\count100
+\c@exercisenumber=\count101
+) (./TeacherNotes.aux)
+\openout1 = `TeacherNotes.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+
+(/usr/local/teTeX/share/texmf/tex/context/base/supp-pdf.tex
+(/usr/local/teTeX/share/texmf/tex/context/base/supp-mis.tex
+loading : Context Support Macros / Missing
+\protectiondepth=\count102
+\scratchcounter=\count103
+\scratchtoks=\toks17
+\scratchdimen=\dimen113
+\scratchskip=\skip54
+\scratchmuskip=\muskip10
+\scratchbox=\box28
+\scratchread=\read1
+\scratchwrite=\write3
+\zeropoint=\dimen114
+\nextbox=\box29
+\nextdepth=\dimen115
+\everyline=\toks18
+\!!counta=\count104
+\!!countb=\count105
+\recursecounter=\count106
+)
+loading : Context Support Macros / PDF
+\nofMPsegments=\count107
+\nofMParguments=\count108
+\everyMPtoPDFconversion=\toks19
+)
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 7.
+
+
+LaTeX Warning: Reference `ch:firstcontact' on page 1 undefined on input line 7.
+
+
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 9.
+
+LaTeX Warning: Reference `cha:CustoImage' on page 1 undefined on input line 9.
+
+
+LaTeX Warning: Reference `cha:firstscript' on page 1 undefined on input line 13
+.
+
+LaTeX Font Info:    Try loading font information for T1+phv on input line 16.
+(/usr/local/teTeX/share/texmf/tex/latex/psnfss/t1phv.fd
+File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
+)
+
+LaTeX Warning: Reference `cha:custo' on page 1 undefined on input line 16.
+
+
+LaTeX Warning: Reference `ch:turtleMen' on page 1 undefined on input line 37.
+
+
+LaTeX Warning: Reference `ch:abstraction' on page 1 undefined on input line 39.
+
+
+
+LaTeX Warning: Reference `cha:CustoImage' on page 1 undefined on input line 39.
+
+
+
+LaTeX Warning: Reference `cha:custo' on page 1 undefined on input line 39.
+
+
+LaTeX Warning: Reference `cha:variable' on page 1 undefined on input line 43.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 44.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 44.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 44.
+
+LaTeX Warning: Reference `ch:loopvar' on page 1 undefined on input line 48.
+
+
+Overfull \vbox (1.59999pt too high) has occurred while \output is active []
+
+
+[1{/usr/local/teTeX/share/texmf/dvips/config/pdftex.map}{/usr/local/teTeX/share
+/texmf.os/dvips/config/Ttbbold.map}{/usr/local/teTeX/share/texmf.os/dvips/confi
+g/wolfram.map}
+
+]
+
+LaTeX Warning: Reference `cha:caroTour' on page 2 undefined on input line 53.
+
+
+Overfull \vbox (1.59999pt too high) has occurred while \output is active []
+
+
+[2] (./TeacherNotes.aux)
+
+LaTeX Warning: There were undefined references.
+
+ )
+(\end occurred when \ifx on line 59 was incomplete) 
+Here is how much of TeX's memory you used:
+ 1595 strings out of 60917
+ 19917 string characters out of 1188883
+ 4068327 words of memory out of 6523684
+ 4566 multiletter control sequences out of 10000+50000
+ 26143 words of font info for 41 fonts, out of 500000 for 1000
+ 54 hyphenation exceptions out of 1000
+ 27i,10n,21p,581b,329s stack positions out of 1500i,500n,5000p,200000b,5000s
+ 20 PDF objects out of 300000
+ 0 named destinations out of 131072
+ 0 words of extra memory for PDF output out of 65536
+</usr/local/teTeX/share/texm
+f/fonts/type1/bluesky/cm/cmsy10.pfb>{/usr/local/teTeX/share/texmf/dvips/psnfss/
+8r.enc}
+Output written on TeacherNotes.pdf (2 pages, 9257 bytes).

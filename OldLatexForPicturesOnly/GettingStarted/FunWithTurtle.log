@@ -1,0 +1,345 @@
+This is pdfTeX, Version 3.14159-1.00b-pretest-20020211 (Web2C 7.3.7x) (format=pdflatex 2004.6.21)  3 JUL 2004 19:29
+\write18 enabled.
+**FunWithTurtle.tex
+(./FunWithTurtle.tex{/usr/local/teTeX/share/texmf.local/pdftex/config/pdftex.cf
+g}
+LaTeX2e <2001/06/01>
+Babel <v3.7h> and hyphenation patterns for american, french, german, ngerman, d
+utch, nohyphenation, loaded.
+(../Common.tex (/usr/local/teTeX/share/texmf/tex/latex/base/book.cls
+Document Class: book 2001/04/21 v1.4e Standard LaTeX document class
+(/usr/local/teTeX/share/texmf/tex/latex/base/bk11.clo
+File: bk11.clo 2001/04/21 v1.4e Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/teTeX/share/texmf/tex/latex/base/makeidx.sty
+Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
+)
+(/usr/local/teTeX/share/texmf/tex/latex/psnfss/times.sty
+Package: times 2002/04/24 PSNFSS-v9.0 (SPQR) 
+)
+(/usr/local/teTeX/share/texmf/tex/latex/misc/a4wide.sty
+Package: a4wide 1994/08/30
+
+(/usr/local/teTeX/share/texmf/tex/latex/ntgclass/a4.sty
+Package: a4 1999/03/03 v1.2f A4 based page layout
+)) (./pdfsync.sty
+Package: pdfsync 2003/12/08 v0.3
+\PDFPOS=\write3
+\PDFSYNC@folio=\count88
+\PDFSYNC@rder=\count89
+
+(/usr/local/teTeX/share/texmf/tex/latex/ms/everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+)
+\openout3 = `FunWithTurtle.pdfsync'.
+
+)
+(/usr/local/teTeX/share/texmf/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/teTeX/share/texmf/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/teTeX/share/texmf/tex/latex/graphics/graphics.sty
+Package: graphics 2001/07/07 v1.0n Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/teTeX/share/texmf/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/teTeX/share/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2001/08/31 v1.1 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 80.
+
+(/usr/local/teTeX/share/texmf/tex/latex/graphics/pdftex.def
+File: pdftex.def 2001/11/29 v0.03i graphics/color for pdftex
+\Gread@gobject=\count90
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/local/teTeX/share/texmf/tex/latex/tools/calc.sty
+Package: calc 1998/07/07 v4.1b Infix arithmetic (KKT,FJ)
+\calc@Acount=\count91
+\calc@Bcount=\count92
+\calc@Adimen=\dimen105
+\calc@Bdimen=\dimen106
+\calc@Askip=\skip43
+\calc@Bskip=\skip44
+LaTeX Info: Redefining \setlength on input line 59.
+LaTeX Info: Redefining \addtolength on input line 60.
+\calc@denominator=\count93
+)
+(/usr/local/teTeX/share/texmf/tex/latex/psnfss/pifont.sty
+Package: pifont 2002/04/24 PSNFSS-v9.0 Pi font support (SPQR) 
+LaTeX Font Info:    Try loading font information for U+pzd on input line 62.
+
+(/usr/local/teTeX/share/texmf/tex/latex/psnfss/upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Try loading font information for U+psy on input line 63.
+
+(/usr/local/teTeX/share/texmf/tex/latex/psnfss/upsy.fd
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+))
+(/usr/local/teTeX/share/texmf/tex/latex/base/t1enc.sty
+Package: t1enc 1994/06/01 Standard LaTeX package
+)
+(/usr/local/teTeX/share/texmf/tex/latex/fancyheadings/fancyheadings.sty
+\headrulewidth=\dimen107
+\footrulewidth=\dimen108
+\plainheadrulewidth=\dimen109
+\plainfootrulewidth=\dimen110
+\headwidth=\dimen111
+\footruleskip=\dimen112
+)
+(/usr/local/teTeX/share/texmf/tex/latex/tools/xspace.sty
+Package: xspace 1997/10/13 v1.06 Space after command names (DPC)
+)
+(/usr/local/teTeX/share/texmf/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/local/teTeX/share/texmf/tex/latex/base/alltt.sty
+Package: alltt 1997/06/16 v2.0g defines alltt environment
+)
+(/usr/local/teTeX/share/texmf/tex/latex/tools/theorem.sty
+Package: theorem 1995/11/23 v2.2c Theorem extension package (FMi)
+\theorem@style=\toks15
+\theorem@bodyfont=\toks16
+\theorempreskipamount=\skip45
+\theorempostskipamount=\skip46
+
+(/usr/local/teTeX/share/texmf/tex/latex/tools/thp.sty
+File: thp.sty 1995/11/23 v2.2c Theorem extension package (FMi)
+))) (../macroes.tex
+(/usr/local/teTeX/share/texmf/tex/latex/tools/thb.sty
+File: thb.sty 1995/11/23 v2.2c Theorem extension package (FMi)
+)
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 14.
+
+(/usr/local/teTeX/share/texmf/tex/latex/psnfss/t1ptm.fd
+File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
+)
+\c@privScript=\count94
+\c@privExercise=\count95
+\c@privMethod=\count96
+\c@privClassDef=\count97
+\c@privTemplate=\count98
+\ScriptFigure=\box26
+\ScriptWidth=\skip47
+\FigureWidth=\skip48
+\scriptindent=\skip49
+\methodindent=\skip50
+\methodwordlength=\skip51
+\aftermethod=\skip52
+\c@fonction=\count99
+\fminibox=\box27
+\fminilength=\skip53
+\c@stefscript=\count100
+\c@exampleScript=\count101
+\c@bigstepnumber=\count102
+\c@exercisenumber=\count103
+) (./FunWithTurtle.aux)
+\openout1 = `FunWithTurtle.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+ABD: EveryShipout initializing macros
+(/usr/local/teTeX/share/texmf/tex/context/base/supp-pdf.tex
+(/usr/local/teTeX/share/texmf/tex/context/base/supp-mis.tex
+loading : Context Support Macros / Missing
+\protectiondepth=\count104
+\scratchcounter=\count105
+\scratchtoks=\toks17
+\scratchdimen=\dimen113
+\scratchskip=\skip54
+\scratchmuskip=\muskip10
+\scratchbox=\box28
+\scratchread=\read1
+\scratchwrite=\write4
+\zeropoint=\dimen114
+\nextbox=\box29
+\nextdepth=\dimen115
+\everyline=\toks18
+\!!counta=\count106
+\!!countb=\count107
+\recursecounter=\count108
+)
+loading : Context Support Macros / PDF
+\nofMPsegments=\count109
+\nofMParguments=\count110
+\everyMPtoPDFconversion=\toks19
+)
+Chapter 1.
+<beasts.pdf, id=1, 230.8625pt x 116.435pt>
+File: beasts.pdf Graphic file (type pdf)
+ <use beasts.pdf>
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 17.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 18.
+
+(/usr/local/teTeX/share/texmf/tex/latex/psnfss/t1phv.fd
+File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
+)
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 20.
+LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <10.95> not available
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 20.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 20.
+
+(/usr/local/teTeX/share/texmf/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 23.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 27.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 27.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 27.
+
+Overfull \hbox (8.5359pt too wide) in paragraph at lines 20--27
+[][]| 
+ []
+
+<turtleMPenSize.pdf, id=2, 180.675pt x 20.075pt>
+File: turtleMPenSize.pdf Graphic file (type pdf)
+ <use turtleMPenSize.pdf>
+Underfull \vbox (badness 1424) has occurred while \output is active []
+
+
+Overfull \vbox (1.59999pt too high) has occurred while \output is active []
+
+
+[1
+
+
+{/usr/local/teTeX/share/texmf/dvips/config/pdftex.map}{/usr/local/teTeX/share/t
+exmf.os/dvips/config/Ttbbold.map}{/usr/local/teTeX/share/texmf.os/dvips/config/
+wolfram.map} <./beasts.pdf>]
+Overfull \hbox (8.5359pt too wide) in paragraph at lines 50--56
+[][]| 
+ []
+
+<colorFromUser.pdf, id=26, 290.08376pt x 81.30376pt>
+File: colorFromUser.pdf Graphic file (type pdf)
+ <use colorFromUser.pdf>
+Overfull \vbox (1.59999pt too high) has occurred while \output is active []
+
+
+[2 <./turtleMPenSize.pdf> <./colorFromUser.pdf>]
+<shapeAndSize.pdf, id=39, 271.0125pt x 171.64125pt>
+File: shapeAndSize.pdf Graphic file (type pdf)
+ <use shapeAndSize.pdf>
+Overfull \hbox (8.5359pt too wide) in paragraph at lines 92--111
+[][]| 
+ []
+
+
+Overfull \vbox (1.59999pt too high) has occurred while \output is active []
+
+
+[3 <./shapeAndSize.pdf>]
+<paintToolCaroFlap.pdf, id=47, 284.06125pt x 153.57375pt>
+File: paintToolCaroFlap.pdf Graphic file (type pdf)
+
+<use paintToolCaroFlap.pdf> <paintOpen.pdf, id=48, 637.38126pt x 475.7775pt>
+File: paintOpen.pdf Graphic file (type pdf)
+
+<use paintOpen.pdf> <palette.pdf, id=49, 193.72375pt x 331.2375pt>
+File: palette.pdf Graphic file (type pdf)
+
+<use palette.pdf> <zoomButton.pdf, id=50, 253.94875pt x 121.45375pt>
+File: zoomButton.pdf Graphic file (type pdf)
+
+<use zoomButton.pdf> <rotateButton.pdf, id=51, 217.81375pt x 102.3825pt>
+File: rotateButton.pdf Graphic file (type pdf)
+
+<use rotateButton.pdf> <luth.pdf, id=52, 111.41624pt x 93.34875pt>
+File: luth.pdf Graphic file (type pdf)
+
+<use luth.pdf> <debugMenu.pdf, id=53, 150.5625pt x 139.52126pt>
+File: debugMenu.pdf Graphic file (type pdf)
+
+<use debugMenu.pdf>
+LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <10.95> not available
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 195.
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <10.95> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 195.
+
+Overfull \hbox (8.5359pt too wide) in paragraph at lines 195--201
+[][]| 
+ []
+
+
+Underfull \hbox (badness 1577) in paragraph at lines 215--215
+[]/ptmr8t@10.95pt/Change the size of the
+ []
+
+
+Underfull \hbox (badness 1577) in paragraph at lines 218--218
+[]/ptmr8t@10.95pt/Change the size of the
+ []
+
+
+Overfull \vbox (1.59999pt too high) has occurred while \output is active []
+
+
+[4 <./paintToolCaroFlap.pdf>]
+Overfull \vbox (1.59999pt too high) has occurred while \output is active []
+
+
+[5 <./paintOpen.pdf> <./palette.pdf>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \vbox (1.59999pt too high) has occurred while \output is active []
+
+
+[6 <./zoomButton.pdf> <./rotateButton.pdf> <./luth.pdf> <./debugMenu.pdf>]
+Overfull \vbox (1.59999pt too high) has occurred while \output is active []
+
+
+[7] (./FunWithTurtle.aux) )
+(\end occurred when \ifx on line 223 was incomplete) 
+Here is how much of TeX's memory you used:
+ 1776 strings out of 60917
+ 22673 string characters out of 1188883
+ 4071463 words of memory out of 6526820
+ 4718 multiletter control sequences out of 10000+50000
+ 39353 words of font info for 51 fonts, out of 500000 for 1000
+ 54 hyphenation exceptions out of 1000
+ 27i,10n,27p,867b,823s stack positions out of 1500i,500n,5000p,200000b,5000s
+ 99 PDF objects out of 300000
+ 0 named destinations out of 131072
+ 55 words of extra memory for PDF output out of 65536
+{/usr/local/teTeX/share/tex
+mf/dvips/psnfss/8r.enc}</usr/local/teTeX/share/texmf/fonts/type1/bluesky/cm/cmb
+x12.pfb>
+Output written on FunWithTurtle.pdf (7 pages, 278794 bytes).

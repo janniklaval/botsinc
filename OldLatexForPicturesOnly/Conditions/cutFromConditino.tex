@@ -1,0 +1,67 @@
+\section{Conditional Statements}
+Conditional statements are part of program that are executed depending whether certain condition holds. In Smalltalk, a condition statement is a sequence of messages that are only sent  when a boolean expression is in a given state. We will use the following convention we say that a conditional statement or expression is composed by a \textit{boolean expression} which specifies the condition, and some \textit{conditional code}. We say that  the conditional code from a \textit{branch} because the program execution can follow or not a certain part of the program forming a kind of tree.
+
+Smalltalk offers four different methods to express condition: \index{ifTrue:}  \ct{ifTrue:}, \index{ifFalse:}  \ct{ifFalse:} \index{ifTrue:ifFalse:}\ct{ifTrue:ifFalse:}, and \index{ifFalse:ifTrue:}  \ct{ifFalse:ifTrue:}. However there are in fact two main variants  depending whether there is one (\ct{ifTrue:} and \ct{ifFalse:}) or two branches in the conditions (\ct{ifFalse:ifTrue:} and \ct{ifTrue:ifFalse:}). 
+
+\subsection{The Messages \ct{ifTrue:} and \ct{ifFalse:}}
+\paragraph{The message \index{ifTrue:}\ct{ifTrue:}.} The message \ct{aBooleanExpression ifTrue: aBlock} specifies that  the sequence of messages, \ct{aBlock} will only be executed whether the expression \ct{aBooleanExpression} is \textit{true}. 
+
+\begin{scriptwithtitle}{Example of \ct{ifTrue:}}\label{scr:iftrueExample}
+Time now > (Time new hours: 13)
+   \textbf{ifTrue: [PopUpMenu inform: 'Time for a nap']}.
+Smalltalk beep. 
+\end{scriptwithtitle}
+
+In \tscrref{scr:iftrueExample} the boolean expression \ct{Time now > (Time new hours: 13)} is evaluated. 
+It will only be true when it will be  later than 13 o'clock. In such a case and only in such a case, the conditional code, \ct{ [PopUpMenu inform: 'Time for a nap']}, is executed. Here, it  shows the message 'Time for a nap'. When the boolean expression is false, the condition is not executed at all. Note that the code after the condition is executed as normal. Here the expression \ct{Smalltalk beep} is always executed because it does not belongs to the conditional code. Therefore its execution is not influenced by the value of the boolean expression. 
+
+\paragraph{The message\index{ifFalse:}\ct{ifFalse:}.} The message \ct{ifFalse:} is similar than the message \ct{ifTrue:} except that it will only execute the conditional code whether the boolean expression is false. 
+The message \ct{aBooleanExpression ifFalse: aBlock} specifies that  the sequence of messages, \ct{aBlock}, will only be executed whether the expression \ct{aBooleanExpression} is false. 
+
+We can express \tscrref{scr:iftrueExample} using \ct{ifFalse:} by simply negating the boolean expression 
+as shown by the scripts~ref{scr:iffalseExample} or \ref{scr:iffalseExample2}. In \tscrref{scr:iffalseExample} we negated the expression using not while in \tscrref{scr:iffalseExample2} we changed the expression. 
+
+\begin{scriptwithtitle}{Example of \ct{ifTrue:}}\label{scr:iffalseExample}
+(Time now > (Time new hours: 13)) not
+   ifFalse: [PopUpMenu inform: 'Time for a nap'].
+Smalltalk beep. 
+\end{scriptwithtitle}
+
+\begin{scriptwithtitle}{Example of \ct{ifTrue:}}\label{scr:iffalseExample2}
+(Time now <= (Time new hours: 13)) 
+   ifFalse: [PopUpMenu inform: 'Time for a nap'].
+Smalltalk beep. 
+\end{scriptwithtitle}
+
+
+\begin{template}
+\textit{aCondition}
+   \textbf{ifTrue: [} \textit{messagesIfConditionIsTrue} \textbf{]}
+
+\textit{aCondition}
+   \textbf{ifFalse: [} \textit{messagesIfConditionIsFalse} \textbf{]}
+\end{template}
+
+
+\subsection{The message  \ct{ifTrue:ifFalse:} and  \ct{ifFalse:ifTrue:}}
+
+The message \ct{aBooleanExpression ifTrue: aTrueBlock ifFalse: aFalseBlock} specifies that  the sequence of messages, \ct{aTrueBlock} will only be executed whether the expression \ct{aBooleanExpression} is true and that the the sequence of messages, \ct{aFalseBlock} will only be executed whether the expression \ct{aBooleanExpression} is false. In short \ct{aTrueBlock} is executed if the \ct{booleanExpression} is true else \ct{aFalseBlock} is executed. In any case, \ct{aTrueBlock} and \ct{aFalseBlock} cannot be executed both. 
+
+
+\begin{scriptwithtitle}{Example of \ct{ifTrue:ifFalse:}}\label{scr:iftruefalseExample}
+Time now > (Time new hours: 13)
+   ifTrue: [PopUpMenu inform: 'Time for a nap']
+   ifFalse: [Smalltalk beep]. 
+\end{scriptwithtitle}
+
+The behavior of \tscrref{scr:iftruefalseExample} is different than \tscrref{scr:iftrueExample} in the sense that only one of the branches will be executed and not both. Here either we will obtain the message or the sound, never both.
+
+
+As both banches are under the same condition, the method \ct{ifFalse:ifTrue:} is just a convenient method
+to write the code in the order we prefer. Contrary to the difference we did when passingfrom \ct{ifTrue:} (\scrref{scr:iftrueExample}to \ct{ifFalse:} \scrref{scr:iffalseExample}), to use \ct{ifTrue:ifFalse:} or \ct{ifFalse:ifTrue:} we do not have to change anything because both cases are already expressed as shown by~\tscrref{scr:falseiftrueExample}. We just permute the conditions.
+
+\begin{scriptwithtitle}{Example of \ct{ifTrue:ifFalse:}}\label{scr:falseiftrueExample}
+Time now > (Time new hours: 13)
+   ifFalse: [Smalltalk beep]
+   ifTrue: [PopUpMenu inform: 'Time for a nap']. 
+\end{scriptwithtitle}

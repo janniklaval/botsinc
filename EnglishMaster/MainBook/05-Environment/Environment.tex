@@ -1,0 +1,351 @@
+% $Author: stef $
+% $Date: 2008-04-04 17:14:31 +0200 (Fri, 04 Apr 2008) $
+% $Revision: 318 $
+%=================================================================
+\ifx\wholebook\relax\else
+% --------------------------------------------
+% Lulu:
+    \documentclass[a4paper,10pt,twoside]{book}
+    \usepackage[
+        papersize={6in,9in},
+        hmargin={.75in,.75in},
+        vmargin={.75in,1in},
+        ignoreheadfoot
+    ]{geometry}
+    \input{../common.tex}
+    \pagestyle{headings}
+    \setboolean{lulu}{true}
+% --------------------------------------------
+% A4:
+%   \documentclass[a4paper,11pt,twoside]{book}
+%   \input{../common.tex}
+%   \usepackage{a4wide}
+% --------------------------------------------
+    \graphicspath{{figures/} {../figures/}}
+    \begin{document}
+%   \renewcommand{\nnbb}[2]{} % Disable editorial comments
+    \sloppy
+\fi
+
+\chapter{Pica’s Environment}\label{cha:environment}
+
+
+In this chapter, I will present pica’s environment and show you how to obtain tools and save 
+your scripts. I will also return to the notion of messages and show that you can ask the environment not only to execute a message, but also to print the result of the message execution. 
+
+
+\section{The Main Menu}
+
+When you click on the background you get the main menu of the environment, as shown in 
+Figure~\ref{fig:allmenus}. 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[!h]
+	\centerline{\includegraphics[width=\textwidth]{allMenu}}
+	\caption{Menu options of the environment\label{fig:allmenus}}
+\end{figure}
+
+If you want to know what a particular menu item does, simply move the mouse pointer 
+over it for a second, and voil\`a! a balloon should pop up describing the item. The main menu 
+gives access to five main groups of functionalities: access to tools, screen capture, access to 
+some robot behavior, appearance, and saving the environment. The submenus are grouped 
+as follows: 
+\begin{itemize}
+\item The \menu{open} menu collects several tools such as the robot code browser, the Bot workspace, a file browser, and other tools that I will present as needed. 
+
+\item The \menu{BotsInc actions} menu collects several actions such as indicating the version of the 
+environment and clearing all robots and their traces, as well as some actions to reinstall 
+the environment if needed: reinstalling default preferences resets the preferences that 
+you may have modified using the appearance menu to their default values. 
+
+\item  The \menu{appearance} menu collects actions that change the appearance of the environment 
+such as fonts used, full-screen mode, and background color. 
+\end{itemize}
+
+
+\section{Obtaining a Bot Workspace}
+If you happen to close the default Bot workspace, don’t worry. You can get a new one easily 
+from the dark blue flap, as shown (though not in blue) on the left side of Figure~\ref{fig:caroflaps}, or from 
+the main menu, as shown in Figure~\ref{fig:allmenus}. To install a new Bot workspace in the working flap, 
+open the working flap (bottom flap) and drop the Bot workspace from the blue flap into the 
+bottom flap. 
+
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=7cm]{smallcaroflap}\hfill\includegraphics[width=7cm]{FullTurtleWorkspace}
+\caption{Obtaining a new Bot workspace from the flaps. \label{fig:caroflaps}}
+\end{center}
+\end{figure}
+
+The dark blue flap contains other tools that we are going to use in the future. The second 
+tool is basically a code browser that you will use when you define new robot methods. 
+
+The environment contains a simple tool (Figure~\ref{fig:rohals}) that lists the most important messages 
+that a robot can understand. You can obtain access to this tool via the \menu{open} vocabulary menu 
+or the help menu (open vocabulary). The vocabulary pane lists the messages, grouped according to type. For example, the messages \ct{east}, \ct{north}, and so on are listed under absolute directions.
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=8cm]{picaAllHaloAnnotated}
+\caption{Right clicking on a robot brings up its halo of handles.\label{fig:rohals}}
+\end{center}
+\end{figure}
+
+
+\section{Interacting with Squeak}
+
+Interaction with Squeak is based on the assumption that you have a three-button mouse, 
+though there are button equivalents for a Windows two-button mouse or Macintosh one- 
+button mouse, as shown in Table below. Each button is associated with a logical set of operations. 
+The left button is for obtaining contextual menus and for pointing and selecting, the middle 
+button is for window manipulation (bringing a window to the front or moving it), and the 
+right button is for obtaining handles, which are small colored and round buttons floating 
+around graphical elements (as shown in Figure~\ref{sketchWithHalo}). Collectively, the handles are called a \emph{halo}. 
+The handles are useful, for they allow you to interact directly with the robot. I will present 
+them in detail in the next chapter. 
+
+\noindent
+\setlength{\extrarowheight}{1mm}
+{\small \begin{tabular}{p{22mm}p{25mm}p{25mm}p{25mm}}
+\hline
+&\textbf{\textsf{Pointing and Selecting}}&\textbf{\textsf{Context-Sensitive Menus}}&\textbf{\textsf{Open the Halo}}\\ \hline
+Three Buttons:&Left click&Center click&Right click\\ 
+Windows 2-button equivalent: &Left click &Alt-left click&Right click\\ 
+Mac 1-Button equivalent:&Click&Option-click&Command-click\\ \hline
+\end{tabular}}
+Mouse Button and Key Combinations 
+
+
+
+\section{Using the Bot Workspace to Save a Script}
+
+The Bot workspace has five buttons and a menu that allow you to save scripts. The button 
+\menu{Do It All} executes the entire script contained in the workspace. The button \menu{Do It} executes 
+the part of the script in the workspace that is currently selected. The button \menu{Clear Trails}
+clears only the robot trails without removing the robots themselves. The button \menu{Clear Robots}
+removes only the robots without clearing their trails. The button \menu{Clear All} removes all the 
+robots and their trails. 
+
+Once you have written a script, you may wish to save it to a file for future use. The Bot 
+workspace provides a way of saving and loading files via the workspace menu. Click on the 
+contents of the workspace to bring up its associated menu, as shown in Figure~\ref{fig:turtleMenu}. The menu 
+item \menu{save contents} will save the complete contents of the workspace into a file. Selecting this 
+menu item brings up a dialog box, as shown in the figure. Note that the system checks whether 
+a file with the same name already exists. If such a file already exists, the system gives you the 
+choice of overwriting the file or saving it under another name. 
+
+\begin{figure}[h]
+\includegraphics[width=6cm]{saveContents}\includegraphics[width=3cm]{enteringFileName}\includegraphics[width=3cm]{overwrite}
+\caption{Left: Bot workspace menu options. Middle: Specifying the name of the file in which the script is to be saved. Right: If a file already exists,you can overwrite it or rename it.\label{fig:turtleMenu} \label{fig:enteringFileName}}
+\end{figure}
+
+
+\section{Loading a Script}
+
+To load a script, you have to use a file list, a tool that allows you to select and load different 
+files into Squeak. You can obtain a file list by selecting the menu item \menu{open file list} from 
+the main menu. A file list comprises several panes. The top left pane allows you to navigate 
+through volumes and folders; each time you select an item in this pane, the top right pane is 
+updated. It shows all the files contained in the folder that you selected in the left pane. When 
+you select a file in the right pane, the bottom pane automatically displays its contents. Figure~\ref{fig:filelistOpen} shows that we are in the folder Bot testing, in which the file 
+\textsf{square.text} is selected. 
+
+
+\begin{figure}[h]\begin{center}
+\includegraphics[width=12cm]{filelistOpenAnnotated}
+\caption{The file list is open to the script \ct{square.text}.\label{fig:filelistOpen}}\end{center}
+\end{figure}
+
+ 
+
+To load a script, you simply have to copy the contents of the bottom pane using the menu 
+item copy and paste it into the Bot workspace using paste, just as you would in any text editor. 
+
+\section{Capturing a Drawing}
+
+To keep a record of your drawings, you can use the screen capture feature of your computer. 
+However, with some computers, screen capture is problematic. To avoid such problems, the 
+environment offers a simple screen capture mechanism that works on any computer. Bring up 
+the main menu by clicking on the background of the environment. The menu offers two items 
+for capturing, named \menu{capture screen} and \menu{capture and save image}, as shown in Figure~\ref{screenCapture}. 
+
+
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=7cm]{screenCapture}\includegraphics[width=7cm]{positioningScreen}
+\caption{Left: Two possibilities for capturing and saving the capture. Right: The cursor has changed,indicating that Squeak is ready for the capture. Now click to position one corner of the rectangular region you want to capture.}\label{screenCapture}
+\end{center}
+\end{figure}
+
+
+The easier of the two options is to use the capture and save image menu item. When you 
+select this item, Squeak shows that it is ready to capture by changing the cursor’s shape to that 
+of a corner, as shown on the right-hand side of Figure~\ref{screenCapture}. Place the cursor at the corner of the 
+rectangular region you want to capture, click, and drag the mouse to delimit the region you 
+want. The region is displayed in the bottom left corner of the Squeak window, and Squeak 
+prompts you for the name of the file without extension that it will save. 
+
+If you want to capture a region of the screen, use the menu item capture screen. In this 
+case, Squeak will not prompt you to save the file, but instead, it creates a picture on the Squeak 
+desktop, which you can save by first calling up the handles by right clicking on the screenshot. 
+A number of different handles should appear around the image, as shown in Figure~\ref{sketchWithHalo}. Once 
+the halo, that is, the group of handles, has appeared around your image, click on the red handle, 
+which opens a menu of actions that you can apply to the image. Select \menu{export} and the format in 
+which the image is to be saved. Squeak will prompt you for the name of the file. Note that you 
+can import these files into Squeak by dropping them from the desktop onto the Squeak desktop. 
+
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=4cm]{sketchWithHalo}\includegraphics[width=9cm]{sketchExportMenu}
+\caption{Call up the halo and choose the red handle menu item \menu{export} to save the image to disk. } \label{sketchWithHalo}
+\end{center}
+\end{figure}
+
+
+
+\section{Message Result}
+In Smalltalk, objects communicate only by sending and receiving messages to and from other 
+objects. Once an object receives a message, it executes it, and additionally, it returns a result. A 
+result is an object that the receiving object has returned to the sender. Communication between 
+objects by means of messages is similar to communication between people by sending letters: 
+Some letters that we receive require us to perform certain actions (such as a warning from the 
+dogcatcher to keep our dog on a leash), while others might require us to sign an acknowledgment 
+that we have received the letter (a certified letter). 
+
+In Squeak, the receiver of a message always returns a result, which by default is the 
+receiver of the message. However, this result is often not of interest. For example, sending the 
+message \ct{go: 100} to a robot tells the robot to move 100 pixels in its current direction. But we 
+have no use for the result returned, which in this case is the robot itself, so in this case, we 
+ignore the result. In many cases, though, the result of a message execution is important. For 
+example, the expression \ct{2 + 3} sends the message + 3 to the object 2, which returns the object 
+5. Sending the message color to a robot returns its current color. The result of a message can 
+be used as part of another message in a compound message. For example, when the expression 
+\ct{(2 + 3) * 10} is executed, the expression \ct{(2 + 3)} is executed, whereby the message + 3 is sent 
+to the object 2, and this returns 5. The result 5 is then used as the object to which a second 
+message, * 10, is sent. Thus 5 is the receiver of the message, and it then returns the result 50. 
+The Squeak environment allows you to execute messages without dealing with the message’s result, 
+and it also allows you to execute messages and print the returned message value. 
+The following section will illustrate this difference in detail. 
+
+%Note
+\note{A result is an object that the receiving object returns to the object that sent a message. 
+For example, \ct{2 + 5} returns 7 and pica color returns pica’s color, a color object.}
+
+
+In Figure~\ref{fig:printitMenu}, the expression \ct{50 + 90} is selected, then using the menu the expression is 
+executed, and the result, 140, is printed on the screen. 
+
+\begin{figure}[h]
+\includegraphics[width=3.8cm]{selectingExp}\hfill \includegraphics[width=3.5cm]{selectMenu}\hfill\includegraphics[width=3.5cm]{resultExpression}
+\caption{Left: Selecting the expression 50 + 90. Middle: Opening the menu.Right:Executing 
+the message and having the result printed.\label{fig:printitMenu}}
+\end{figure}
+
+\section{Executing a Script}
+There are three ways of executing a script. 
+
+\begin{enumerate}
+\item Using the buttons of the Bot workspace editor. In Chapter 2 you saw a simple way to 
+execute your first script by pressing the Do It All button of the Bot workspace. But 
+to execute a script, you can also select the text you want to execute with the mouse 
+(the selection turns green) and then press the \menu{Do It} button of the Bot workspace. 
+\item Using the menu. Select the part of your script you want to execute, as shown, for 
+example, in Figure~\ref{fig:doitMenu}. Then open the menu by pressing the middle button of your 
+mouse (or press the option key while clicking with the left button), and then choose 
+the do it (d) or the print it (p) menu item as shown in Figure~\ref{fig:printitMenu}. 
+
+\item Using keyboard shortcuts. Select a piece of text, then press command+D on a Mac or 
+alt+D on a PC. 
+
+\end{enumerate}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=8cm]{doitViaMenu}
+\caption{Selecting a piece of a script and executing it explicitly using the menu.\label{fig:doitMenu}}
+\end{center}
+\end{figure}
+
+
+
+\section{Hints}
+To automatically select all the text of a script, you can simply click at the start of the text (before 
+the first character), at the end of the text, or on the line after the last expression. If you want to 
+select a word, you can double click anywhere on the word. If you want to select a line, just dou- 
+ble click at the beginning (before the first character) or end (after the last character) of the line. 
+
+
+\section{Two Examples}
+
+When you execute the expression \ct{pica color}, which asks the robot its color using the do it (d) 
+menu item, the message color is sent and executed. However, you have the impression that 
+nothing happens. This is because you have not asked the system to do anything with the result 
+of the message execution. If you are interested in the result of a message, you should use the 
+menu item \menu{print it (p)}, as shown in Figure~\ref{fig:colorPrintIt}. This has the effect of both executing the piece 
+of code selected \emph{and} printing the result returned by the last message in the code. In the figure, 
+the expression \ct{Bot new} is executed, and then the message color is sent to the newly created 
+robot. The message \ct{color} is executed, and the color of the receiving robot is returned and 
+printed, as shown in Figure~\ref{fig:resultColorPrintIt}. The text \ct{(TranslucentColor r: 0.0 g: 0.0 b: 1.0 alpha: 0.847)} tells us that the color of the robot is a transparent color composed of the three color 
+components red, green, and blue. 
+
+
+\begin{figure}
+\centerline{\includegraphics[width=8cm]{colorPrintIt}} 
+\caption{Open the menu and select the item Print it (d)to execute the selected piece of code. \label{fig:colorPrintIt}}
+\end{figure}
+
+
+
+\begin{figure}
+\centerline{\includegraphics[width=8cm]{resultColorPrintIt}} 
+\caption{The result of the message is printed as a textual representation of a color. \label{fig:resultColorPrintIt}}
+\end{figure}
+
+
+Let’s look at a final example to make sure that you understand when to use print it. When 
+you execute the expression \ct{100 + 20} using the menu item do it (d), the message \ct{+ 20} is sent to 
+the object 100, which adds 20. However, you do not see anything. This is normal, because in 
+such a case the execution of the message \ct{+ 20} returns a new number representing the sum, 
+but you did not ask Squeak to print it. To see the result, you have to print the result of the message execution using the menu item print it. From now on, we will write “-Printing the 
+returned value:” to indicate that we are using the print command to execute an expression 
+and print its result, as shown in Script~\ref{scr:expression}. Note that we will use this convention only when 
+the result is important. 
+
+\begin{script}[expression]{Printing the result of executing an expression }
+(100 + 20) * 10 
+-Printing the returned value: 1200
+\end{script}
+
+There are two ways of executing an expression: (1) using the Do It menu item to execute an 
+expression, and (2) using the \menu{Print it} menu item to execute it and print the returned result. 
+
+\section{Summary}
+
+\begin{itemize}
+\item To execute an expression, select a piece of text representing one or several expressions 
+and press the \menu{Do It} button or select the menu item do itfrom the execution menu. 
+\item  A result is an object that you obtain from a message. For example, \ct{pica color} returns 
+the color of the robot. 
+
+\item  There are two ways of executing an expression, (1) using the \menu{do it} menu item to execute 
+an expression, and (2) using the \menu{print it} menu item to execute it and print the returned 
+result. 
+\end{itemize}
+
+
+\ifx\wholebook\relax\else
+    \end{document}
+\fi
+
+%%% Local Variables:
+%%% coding: utf-8
+%%% mode: latex
+%%% TeX-master: t
+%%% TeX-PDF-mode: t
+%%% ispell-local-dictionary: "english"
+%%% End:

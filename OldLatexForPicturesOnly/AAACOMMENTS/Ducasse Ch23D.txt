@@ -1,0 +1,28 @@
+Chapter 23
+==========
+
+218 script reference looks awry - please fix
+
+>> fixed
+
+219 instead of leaving everything as an exercise to the reader, perhaps have the solutions available to your problem at the end of the chapter so the reader doesn't continually frustrate himself on error.
+
+>> I already give  lot and some of my reviwers complained about that. 
+
+220 introduction to section 3 is very confusing, please rewrite
+
+>> I fixed what I could but I do not see why this is not clear. 
+
+222 you mention speeds in terms of pixels - what, 25 pixels per second? minute? please clarify
+
+>> done. 
+
+section 4.2 is where you begin to lose the reader.  do not assume the reader is able to piece together the puzzle quite yet.  the rest of the chapter assumes the reader doesn't need examples, but just gentle guidance, and again since this is an introductory book and not even a textbook you should not leave so much to chance.  you need to hold the reader's hand and guide him more.  this leap of logic is not appropriate at this point.
+
+>> this is the hardest chapter of the book and I do not want to give all the solutions. My previous readers complain about the fact that they could not dream about their solution. So this is good as it is now. 
+
+
+conclusion needs more text.  this is a rather large chapter; go by your section headings and offer a paragraph or so for each heading, capturing the salient points within each.
+
+
+>> from a programming perspective there is no salient point. We are proposing experiences. no more. 

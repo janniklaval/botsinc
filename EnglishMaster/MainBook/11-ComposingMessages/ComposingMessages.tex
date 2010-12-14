@@ -1,0 +1,725 @@
+% $Author: stef $
+% $Date: 2008-04-04 17:14:31 +0200 (Fri, 04 Apr 2008) $
+% $Revision: 318 $
+%=================================================================
+\ifx\wholebook\relax\else
+% --------------------------------------------
+% Lulu:
+    \documentclass[a4paper,10pt,twoside]{book}
+    \usepackage[
+        papersize={6in,9in},
+        hmargin={.75in,.75in},
+        vmargin={.75in,1in},
+        ignoreheadfoot
+    ]{geometry}
+    \input{../common.tex}
+    \pagestyle{headings}
+    \setboolean{lulu}{true}
+% --------------------------------------------
+% A4:
+%   \documentclass[a4paper,11pt,twoside]{book}
+%   \input{../common.tex}
+%   \usepackage{a4wide}
+% --------------------------------------------
+    \graphicspath{{figures/} {../figures/}}
+    \begin{document}
+%   \renewcommand{\nnbb}[2]{} % Disable editorial comments
+    \sloppy
+\fi
+
+\chapter{Composing Messages}\label{cha:composingMessages}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{figure}[h]
+% 	\centerline{\includegraphics{}}
+% 	\caption{Ready-to-use files for the Macintosh.  
+% 	\label{fig:macfiles}}
+% \end{figure}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{exofigwithsize}[0.5]{\includegraphics[width=3cm]{turtleMSmallStairs}}{A Staircase}\label{xp:letterA}
+% You are not limited in your robot drawings to squares. You can create a wide range of geometrical figures.
+% For example, here is a drawing of a small staircase. Write a script to reproduce this drawing. 
+% \end{exofigwithsize}
+% 
+% \begin{exonofigtitle}{Moving Clock Hands}
+% Experiment with different angle values for each of the two robots; that is,change the angle values for the two turn 
+% methods. Then, compare the effect of the method \ct{turnLeft: 60} (for pica) and \ct{turnRight: 300} (for daly). 
+% You can see that turning left 60 degrees yields the same result as turning right 300 degrees. This is so because 
+% the sum of the two values is 360 degrees, that is, a full circle. 
+% \end{exonofigtitle}
+% 
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{scriptfigwithsize}[0.4]{\includegraphics[width=5cm]{turtleMLetterA}}{The letter A}\label{scr:letterA}
+% 	| pica | 
+% 	pica := Bot new. 
+% 	pica north. 
+% 	pica go: 100. 
+% 	pica east. 
+% 	pica go: 100. 
+% 	pica south. 
+% 	pica go: 100. 
+% 	pica north. 
+% 	pica go: 50. 
+% 	pica west. 
+% 	pica go: 100
+% \end{scriptfigwithsize}
+% 
+% \begin{script}[myster1]{What does pica do? (Problem 1)}
+% 	| pica | 
+% 	pica := Bot new. 
+% 	pica go: 100. 
+% 	pica turnLeft: 45. 
+% 	pica go: 50. 
+% 	pica turnLeft: 45. 
+% 	pica go: 100 
+% \end{script}
+
+As with any language, Smalltalk follows certain rules in executing the messages sent to 
+objects. I have not yet presented these rules to you, and you may have wondered just what 
+those rules are when you were experimenting with the previous scripts. Your patience will be 
+now rewarded. This chapter explains how to read and write correctly formulated messages. 
+This chapter may appear a bit more difficult or abstract than the previous ones. However, 
+I have done my best to present clearly the simple rules that govern the writing of messages. 
+Understanding such details might not be as much fun as playing with robots, but it is the 
+price that must be paid if you are to be able to write more advanced programs. The good news 
+is that Smalltalk is not a complex language: there are only five rules that you need to under- 
+stand. If you are still hesitant, you may also skip this chapter on a first reading and return to it 
+when you have questions about the structure of your programs. 
+
+As described in Chapter 2, a message is composed of the \emph{message selector} and the optional 
+\emph{message arguments}. A message is sent to a \emph{message receiver}. The combination of a message and 
+its receiver is called a \emph{message send}. 
+
+When you write a complex expression such as pica \ct{go: 100 + 20}, it contains two message 
+sends, using the message selectors \ct{go:} and \ct{+}, and you have to know the order in which the 
+messages are executed if you are to understand what the result of the entire expression will be. 
+In Smalltalk, the order in which messages are executed is determined by the type of message 
+send. There are three types of messages: \emph{unary}, \emph{binary}, and \emph{keyword-based}. Unary messages 
+are always sent first, followed by binary messages, and finally keyword-based messages. Any 
+messages enclosed in parentheses are executed prior to any other messages. This means that 
+you can change the order in which message sends are executed through the use of parentheses. 
+These rules go a long way toward making Smalltalk code easy to read. And you will soon 
+discover that most of the time, you do not even have to think about them. However, you have 
+to know them, because occasions will arise that will require your knowledge of them. 
+
+All of the examples presented in this chapter consist of executable code, as shown in the 
+text. So do not hesitate to try them out and see how they function. I will begin by showing you 
+how to identify the different types of messages, and then I will present some examples of each 
+type. Finally, I will present the rules for message composition. 
+
+
+
+\section{The Three Types of Messages }
+
+Smalltalk defines a small number of simple rules to determine the order in which message 
+sends are executed. These rules, which I will present in detail later, are based on the distinction 
+among three different types of messages: 
+
+\begin{itemize}
+\item  \emph{Unary messages} are messages with no arguments. They are sent to an object (the 
+message receiver) without any other information. For example, in the expression \ct{pica color}, 
+the message color is a unary message. It does not send any additional information; 
+that is, there is no argument. These messages are called “unary,” from the Latin 
+\emph{unum}, meaning “one,” because a message send with a unary message involves only 
+\emph{one object}, the message receiver. 
+
+\item  \emph{Binary messages} are messages that involve two objects: the message receiver and the 
+message selector’s sole argument. (The word “binary” is related to the Latin \emph{bis}, mean- 
+ing “twice.”) Binary messages are mainly related to mathematical expressions. For 
+example, in the message send \ct{10 + 20}, the message consists of the message selector + 
+together with the single argument 20. The message \ct{+ 20} is sent to the object 10, which 
+is the message receiver. 
+
+\item  \emph{Keyword-based messages} are messages whose message selector contains a keyword 
+with at least one colon character \ct{:} in its name and that has one or more arguments. For 
+example, in the message send \ct{pica go: 100}, the keyword \ct{go:} contains the colon character: and 
+there is one argument, \ct{100}, and therefore there are two objects involved in 
+the message send: the message receiver \ct{pica} and the argument \ct{100}. 
+\end{itemize}
+
+
+\important{Don’t be confused by the nomenclature for unary and binary messages. The idea of “one” in the 
+word \emph{unary} and the idea of “two” in the word \emph{binary} refer to the number of objects involved in a message 
+send, not the number of arguments. Thus a unary message has no arguments, and so a unary message 
+send involves one object, namely,the message receiver. A binary message has a single argument,and 
+therefore a binary message send involves two objects: the argument of the message selector and the 
+message receiver.}	
+
+\section{Identifying Messages}
+
+In order to understand the structure of an expression, the first thing you need to do is to identify 
+the messages and their receivers. To do this, I suggest that you use a graphical notation as shown 
+in Figure~\ref{fig:uKeyUnOne}. In all the figures of this chapter, the message receivers are underlined, each 
+message is surrounded by an \emph{ellipse}, and the messages that make up the expression are numbered in 
+the order in which they will be executed. When there is more than one ellipse, the first ellipse to 
+be executed is drawn with a dashed line so that you can see at once where to begin. 
+
+Figure~\ref{fig:uKeyUnOne}  shows that the expression \ct{pica color: Color yellow} contains within it the 
+expression \ct{Color yellow}. Therefore, there are two ellipses, one for the entire expression \ct{pica color: Color yellow}, and one for the subexpression \ct{Color yellow}. You will learn a bit later that 
+the expression \ct{Color yellow} is executed first, so its ellipse is a broken line and is numbered 1. 
+
+Note that each message has a receiver. The robot pica receives the message \ct{color: ...}, and 
+Color receives the message yellow. Therefore, these two message receivers are underlined. (The 
+three dots in the message \ct{color: ...} indicate the argument of the message selector \ct{color:}, 
+which will be the result of the message send \ct{Color yellow}.) 
+
+ \begin{figure}[h]
+ 	\centerline{\includegraphics[width=5cm]{uKeyUnOne}}
+ 	\caption{The expression \ct{pica color: Color yellow} contains the subexpression \ct{Color yellow}. 
+	The message \ct{yellow} is sent to \ct{Color}, and then the message \ct{color: ...} is sent to \ct{pica}.  
+ 	\label{fig:uKeyUnOne}}
+ \end{figure}
+
+As I have mentioned, every message is sent to an object called the message receiver. A 
+receiver does not have to be a robot. It can be just about anything, from a number to a window. A message receiver can appear explicitly as the first element of an expression, such as 
+\ct{pica} in the expression \ct{pica go: 100} or \ct{Color} in the expression \ct{Color new}. However, a receiver 
+can also be the result of other message sends. For example, in the message \ct{Bot new go: 100}, 
+the receiver of the message \ct{go: 100} is the resulting object returned by the message send Bot 
+new. Nevertheless, in every case, a message is sent to some object, and that object is called the 
+message receiver. 
+
+\important{In a message send, a message is always sent to an object, called the message receiver, 
+which may be named explicitly or may be the result of other message sends.}
+
+As I have mentioned, every message is sent to an object called the message receiver. A 
+receiver does not have to be a robot. It can be just about anything, from a number to a win- 
+dow. A message receiver can appear explicitly as the first element of an expression, such as 
+\ct{pica} in the expression \ct{pica go: 100} or \ct{Color} in the expression \ct{Color new}. However, a receiver 
+can also be the result of other message sends. For example, in the message \ct{Bot new go: 100}, 
+the receiver of the message \ct{go: 100} is the resulting object returned by the message send Bot 
+new. Nevertheless, in every case, a message is sent to some object, and that object is called the 
+message receiver. 
+
+
+Table~\ref{tab1101} shows some message sends, and I suggest that in each case, you identify the 
+type of message and then draw the graphical representation of the expression.
+
+ \begin{table}[h]
+ \caption{\emph{Some Examples of Message Sends, Simple and Compound.}\label{tab1101}}
+ \begin{center}
+ {\small \begin{tabular}{p{23mm}p{28mm}p{50mm}}
+ \hline
+ \textbf{Expression} & \textbf{Type(s)} & \textbf{Action}\\ \hline
+ \textsf{pica go: 100} & keyword-based & The receiving robot moves forward 100 pixels. \\
+ \textsf{100 + 20} & binary & The number 100 receives the message with the number 20 as argument.\\
+ \textsf{pica est} & unary & The receiving robot \textsf{pica} points to the \textsf{east}. \\
+ \textsf{pica color: Color yellow} & keyword-based, unary & The receiving robot \textsf{pica} changes its color to the color yellow.\\
+ \textsf{pica go: 100 + 20} & keyword-based, binary & The receiving robot moves forward 120 pixels.\\
+ \textsf{Bot new go: 100} & unary, keyword-based & The message \textsf{new} is sent to the Bot class, 
+ which returns a new robot to which the message \textsf{go: 100} is sent, causing the robot to move forward 100 pixels. \\
+ \hline
+ \end{tabular}}
+ \end{center}
+ \end{table}
+
+
+
+From Table~\ref{tab1101} you should observe the following points: 
+\begin{itemize} 
+	
+	\item Some of the messages have arguments, while others do not. The message east, being 
+unary, does not have an argument, while \ct{go: 100} and \ct{+ 20} each have one argument, 
+the number 100 and the number 20, respectively. 
+\item  Different messages are sent to different objects. In the expression pica east, the message
+\ct{east} is sent to a robot, and in \ct{100 + 20}, the message \ct{+ 20} is sent to the number \ct{100}. 
+
+\item  There are simple messages and compound messages. For example, \ct{Color yellow} and 
+\ct{100 + 20} are simple: One message is sent to one object. On the other hand, the expression 
+\ct{pica go: 100 + 20} contains two messages: \ct{+ 20} is sent to \ct{100}, and then \ct{go: ...} is sent to 
+pica, where ... represents the result of the execution of the message send \ct{100 + 20}. 
+\item  A message receiver can be the result of an expression that returns an object. In the 
+expression \ct{Bot new go: 100}, the message \ct{go: 100} is sent to the object (a robot) that 
+results from evaluation of the expression \ct{Bot new}. 
+\end{itemize}
+
+\section{The Three Types of Messages in Detail}
+Now that you are able to identify message receivers and the three types of messages, let us 
+look at the different types of messages in detail. 
+
+
+\subsection{Unary Messages}
+
+Among the uses of unary messages are obtaining a value from an object, such as the size of a 
+robot’s pen (\ct{pica penSize}); obtaining an object from a class (\ct{Color yellow}); and instructing 
+the receiver to perform an action (\ct{pica beInvisible}). Recall that a unary message does not 
+take an argument: it is sent to the receiver without any other information. Thus the one object 
+involved in a unary message send is the message receiver. Unary message sends are of the 
+form of \ct{receiver messageName}. Script~\ref{scr:unaryex} presents some examples of unary messages, shown 
+in boldface type. 
+
+\begin{script}[unaryex]{Examples of unary messages}
+| pica | 
+pica := Bot new. 
+pica !\textbf{color}!. 
+pica !\textbf{penSize}!. 
+pica !\textbf{east}!. 
+Color !\textbf{yellow}!. 
+125 !\textbf{factorial}!
+\end{script}
+
+
+
+
+
+\important{Unary messages are messages that do not take an argument. A unary message send has 
+the form \textsf{receiver messageName}.}
+
+\subsection{Binary Messages}
+
+Binary messages are messages that involve two objects: the receiver and a single argument. All 
+binary message selectors are composed of one or two characters from the following list: 
+\ct{+}, 
+\ct{*},
+\ct{/}, 
+\ct{|},
+\ct{&},
+\ct{=},
+\ct{>},
+\ct{<},
+\textsf{$\sim$},
+\ct{@}. Therefore \ct{+}, \ct{=}, and \ct{*} are message selectors, but so is \ct{=>}, which is composed of two symbols. 
+
+Table~\ref{tab1102} shows some examples of binary message sends and their meaning. At this 
+point, I would rather not go into the details of these examples, so don’t worry if you are not 
+sure about exactly what each of these message selectors does. But try executing the expressions and others like them. 
+
+
+\begin{table}[h]
+ \caption{\emph{Examples of Binary Messages with Numbers.}\label{tab1102}}
+ \begin{center}
+ {\small \begin{tabular}{p{23mm}p{28mm}p{50mm}}
+ \hline
+ \textbf{Expression} & \textbf{Returned Value} & \textbf{Action}\\ \hline
+\textsf{1 + 2.5}& \textsf{3.5}& Addition of two numbers \\ 
+\textsf{3.4 * 5}& \textsf{17.0}& Multiplication of two numbers \\ 
+\textsf{8 / 2}& \textsf{4}& Division of two numbers \\ 
+\textsf{10 - 8.3}& \textsf{1.7}& Subtraction of two numbers \\ 
+\textsf{12 = 11}& \textsf{false}& Testing for equality between two numbers \\ 
+\textsf{12 ~= 11}& \textsf{true}& Testing for inequality between two numbers \\ 
+\textsf{12 > 9}& \textsf{true}& Is the receiver greater than the argument? \\ 
+\textsf{12 >= 10}& \textsf{true}& Is the receiver greater than or equal to the argument? \\ 
+\textsf{12 < 10}& \textsf{false}& Is the receiver less than the argument? \\ 
+\textsf{100@10}& \textsf{100@10}& Create a point with coordinates (100, 10)\\ 
+ \hline
+ \end{tabular}}
+ \end{center}
+ \end{table}
+
+
+
+\important{Binary message sends involve two objects:the receiver and a single argument.The mes- 
+sage selector of a binary argument is composed of one or two characters from the following list: \ct{+}, 
+\ct{*}, \ct{/}, \ct{|}, \ct{&}, \ct{=}, \ct{>}, \ct{<}, \textsf{$\sim$}, \ct{@}. Binary message sends have the form \ct{receiver messageName argument}.}
+
+
+
+\subsection{Keyword-Based Messages}
+
+Keyword-based messages are messages that take at least one argument and that contain at least 
+one colon character \ct{:}. Note that the colon is part of the message selector. Therefore, \ct{go:}, not \ct{go},  is the name of a keyword-based message. Script~\ref{scr:unarykey} shows some examples of keyword-based 
+messages, shown in boldface type. 
+
+
+
+\begin{script}[unarykey]{Examples of keyword-based messages}
+	| pica | 
+	pica := Bot new. 
+	pica !\textbf{go:}! 100. 
+	pica !\textbf{penSize:}! 5. 
+	pica !\textbf{color:}! Color yellow. 
+	pica !\textbf{turn:}! 90
+\end{script}
+
+
+I have said that a keyword-based message has at least one argument, but we have not yet 
+seen an example of such a message with multiple arguments. Let us look at an example now: 
+The message send \ct{aNumber between: lowerBound and: upperBoundchecks} whether the number 
+\ct{aNumber} is in the interval represented by the two numbers \ct{lowerBound} and \ct{upperBound}. 
+This message needs two arguments, namely, the two bounds of the interval. An example is 
+shown in Table 11-3. Note that the message selector is actually \ct{between:and:}. It is composed 
+of the two words \ct{between:} and \ct{and:}. 
+
+
+\begin{table}[h]
+ \caption{\emph{Keyword-Based Messages That Take More Than One Argument.}\label{tab1103}}
+ \begin{center}
+ {\small \begin{tabular}{p{25mm}p{18mm}p{20mm}p{40mm}}
+ \hline
+ \textbf{Expression} & \textbf{Arguments} &\textbf{Returned Value} & \textbf{Action}\\ \hline
+5 between: 2 and: 10 &2, 10&true &Is 5 between 2 and 10? \\
+Color r:0g:1b:0 &0, 1, 0&a green color object&creates a color with the given values of red, green, and blue. \\ \hline
+ \end{tabular}}
+ \end{center}
+ \end{table}
+
+
+\important{Keyword-based messages have at least one argument, and their message selector contains 
+at least one colon character \ct{:}. A keyword-based message send that takes two arguments is of the form 
+\ct{receiver messageNameWordOne: argumentOne messageNameWordTwo: argumentTwo}.}
+
+\section{Order of Execution}
+You have seen that there are three kinds of messages: unary, binary, and keyword-based. Now 
+I will tell you, as I promised, how to determine the order in which messages are executed. The 
+order of message execution is determined by the type of message, as described by the follow- 
+ing three rules: 
+
+\begin{description}
+\item Rule 1: Unary message sends are executed first, then binary message sends, and finally 
+keyword-based ones. 
+\item Rule 2: As with mathematical expressions, the priority of message execution can be over- 
+ridden by parentheses: message sends in parentheses are executed before any other types of message sends. 
+\item Rule 3: Message sends of the same type are executed from left to right. 
+\end{description}
+
+These rules may seem complex, but they are quite natural, and once you get used to them, 
+you will not have to think too much about them most of the time. In particular, the third rule 
+simply states that messages of the same type are executed in the order in which they are read. 
+
+If you are ever in doubt and want to be sure that your messages are executed the way you 
+want, you can always add extra parentheses, as shown in Figure~\ref{fig:uKeyUn}. 
+
+\begin{figure}[h]
+	\centerline{\includegraphics[width=\textwidth]{uKeyUn}}
+	\caption{Unary message sends are executed first, so \ct{Color yellow} is executed first. This execution returns a color object,which is passed as the argument of the message \ct{color:} ... that is 
+	sent to \ct{pica}. 
+	\label{fig:uKeyUn}}
+\end{figure}
+
+
+In the figure, the expression \ct{pica color: Color yellow} is analyzed. The message selector \ct{yellow} is a unary message, while the message selector \ct{color:} is a keyword-based one. Therefore, the expression \ct{Color yellow} is executed first. If you are unsure about the order of execution, then you can put
+parentheses around \ct{Color yellow} to make sure that it will be executed first. This won’t change 
+the natural order of execution. That is, \ct{pica color: Color yellow} and \ct{pica color: (Color yellow)} have precisely the same effect. The rest of this section illustrates each of these points. 
+
+
+\section{Rule 1: Unary > Binary > Keywords}
+
+Unary message sends are executed first, then binary message sends, and finally keyword- 
+based message sends. In programmer jargon we also say that unary messages have precedence 
+over binary messages, and binary messages have precedence over keyword-based messages. 
+\important{Rule 1:Unary message sends are executed before binary message sends,which are 
+executed before keyword-based message sends.}
+
+\subsection{Example 1}
+In the message send \ct{pica color: Color yellow}, there is one unary message, \ct{yellow}, sent 
+to the class \ct{Color}, and there is one keyword-based message, \ct{color:} ..., which is sent to the 
+robot \ct{pica}. Unary message sends are executed first, so the first message send to be executed 
+is \ct{Color yellow}. This execution returns a color object, represented as \ct{aColor} (since we need a 
+name to refer to it), which is passed to pica as the argument of the message \ct{color: aColor}. 
+Figure \ref{fig:uKeyUn} shows graphically the order in which the messages are executed. 
+
+As an aid to your understanding, I would like to propose a textual way of representing a 
+compound message send in step-by-step execution. In Step-by-step~\ref{scr:unarykey2}, the message send 
+to be executed step by step is \ct{pica color: Color yellow}. The first line shows the complete 
+message send in boldface type.
+
+\begin{script}[unarykey2]{Step-by-step decomposition of the execution of pica color: Color yellow}
+pica color: Color yellow 
+(1)           Color yellow        "unary" 
+-returns> aColor  
+(2) pica color: aColor "keyword-based" 
+\end{script}
+
+The lines of code represent the execution steps in numbered order in which they will occur. 
+Thus \ct{Color yellow} is the first expression to be executed. Note that the expressions have been 
+indented to line up with their counterparts in the message send at the top. 
+
+When the execution of a message send returns a result that is used in the following execution, the line following the executed expression shows “-returns>” followed by the result. Here 
+the expression \ct{Color yellow} returns a color object that I have called \ct{aColor} so that it can be 
+referred to in the sequel. The second expression to be executed is \ct{pica color: aColor}, where 
+as I just explained, \ct{aColor} is the result obtained from the previous execution step. To stress 
+this point, the returned value or object is displayed in italic type. For further clarification, the 
+kind of message that is currently being executed is displayed as a comment inside quotation 
+marks. For example, \ct{Color yellow} is shown to be a unary message. 
+
+
+\subsection{Example 2}
+The message send \ct{pica go: 100 + 20}, contains the binary message selector + and the keyword-based message selector \ct{go:}. Binary messages are executed prior to keyword-based 
+messages, so \ct{100 + 20} is executed first: The message \ct{+ 20} is sent to the object \ct{100}, which 
+returns the number 120. Then the message \ct{pica go: 120} is executed with \ct{120} as argument. 
+Step-by-step script \ref{scr:uKeyBin} shows how the expression is executed (Figure~\ref{fig:uKeyBin}). 
+
+\begin{figure}[h]
+	\centerline{\includegraphics[width=5cm]{uKeyBin}}
+	\caption{Decomposition of the expresssion \ct{pica go: 100 + 20}. 
+	\label{fig:uKeyBin}}
+\end{figure}
+
+\begin{script}[uKeyBin]{Step-by-step decomposition of the expresssion pica go: 100 + 20}
+pica go: 100 + 20 
+(1)          100 + 20      "binary" 
+-returns> 120 
+(2) pica go: 120           "keyword-based" 
+\end{script}
+
+
+
+
+
+\subsection{Example 3}
+The message \ct{pica penSize: pica penSize + 2} contains the unary message \ct{penSize}, the 
+binary message with selector \ct{+}, and the keyword-based message with selector \ct{penSize:}. 
+Step-by-step script \ref{scr:uKeyUnBin} illustrates the decomposition of message execution. The unary message send 
+\ct{pica penSize} is executed first (step 1). This message returns a number, which we are calling 
+\ct{aNumber}, representing the current size of the receiver’s pen. Then the binary message send 
+\ct{aNumber + 2} is executed (step 2). The number \ct{aNumber} is the receiver of the message \ct{+ 2}, 
+which in turn returns another number, the sum, which here is called \ct{anotherNumber}. Finally, 
+the keyword-based message \ct{penSize: anotherNumber} is sent to \ct{pica}, who sets his pen size to 
+\ct{anotherNumber} (see Figure~\ref{fig:uKeyUnBin}). 
+
+\begin{figure}[h]
+	\centerline{\includegraphics[width=5cm]{uKeyUnBin}}
+	\caption{Decomposition of the expresssion \ct{pica penSize: pica penSize + 2}. 
+	\label{fig:uKeyUnBin}}
+\end{figure}
+
+\begin{script}[uKeyUnBin]{Step-by-step decomposition of the expresssion pica go: 100 + 20}
+pica penSize: pica penSize + 2 
+(1)               pica penSize        "unary" 
+-returns> aNumber  
+(2)               aNumber+ 2         "binary" 
+-returns> anotherNumber 
+(3) pica penSize: anotherNumber "keyword-based" 
+\end{script}
+
+
+Altogether, the entire compound expression increases the receiver’s pen size by two 
+pixels. It does so by first asking \ct{pica} for his pen size (\ct{pica penSize}), increasing that number 
+by two \ct{(aNumber+ 2)}, and then telling pica to change his pen size to the new number 
+(pica penSize: anotherNumber). Note that \ct{penSize} and \ct{penSize:} are two different message 
+selectors! The first is unary and asks the receiver for its pen size, and the second is keyword- 
+based and tells the receiver to change its pen size to the value of its argument. 
+
+\subsection{Example 4}
+As an exercise, I will let you decompose the execution of the message \ct{Bot new go: 100 + 20}, 
+which is composed of one unary, one keyword-based, and one binary message (see Figure~\ref{fig:uunKeyBin}). 
+
+\begin{figure}[h]
+	\centerline{\includegraphics[width=5cm]{uunKeyBin}}
+	\caption{Decomposition of the expresssion \ct{pica  new go: 100 + 20}. 
+	\label{fig:uunKeyBin}}
+\end{figure}
+
+
+
+
+\section{Rule 2: Parentheses First}
+
+The default ordering of message execution may not be suitable for what you want to accomplish in 
+an expression, and so you should be able to change it. For this purpose, Smalltalk 
+offers parentheses \ct{(}and\ct{)}. Just as in mathematics, expressions in parentheses get the highest 
+precedence, and they are executed before any others. 
+
+Keep in mind that if you find the rules for order of execution a bit complex or if you sim- 
+ply want to clarify the structure of an expression, use parentheses to ensure that the messages 
+are executed in the order that you wish. Figure~\ref{fig:equi} shows some of the expressions that we 
+have previously looked at together with their equivalents using parentheses. 
+
+\begin{figure}[h]
+	\centerline{\includegraphics[width=\linewidth]{uKeyUnBinPar}}
+	\centerline{\includegraphics[width=\linewidth]{uunKeyBinPar}}
+	\caption{Equivalent messages using parentheses.\label{fig:equi}}
+\end{figure}
+
+
+\important{Rule 2: As in mathematics, messages in parentheses are executed before any others.
+They  have the highest priority.}
+
+\subsection{Example 5}
+
+The message \ct{(65 @ 325 extent: 134 @ 100) center} returns the center of a rectangle whose 
+upper-left point has coordinates \ct{(65, 325)}, whose width is \ct{134} pixels, and whose height
+ is \ct{100} pixels. Step-by-step~\ref{scr:thisone} shows how the message is decomposed and executed. First, the message 
+within the parentheses is executed. It is a compound expression consisting of three message 
+sends: two binary message sends, \ct{65 @ 325} and \ct{134 @ 100}, which are executed first and return 
+points; and the keyword-based message \ct{extent:} ..., which is then sent to the point (65, 325) and 
+which returns a rectangle with upper-left point and dimensions as described above. Finally, the 
+unary message center is sent to this rectangle, and a point, the rectangle’s center, is returned. Try- 
+ing to evaluate the message without parentheses leads to an error, because in that case, the unary 
+message \ct{center} would have to be executed first, and it would be sent to the object \ct{100}, but a 
+number object does not understand the message \ct{center}. 
+
+
+\begin{script}[thisone]{Step-by-step decomposition of the expresssion \ct{pica go: 100 + 20}}
+(65 @ 325 extent:  134 @ 100) center 
+(1)  65@325                                      "binary" 
+-returns> aPoint 
+(2)                    134@100                   "binary" 
+-returns> anotherPoint 
+(3)  aPointextent: anotherPoint "keyword-based" 
+-returns> aRectangle  
+(4)  aRectanglecenter                           "unary" 
+-returns> 132@375  
+\end{script}
+
+
+
+\section{Rule 3: From Left to Right}
+
+Now that you know how messages are categorized according to priority of execution, the final 
+question to be addressed is how messages with the same priority are executed. Rule 3 states 
+that they are executed from left to right. This rule was used already, in Step-by-step~\ref{scr:thisone}, 
+where the left-hand binary message \ct{@ 325} was executed before the right-hand message \ct{@ 100}. 
+
+\important{Rule 3: Messages of the same type are executed in order from left to right.}
+
+\subsection{Example 6}
+
+In the expression \ct{Bot new east}, both message sends are unary messages, so the first one as 
+you read from left to right, \ct{Bot new}, is executed first. It returns a newly created robot, called 
+\ct{aBot} in Step-by-step~\ref{scr:noThatone} to which the second message, east, is sent. 
+Figure~\ref{fig:ucompoUn} shows  the order of execution. 
+
+
+\begin{script}[noThatone]{Step-by-step decomposition of the expresssion \ct{Bot new east}}
+!\textbf{Bot new east}!     
+  (1)  Bot new                 "unary"
+      -returns>  aBot
+  (2)         aBot east        "unary"
+\end{script}
+
+
+\begin{figure}[h]
+	\centerline{\includegraphics[width=\linewidth]{ucompoUn}}
+	\caption{Decomposition of the expression \ct{Bot new east}.\label{fig:ucompoUn}}
+\end{figure}
+
+
+\subsection{Example 7}
+
+In the expression \ct{20 + 2 * 5}, there are only the two binary message selectors \ct{+} and \ct{*}. According 
+to Rule 3, since \ct{+} is to the left of \ct{*}, it should be executed first. In normal mathematical 
+notation as well as in many programming languages, multiplication would take precedence 
+over addition regardless of the order in which the arithmetic operations appear. However, in 
+Smalltalk there is \emph{no specific priority} for mathematical operations. The message descriptors \ct{+} 
+and \ct{*} are just binary messages, and therefore they have equal status. The message selector \ct{*} 
+does not have precedence over \ct{+}, and the leftmost message selector \ct{+} is sent first, and then 
+\ct{*} is sent to the result, as shown in Step-by-step~\ref{scr:math} and Figure~\ref{fig:ucompoNoBracket}. 
+
+\begin{script}[math]{Step-by-step decomposition of the expression \ct{20 + 2 * 5}}
+!\textbf{20 + 2 * 5}!
+  
+(1)  20 + 2
+  -returns> 22
+(2)  22 * 5
+   -returns> 110
+\end{script}
+
+
+\begin{figure}[h]
+	\centerline{\includegraphics[width=\linewidth]{ucompoNoBracket}}
+	\caption{Decomposition of the expression \ct{20 + 2 * 5}.\label{fig:ucompoNoBracket}}
+\end{figure}
+
+
+\important{There is no priority among binary messages. In the expression \ct{20 + 2 * 5}, the leftmost message 
+\ct{+} is evaluated first, despite the fact that in normal mathematical notation, 
+multiplication takes precedence over addition.}
+
+You can see, then, as shown in Step-by-step~\ref{scr:math}, that the result of this expression is not 
+30, which you would get if you did the multiplication first, but 110. This behavior is surprising 
+at first, but it derives from the three simple rules for executing messages. This counter intuitive 
+order of mathematical operations is the price that we have to pay for the simplicity of the 
+Smalltalk model, which has only methods. If you want your expression to obey the normal 
+priority of mathematical operations, then you should use parentheses, since when message 
+sends are enclosed in parentheses, they are executed first. Hence the expression \ct{20 + (2 * 5)} 
+returns the result 30, as shown in Step-by-step~\ref{scr:math2} and Figure~\ref{fig:ucompoNumberBracket}. 
+
+\begin{script}[math2]{Step-by-step decomposition of the expression \ct{20 + (2 * 5)}}
+!\textbf{20 + (2 * 5)}!
+  
+(1)  2 * 5
+  -returns> 10
+(2)  20 + 5
+   -returns> 30
+\end{script}
+
+
+\begin{figure}[h]
+	\centerline{\includegraphics[width=\linewidth]{ucompoNumberBracket}}
+	\caption{Decomposition of the expression \ct{20 + (2 * 5)}.\label{fig:ucompoNumberBracket}}
+\end{figure}
+
+
+\important{Message sends surrounded by parentheses are executed first. Therefore,in the expression 
+\ct{20 + (2 * 5)}, the message with \ct{*} is executed before the one with \ct{+}, which is the usual order of 
+operations in mathematics.}
+
+\important{
+Note In Smalltalk,the mathematical message selectors such as \ct{+}and \ct{*} all have the same priority. The 
+symbols \ct{+} and \ct{*} are simply message selectors for binary messages. Therefore, * does not have priority over 
+\ct{+}. If you want to force one operation to take precedence over another, then you should use parentheses. 
+The fact that Smalltalk does not follow mathematical precedence can be confusing at the beginning. Therefore, 
+when you have multiple binary messages representing a mathematical expression, give yourself and 
+anyone else reading your program a break and insert parentheses to express how the computation should 
+be performed. When you have become more accustomed to the way that messages are executed, you will 
+probably become more laissez-faire about parentheses.}
+
+A consequence of rule 1 ---which provides for the order of execution of different types of 
+messages, with unary messages being executed before binary messages, and binary messages 
+before keyword-based messages---is that you very often do not have to use parentheses. That 
+is, most of the time, you do not have to worry about order of execution. Table~\ref{tab1104} shows 
+expressions written to be executed according to Smalltalk’s rules and equivalent expressions 
+using parentheses, which would be necessary if the order of precedence did not exist. 
+
+
+\begin{table}[h]
+\caption{Some Expressions and Their Fully Parenthesized Equivalents.}
+\label{tab1104}
+\begin{center}
+{\small \begin{tabular}{p{50mm}p{50mm}}
+\hline
+\textbf{Without Parentheses} & \textbf{Equivalent Expression with Parentheses} \\
+\hline
+\textsf{pica color: Color yellow} & \textsf{pica color: (Color yellow)} \\
+\textsf{pica go: 100 + 20} & \textsf{pica go: (100 + 20)} \\
+\textsf{pica penSize: pica penSize + 2} & \textsf{pica penSize: ((pica penSize) + 2)}\\
+\textsf{2 factorial + 4} & \textsf{(2 factorial) + 4} \\
+\hline
+\end{tabular}}
+\end{center}
+\end{table}
+
+
+
+
+
+
+
+
+\section{Summary}
+
+\begin{itemize}
+\item  A message is always sent to an object, called the message receiver, which may be the 
+result of other messages. 
+\item  Unary messages are messages that take no argument. A unary message send is of the 
+form of \ct{receiver messageName}. 
+\item  Binary messages are messages that involve two objects: the receiver of the message 
+and a single argument. The message selector of a binary message consists of one or two 
+characters from the following list: \textsf{$+$}, \textsf{$*$}, \textsf{$/$}, \textsf{$|$}, \textsf{\&}, \textsf{$=$}, \textsf{$>$}, \textsf{$<$}, \textsf{$\sim$}, \textsf{@}. Binary message sends are of 
+the form \ct{receiver messageName argument}. 
+\item  Keyword-based messages are messages that take one or more arguments and use a 
+keyword with at least one colon character :. A keyword-based message send taking 
+two arguments is of the form \ct{receiver messageNameWordOne: argumentOne messageNameWordTwo: argumentTwo}. 
+
+\item Rule 1. Unary messages are executed first, then binary messages, and finally keyword- 
+based messages. 
+\item  Rule 2. As in mathematics, expressions in parentheses are executed before any others. 
+\item Rule 3. When messages are of the same type, the order of execution is from left to right. 
+\item In Smalltalk, mathematical message selectors such as + and * have the same priority, 
+and therefore * does not have priority over +. You should use parentheses to ensure that 
+your mathematical expressions are executed in the proper order. 
+
+\end{itemize}
+
+\ifx\wholebook\relax\else
+    \end{document}
+\fi
+
+%%% Local Variables:
+%%% coding: utf-8
+%%% mode: latex
+%%% TeX-master: t
+%%% TeX-PDF-mode: t
+%%% ispell-local-dictionary: "english"
+%%% End:

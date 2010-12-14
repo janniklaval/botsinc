@@ -1,0 +1,160 @@
+% $Author: stef $
+% $Date: 2008-04-04 17:14:31 +0200 (Fri, 04 Apr 2008) $
+% $Revision: 318 $
+%=================================================================
+\ifx\wholebook\relax\else
+% --------------------------------------------
+% Lulu:
+    \documentclass[a4paper,10pt,twoside]{book}
+    \usepackage[
+        papersize={6in,9in},
+        hmargin={.75in,.75in},
+        vmargin={.75in,1in},
+        ignoreheadfoot
+    ]{geometry}
+    \input{../common.tex}
+    \pagestyle{headings}
+    \setboolean{lulu}{true}
+% --------------------------------------------
+% A4:
+%   \documentclass[a4paper,11pt,twoside]{book}
+%   \input{../common.tex}
+%   \usepackage{a4wide}
+% --------------------------------------------
+    \graphicspath{{figures/} {../figures/}}
+    \begin{document}
+%   \renewcommand{\nnbb}[2]{} % Disable editorial comments
+    \sloppy
+\fi
+\chapter*{Avant-propos}
+
+Par Alan Kay \\
+Pr\'esident, Viewpoints Research Institute, Inc. \& Sr. Fellow, 
+The Hewlett-Packard Company 
+
+
+
+\section*{Le futur de la programmation du point de vue des ann\'ees 60}
+J'ai commenc\'e en troisi\`eme cycle d'universit\'e (\`a l'Universit\'e de Utah ARPA Project) en Novembre 1966, et il est int\'eressant de revoir le monde de la programmation au moment o\`u je l'ai \'etudi\'e.
+	
+L'extraordinaire Jean Sammit (qui \'etait une inventrice et historienne de langage de programmation,  ainsi que la premi\`ere femme pr\'esidente de l'ACM) pouvait  d\'enombrer environ 3000 langages de programmation existants \`a la fin des ann\'ees 1960. Beaucoup de langages de programmation continu\`erent \`a s'\'etendre, et une partie \'etait de grand int\'er\^et.
+
+Algol 60, comme le signal\'e Tony Hoare, ``\'etait un grand progr\'es, particuli\`erement sur ses descendants!'' Il avait beaucoup de vertus ext\'erieures, y compris un sentiment plus fort pour les contextes et les environnements au sens de langage de programmation, et un dispositif remarquable, lors des ann\'ees 60 -- appel\'e par ce nom -- qui a permis \`a ses programmeurs une gamme d'expression tr\`es semblable \`a ceux des concepteurs de langage. Par exemple, on pourrait \'ecrire des proc\'edures qui auraient les m\^emes sens et actions que les d\'eclarations de commande du langage :
+ \ct{for (i, 1, 10, print(a[i])} o\`u le premier et quatri\`eme param\`etres seraient marqu\'es name et empaquet\'e ainsi dans une expression qui se souvient du contexte de l'espace-nom de ses variables, mais pourrait \^etre manoeuvr\'e et ex\'ecut\'e \`a partir du corps de la proc\'edure for. Pas m\^eme le LISP original ne l'a correctement fait le premier !
+
+Il y avait une variante syntactique peu connue dans la syntaxe officielle d'algol 60 qui obtenait une forme plus lisible pour des proc\'edures construites. Ceci a permit de remplacer les guillemets, dans un appel de proc\'edure par la construction suivante :
+\ct{ ): <some comment> ( }
+
+et ce qui permettrait \`a l'appel pr\'ec\'edent d'\^etre \'ecrit comme suit :
+\ct{for (i): from (1): to (10): do ( print( a[i] ))}
+
+Si vous faites ceci avec un bel affichage ou une machine \`a \'ecrire ex\'ecutive d'IBM \`a partir d'un terminal (comme JOSS a eu), vous obtiendriez
+\ct{for(i): from(1): to(10): do( print( a[i] ))}
+ce qui ressemble beaucoup au langage de base d'algol mais r\'ealis\'e avec une m\'eta-extension par le programmeur au profit d'autres programmeurs.
+
+
+Peut-\^etre que la plus fondamentale des id\'ees et de repr\'esentations de langage s'est produite plus t\^ot que Algol, mais a pris beaucoup plus de temps chez la plupart des informaticiens pour comprendre (et beaucoup ne l'ont jamais fait), en partie du aux diff\'erentes notations et aux difficult\'es \`a les lire (pour des \'etrangers au moins), et parce que plusieurs des plus grandes contributions du LISP \'etaient ``vraiment m\'eta.'' Une des grandes contributions du LISP \'etait son propre \'evaluateur \'ecrit en une demi de page de code. C'\'etait une sorte d' ``\'equations de Maxwell'' pour la programmation, et \c ca a permis beaucoup de choses d'\^etre consid\'er\'e comme cela mais qui \'etaient essentiellement impensable dans des approches plus normales.
+
+LISP lui-m\^eme a \'et\'e consid\'er\'e comme le principal syst\`eme de programmation pour un agent au sens interactif -- Le preneur de conseil -- et qui pourrait prendre les souhaits d'un utilisateur  \`a l'aide d'une norme vernaculaire et les transformer en processus d'ordinateur qui satisferaient ces souhaits. Quelques langages interm\'ediaires tr\`es int\'eressantes, tels que FLIP, qui essaye d'utiliser certaines propri\'et\'es du suiveur de conseil, et tels que PILOTE, ont \'et\'e cr\'e\'ees au milieu des ann\'ees 60.
+
+Sketchpad \'etait peut-\^etre le plus radical des syst\`emes pr\'ecoces. En effet, il a essay\'e de passer outre toute la structure interactive raisonnable pour les personnes voulant utiliser l'ordinateur pour des simulations interactives de toutes sortes. Les trois contributions cosmiques de
+Sketchpad sont 
+\begin{itemize}
+\item  La premi\`ere approche utilisable aux infographies interactives
+\item Une vraie structure objet pour toutes ses entit\'es
+\item  Une mani\`ere non proc\'edurale de programmer en termes de r\'esultats finaux d\'esir\'es, o\`u le syst\`eme pourrait utiliser divers processus de probl\`emes-solutions automatique pour trouver les r\'esultats d\'esir\'es
+\end{itemize}
+
+Ceci a \'et\'e aid\'e \'enorm\'ement par une ``approche de tol\'erance'' \`a r\'esoudre les contraintes, qui au lieu d'essayer d'obtenir des solutions parfaites logique/symbolique des ensembles de contraintes ont \`a la place essay\'e de r\'esoudre les contraintes dans des tol\'erances globales. Cette approche a permis \`a beaucoup de probl\`emes importants d'\^etre trait\'es mais est encore difficile ou insurmontable symboliquement aujourd'hui.
+JOSS \'etait au contraire tr\`es diff\'erent : il a fait ``presque rien'' (des calculs fondamentalement num\'eriques utilisant des nombres et des structures de rang\'ee), mais ce qu'il a fait a \'et\'e r\'ealis\'e parfaitement et sous forme d'une des plus grandes conceptions d'interface utilisateurs de l'histoire.
+
+Un \emph{langage de programmation} \'etait le nom d'un livre de Kenneth Iverson qui a adopt\'e une approche fortement math\'ematique de la programmation par l'interm\'ediaire des fonctions et des metafonctions exprim\'es sous forme d'alg\`ebre. En ce moment le langage s'est appel\'e ``Iverson.'' Un syst\`eme r\'eel dans lequel vous pourriez programmer un ordinateur mais qui \'etait \`a ce moment une rumeur, mais beaucoup de programmes papier ont \'et\'e \'ecrits en utilisant ces id\'ees. La meilleure chose au sujet d'Iverson \'etait qu'il a vraiment \'et\'e rentable au niveau  des transformations math\'ematiques et des relations math\'ematiques, et il ne s'est pas inqui\'et\'e de combien d'op\'erations seraient exig\'ees. Ne pas s'inqui\'eter du nombre d'op\'erations \'etait presque impensable en ces jours d'horloges de 1 m\'egahertz sur les ordinateurs b\^atiment-class\'es de plusieurs millions de dollars, ainsi Iverson et LISP \'etaient les deux v\'ehicules tr\`es lib\'er\'es pour penser dans le futur, quand les machines seraient plus petites physiquement, et plus grandes et plus rapidement logiquement.
+
+
+Les concepteurs de Simula ont voulu modeliser de grandes, complexes structures dynamiques  et se sont rendus compte que les blocs d'Algol r\'ealiseraient le travail si vous les lib\'eriez de la structure de gestion hi\'erarchique de l'Algol. Dans la cr\'eation de Simula I au milieu des ann\'ees 60, ils pouvaient voir que leurs id\'ees ont eu une grande pertinence de langage et de programmations, et lorsqu'ils ont fait Simula 67 ils pouvaient remplacer beaucoup de types de donn\'ees autrefois int\'egr\'es, tels que \ct{string}, avec une classe de Simula 67.
+
+L'id\'ee d'\'etendre les syntaxes, les s\'emantiques, et les pragmatiques des langages de programmation a constitu\'e un genre entier de recherche dans la seconde moiti\'e des ann\'ees 60. Une des raisons de ceci est qu'il \'etait devenu abondamment clair que la programmation allait \^etre difficile \`a r\'eduire, et que l'\'evolutivit\'e dans diverses domaines allait \^etre critique \`a la sant\'e de l'informatique. L\`a o\`u la complexit\'e est une issue centrale, l'architecture domine des mat\'eriaux. Cette r\'ealisation a commenc\'e \`a faire la programmation en apparaissant en tant que quelque chose de diff\'erente \`a partir des maths, et elle a commenc\'e \`a se r\'ev\'eler elle-m\^eme comme nouvelle forme de technologie. Il y avait des appels pour la formation d'un sujet qui s'appelait la ``technologie des logiciels'' et une conf\'erence \`a essayer de comprendre ce que ceci pourrait signifier (comment faire face si vous ne pouvez pas simplement faire des maths ?).
+
+
+Le bureau de traitement de l'information techniques d'ARPA (IPTO) \'etait en plein rendement du temps o\`u j'\'etais en troisi\`eme cycle d'universit\'e en 1966, et il avait d\'ej\`a fait quelques grands d\'ebuts vers un r\^eve collectif d'avoir le calcul interactif omnipr\'esent pour chacun reli\'e par l'interm\'ediaire ``d'un r\'eseau intergalactique.'' Juste comment cr\'eer ce r\'eseau (qui a eu d'\'enormes \'evolutions) g\'en\'er\'e d'une part par le meilleur syst\`eme \`a ce moment, et \'etait d'une part importante de ma propre id\'ee de la programmation du futur.
+
+Les financeurs d'ARPA \'etaient sages et ils n'ont pas transform\'e la vision de leur r\^eve en buts lucratifs, mais \`a la place ont essay\'e de trouver et placer les talents ayant leurs propres id\'ees sur ce r\^eve et de la fa\c con dont il pourrait \^etre r\'ealis\'e. Ceci a eu comme cons\'equence environ 17 sites dans les universit\'es et dans les compagnies, dont ils  furent fourni de conceptions et de d\'emos tr\`es int\'eressantes et diff\'erentes. Ceci a constitu\'e une communaut\'e  des deux ``accord et argument'' qui les ont tous rendu beaucoup plus fut\'es qu'ils n'\'etaient avant d'avoir joint le grand r\^eve.
+
+Naturellement, parmi les 3.000 langues de Jean Sammit, il y en a beaucoup que je n'ai pas mentionn\'e, ainsi que la conception int\'eressante qui est arriv\'ee en 1967 \`a la fin de la d\'ecennie a \'et\'e omise ici. Pour s\'electionner juste cinq d\'eveloppements d'importance particuli\`ere pour les lecteurs de ce livre, je choisirais la conception des objets que j'ai fourni, et la fa\c con dont ils \'etaient cens\'es \^etre utiles aux utilisateurs des PCs ; Syst\`eme de PLANNER de Karl Hewitt, qui \'etait le syst\`eme le plus coh\'esif pour faire la ``programmation en raisonnement'' ; Syst\`eme IMP de Ned Iron, qui repr\'esente peut-\^etre le premier langage compl\`etement extensible et vraiment utile ; et le langage de d\'efinition de commande de Dave Fisher, qui a illumin\'e l'extensibilit\'e en g\'en\'eral et en respectant en particulier des structures de commande.
+
+
+Ma formation \'etait dans les math\'ematiques et la biologie mol\'eculaire (j'ai travaill\'e mon domaine \`a travers l'\'ecole comme programmeur artisan) et dans les arts. Les circonstances m'ont forc\'e \`a essayer de comprendre le cahier de croquis, le Simula, et le r\'eseau intergalactique propos\'e d'ARPA lors de ma premi\`ere semaine en troisi\`eme cycle d'universit\'e, et la r\'eaction que j'ai eue \'etait cataclysmique. Ils \'etaient semblables par certains c\^ot\'es et tr\`es diff\'erents dans d'autres, mais ils \'etaient de diff\'erentes esp\`eces du m\^eme genre si on prenait une perspective biologique et math\'ematique. Biologiquement, ils \'etaient ``presque des cellules'' pleurant dehors pour \^etre des cellules. Math\'ematiquement, ils \'etaient ``presque des alg\`ebres'' pleurant dehors pour \^etre des alg\`ebres. Ainsi ma fusion initiale de ces m\'etaphores avec le calcul \'etait que vous pourriez faire tout \`a partir des entit\'es qui \'etaient des ordinateurs logiques qui pourraient envoyer les messages (qui devraient \'egalement \^etre les ordinateurs logiques). Les ordinateurs logiques remplacerait la partie de cellules, et les protocoles con\c cus pourraient \^etre tr\`es alg\'ebrique ce qui est aujourd'hui (inexactement) appel\'e \emph{polymorphisme}. Ceci aurait comme cons\'equence la grandes simplicit\'e et \'evolutivit\'e aux ``mat\'eriaux de niveau,'' et ouvrirait la porte pour des avancements dans la simplicit\'e et l'\'evolutivit\'e \`a l' ``expression de niveau'' o\`u le programmeur a v\'ecu.
+
+
+Plusieurs ann\'ees plus tard, j'ai trouv\'e Hewitt PLANNER, et me suis rendu compte que c'\'etait la base vers la bonne voie pour obtenir des programmes qui seront plus signicatifs et plus extensibles. (Plusieurs des id\'ees de PLANNER ont \'egalement \'evolu\'e appel\'e plus tard le langage Prolog.) Il \'etait assez clair qu'essayer d'envoyer les messages, qui \'etaient des objectifs orient\'es, pourrait consid\'erablement aider l'\'evolutivit\'e, en partie parce qu'il y a bien plus de mani\`eres d'essayer de satisfaire des objectifs que d'objectifs (penser \`a la classification comme un objectif contre toutes les mani\`eres de classer), et cette s\'eparation pourrait avoir de grands avantages en gardant des programmes plus significatif et moins d'optimisations compos\'ees de significations.
+
+
+Pendant ce temps, le langage extensible PMI est apparu, disposant de plusieurs id\'ees intelligentes qui lui ont permis d'\^etre pratique sans pour autant se retrouver dans son propre ``m\'eta-''.
+
+
+En parall\`ele de la th\`ese sur laquelle je travaillais (portant sur des ``Personnal Computer'' et des syst\`emes orient\'es objets pour tous les niveaux des utilisateurs), Dave Fisher travaillait sur un tr\`es bel ensemble compl\'ementaire d'id\'ees portant sur la fa\c con de contr\^oler des structures extensibles gr\^ace \`a la possibilit\'e d'ajouter dynamiquement de nouvelles significations \`a un m\'eta-interpr\'eteur de style LISP.
+
+
+LOGO, le premier grand langage de programmation  pour enfants, \'etait une combinaison heureuse de JOSS et de LISP cr\'e\'e par Papert, Feurzig, Bobrow, ainsi que d'autres personnes du BBN. Ceci a donn\'e l'id\'ee que les enfants sont des utilisateurs tr\`es importants des puissantes id\'ees du calcul. De plus, ceci a chang\'e mon id\'ee de la programmation,
+
+
+Ces cinq syst\`emes et l'invitation d'aider \`a d\'emarrer  Xerox PARC \'etaient les impulsions pour smalltalk, et sont tr\`es visible dans les premi\`eres versions de smalltalk.
+Avec du recul, il est frappant que:
+
+\begin{itemize}
+\item Le niveau de l'expression dans la programmation d'aujourd'hui est tr\`es bas (par rapport \`a 1965 pour la plupart), et tr\`es peu de programmeurs programment aujourd'hui au m\^eme  niveau de ce qui \'etait possible avec LISP et Smalltalk dans les ann\'ees 70.
+
+\item  Smalltalk n'a pas sensiblement chang\'e depuis qu'il est sorti, sous le nom de Smalltalk-80, au d\'ebut des ann\'ees 80, bien qu'il contienne son propre ``m\'eta-syst\`eme'' le rendant  tr\`es facilement am\'eliorable.
+
+\item  La loi de Moore de 1965 s'est av\'er\'ee assez correct, et nous pouvons maintenant \'etablir des \'enormes syst\`emes HW et SW. Pourtant, ces derniers sont tr\`es fragiles car les concepts \'evolutifs \`a part les simples ``objects'' n'ont pas \'et\'e ajout\'es (c.-\`a-d., nous avons peut-\^etre des cellules, mais aucun concept m\^eme de tissus, ou comment construire/\'elever des organisations multicellulaires).
+
+\item Internet s'est av\'er\'e \^etre une tr\`es bonne expression d'approche radicale \`a l'architecture et \`a la graduation, pourtant aucun logiciel/syst\`eme de programmation n'est \'etabli pour permettre \`a des programmeurs de s'exprimer gr\^ace \`a des ``syst\`emes Internet'' (comme les programmes exemplaires  de Google et d'Amazone qui pourraient ressembler \`a une nouvelle sorte de syst\`eme de programmation).
+
+\end{itemize}
+ 
+Qu'est ce qui c'est justement av\'er\'e progresser durant les  25 derni\`eres ann\'ees ? Et pourquoi est-ce que Squeak est essentiellement un Smalltalk ``libre'', si nous avons besoin d\'esesp\'er\'ement de progr\`es ?
+
+En 1995, Internet a \'et\'e assez m\^ur pour nous permettre d'essayer quelques exp\'eriences gr\^ace \`a des m\'edias que nous avons longtemps voulu utiliser. Et Java (ainsi que d'autres syst\`emes de programmation) du temps (et aujourd'hui) ont manqu\'e assez mal en \'etant flexibles, meta, et  assez portable pour servir de v\'ehicule. Puisque nous avions fini Smalltalk une fois par le pass\'e, et avions \'ecrit un livre concernant la fa\c con r\'ealiser un tel syst\`eme complet, il a sembl\'e  raisonnable de prendre une ann\'ee pour r\'ealiser un Smalltalk gratuit et contr\^olable et de le communiquer sur Internet (en fait, cela a pris environ neuf mois). L'id\'ee \'etait que Squeak ne devait pas \^etre le v\'ehicule ou m\^eme l'usine pour un meilleur langage du 21i\`eme si\`ecle.
+
+
+Cependant, les syst\`emes de programmation dans lesquels les programmeurs peuvent souvent programmer pour prendre a life of their own, ainsi qu'une grande partie du mouvement de Squeak en open-source and interest est pr\'ecis\'ement un Smalltalk libre avec un syst\`eme de m\'edias qui est fortement portatif. Je pense qu'il est sain de dire que la majeure partie de la communaut\'e de Squeak est consacr\'ee \`a rendre ce Smalltalk plus utile et accessible, et non d\'evou\'e \`a r\'ealiser quelque chose tellement bien qu'il renderait Smalltalk obsol\`ete (un destin que j'aimerais ch\`erement voir se produire).
+
+
+Ainsi, je voudrais encourager les lecteurs de cet excellent nouveau livre \`a ne pas penser \`a Smalltalk comme un groupe de dispositifs des dieux marchands   qui doit \^etre adh\'er\'e, mais comme un syst\`eme qui est capable d'une grande extension dans toutes les dimensions et qui r\'ecompenserait ceux qui proposent de meilleures mani\`eres de programmer. \`a PARC nous avons chang\'e Smalltalk toutes les quelques semaines, et d'une mani\`ere importante tous les deux ans. Bien qu'il ait \`a peine chang\'e depuis lors, merci de faire et de d\'eposer ces grands changements sur Internet pour permettre \`a chacun de nous d'apprendre d'appr\'ecier !
+
+\chapter*{A propos de  l'auteur}
+
+ST\'EPHANE DUCASSE a obtenu son titre de docteur \`a l'universit\'e de Nice-Sophia Antipolis et son habilitation \`a l'universit\'e de Paris 6. Il \'etait le b\'en\'eficiaire de la r\'ecompense 2002 de la SNCF en tant que professeur Boursier. Il est maintenant professeur aux universit\'es de Berne et de Savoie.
+
+Les centre d'int\'er\^ets de St\'ephane sont la conception de syst\`emes r\'eflectif, la conception de langages orient\'e objet, la conception et l'impl\'ementation d'applications,  des composants de logiciel, conception et ex\'ecution des applications, la r\'eing\'enierie des applications orient\'ees objet, et l'enseignement aux d\'ebutants. Il est le principal d\'eveloppeur de l'environnement r\'eing\'enierie Moose. Il aime programmer en Smalltalk et est le pr\'esident du Groupe d'utilisateurs europ\'een de smalltalk.
+
+St\'ephane a \'ecrit plusieurs livres en fran\c cais et l'anglais : La programmation: une approche fonctionnelle et recursive en Scheme (Eyrolles 96), Squeak (Eyrolles 2001), et Object-Oriented Reengineering Patterns (MKP 2002).
+
+Si vous voulez d\'ecouvrir pourquoi St\'ephane aime autant Squeak et pourquoi il participe activement \`a son d\'eveloppement, venez sur  \url{http://www.squeak.org/} et \url{http://www.pharo-project.org}. Venez sur \ct{http://smallwiki.unibe.ch/botsinc/} le site Web de ce livre.
+
+St\'ephane travaille actuellement sur Pharo, \url{http://www.pharo-project.org},  uen nouvelle distribution de Smalltalk o\`u il esp\`ere rendre Smalltalk obsol\`ete comme Alan Kay le souhaite. 
+
+\chapter*{Remerciements}
+J'aimerai remercier tous ceux qui lisent des parties et des \'ebauches de ce livre et qui m'envoient leurs remarques. Ce n'est un t\^ache facile de lire un travail en cours, et je vous suis reconnaissant,  vous qui avez fait l'effort. Je n'essayerai pas d'\'enum\'erer tous vos noms ici, car je suis s\^ur d'en oublier. Cependant, je dois mentionner Orla Greevy, Ian Prince et Daniel Knierim, qui ont lu enti\`erement ce manuscrit. Merci \`a tous pour vos r\'eactions et vos soutiens. Je voudrais \'egalement mentionner, en particulierDaniel Villain, qui a lu une \'ebauche de la version fran\c caise.
+
+
+Je veux remercier la communaut\'e autour de Squeak pour l'aide qu'ils m'ont fourni durant le d\'eveloppement des environnements utilis\'es dans ce livre, et pour l'extraordinaire d\'eveloppement de  l'environnement Squeak en premier lieu. En particulier, je voudrais remercier Nathanael Sch\"arli et Ned Konz pour leurs aides. J'offre des remerciements sp\'eciaux \`a tous les d\'eveloppeurs qui ont aid\'e smalltalk \`a s'\'echapper des nuages du pays des r\^eves afin de devenir une r\'ealit\'e. Je voudrais \'egalement remercier tout les ``Smalltalkers'' qui ont rendu ce langage et cette communaut\'e si excitant. J'esp\`ere que vous continuerez de rendre vos r\^eves vrais.
+
+
+L'\'ecriture de ce livre \`a \'et\'e un processus long et difficile, car l'enseignement \`a des d\'ebutants est difficile. D'ailleurs, je ne suis pas une personne facile \`a vivre, et en tant que chercheur, je deviens excit\'e par trop de sujets. Je veux remercier particuli\`erement Didier Besset pour les nombreuses discussions fructueuses au d\'ebut de ce projet.
+
+Je veux \'egalement remercier mon \'epouse, Florence, et mes fils Quentin et Thibaut, deux petits gar\c cons qui adorent courir bruyamment autour de mon bureau lorsque j'essayais de me concentrer sur mon travail. Merci \`a tous d'accepter un mari et un p\`ere qui n'\'etait pas toujours pr\'esent, enthousiaste, et accessible. Mais bient\^ot nous programmerons ensemble.
+
+
+\ifx\wholebook\relax\else
+    \end{document}
+\fi
+
+
+%%% Local Variables:
+%%% coding: utf-8
+%%% mode: latex
+%%% TeX-master: t
+%%% TeX-PDF-mode: t
+%%% ispell-local-dictionary: "english"
+%%% End:

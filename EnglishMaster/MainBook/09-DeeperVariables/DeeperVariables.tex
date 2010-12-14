@@ -1,0 +1,266 @@
+% $Author: stef $
+% $Date: 2008-04-04 17:14:31 +0200 (Fri, 04 Apr 2008) $
+% $Revision: 318 $
+%=================================================================
+\ifx\wholebook\relax\else
+% --------------------------------------------
+% Lulu:
+    \documentclass[a4paper,10pt,twoside]{book}
+    \usepackage[
+        papersize={6in,9in},
+        hmargin={.75in,.75in},
+        vmargin={.75in,1in},
+        ignoreheadfoot
+    ]{geometry}
+    \input{../common.tex}
+    \pagestyle{headings}
+    \setboolean{lulu}{true}
+% --------------------------------------------
+% A4:
+%   \documentclass[a4paper,11pt,twoside]{book}
+%   \input{../common.tex}
+%   \usepackage{a4wide}
+% --------------------------------------------
+    \graphicspath{{figures/} {../figures/}}
+    \begin{document}
+%   \renewcommand{\nnbb}[2]{} % Disable editorial comments
+    \sloppy
+\fi
+
+\chapter{Digging Deeper into Variables}\label{cha:deeperVariable}
+
+
+In the previous chapter I introduced variables. In this chapter I am going to delve a bit deeper  into the subject so that you can learn more about how variables are used. Since this chapter is a bit technical in nature, you might want to omit it on a first reading. 
+
+Before illustrating in detail how variables work, I want to stress again the importance of 
+choosing good names for variables. 
+
+\section*{Naming Variables}
+
+You are free to choose practically any name for a variable. However, giving your variables 
+meaningful names is very important, because doing so will help you both in writing your 
+programs and in understanding the programs that you have written. To illustrate this point, 
+read Script~\ref{scr:meaningless}, which is in fact Script 8-10 rewritten using meaningless variable names. \sd{fix 8-10}
+
+
+\begin{script}[meaningless]{Meaningless variable names make a program difficult to understand. }
+	| x y z| 
+	x := Bot new. 
+	y := 6. 
+	z := 360 / y. 
+	y timesRepeat: 
+		[ x go: 100. 
+		x turnLeft: z ]. 
+\end{script}
+
+As you may discover by trying it out, Script 9-1 is perfectly correct, and Squeak can execute 
+it without any problem. But I am sure that you know which of the two scripts 8-10 and 9-1 is 
+more understandable. 
+
+In Smalltalk, the name of a variable can be any sequence of alphabetic and numeric 
+(alphanumeric) characters beginning with a lowercase letter. It is customary to use long vari- 
+able names that clearly indicate the function of the variable in the program. Doing so helps 
+you and other programmers to understand your scripts more easily. 
+
+Being able to understand what a program does is very important, since as you will see 
+later, a program usually involves a combination of many scripts.\footnote{This is actually a simplification. Soon, you will learn about methods, which are the true building 
+blocks of programming with objects.} When the time comes that you need to understand a script written by someone else, or even one written by yourself, but perhaps many months ago, you will be glad that you adopted the habit of choosing meaningful variable names. 
+
+Now that you have been convinced of the importance of choosing meaningful names for 
+variables, I will discuss variables in detail. 
+
+\section*{Variables as Boxes}
+Variables are placeholders that refer to objects. A common way to explain the notion of a variable is to use a graphical notation in which variables are represented as boxes. Let us illustrate this idea in Script 9-2 and Figure 9-1. 
+
+In Script 9-2 (step a in the script and in the figure), two variables, \ct{pica} and \ct{pablo}, are  declared. Then in step (b) we create a robot and assign it to the variable pica; that is, the variable \ct{pica} now refers to the newly created robot. Then in (c) the variable \ct{pablo}
+is assigned the value of the variable \ct{pica}, and therefore \ct{pablo} now points to the same object as the variable \ct{pica}, that is, to the newly created robot. When we send a message using either of the two variables, we are actually sending that message to the same object, namely the robot created in step (b), since both variables refer to the same object. Therefore, in (d), the message sent to \ct{pica} causes him to move 100 pixels, while the message in (e), which addresses \ct{pablo}, causes the same robot to change its color to yellow. 
+
+Another way of saying this is that the robot has two names: \ct{pica} and \ct{pablo}. It is just as if the artist Pablo Picasso’s mother had said, “Picasso, come here” \ct{(pica go: 100)}, and then said, “All right, Pablo, here is your yellow shirt. Put it on” \ct{(pablo color: yellow)}. 
+
+\begin{script}[scr:twovariables]{Two variables point to the same robot.}
+	(a)  | pica pablo |          
+	(b)  pica:= Bot new. 
+	(c)  pablo := pica. 
+	(d)  pica go: 100. 
+	(d)  pablo color: Color yellow.
+\end{script}
+
+\begin{figure}
+\begin{center}
+\centerline{\includegraphics[width=10cm]{boxesPointer}}
+\caption{Two variables, \ct{pica} and \ct{pablo}, are declared. (b) A robot is created and the variable 
+\ct{pica} is associated with this new object. (c) The variable \ct{pablo} is assigned the value of the variable pica, and therefore pablo now points to the same object as pica. (d) When we send the message \ct{go: 100} using \ct{pica},the robot moves. (e) When we send the message \ct{color: Color yellow} to pablo, the same robot changes color. In sum,if we send a message to either of the two variables, we are actually sending that message to the same object. \label{fig:boxesPointerRepresentation}}
+\end{center}
+\end{figure}
+
+\section*{Assignment: The Right and Left Parts of :=}
+
+There are two very different ways that a variable name is used in a script. Sometimes, the name 
+is used to refer to its value, as in expressions such as \ct{walkLength + 100} and \ct{pica go: 100}. At other times, the variable name is used to refer to the placeholder itself in order to initialize it or change its value, as in \ct{walkLength := 100} and \ct{pica := Bot new}. 
+
+The key thing to understand about variables is that using a variable name always refers to 
+the value associated with the variable, except in the case that the variable is on the left-hand side of an assignment expression, that is, to the left of the symbol :=. In this one case, the variable name represents the placeholder itself and not the value of the variable. Another way of saying this is that the value of a variable is always read, except when it appears to the left of :=, in which case it is written, that is, changed. Script~\ref{scr:incr} shows an example. 
+
+
+\begin{script}[incr]{The variable \ct{walkLength} is written in line 3 and then read in line 4.}
+(1)  | walkLength pica | 
+(2)  pica := Bot new. 
+(3)  walkLength := 100. 
+(4)  walkLength + 150. 
+(5)  pica go: walkLength
+\end{script}
+
+
+In line 3 of Script 9-3, the variable name \ct{walkLength} appears to the left of :=, so it refers to the placeholder, and the value 100 is assigned to the variable walkLength. After line 3 has been executed, the variable \ct{walkLength} refers to the number 100. In line 4, \ct{walkLength + 150} is not part of an assignment expression, and so the variable name refers to the variable’s value. (Note that in line 4, an addition is carried out, but the result of the addition is not used. Therefore, this line does not do anything and could be removed.) In line 5, both variables \ct{pica} and \ct{walkLength} are used to refer to their values, that is, the objects to which they refer. Therefore, the variable \ct{walkLength} here refers to its value 100, while pica refers to the robot created earlier in the script. Thus line (5) has the effect that the message \ct{go: 100} is sent to the robot created the line 2. 
+
+\important{ A variable is a placeholder for a value,that is, an object. Using a variable returns its value except when the variable is on the left-hand side of an assignment expression,that is,to the left of the symbol :=. In such a case,the value of the variable is changed to the value of the expression on the right-hand side of the assignment expression. For example, \ct{walkLength + 150} returns 150 added to the value of the variable \ct{walkLength}, while \ct{walkLength := 100} changes the value of \ct{walkLength} to 100.}
+
+
+
+\section*{Analyzing Some Simple Scripts}
+To understand better how variables are manipulated, I am going to describe a series of scripts. 
+First, read the script and guess what it does; then evaluate the script carefully to determine its result. I suggest that you to draw a box representation if you think it would be helpful, and check your drawing against the one shown in the figure. As you will see, I   give a small explanation of each script. Note that explanations from one script are not repeated in subsequent scripts, so go through them in order, and look back at the previous scripts for clarification of any points that are confusing. 
+
+
+% \begin{scriptfigwithsize}[0.4]{\includegraphics[width=5cm]{boxOne2}}{Two variables are declared and initialized,and then their values are used.}\label{scr:letterA}
+% 	| pica walkLength | 
+% 	pica := Bot new. 
+% 	walkLength := 100. 
+% 	pica go: walkLength
+% \end{scriptfigwithsize}
+
+\paragraph{Using two variables.}
+In Script~\ref{scr:incr2}, the variables \ct{pica} and \ct{walkLength} are declared. A new robot is created and assigned to the variable \ct{pica}. Then \ct{100} is assigned to the variable \ct{walkLength}. The robot (value assigned to the variable \ct{pica}) receives the message \ct{go:} with the value of the variable \ct{walkLength} as argument, which in this case is \ct{100}. 
+
+\begin{script}[incr2]{Two variables are declared and initialized, and then their values are used (see Figure~\ref{fig:boxOne2}).}
+	| pica walkLength | 
+	pica := Bot new. 
+	walkLength := 100. 
+	pica go: walkLength
+\end{script}
+
+\begin{figure}[h]
+	\centerline{\includegraphics[width=10cm]{boxOne2}}
+	\caption{Two variables are declared and initialized, and then their values are used.  
+	\label{fig:boxOne2}}
+\end{figure}
+
+
+
+\begin{script}[incr3]{Like Script~\ref{scr:incr2}, except that a variable is used as part of an expression  (see Figure~\ref{fig:boxOne3}).}
+	| pica walkLength | 
+	pica := Bot new. 
+	walkLength := 100. 
+	pica go: walkLength + 170. 
+\end{script}
+
+\begin{figure}[h]
+	\centerline{\includegraphics[width=10cm]{boxSize2}}
+	\caption{Using a new variable to hold the value of the length of pica’s walk.  
+	\label{fig:boxOne3}}
+\end{figure}
+
+In Script~\ref{scr:incr3}, to determine the number of pixels that the robot should move forward, the expression \ct{walkLength + 170} is evaluated. Since \ct{walkLength} was initialized to the value \ct{100} and its value was not changed thereafter, the value of \ct{walkLength} is \ct{100}. Therefore, \ct{walkLength + 170} has the value \ct{270}, and the robot moves forward 270 pixels. 
+
+\paragraph{Defining new variable value.}
+The expression \ct{pica go: walkLength + 170} in Script~\ref{scr:incr3} is equivalent to the expression \ct{pica go: walkLength2} of Script~\ref{scr:incr4}. Indeed, the value of the variable \ct{walkLength2} is the value of the variable \ct{walkLength} plus 170.
+
+\begin{script}[incr4]{Using a new variable to hold the value of the length of pica’s walk   (see Figure~\ref{fig:boxOne3}).}
+	| pica walkLength walkLength2 | 
+	pica := Bot new. 
+	walkLength := 100. 
+	walkLength2 := walkLength + 170. 
+	pica go: walkLength2. 
+\end{script}
+
+
+\paragraph{Changing the value of a variable.}
+The value of a variable can indeed be changed using \ct{:=}. In Script~\ref{scr:incr5}, first the variable  \ct{walkLength} is declared, then we assign 100 to it, and then we assign 300 to it (the dashed arrow in the figure pointing to 100 indicates that the variable no longer points to 100). When the variable is then used in the last expression of the script, its value is 300. As a result, the robot moves forward 300 pixels. 
+
+
+\begin{script}[incr5]{Changing \ct{walkLength} twice (see Figure~\ref{fig:boxThree}).}
+	| pica walkLength | 
+	pica := Bot new. 
+	walkLength := 100. 
+	walkLength := 300. 
+	pica go: walkLength 
+\end{script}
+
+\begin{figure}[h]
+	\centerline{\includegraphics[width=10cm]{boxThree}}
+	\caption{Changing \ct{walkLength} value twice.\label{fig:boxThree}}
+\end{figure}
+
+\newpage
+\paragraph{Using a variable without assigning it a value has no effect on its value.}
+Script~\ref{scr:incrNoChange} shows that using the value of a variable in any way other than assigning it a new value has no effect on the variable’s value. The only way to change the value of a variable is with an assignment expression. In Script~\ref{scr:incrNoChange}, the variable \ct{walkLength} is initialized with the value 100. Then the value of \ct{walkLength}, here 100, is added to 200, but   no assignment expression is involved, and so the variable’s value is not modified. And so when the value of \ct{walkLength}, which here is 100, is used in the last statement to specify how far the robot should move forward, the robot moves 100 pixels. 
+
+
+\begin{script}[incrNoChange]{Using a variable without assigning it a value has no effect on its value. (see Figure~\ref{fig:boxNoChange}).}
+	| walkLength pica | 
+	pica := Bot new. 
+	walkLength := 100. 
+	walkLength + 200. 
+	pica go: walkLength 
+\end{script}
+
+\begin{figure}[h]
+	\centerline{\includegraphics[width=10cm]{boxNoChange2}}
+	\caption{Using a variable without assigning it a value has no effect on its value.   
+	\label{fig:boxNoChange}}
+\end{figure}
+
+
+\paragraph{Using the value of a variable to define its own value.}
+In Script~\ref{scr:incr9}, the variable \ct{walkLength} is initialized to 100. Then its value is changed to the value of the expression \ct{walkLength + 50}. At this point, the value of \ct{walkLength} is \ct{100}, so the expression \ct{walkLength + 50} returns \ct{150}, and then the value 150 is assigned to the variable \ct{walkLength}. So in the last step, the robot moves forward 150 pixels. It is important to note here that in the   expression \ct{walkLength := walkLength + 50}, the variable name \ct{walkLength} is used in two different ways: first, the expression to the right of \ct{:=} is evaluated, in which \ct{walkLength} represents a value, and then the result of that evaluation is assigned to the variable \ct{walkLength} to the left of \ct{:=}, which on this side represents the variable as a placeholder. 
+
+
+\begin{script}[incr9]{The value of the variable \ct{walkLength} is used to define the variable itself.  (see Figure~\ref{fig:boxOne4}).}
+	| pica walkLength | 
+	pica := Bot new. 
+	walkLength := 100. 
+	walkLength := walkLength + 50. 
+	pica go: walkLength
+\end{script}
+
+\begin{figure}[h]
+	\centerline{\includegraphics[width=10cm]{boxFour}}
+	\caption{The value of the variable \ct{walkLength} is used to define the variable itself.  
+	\label{fig:boxOne4}}
+\end{figure}
+
+
+
+\paragraph{Using twice the same variable to change its own value.}
+In Script~\ref{scr:incr10}, the variable \ct{walkLength} is initialized to \ct{150}. Then the value of \ct{walkLength} is reassigned to refer to the value of the expression \ct{walkLength + walkLength}. In computing the value of the expression \ct{walkLength + walkLength}, the value of \ct{walkLength} is \ct{150}. Therefore, the expression returns \ct{300}, which becomes the new value of the variable \ct{walkLength}. And so  the robot moves forward 300 pixels.
+
+
+\begin{script}[incr10]{Using twice the same variable to change its own value (see Figure~\ref{fig:boxOne4}).}
+	| pica walkLength | 
+	pica := Bot new. 
+	walkLength := 150. 
+	walkLength := walkLength + walkLength. 
+	pica go: walkLength 
+\end{script}
+
+
+\section*{Summary}
+
+\begin{itemize}
+\item A variable is an object that serves as a placeholder for a value. You can think of a variable as a box referring to an object. 
+
+\item Using a variable returns its value except when the variable is on the left of an assignment expression \ct{:=}. In such a case its value changes to become the value of the expression on the right of the assignment expression \ct{:=}. For example, \ct{walkLength + 100} returns 100 added to the value of the variable \ct{walkLength}. On the other hand, \ct{walkLength := 100} changes the value of \ct{walkLength} to be \ct{100}. 
+\end{itemize}
+
+\ifx\wholebook\relax\else
+    \end{document}
+\fi
+
+
+%%% Local Variables:
+%%% coding: utf-8
+%%% mode: latex
+%%% TeX-master: t
+%%% TeX-PDF-mode: t
+%%% ispell-local-dictionary: "english"
+%%% End:

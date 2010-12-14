@@ -1,0 +1,48 @@
+
+Ducasse Ch11
+************
+
+Nice chapter, I feel the learning curve is a little bit too steep right now though? perhaps you could help the reader a tiny bit more? I know you are trying to stretch them here, but ...
+
+>> I will try but again my reader is not a 10 year old kid. 
+
+
+p98 "grows 10 by 10 pixels " <--- you mean just by 10 pixels right?
+
+>> fixed
+
+
+p98
+"Here, 20 = 10 + 10, 30 = 20 + 10, 40 = 30 + 10,.... If we use the variable length to
+represent the length of a step, we see that the length of the second step is the length of the first step
+plus 10, that the length of the third step is the length of the second step plus 10... We"
+---> recommend the use of a visual here for your reader
+---> otherwise it's all a bit abstract!
+
+>> we should not exaggerate. 
+Knowing how to express it is not trivial but the fact that a step is 10 pixels
+than the previous one is trivial.
+
+
+p100
+"as well as the spiral shown in figure 11.2" <--- 11.3 ?
+(hey that's quite tough hehe)
+
+>> no this is right
+
+
+p101
+You think maybe explain how to do 11.2 explicitly? the step of logic required is quite tough in this beautiful looking chapter
+
+>> no this is easy and if I say how to do it this is totally stupid. 
+
+
+Ditto for some of the others - motivating yes, easy? not for some of your readers!!
+>> I added some hints
+
+Oh - no summary?
+ :)
+
+I added another section and a small summary. 
+
+

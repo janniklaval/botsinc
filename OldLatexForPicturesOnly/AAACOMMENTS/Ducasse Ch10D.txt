@@ -1,0 +1,60 @@
+
+Ducasse Ch10
+************
+
+Difficult chapter, I advise some considerable reworking so you hold the reader's hand more clearly and work through step by step with them. Keep the diagrams next to their descriptive text - it will help a lot also.
+
+
+>> Yes may be should be moved after compose to recompose
+since I could then explain what a stack of messages is...
+
+
+
+"get an error [message]" --> think that needs to be introduced more carefully/slowly perhaps?
+
+
+p92
+Place Fig 10.2 close to its reference I advise
+
+
+p92
+"Note that this functionality is possible only if you provoked the error using some specific messages"
+-->
+This is a bit mysterious at this point? the reader is not aware of debugging techniques right?
+
+p92/93
+Figure 10.3 closer to its body text reference I advise
+
+
+p93
+"execution of the program" or "execution of the script" ? which will be easier for the reader?
+
+p93 Fig 10.2
+Is there a less intimidating shot of the debugger window possible? Just for intro purposes? Then again, repeating what they see is a good idea :)
+
+p93
+Note error: "Figure˜reffig:debug1sizenil shows that we selected another message in the stack."
+
+
+p93-95
+These pages are in my opinion problematic.
+--->
+It isn't helped by the Figures not being next to their descriptive text.
+But also - it's just a little too hard to follow on paper, in my opinion. Do your other reviewers feel the same about this?
+--->
+My advice would be to step the reader very very much more simply and clearly through bringing up some error messages and working with the debugger. But very structured, very clear. The text needs to walk through closely with the reader. We are taking them to strange lands of bugs and debuggers and the concept of broken code and compilation - go carefully, slowly, and make it a "step 1-step2-stop and observer-step3-..." sequence so the reader can always "hang on" to your hand??
+-->
+Figure 10.6 is sitting out there out-of-synchronisation with the rest of the chapter, not helping the reader, and it's unclear its chronology or time. Interleave screens with text - put the right diagrams next to the right text !!
+-->
+The chapter's Summary doesn't seem to relate to its content very directly for the reader?!
+
+
+
+
+
+
+
+
+
+
+

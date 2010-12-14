@@ -1,0 +1,18 @@
+Chapter 17
+==========
+This is a good chapter; I think it has a nice flow and is very helpful to the reader.  Steps gradually into transcripts, traces, etc.
+
+A few edits here:
+
+149 - perhaps callout box is redundant?
+
+152 - "A string doesnot know out to perform any math..."  perhaps change this to something like "Squeak cannot perform mathematical operations with strings"
+
+>> no OOP thinking this is the right way to express sentence. 
+
+
+152 bottom - have you defined "flaps" earlier in the text?
+>> Yes
+
+fig 17.1 and 17.2 have identical captions
+

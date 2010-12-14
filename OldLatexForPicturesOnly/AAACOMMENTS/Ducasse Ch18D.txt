@@ -1,0 +1,15 @@
+Chapter 18
+==========
+
+161 Your intro to the chapter here is a little weak; you use the term condition in a sentence without really giving the reader a context for it.  Perhaps some rewording is in order.
+
+162:  what is @@tron@@?  This may be ignorance on my part, but I'm not sure what this.
+
+>> this is french
+because I could not find the english
+
+section 4 is very helpful.  I like the way you guide the reader through the debugging process and add the trace.  Examples like this throughout the text add great value for the reader.
+
+You might consider expanding the summary section a bit, as it seems like we learned more in this chapter than you let on with the single bullet point.
+
+>> Yes but I do not know what to do.

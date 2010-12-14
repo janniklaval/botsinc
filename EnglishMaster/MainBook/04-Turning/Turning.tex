@@ -1,0 +1,464 @@
+% $Author: stef $
+% $Date: 2008-04-04 17:14:31 +0200 (Fri, 04 Apr 2008) $
+% $Revision: 318 $
+%=================================================================
+\ifx\wholebook\relax\else
+% --------------------------------------------
+% Lulu:
+    \documentclass[a4paper,10pt,twoside]{book}
+    \usepackage[
+        papersize={6in,9in},
+        hmargin={.75in,.75in},
+        vmargin={.75in,1in},
+        ignoreheadfoot
+    ]{geometry}
+    \input{../common.tex}
+    \pagestyle{headings}
+    \setboolean{lulu}{true}
+% --------------------------------------------
+% A4:
+%   \documentclass[a4paper,11pt,twoside]{book}
+%   \input{../common.tex}
+%   \usepackage{a4wide}
+% --------------------------------------------
+    \graphicspath{{figures/} {../figures/}}
+    \begin{document}
+%   \renewcommand{\nnbb}[2]{} % Disable editorial comments
+    \sloppy
+\fi
+\chapter{Directions and Angles}\label{cha:turning}
+
+\noindent\hrule
+\hfil \includegraphics[width=0.9\linewidth]{ChTurntitlePicture}\hfil
+\vspace{0.2cm}
+\noindent\hrule\vspace{1.5cm}
+
+
+By now, you should be getting tired of drawing figures only in fixed directions. In this chapter 
+you will learn how to change the direction in which a robot points, allowing the robot to point 
+in any direction, to turn through any angle relative to its current position, and therefore to draw 
+lines in any direction. If you already understand clearly what an angle is and how to measure 
+angles in degrees, you may skip the section “The Right Angle of Things” and then proceed to 
+the examples and experiments in the section “Simple Drawings.” 
+I will begin by presenting the elementary messages for changing direction that robots 
+understand. I am going to hide the robots from the illustrations using the message \ct{beInvisible} 
+so that you can get clearer pictures. 
+
+\newpage
+
+\section{Right or Left?}
+
+In the previous chapter, you learned that a robot can be made to face in different directions 
+using the messages \ct{east}, \ct{north}, \ct{northEast}, \ct{northWest}, \ct{south},
+\ct{southEast}, \ct{southWest}, and \ct{west}. 
+However, with these messages you cannot change the direction of your robot through an arbitrary angle, 
+such as 15 degrees. In addition, you cannot turn a robot through, say, a quarter 
+turn relative to its current direction. 
+
+To turn a robot through a given angle you should use the two methods \ct{turnLeft:} and 
+\ct{turnRight:}, which tell a robot to turn to the left or the right. As the colon at the end of each 
+method name indicates, these two methods expect an argument. This argument is the angle 
+through which the robot should turn relative to its current position. That is, the argument is 
+the difference between the robot’s direction before the message is sent and its direction after 
+the message is sent. This angle is given in degrees. For example the expression \ct{pica turnLeft: 15} 
+asks pica to turn to the left fifteen degrees from its current direction, and \ct{pica turnRight: 30} 
+turns pica to the right thirty degrees from its current direction. Figure~\ref{fig:turnLeftBoth} illustrates the effect of the messages \ct{turnLeft:} and \ct{turnRight:}, first when a robot is pointing to the east, and second when a robot is pointing in some other direction. 
+
+\begin{figure}
+\begin{center}\includegraphics[width=12cm]{turnLeftBoth}
+\caption{Left: A robot facing east turns left or right through 30 degrees. Right:A robot facing in 
+some other direction turns left or right through 30 degrees.  \label{fig:turnLeftBoth}}
+\end{center}
+\end{figure}
+
+As you practice turning robots through various angles, keep in mind that when a new 
+robot is created, it always points to the east, that is, to the right of the screen. 
+
+
+
+
+
+\begin{exonofig}{Mystery Scripts}
+Scripts~\ref{scr:myster1} and \ref{scr:myster2} present problems in which you are to guess what the created robot will do. After studying these two scripts, experiment with them by changing the angle values, for example to determine what angle turns the robot through a quarter circle, a half circle, or a full circle. If you need to review the notion of angle, read the section "The Right Angle of Things" before continuing. 
+\end{exonofig}
+
+\begin{script}[myster1]{What does pica do? (Problem 1)}
+	| pica | 
+	pica := Bot new. 
+	pica go: 100. 
+	pica turnLeft: 45. 
+	pica go: 50. 
+	pica turnLeft: 45. 
+	pica go: 100 
+\end{script}
+
+\begin{script}[myster2]{What does pica do? (Problem 2)}
+	| pica | 
+	pica := Bot new. 
+	pica go: 100. 
+	pica turnRight: 60. 
+	pica go: 100. 
+	pica turnLeft: 60. 
+	pica go: 100 
+\end{script}
+
+
+\section{A Directional Convention}
+
+In mathematics, it is a general convention that rotation through a negative angle is construed 
+as clockwise, while one with a positive angle is in the counterclockwise direction. You can also 
+make use of this mathematical convention by using the message \ct{turn:}. Hence, the message 
+\ct{turnLeft: aNumber} is equivalent to the message \ct{turn: aNumber}, while the message \ct{turnRight: aNumber} is equivalent to \ct{turn: -aNumber}, where \ct{-aNumber} is the negative of \ct{aNumber}. 
+This relationship is depicted in Figure~\ref{fig:turnLeftWithMathematicalEq}. 
+
+
+\begin{figure}
+\begin{center}\includegraphics[width=8cm]{turnLeftWithMathematicalEq}
+\caption{Turning through a 30-degree angle starting from the direction east. \label{fig:turnLeftWithMathematicalEq}}
+\end{center}
+\end{figure}
+
+
+
+
+
+\section{Absolute Versus Relative Orientation}
+You should now feel confident that you can ask a robot to execute any drawing consisting of 
+straight lines. Before going further, be certain that you understand the difference between orienting 
+a robot absolutelyusing the methods \ct{north}, \ct{south}, \ct{southEast}, \ct{east}, etc., and using the 
+methods \ct{turn:}, \ct{turnLeft:}, and \ct{turnRight:} to orient the robot relative to its current orientation. Experiments \ref{xp:relsq}, \ref{xp:titledsquare}, and \ref{xp:brsquare} will help you to solidify your understanding of this difference. 
+
+
+
+\begin{exofigwithsize}[0.7]{\includegraphics[width=2.5cm]{ChTurnfirstSquare}}{A relative square}\label{xp:relsq}
+Write a script to draw a square using the method \ct{turnLeft:} or \ct{turnRight:}. 
+\end{exofigwithsize}
+
+
+\begin{exonofigtitle}{Tilting the Square}\label{xp:titledsquare}
+Modify your script from Experiment~\ref{xp:relsq} by adding the line \ct{pica turnLeft: 33.} before the first line containing the message \ct{go: 100}. You will obtain a square again, but it is tilted 33 degrees from the previous one. 
+\end{exonofigtitle}
+
+
+
+
+\begin{exonofigtitle}{A broken square}\label{xp:brsquare}
+Finally, execute Script~\ref{scr:brsquare}, which attempts to draw a tilted square using the methods \ct{north}, \ct{south}, \ct{east}, and \ct{west} that we presented in the previous chapter. 
+\end{exonofigtitle}
+
+
+\begin{scriptfigwithsize}[0.4]{\includegraphics[width=3cm]{ChTurnbadSquare}}{A Broken Square}\label{scr:brsquare}
+	| pica | 
+	pica := Bot new. 
+	pica north. 
+	pica go: 100. 
+	pica east. 
+	pica go: 100. 
+	pica south. 
+	pica go: 100. 
+	pica north. 
+	pica go: 50. 
+	pica west. 
+	pica go: 100
+\end{scriptfigwithsize}
+
+Do you still obtain a square? No! The first side drawn by the robot is slanted, whereas the 
+other sides are either horizontal or vertical. The script that you wrote for Experiment~\ref{xp:brsquare} and 
+Script~\ref{scr:brsquare} demonstrate the crucial difference between \emph{relative} and \emph{absolute}
+ changes in direction: 
+
+\begin{itemize}
+\item The methods \ct{north}, \ct{south}, \ct{east}, and \ct{west} change direction in an absolute manner. 
+The direction in which the robot will point \emph{does not depend} on the current direction in 
+which it is pointing. 
+\item  The methods \ct{turnLeft:}and \ct{turnRight:} change direction in a relative manner. The 
+direction in which the robot will point \emph{depends} on its current direction. 
+\end{itemize}
+
+Figure~\ref{fig:roserelative} shows the equivalence between relative moves starting with a robot pointing to 
+the east and absolute moves. As you know, this equivalence is valid only if the robot is point- 
+ing east and not if it is pointing in any other direction. By the way, note that turning the robot 
+180 degrees points it in the opposite direction; this trick is often used in scripts. 
+
+
+\begin{figure}[h]
+\begin{center}\includegraphics[width=8cm]{roseDesVentsRelatifToo}
+\caption{Comparing absolutes and relative angles starting from the east direction.\label{fig:roserelative}}
+\end{center}
+\end{figure}
+
+\section{The Right Angle of Things}
+
+As you know by now, a newly created robot is pointing east, that is, toward the right-hand side 
+of the screen. If we ask this robot to turn left by 90 degrees, it will end up heading north. If 
+instead, we ask it to turn right by 90 degrees, it will end up heading south. Script 4-4 illustrates 
+the result of a turn left by 45 degrees. To help you in following the script, the accompanying 
+figure shows the robot’s starting position. 
+
+\begin{scriptfigwithsize}[0.5]{\includegraphics[width=5cm]{ChTurnAngleSearchAnnotated}}{Moving through angles (1)}\label{xp:angle1}
+	| pica | 
+	pica := Bot new. 
+	pica west. 
+	pica go: 100. 
+	pica east. 
+	pica turnLeft: 45. 
+	pica go: 100.
+\end{scriptfigwithsize}
+
+
+
+The first part of Script~\ref{xp:angle1}, up to the line pica east, draws a horizontal line, which will act 
+as a reference line to indicate the easterly direction. The last part draws a line in the direction 
+45 degrees to the left of the easterly direction. You can vary the value of the angle to see what 
+sort of angles other numbers of degrees represent. Try the values 60, 120, 180, 240, 360, and 
+420. In particular, note that a turn by 180 degrees amounts to turning the robot in the opposite 
+direction from which it is pointing. 
+
+Do you see any difference between arguments of 60 and 420? They represent the same angle! 
+Any two angle values whose difference is 360 or any multiple thereof are equivalent because 360 
+degrees represents a complete circle. Try an angle value of 1860 (1860 = 60 + 360 ×5). The result is 
+the same as you obtained with angle values 60 and 420. So keep in mind in dealing with angles 
+that a robot’s orientation does not change by adding one or more full turns to the orientation. 
+
+Now let us have some fun with the method \ct{turnRight:}. Script 4-5 draws the hour and 
+minute hands of a clock together with a reference line. It uses two robots, which you can use 
+to investigate the correspondence between a left turn and a right turn. I have added comments 
+surrounded by quotation marks and have employed a variety of font effects to help you to identify 
+the different parts of the script. Note that you do not have to type these comments, since 
+they are not executed. 
+
+
+\begin{scriptfigwithsize}[0.4]{\includegraphics[width=7cm]{twoAnglesAnnotated}}{Moving through angles (2)}\label{xp:angle2}
+	| pica daly | 
+	pica := Bot new. 
+	pica jump: 200. 
+	"drawing the reference line" 
+	pica turnLeft: 180. 
+	pica go: 200. 
+	pica turnLeft: 180. 
+	pica color: Color blue. 
+	pica turnLeft: 45.       
+	"drawing the minute hand" 
+	pica go: 150. 
+	daly := Bot new. 
+	daly color: Color red. 
+	\textbf{daly turnRight: 45.}  
+	"drawing the hour hand" 
+	\textbf{daly go: 100.} 
+\end{scriptfigwithsize}
+
+
+In Script~\ref{xp:angle2}, the code in italics draws the reference line—that is, the line representing 
+the direction of the robot before a turn method is executed—using the fact that a turn through 
+180 degrees amounts to turning around to point in the opposite direction. The reference line 
+is also the longest line drawn. Thus, the reference line will still be visible if the lines drawn by 
+the robots fall on top of it. The text in normal roman font following the italics is the code that 
+draws the minute hand (using pica) and in bold, the code drawing the hour hand using the 
+robot daly. 
+
+\begin{exonofigtitle}{Moving Clock Hands}
+Experiment with different angle values for each of the two robots; that is,change the angle values for the two turn 
+methods. Then, compare the effect of the method \ct{turnLeft: 60} (for pica) and \ct{turnRight: 300} (for daly). 
+You can see that turning left 60 degrees yields the same result as turning right 300 degrees. This is so because 
+the sum of the two values is 360 degrees, that is, a full circle. 
+\end{exonofigtitle}
+
+
+Now let us see what happens when the robot turns from another direction. Here is the 
+same script as Script 4-4 but showing the effect of turning from the north. In this script we are 
+replacingdalyby another robot, berthe, who honors the French impressionist painter Berthe 
+Morisot. 
+
+
+\begin{scriptfigwithsize}[0.4]{\includegraphics[width=5cm]{threeAngles}}{Moving through angles (3)}\label{xp:angle3}
+	| pica berthe | 
+	pica := Bot new. 
+	\textbf{pica north.}
+	pica jump: 200. 
+	pica turnLeft: 180. 
+	pica go: 200. 
+	pica turnLeft: 180. 
+	pica color: Color blue. 
+	pica turnLeft: 45. 
+	pica go: 150. 
+	berthe := Bot new. 
+	berthe north. 
+	berthe color: Color red. 
+	berthe turnRight: 45. 
+	berthe go: 100. 
+\end{scriptfigwithsize}
+
+
+\begin{exonofigtitle}{Changing the Reference Direction}
+Continue to experiment with Script~\ref{xp:angle3} by changing the reference direction. For the comparison to be meaningful, 
+you have also to orient \ct{berthe} in the same direction as \ct{pica} after creating her. Try any angle values you like and 
+try to predict what the resulting drawing will look like before executing the script. Continue experimenting with the 
+script until your predictions are accurate. 
+\end{exonofigtitle}
+
+Note that you should always be able to predict what is going to happen before executing a 
+script, because a computer blindly executes all valid statements, even the silliest ones. 
+
+\section{A Robot Clock}
+
+I have mentioned that the lines drawn in Script 4-6 are akin to the hands of a clock. The anal- 
+ogy between time and angles is a good one, for the notion of degrees is strongly correlated 
+with that of hours. Ancient civilizations discovered the notion of time by measuring the angle 
+of the sun (or a star) relative to a reference direction. However, a script like Script 4-6 allows 
+you to place the hands in a position that does not indicate a real time of day. For example, you 
+could draw a clock with the hour hand pointing north and the minute hand pointing south. 
+But on a real clock, when the minute hand is pointing south, it is half past the hour, and so 
+the hour hand should be halfway between two numbers on the clock’s face. 
+
+Now you will study the relationship between the hour hand and the minute hand on a 
+realclock that represents a realtime of day. 
+
+%xp
+
+\begin{exonofigtitle}{A "real" Clock}
+	Modify Script~\ref{xp:angle3} as follows: 
+
+\begin{itemize} 
+	\item Keep the direction of reference to the north (this is how Script 4-6 is written). This reference line 
+	indicates 12:00 noon or midnight. 
+	\item  Use the method \ct{turnRight:} for both robots. After all,the hands of a clock move clockwise, which is 
+	to the right. 
+	\item  You can ask \ct{pica} to draw the minute hand by multiplying the number of minutes after the hour 
+	that you wish to indicate by 6 (since during the 60 minutes in an hour, the minute hand travels the 
+	$6 * 60 = 360$ degrees in a full circle). For example,to represent the minute hand for 20 minutes after 
+	the hour, you should use the expression \ct{turnRight: 120} (since $120 = 6  * 20$). 
+	\item  You can ask \ct{berthe} to draw the hour hand by multiplying the number of the hours you want to indicate 
+	by 30 (12 hours times 30 degrees per hour equals 360 degrees) and then adding one-half (0.5) 
+	of a degree for each minute after the hour,since in 60 minutes,the hour hand moves 30 degrees.For 
+	example, the hour hand is positioned for 2 o'clock with the message \ct{turnRight: 60} $(60 = 30 * 2)$, 
+	while the time 4:26 requires the hour hand to be positioned with the message \ct{turnRight: 133} 
+	$(133 = 30 * 4 + 26 * 0.5)$. 
+\end{itemize}
+Try to indicate a few times of your choice with this modified script. 
+\end{exonofigtitle}
+	
+\section{Simple Drawings}
+
+To begin with, here is a script for drawing a triangle with three equal sides: 
+
+
+\begin{scriptfigwithsize}[0.4]{\includegraphics[width=3cm]{ChTurnfirstTriangle}}{An equilateral triangle}\label{xp:triangle}
+	| pica | 
+	pica := Bot new. 
+	pica go: 100. 
+	pica turnLeft: 120. 
+	pica go: 100. 
+	pica turnLeft: 120. 
+	pica go: 100. 
+	pica turnLeft: 120. 
+\end{scriptfigwithsize}
+
+The last line of code is not necessary for drawing the triangle; it serves to point \ct{pica} back in 
+his initial position. 
+
+Now, you are ready to draw a house. 
+
+\begin{exofigwithsize}[0.5]{\includegraphics[width=2cm]{ChTurnbabyHouse}}{A House}\label{xp:house}
+	Draw a house as shown in the figure. Try to draw houses of different shapes. 
+\end{exofigwithsize}
+
+
+\section{Regular Polygons}
+
+A regular polygon is a figure composed of line segments all of the same length and all of 
+whose angles are equal. An equilateral triangle is a regular polygon with three sides. A square 
+is a regular polygon with four sides. For example, Script~\ref{xp:triangle} draws an equilateral triangle 
+whose side length is 100 pixels. It is obtained by telling \ct{pica} to go forward 100 pixels and then 
+turn 120 degrees left, and then repeating these two messages two more times so that they are 
+executed three times altogether. 
+
+You can program a robot to draw a regular polygon with any number of sides by asking it 
+to move a certain length and then turn left or right by 360 degrees divided by the number of 
+sides; this sequence must be repeated as many times as there are sides. Note that the last turn 
+by the robot can be omitted, since the robot has drawn the last line of the polygon. 
+
+
+\begin{exofigwithsize}[0.5]{\includegraphics[width=2cm]{ChTurnpentagon}}{A House}\label{xp:penta}
+	Draw a regular pentagon (a regular polygon with five sides), as shown in the figure,with sides of length 100 pixels.
+\end{exofigwithsize}
+
+\begin{exofigwithsize}[0.5]{\includegraphics[width=2cm]{ChTurnhexagon}}{A House}\label{xp:hexagon}
+	Draw a regular hexagon (a regular polygon with six sides), as shown in the figure, with sides of length 100 pixels.
+\end{exofigwithsize}
+
+If you are just curious to see how far you can go with this process, you can use the cut and 
+paste feature of the Bot workspace to generate a regular polygon with a large number of sides. 
+If you are in the mood, go on increasing the number of sides. However, in Chapter 7, I will show 
+you how you can type a sequence of expressions once and then have them repeated over and 
+over. 
+
+\begin{exofigwithsize}[0.5]{\includegraphics[width=2cm]{ChTurnc3pace}}{3 spaces}\label{xp:threespokedfig}
+Draw the three-spoked figure shown below. 
+\end{exofigwithsize}
+
+
+\section{Summary}
+
+\begin{itemize}
+\item A robot can be oriented relative to its current direction using the methods \ct{turnLeft}: 
+and \ct{turnRight:}. 
+\item The parameter given to the methods \ct{turnLeft:} and \ct{turnRight:} is given in degrees. 
+\item Turning 360 degrees corresponds to a turn through a full circle. 
+\item  Turning 180 degrees corresponds to a turn through a half circle. 
+\item Angle values whose difference is a multiple of 360 degrees are equivalent. 
+\end{itemize}
+
+Here is a list of the methods that you have learned about in this chapter. 
+
+
+\vspace*{5mm}
+\noindent
+\setlength{\extrarowheight}{1mm}
+{\small \begin{tabular}{p{14mm}p{23mm}p{45mm}p{22mm}}
+\hline
+\textbf{Method} & \textbf{Syntax} & \textbf{Description} & \textbf{Example}\\
+\hline
+\textsf{turnLeft:} & \textsf{turnLeft: aNumber} &
+Tell the robot to change its direction by a given number of degrees to the left. 
+& \textsf{pica turnLeft: 30 } \\
+
+\textsf{turnRight:} & \textsf{turnRight: aNumber} &
+Tell the robot to change its 
+direction by a given number 
+of degrees to the right.
+& \textsf{pica turnRight: 30} \\
+
+
+\textsf{turn:} & \textsf{turn: aNumber} &
+DTell the robot to change its  
+direction to a given number 
+of degrees following the 
+mathematical convention 
+that a turn is to the left if the 
+number is positive and to 
+the right if it is negative.
+& \textsf{pica turn: 30} \\
+
+\textsf{beInvisible} & \textsf{beInvisible} &
+Hide the receiver. 
+& \textsf{pica beInvisible} \\
+
+\textsf{beVisible} & \textsf{beVisible} &
+Show the receiver. 
+& \textsf{pica beVisible} \\
+\hline
+\end{tabular}}
+
+
+\ifx\wholebook\relax\else
+    \end{document}
+\fi
+
+
+%%% Local Variables:
+%%% coding: utf-8
+%%% mode: latex
+%%% TeX-master: t
+%%% TeX-PDF-mode: t
+%%% ispell-local-dictionary: "english"
+%%% End:

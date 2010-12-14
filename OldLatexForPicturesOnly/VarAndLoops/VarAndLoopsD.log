@@ -1,0 +1,436 @@
+This is pdfTeX, Version 3.14159-1.00b-pretest-20020211 (Web2C 7.3.7x) (format=pdflatex 2004.8.20)  29 JAN 2005 18:55
+\write18 enabled.
+**VarAndLoopsD.tex
+(./VarAndLoopsD.tex{/usr/local/teTeX/share/texmf.local/pdftex/config/pdftex.cfg
+}
+LaTeX2e <2001/06/01>
+Babel <v3.7h> and hyphenation patterns for american, french, german, ngerman, d
+utch, nohyphenation, loaded.
+(../Common.tex (/usr/local/teTeX/share/texmf/tex/latex/base/book.cls
+Document Class: book 2001/04/21 v1.4e Standard LaTeX document class
+(/usr/local/teTeX/share/texmf/tex/latex/base/bk11.clo
+File: bk11.clo 2001/04/21 v1.4e Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/teTeX/share/texmf/tex/latex/base/makeidx.sty
+Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
+)
+(/usr/local/teTeX/share/texmf/tex/latex/psnfss/times.sty
+Package: times 2002/04/24 PSNFSS-v9.0 (SPQR) 
+)
+(/usr/local/teTeX/share/texmf/tex/latex/misc/a4wide.sty
+Package: a4wide 1994/08/30
+
+(/usr/local/teTeX/share/texmf/tex/latex/ntgclass/a4.sty
+Package: a4 1999/03/03 v1.2f A4 based page layout
+)) (./pdfsync.sty
+Package: pdfsync 2003/12/08 v0.3
+\PDFPOS=\write3
+\PDFSYNC@folio=\count88
+\PDFSYNC@rder=\count89
+
+(/usr/local/teTeX/share/texmf/tex/latex/ms/everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+)
+\openout3 = `VarAndLoopsD.pdfsync'.
+
+)
+(/usr/local/teTeX/share/texmf/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/teTeX/share/texmf/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/teTeX/share/texmf/tex/latex/graphics/graphics.sty
+Package: graphics 2001/07/07 v1.0n Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/teTeX/share/texmf/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/teTeX/share/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2001/08/31 v1.1 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 80.
+
+(/usr/local/teTeX/share/texmf/tex/latex/graphics/pdftex.def
+File: pdftex.def 2001/11/29 v0.03i graphics/color for pdftex
+\Gread@gobject=\count90
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/local/teTeX/share/texmf/tex/latex/tools/calc.sty
+Package: calc 1998/07/07 v4.1b Infix arithmetic (KKT,FJ)
+\calc@Acount=\count91
+\calc@Bcount=\count92
+\calc@Adimen=\dimen105
+\calc@Bdimen=\dimen106
+\calc@Askip=\skip43
+\calc@Bskip=\skip44
+LaTeX Info: Redefining \setlength on input line 59.
+LaTeX Info: Redefining \addtolength on input line 60.
+\calc@denominator=\count93
+)
+(/usr/local/teTeX/share/texmf/tex/latex/psnfss/pifont.sty
+Package: pifont 2002/04/24 PSNFSS-v9.0 Pi font support (SPQR) 
+LaTeX Font Info:    Try loading font information for U+pzd on input line 62.
+
+(/usr/local/teTeX/share/texmf/tex/latex/psnfss/upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Try loading font information for U+psy on input line 63.
+
+(/usr/local/teTeX/share/texmf/tex/latex/psnfss/upsy.fd
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+))
+(/usr/local/teTeX/share/texmf/tex/latex/base/t1enc.sty
+Package: t1enc 1994/06/01 Standard LaTeX package
+)
+(/usr/local/teTeX/share/texmf/tex/latex/fancyheadings/fancyheadings.sty
+\headrulewidth=\dimen107
+\footrulewidth=\dimen108
+\plainheadrulewidth=\dimen109
+\plainfootrulewidth=\dimen110
+\headwidth=\dimen111
+\footruleskip=\dimen112
+)
+(/usr/local/teTeX/share/texmf/tex/latex/tools/xspace.sty
+Package: xspace 1997/10/13 v1.06 Space after command names (DPC)
+)
+(/usr/local/teTeX/share/texmf/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/local/teTeX/share/texmf/tex/latex/base/alltt.sty
+Package: alltt 1997/06/16 v2.0g defines alltt environment
+)
+(/usr/local/teTeX/share/texmf/tex/latex/tools/theorem.sty
+Package: theorem 1995/11/23 v2.2c Theorem extension package (FMi)
+\theorem@style=\toks15
+\theorem@bodyfont=\toks16
+\theorempreskipamount=\skip45
+\theorempostskipamount=\skip46
+
+(/usr/local/teTeX/share/texmf/tex/latex/tools/thp.sty
+File: thp.sty 1995/11/23 v2.2c Theorem extension package (FMi)
+))) (../macroes.tex
+(/usr/local/teTeX/share/texmf/tex/latex/tools/thb.sty
+File: thb.sty 1995/11/23 v2.2c Theorem extension package (FMi)
+)
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 14.
+
+(/usr/local/teTeX/share/texmf/tex/latex/psnfss/t1ptm.fd
+File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
+)
+\c@privScript=\count94
+\c@privExercise=\count95
+\c@privMethod=\count96
+\c@privClassDef=\count97
+\c@privTemplate=\count98
+\ScriptFigure=\box26
+\ScriptWidth=\skip47
+\FigureWidth=\skip48
+\lineWidth=\skip49
+\scriptindent=\skip50
+\methodindent=\skip51
+\methodwordlength=\skip52
+\aftermethod=\skip53
+\c@fonction=\count99
+\fminibox=\box27
+\fminilength=\skip54
+\c@stefscript=\count100
+\c@decompo=\count101
+\c@exampleScript=\count102
+\c@bigstepnumber=\count103
+\c@exercisenumber=\count104
+) (./VarAndLoopsD.aux
+
+LaTeX Warning: Label `exo:spiralsimple' multiply defined.
+
+)
+\openout1 = `VarAndLoopsD.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+ ABD: EveryShipout initializing macros
+(/usr/local/teTeX/share/texmf/tex/context/base/supp-pdf.tex
+(/usr/local/teTeX/share/texmf/tex/context/base/supp-mis.tex
+loading : Context Support Macros / Missing
+\protectiondepth=\count105
+\scratchcounter=\count106
+\scratchtoks=\toks17
+\scratchdimen=\dimen113
+\scratchskip=\skip55
+\scratchmuskip=\muskip10
+\scratchbox=\box28
+\scratchread=\read1
+\scratchwrite=\write4
+\zeropoint=\dimen114
+\nextbox=\box29
+\nextdepth=\dimen115
+\everyline=\toks18
+\!!counta=\count107
+\!!countb=\count108
+\recursecounter=\count109
+)
+loading : Context Support Macros / PDF
+\nofMPsegments=\count110
+\nofMParguments=\count111
+\everyMPtoPDFconversion=\toks19
+)
+Chapter 1.
+<varLoopsTitle.pdf, id=1, 361.35pt x 353.32pt>
+File: varLoopsTitle.pdf Graphic file (type pdf)
+ <use varLoopsTitle.pdf>
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 45.
+
+Overfull \vbox (1.59999pt too high) has occurred while \output is active []
+
+
+[1
+
+
+{/usr/local/teTeX/share/texmf/dvips/config/pdftex.map}{/usr/local/teTeX/share/t
+exmf.os/dvips/config/Ttbbold.map}{/usr/local/teTeX/share/texmf.os/dvips/config/
+wolfram.map} <./varLoopsTitle.pdf>]
+<varLoopsFlatStair.pdf, id=18, 245.91875pt x 65.24374pt>
+File: varLoopsFlatStair.pdf Graphic file (type pdf)
+
+<use varLoopsFlatStair.pdf>
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 57.
+LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <10.95> not available
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 57.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 57.
+
+(/usr/local/teTeX/share/texmf/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+LaTeX Font Info:    Try loading font information for T1+phv on input line 57.
+
+(/usr/local/teTeX/share/texmf/tex/latex/psnfss/t1phv.fd
+File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
+)
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 60.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 77.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 77.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 77.
+
+Overfull \hbox (8.5359pt too wide) in paragraph at lines 57--77
+[][]| 
+ []
+
+<stairExplained.pdf, id=19, 449.04163pt x 189.70876pt>
+File: stairExplained.pdf Graphic file (type pdf)
+
+<use stairExplained.pdf>
+Overfull \hbox (6.38676pt too wide) in paragraph at lines 83--84
+ [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (8.5359pt too wide) in paragraph at lines 93--101
+[][]| 
+ []
+
+
+Overfull \vbox (1.59999pt too high) has occurred while \output is active []
+
+
+[2 <./varLoopsFlatStair.pdf>]
+LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <10.95> not available
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 103.
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <10.95> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 103.
+
+Overfull \hbox (8.5359pt too wide) in paragraph at lines 103--112
+[][]| 
+ []
+
+
+Overfull \hbox (8.5359pt too wide) in paragraph at lines 114--124
+[][]| 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (1.59999pt too high) has occurred while \output is active []
+
+
+[3 <./stairExplained.pdf>]
+
+LaTeX Warning: Reference `ch:variables' on page 4 undefined on input line 139.
+
+<varLoopsSquareStair.pdf, id=50, 245.91875pt x 245.91875pt>
+File: varLoopsSquareStair.pdf Graphic file (type pdf)
+
+<use varLoopsSquareStair.pdf>
+<varLoopsMaze.pdf, id=51, 265.99374pt x 271.0125pt>
+File: varLoopsMaze.pdf Graphic file (type pdf)
+ <use varLoopsMaze.pdf>
+Underfull \vbox (badness 4467) has occurred while \output is active []
+
+
+Overfull \vbox (1.59999pt too high) has occurred while \output is active []
+
+
+[4 <./varLoopsSquareStair.pdf>]
+<varLoopsSpiral121.pdf, id=58, 316.18124pt x 290.08376pt>
+File: varLoopsSpiral121.pdf Graphic file (type pdf)
+
+<use varLoopsSpiral121.pdf> <Argmirescr.pdf, id=59, 120.45pt x 120.45pt>
+File: Argmirescr.pdf Graphic file (type pdf)
+
+<use Argmirescr.pdf>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (1.59999pt too high) has occurred while \output is active []
+
+
+[5 <./varLoopsSpiral121.pdf> <./varLoopsMaze.pdf>]
+<corridor.pdf, id=69, 302.12875pt x 302.12875pt>
+File: corridor.pdf Graphic file (type pdf)
+ <use corridor.pdf>
+Overfull \hbox (8.5359pt too wide) in paragraph at lines 178--187
+[][]| 
+ []
+
+
+Overfull \vbox (1.59999pt too high) has occurred while \output is active []
+
+
+[6 <./Argmirescr.pdf> <./corridor.pdf>]
+<steppingLoop.pdf, id=80, 465.57239pt x 377.25543pt>
+File: steppingLoop.pdf Graphic file (type pdf)
+ <use steppingLoop.pdf>
+<damier.pdf, id=81, 201.75375pt x 201.75375pt>
+File: damier.pdf Graphic file (type pdf)
+ <use damier.pdf>
+Underfull \hbox (badness 2096) in paragraph at lines 209--210
+[]/ptmr8t@10.95pt/Define a script that cre-ates the
+ []
+
+
+Underfull \hbox (badness 2142) in paragraph at lines 209--210
+/ptmr8t@10.95pt/pli-cated than the ear-lier ex-per-i-
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (1.59999pt too high) has occurred while \output is active []
+
+
+[7 <./steppingLoop.pdf>]
+<cubesandpyramid.pdf, id=104, 142.5325pt x 141.52875pt>
+File: cubesandpyramid.pdf Graphic file (type pdf)
+
+<use cubesandpyramid.pdf>
+Overfull \vbox (1.59999pt too high) has occurred while \output is active []
+
+
+[8 <./damier.pdf> <./cubesandpyramid.pdf>] (./VarAndLoopsD.aux)
+
+ *File List*
+../Common.tex
+    book.cls    2001/04/21 v1.4e Standard LaTeX document class
+    bk11.clo    2001/04/21 v1.4e Standard LaTeX file (size option)
+ makeidx.sty    2000/03/29 v1.0m Standard LaTeX package
+   times.sty    2002/04/24 PSNFSS-v9.0 (SPQR) 
+  a4wide.sty    1994/08/30
+      a4.sty    1999/03/03 v1.2f A4 based page layout
+ pdfsync.sty    2003/12/08 v0.3
+everyshi.sty    2001/05/15 v3.00 EveryShipout Package (MS)
+graphicx.sty    1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+  keyval.sty    1999/03/16 v1.13 key=value parser (DPC)
+graphics.sty    2001/07/07 v1.0n Standard LaTeX Graphics (DPC,SPQR)
+    trig.sty    1999/03/16 v1.09 sin cos tan (DPC)
+graphics.cfg    2001/08/31 v1.1 graphics configuration of teTeX/TeXLive
+  pdftex.def    2001/11/29 v0.03i graphics/color for pdftex
+    calc.sty    1998/07/07 v4.1b Infix arithmetic (KKT,FJ)
+  pifont.sty    2002/04/24 PSNFSS-v9.0 Pi font support (SPQR) 
+    upzd.fd    2001/06/04 font definitions for U/pzd.
+    upsy.fd    2001/06/04 font definitions for U/psy.
+   t1enc.sty    1994/06/01 Standard LaTeX package
+fancyheadings.sty    
+  xspace.sty    1997/10/13 v1.06 Space after command names (DPC)
+  ifthen.sty    2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+   alltt.sty    1997/06/16 v2.0g defines alltt environment
+ theorem.sty    1995/11/23 v2.2c Theorem extension package (FMi)
+     thp.sty    1995/11/23 v2.2c Theorem extension package (FMi)
+../macroes.tex
+     thb.sty    1995/11/23 v2.2c Theorem extension package (FMi)
+   t1ptm.fd    2001/06/04 font definitions for T1/ptm.
+supp-pdf.tex
+varLoopsTitle.pdf    Graphic file (type pdf)
+varLoopsFlatStair.pdf    Graphic file (type pdf)
+   t1pcr.fd    2001/06/04 font definitions for T1/pcr.
+   t1phv.fd    2001/06/04 scalable font definitions for T1/phv.
+stairExplained.pdf    Graphic file (type pdf)
+varLoopsSquareStair.pdf    Graphic file (type pdf)
+varLoopsMaze.pdf    Graphic file (type pdf)
+varLoopsSpiral121.pdf    Graphic file (type pdf)
+Argmirescr.pdf    Graphic file (type pdf)
+corridor.pdf    Graphic file (type pdf)
+steppingLoop.pdf    Graphic file (type pdf)
+  damier.pdf    Graphic file (type pdf)
+cubesandpyramid.pdf    Graphic file (type pdf)
+ ***********
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ )
+(\end occurred when \ifx on line 225 was incomplete) 
+Here is how much of TeX's memory you used:
+ 1791 strings out of 60917
+ 23002 string characters out of 1188883
+ 4071730 words of memory out of 6527087
+ 4735 multiletter control sequences out of 10000+50000
+ 36812 words of font info for 50 fonts, out of 500000 for 1000
+ 54 hyphenation exceptions out of 1000
+ 27i,10n,27p,537b,824s stack positions out of 1500i,500n,5000p,200000b,5000s
+ 118 PDF objects out of 300000
+ 0 named destinations out of 131072
+ 55 words of extra memory for PDF output out of 65536
+</usr/local/teTeX/share/tex
+mf/fonts/type1/bluesky/cm/cmsy10.pfb>{/usr/local/teTeX/share/texmf/dvips/psnfss
+/8r.enc}</usr/local/teTeX/share/texmf/fonts/type1/bluesky/cm/cmbx12.pfb>
+Output written on VarAndLoopsD.pdf (8 pages, 57791 bytes).

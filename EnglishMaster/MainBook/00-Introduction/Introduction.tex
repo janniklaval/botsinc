@@ -1,0 +1,189 @@
+% $Author: stef $
+% $Date: 2008-04-04 17:14:31 +0200 (Fri, 04 Apr 2008) $
+% $Revision: 318 $
+%=================================================================
+\ifx\wholebook\relax\else
+% --------------------------------------------
+% Lulu:
+    \documentclass[a4paper,10pt,twoside]{book}
+    \usepackage[
+        papersize={6in,9in},
+        hmargin={.75in,.75in},
+        vmargin={.75in,1in},
+        ignoreheadfoot
+    ]{geometry}
+    \input{../common.tex}
+    \pagestyle{headings}
+    \setboolean{lulu}{true}
+% --------------------------------------------
+% A4:
+%   \documentclass[a4paper,11pt,twoside]{book}
+%   \input{../common.tex}
+%   \usepackage{a4wide}
+% --------------------------------------------
+    \graphicspath{{figures/} {../figures/}}
+    \begin{document}
+%   \renewcommand{\nnbb}[2]{} % Disable editorial comments
+    \sloppy
+\fi
+
+\chapter{Preface}\label{cha:preface}
+
+\begin{quote}
+\textit{Knowledge is only one part of understanding.Genuine understanding comes 
+from hands-on experience.}
+—S. Papert 
+\end{quote}
+
+
+\section*{Goals and Audience}
+The goal of this book is to explain elementary programming concepts (such as loops, abstraction, 
+composition, and conditionals) to novices of all ages. I believe that learning by experimenting 
+and solving problems is central to human knowledge acquisition. Therefore, I have presented 
+programming concepts through simple problems such as drawing golden rectangles or simulat- 
+ing animal behavior. 
+
+My ultimate goal is to teach you object-oriented programming, because this particular 
+paradigm provides an excellent metaphor for teaching programming. However, object- 
+oriented programming requires some more elementary notions of programming and abstrac- 
+tion. Therefore, I wrote this book to present these basic programming concepts in an elementary 
+programming environment with the special perspective that this book is the first in a series of 
+two books. Nevertheless, this book is completely self-contained and does not require you to 
+read the next one. The second book introduces another small programming environment. It 
+focuses on intermediate-level topics such as finding a path through a maze and drawing frac- 
+tals. It also acts as a companion book for readers who want to know more and who want to 
+adapt the environment of this book to their own needs. Finally, it introduces object-oriented 
+programming. 
+
+The ideal reader I have in mind is an individual who wants to have fun programming. 
+This person may be a teenager or an adult, a schoolteacher, or somebody teaching program- 
+ming to children in some other organization. Such an individual does not have to be fluent in 
+programming in any language. 
+
+The material of this book was originally developed for my wife, who is a physics and 
+mathematics teacher in a French school where the students are between eleven and fifteen 
+years old. In late 1998, my wife was asked to teach computing science, and she was dismayed 
+by the lack of appropriate material. She started out teaching HTML, Word, and other topics, 
+and she remained dissatisfied, since these approaches failed to promote a scientific attitude 
+toward computing science. Her goal was to teach computer science as a process of attacking 
+problems and finding solutions. 
+
+As a computer scientist, I was aware of work on the programming language Logo, and I 
+particularly liked the idea of experimentation as a basis for learning. I was also aware that the 
+programming language Smalltalk had been influenced by the ideas of Seymour Papert and 
+those behind Logo, and that it had originated from research on teaching programming to 
+children. Moreover, Smalltalk has a simple syntax that mimics natural language. At about that 
+time, the Squeak environment had arrived at a mature state, and books started to become 
+available in late 1999. But these were for experienced programmers, so I started and wrote 
+the present book. 
+
+The environments that I use in this book and its companion book are fully functional. 
+They have gone through several iterations of improvements based on the feedback that I have 
+received from teachers. A guiding rule in our work has been to modify the Squeak environment 
+as little as possible, for our goal is for readers to be able to extend the ideas presented in this 
+book and develop new ones of their own. 
+
+\section*{Object-Oriented Structure and Vocabulary}
+
+The chapters of this book are relatively small, so that each chapter can be turned into a one- 
+or two-hour lab session. I do not advocate presenting the material directly to children for self- 
+instruction, but each chapter in fact has all the material for such an approach. 
+Although object-oriented programming is not developed in this book, I use its vocabu- 
+lary. That is, we create objects from classes and send them messages. Object behavior is 
+defined by methods. I made this choice because the metaphor offered by object-oriented pro- 
+gramming is natural, and children have an intuitive understanding of the idea of objects and 
+their behavior. 
+
+Those who are used to Logo may wonder why our robots do not have “pen up” and “pen 
+down” methods, but instead “go” and “jump,” where under the former, a robot moves leaving 
+a trace, while the latter moves a robot forward without leaving a trace. I believe that the go and 
+jump paradigm is better suited to the ideas of object-oriented programming and encapsula- 
+tion of data than the traditional pen down and pen up design. An excellent analysis of these 
+two approaches was made by Didier Besset, who collaborated with me on this project in its 
+early stages. 
+
+
+\section*{Organization}
+
+
+The book is divided into five parts, as described below. 
+
+\begin{description}
+	\item Getting Started. Part 1 shows how to get started with the Squeak environment. It explains 
+the installation process and how to launch Squeak, and then presents robots and their 
+behavior. A first simple program that draws some lines is presented. 
+	\begin{center}
+	\includegraphics[width=5cm]{1-ChTurntitlePicture}
+	\end{center}
+	
+	\item Elementary Programming Concepts.Part 2 introduces first programming concepts, such 
+	as loops and variables. It shows how messages sent to a robot are resolved. 
+	
+	\begin{center}
+	\includegraphics[width=4cm]{2-varLoopsTitle}
+	\end{center}
+	
+	\item Bringing Abstraction into Play. Part 3 introduces the necessity of abstraction, that is, 
+	methods or procedures that can be reused by different programs. The most difficult con- 
+	cept introduced is the idea of composing new methods from existing ones to solve more 
+	complex problems. Several nontrivial experiments are proposed, such as drawing golden 
+	rectangles. Techniques and tools for debugging programs are also introduced. 
+	
+	
+	\begin{center}
+	\includegraphics[width=5cm]{3-nborsteps}
+	\end{center}
+	
+	\item Conditionals. Part 4 introduces the notion of conditionals, conditional loops, and Boolean 
+	expressions, all of which are central to programming. This part also introduces the notion of 
+	references in a two-dimensional space and some other types of robot behavior. Finally, 
+	ways of using robots to simulate the behavior of simple animals are presented. 
+	
+	\begin{center}
+	\includegraphics[width=3cm]{4-followBorder2}\includegraphics[width=3cm]{5-oppositeBorderOfBox}
+	\end{center}
+
+
+\item Other Squeak Worlds. Part 5 presents two entertaining programming environments that 
+are available in Squeak: the eToy graphical scripting system and the 3D authoring envi- 
+ronment Alice. 
+
+\end{description}
+
+\section*{Why Squeak and Smalltalk?}
+You may be wondering why among the large number of programming languages available today 
+I have chosen Smalltalk. Smalltalk and Squeak have been chosen for the following reasons: 
+
+\begin{itemize}
+\item  Smalltalk is a powerful language. You can build extremely complex systems within a 
+language that is simple and uniform. 
+\item  Smalltalk was designed as a teaching language. It was influenced by Logo and LISP, and 
+Smalltalk in turn heavily influenced languages such as Java and C\#. However, those lan- 
+guages are much too complex for a first exposure to programming. They have lost the 
+beauty of Smalltalk’s simplicity. 
+\item  Smalltalk is dynamically typed, and this makes transparent a number of concerns 
+related to types and type coercion that are tedious to explain and of little interest to 
+the novice. 
+\item  With Smalltalk you need to learn only key, essential concepts, concepts that are to be 
+found in all programming languages. Thus with Smalltalk I can focus on explaining the 
+important concepts without having to deal with difficult or unattractive aspects of 
+more complex languages. 
+\item  Squeak is a powerful multimedia environment, so after reading my books you will be 
+able to build your own programs in a truly rich context. 
+\item  Squeak is available without charge and runs on all of today’s principal computing plat- 
+forms. And it should be easily portable to the platforms of the future. 
+\item  Squeak is popular. For example, in Spain, it is used in schools, where it runs on over 
+80,000 computers.
+\end{itemize}
+
+\ifx\wholebook\relax\else
+    \end{document}
+\fi
+
+%%% Local Variables:
+%%% coding: utf-8
+%%% mode: latex
+%%% TeX-master: t
+%%% TeX-PDF-mode: t
+%%% ispell-local-dictionary: "english"
+%%% End:

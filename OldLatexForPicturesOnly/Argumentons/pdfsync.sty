@@ -1,0 +1,97 @@
+ %%%%  This is pdfsync.sty
+%%%%  2003-12-08:
+%%%%  There is a bug in using everyvbox... novbox is now the default
+%%%%  bug fixed: $0$ was no visible
+%%%%  2003-11-28:
+%%%%  comment characters added to fix an error. Don't know exactly the cause...
+%%%%  Default option is all...
+%%%%  Could not use \everydisplay... (bug in eqnarray)
+%%%%  2003-11-19
+%%%%  first version
+%%%% usage: \usepackage[display,cr,vbox]{PDFSYNC}
+%%%% appends reference points before each \par and at each \hbox, inline math;
+%%%% optionally also at every displayed math, with the option [display]
+%%%% optionally also at every \cr, with the option [cr]
+%%%% optionally also at every \vbox, with the option [vbox]
+%%%%
+%%%% If you want additional files to be parsed, please use the command
+%%%% \include (which is redefined below)
+%%%% This file is due to Piero D'Ancona and jlaurens@users.sourceforge.net
+%%%% iTeXMac is supporting pdfsync
+%%%% Copy this file to ~/Library/texmf/tex/latex or ~/Library/TeX/texmf/tex/latex if available
+%%%% This file is distributed under the GPL and the "smart licence": please make things better if you can
+%%%% © 2003, jlaurens@users.sourceforge.net
+%
+\NeedsTeXFormat{LaTeX2e}%
+\ProvidesPackage{pdfsync}[2003/12/08 v0.3]%
+\newif\ifPDFSYNCOK%
+\newif\ifPDFSYNCStar%
+\newif\ifPDFSYNCPar \PDFSYNCPartrue%
+\newif\ifPDFSYNCMath \PDFSYNCMathtrue%
+\newif\ifPDFSYNCCr \PDFSYNCCrtrue%
+\newif\ifPDFSYNCHBox \PDFSYNCHBoxtrue%
+\newif\ifPDFSYNCVBox \PDFSYNCVBoxfalse%
+\newif\ifPDFSYNCExtra \PDFSYNCExtratrue%
+\newwrite\PDFPOS%
+\newcount\PDFSYNC@folio\PDFSYNC@folio=0%
+\newcount\PDFSYNC@rder\PDFSYNC@rder=0%
+\DeclareOption{nopar}{\PDFSYNCParfalse}%
+\DeclareOption{nomath}{\PDFSYNCMathfalse}%
+\DeclareOption{nocr}{\PDFSYNCCrfalse}%
+\DeclareOption{nohbox}{\PDFSYNCHBoxfalse}%
+\DeclareOption{novbox}{\PDFSYNCVBoxfalse}%
+\DeclareOption{vbox}{\PDFSYNCVBoxtrue}%
+\DeclareOption{noextra}{\PDFSYNCExtrafalse}%
+\DeclareOption{nothing}{\let\pdfsyncstart\pdfsyncstop}%
+\ProcessOptions\relax%
+\RequirePackage{everyshi}%
+\ifx\pdfsavepos\undefined%
+  \wlog{Synchronization is only available with pdf. Use a dvi viewer instead.}%
+  \let\pdfsyncstart\relax%
+  \let\pdfsyncstop\relax%
+  \let\pdfsync\relax%
+  \let\@PDFSYNC\relax%
+\else%
+  \def\pdfsyncstart{\global\PDFSYNCOKtrue}%
+  \def\pdfsyncstop{\global\PDFSYNCOKfalse}%
+  \EveryShipout{\@PDFSYNC\global\advance\PDFSYNC@folio by 1\immediate\write\PDFPOS{s\space\the\PDFSYNC@folio}}%
+   \immediate\openout\PDFPOS\jobname.pdfsync%
+    \immediate\write\PDFPOS{\jobname}%            control info
+    \immediate\write\PDFPOS{version 0}%            control info
+    \let\PDFSYNC@include\include%
+    \def\PDFSYNC@@include#1{%
+	    \immediate\write\PDFPOS{(#1}%
+	    \PDFSYNC@include{#1}\immediate\write\PDFPOS{)}}%
+    \let\include\PDFSYNC@@include%
+    \def\@PDFSYNC{%
+    \ifPDFSYNCOK%
+	\pdfsavepos%
+	\immediate\write\PDFPOS{l\space\the\PDFSYNC@rder\space\the\inputlineno}%
+	\def\position{\the\pdflastxpos\space\the\pdflastypos}%
+	\ifPDFSYNCStar%
+	    \edef\argument{{p*\space\the\PDFSYNC@rder\space\noexpand\position}}%
+	\else%
+	    \edef\argument{{p\space\the\PDFSYNC@rder\space\noexpand\position}}%
+	\fi%
+	\expandafter\write\expandafter\PDFPOS\argument%
+	\global\advance\PDFSYNC@rder by 1%
+    \fi}%
+ \def\pdfsync{\global\PDFSYNCStartrue\@PDFSYNC\global\PDFSYNCStarfalse}%
+  \def\PDFSYNC@Extra{%
+%  \let\PDFSYNC@maketitle\maketitle\def\maketitle{\pdfsyncstop\PDFSYNC@maketitle\pdfsyncstart}
+  \let\PDFSYNC@newline\\\def\\{{\@PDFSYNC}\PDFSYNC@newline}%
+  \global\let\PDFSYNC@verse\verse
+  \global\def\verse{\PDFSYNC@verse\let\PDFSYNC@newline\\\def\\{{\@PDFSYNC}\PDFSYNC@newline}}%
+  }%
+\AtBeginDocument{%
+\pdfsyncstart%
+\ifPDFSYNCPar\global\let\p@@r\par\gdef\par{{\@PDFSYNC}\p@@r}\fi%
+\ifPDFSYNCMath\everymath{{\@PDFSYNC}}\fi%
+\ifPDFSYNCCr\everycr {{\@PDFSYNC}}\fi%
+\ifPDFSYNCHBox\everyhbox {{\@PDFSYNC}}\fi%
+\ifPDFSYNCVBox\everyvbox {{\@PDFSYNC}}\fi%there is a bug here
+\ifPDFSYNCExtra\PDFSYNC@Extra\fi%
+}%
+\fi%
+\endinput
+

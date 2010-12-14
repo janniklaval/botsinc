@@ -1,0 +1,8 @@
+Chapter 21
+==========
+
+191 actually it's not new or unusual to use a coordinate system.  I would rewrite that sentence as it's not very clear.
+
+i think the introduction of the terms abscissa and ordinate really just confuse things.  it's better to stick to referring to coordinates as just x and y coordinates, or horizontal and vertical coordinates.
+
+again, your summary section at the end of the chapter needs to be beefed up.

@@ -1,0 +1,435 @@
+This is pdfTeX, Version 3.14159-1.00b-pretest-20020211 (Web2C 7.3.7x) (format=pdflatex 2004.8.20)  29 JAN 2005 18:53
+\write18 enabled.
+**BouclonsD.tex
+(./BouclonsD.tex{/usr/local/teTeX/share/texmf.local/pdftex/config/pdftex.cfg}
+LaTeX2e <2001/06/01>
+Babel <v3.7h> and hyphenation patterns for american, french, german, ngerman, d
+utch, nohyphenation, loaded.
+(../Common.tex (/usr/local/teTeX/share/texmf/tex/latex/base/book.cls
+Document Class: book 2001/04/21 v1.4e Standard LaTeX document class
+(/usr/local/teTeX/share/texmf/tex/latex/base/bk11.clo
+File: bk11.clo 2001/04/21 v1.4e Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/teTeX/share/texmf/tex/latex/base/makeidx.sty
+Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
+)
+(/usr/local/teTeX/share/texmf/tex/latex/psnfss/times.sty
+Package: times 2002/04/24 PSNFSS-v9.0 (SPQR) 
+)
+(/usr/local/teTeX/share/texmf/tex/latex/misc/a4wide.sty
+Package: a4wide 1994/08/30
+
+(/usr/local/teTeX/share/texmf/tex/latex/ntgclass/a4.sty
+Package: a4 1999/03/03 v1.2f A4 based page layout
+)) (./pdfsync.sty
+Package: pdfsync 2003/12/08 v0.3
+\PDFPOS=\write3
+\PDFSYNC@folio=\count88
+\PDFSYNC@rder=\count89
+
+(/usr/local/teTeX/share/texmf/tex/latex/ms/everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+)
+\openout3 = `BouclonsD.pdfsync'.
+
+)
+(/usr/local/teTeX/share/texmf/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/teTeX/share/texmf/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/teTeX/share/texmf/tex/latex/graphics/graphics.sty
+Package: graphics 2001/07/07 v1.0n Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/teTeX/share/texmf/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/teTeX/share/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2001/08/31 v1.1 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 80.
+
+(/usr/local/teTeX/share/texmf/tex/latex/graphics/pdftex.def
+File: pdftex.def 2001/11/29 v0.03i graphics/color for pdftex
+\Gread@gobject=\count90
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/local/teTeX/share/texmf/tex/latex/tools/calc.sty
+Package: calc 1998/07/07 v4.1b Infix arithmetic (KKT,FJ)
+\calc@Acount=\count91
+\calc@Bcount=\count92
+\calc@Adimen=\dimen105
+\calc@Bdimen=\dimen106
+\calc@Askip=\skip43
+\calc@Bskip=\skip44
+LaTeX Info: Redefining \setlength on input line 59.
+LaTeX Info: Redefining \addtolength on input line 60.
+\calc@denominator=\count93
+)
+(/usr/local/teTeX/share/texmf/tex/latex/psnfss/pifont.sty
+Package: pifont 2002/04/24 PSNFSS-v9.0 Pi font support (SPQR) 
+LaTeX Font Info:    Try loading font information for U+pzd on input line 62.
+
+(/usr/local/teTeX/share/texmf/tex/latex/psnfss/upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Try loading font information for U+psy on input line 63.
+
+(/usr/local/teTeX/share/texmf/tex/latex/psnfss/upsy.fd
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+))
+(/usr/local/teTeX/share/texmf/tex/latex/base/t1enc.sty
+Package: t1enc 1994/06/01 Standard LaTeX package
+)
+(/usr/local/teTeX/share/texmf/tex/latex/fancyheadings/fancyheadings.sty
+\headrulewidth=\dimen107
+\footrulewidth=\dimen108
+\plainheadrulewidth=\dimen109
+\plainfootrulewidth=\dimen110
+\headwidth=\dimen111
+\footruleskip=\dimen112
+)
+(/usr/local/teTeX/share/texmf/tex/latex/tools/xspace.sty
+Package: xspace 1997/10/13 v1.06 Space after command names (DPC)
+)
+(/usr/local/teTeX/share/texmf/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/local/teTeX/share/texmf/tex/latex/base/alltt.sty
+Package: alltt 1997/06/16 v2.0g defines alltt environment
+)
+(/usr/local/teTeX/share/texmf/tex/latex/tools/theorem.sty
+Package: theorem 1995/11/23 v2.2c Theorem extension package (FMi)
+\theorem@style=\toks15
+\theorem@bodyfont=\toks16
+\theorempreskipamount=\skip45
+\theorempostskipamount=\skip46
+
+(/usr/local/teTeX/share/texmf/tex/latex/tools/thp.sty
+File: thp.sty 1995/11/23 v2.2c Theorem extension package (FMi)
+))) (../macroes.tex
+(/usr/local/teTeX/share/texmf/tex/latex/tools/thb.sty
+File: thb.sty 1995/11/23 v2.2c Theorem extension package (FMi)
+)
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 14.
+
+(/usr/local/teTeX/share/texmf/tex/latex/psnfss/t1ptm.fd
+File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
+)
+\c@privScript=\count94
+\c@privExercise=\count95
+\c@privMethod=\count96
+\c@privClassDef=\count97
+\c@privTemplate=\count98
+\ScriptFigure=\box26
+\ScriptWidth=\skip47
+\FigureWidth=\skip48
+\lineWidth=\skip49
+\scriptindent=\skip50
+\methodindent=\skip51
+\methodwordlength=\skip52
+\aftermethod=\skip53
+\c@fonction=\count99
+\fminibox=\box27
+\fminilength=\skip54
+\c@stefscript=\count100
+\c@decompo=\count101
+\c@exampleScript=\count102
+\c@bigstepnumber=\count103
+\c@exercisenumber=\count104
+) (./BouclonsD.aux)
+\openout1 = `BouclonsD.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+
+ABD: EveryShipout initializing macros
+(/usr/local/teTeX/share/texmf/tex/context/base/supp-pdf.tex
+(/usr/local/teTeX/share/texmf/tex/context/base/supp-mis.tex
+loading : Context Support Macros / Missing
+\protectiondepth=\count105
+\scratchcounter=\count106
+\scratchtoks=\toks17
+\scratchdimen=\dimen113
+\scratchskip=\skip55
+\scratchmuskip=\muskip10
+\scratchbox=\box28
+\scratchread=\read1
+\scratchwrite=\write4
+\zeropoint=\dimen114
+\nextbox=\box29
+\nextdepth=\dimen115
+\everyline=\toks18
+\!!counta=\count107
+\!!countb=\count108
+\recursecounter=\count109
+)
+loading : Context Support Macros / PDF
+\nofMPsegments=\count110
+\nofMParguments=\count111
+\everyMPtoPDFconversion=\toks19
+)
+Chapter 1.
+<loopTitlePicture.pdf, id=1, 521.95pt x 140.525pt>
+File: loopTitlePicture.pdf Graphic file (type pdf)
+ <use loopTitlePicture.pdf>
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 55.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 60.
+LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <10.95> not available
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 60.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 60.
+
+(/usr/local/teTeX/share/texmf/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+LaTeX Font Info:    Try loading font information for T1+phv on input line 60.
+
+(/usr/local/teTeX/share/texmf/tex/latex/psnfss/t1phv.fd
+File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
+)
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 66.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 67.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 67.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 67.
+
+Overfull \hbox (8.5359pt too wide) in paragraph at lines 60--67
+[][]| 
+ []
+
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 85.
+LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <10> not available
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 85.
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <10> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 85.
+
+Overfull \hbox (8.5359pt too wide) in paragraph at lines 73--106
+[][]| 
+ []
+
+
+Overfull \vbox (1.59999pt too high) has occurred while \output is active []
+
+
+[1
+
+
+{/usr/local/teTeX/share/texmf/dvips/config/pdftex.map}{/usr/local/teTeX/share/t
+exmf.os/dvips/config/Ttbbold.map}{/usr/local/teTeX/share/texmf.os/dvips/config/
+wolfram.map} <./loopTitlePicture.pdf>]
+Overfull \hbox (8.5359pt too wide) in paragraph at lines 114--123
+[][]| 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (1.59999pt too high) has occurred while \output is active []
+
+
+[2]
+
+LaTeX Warning: Reference `cha:firstscript' on page 3 undefined on input line 13
+5.
+
+<loopStar60.pdf, id=31, 140.525pt x 140.525pt>
+File: loopStar60.pdf Graphic file (type pdf)
+ <use loopStar60.pdf>
+Underfull \vbox (badness 1983) has occurred while \output is active []
+
+
+Overfull \vbox (1.59999pt too high) has occurred while \output is active []
+
+
+[3] <indent.pdf, id=44, 478.77469pt x 229.85875pt>
+File: indent.pdf Graphic file (type pdf)
+ <use indent.pdf>
+
+LaTeX Warning: Reference `sec:firstPolygons' on page 4 undefined on input line 
+187.
+
+
+LaTeX Warning: Reference `ch:relativeTurn' on page 4 undefined on input line 18
+7.
+
+
+Overfull \hbox (8.5359pt too wide) in paragraph at lines 202--213
+[][]| 
+ []
+
+
+Overfull \vbox (1.59999pt too high) has occurred while \output is active []
+
+
+[4 <./loopStar60.pdf> <./indent.pdf>]
+<loopPentagon.pdf, id=71, 162.6075pt x 154.5775pt>
+File: loopPentagon.pdf Graphic file (type pdf)
+ <use loopPentagon.pdf>
+<loopHexagon.pdf, id=72, 200.75pt x 174.6525pt>
+File: loopHexagon.pdf Graphic file (type pdf)
+ <use loopHexagon.pdf>
+
+LaTeX Warning: Reference `exo:saqqarah' on page 5 undefined on input line 239.
+
+<loopPyramid.pdf, id=73, 200.75pt x 100.375pt>
+File: loopPyramid.pdf Graphic file (type pdf)
+ <use loopPyramid.pdf>
+Underfull \vbox (badness 1521) has occurred while \output is active []
+
+
+Overfull \vbox (1.59999pt too high) has occurred while \output is active []
+
+
+[5 <./loopPentagon.pdf> <./loopHexagon.pdf>]
+<loopPyramid10.pdf, id=83, 401.5pt x 200.75pt>
+File: loopPyramid10.pdf Graphic file (type pdf)
+ <use loopPyramid10.pdf>
+<loopCross.pdf, id=84, 301.125pt x 301.125pt>
+File: loopCross.pdf Graphic file (type pdf)
+ <use loopCross.pdf>
+<loopStair.pdf, id=85, 100.375pt x 100.375pt>
+File: loopStair.pdf Graphic file (type pdf)
+ <use loopStair.pdf>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (1.59999pt too high) has occurred while \output is active []
+
+
+[6 <./loopPyramid.pdf> <./loopPyramid10.pdf> <./loopCross.pdf>]
+<loopStylisedStair.pdf, id=97, 100.375pt x 100.375pt>
+File: loopStylisedStair.pdf Graphic file (type pdf)
+
+<use loopStylisedStair.pdf>
+<loopSimpleElement.pdf, id=98, 25.09375pt x 25.09375pt>
+File: loopSimpleElement.pdf Graphic file (type pdf)
+
+<use loopSimpleElement.pdf> <loopComb.pdf, id=99, 200.75pt x 25.09375pt>
+File: loopComb.pdf Graphic file (type pdf)
+
+<use loopComb.pdf> <loopLadder.pdf, id=100, 25.09375pt x 200.75pt>
+File: loopLadder.pdf Graphic file (type pdf)
+
+<use loopLadder.pdf>
+
+LaTeX Warning: Reference `ch:relativeTurn' on page 7 undefined on input line 36
+3.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (1.59999pt too high) has occurred while \output is active []
+
+
+[7 <./loopStair.pdf> <./loopStylisedStair.pdf> <./loopSimpleElement.pdf> <./loo
+pComb.pdf> <./loopLadder.pdf>]
+Overfull \vbox (1.59999pt too high) has occurred while \output is active []
+
+
+[8] (./BouclonsD.aux)
+
+ *File List*
+../Common.tex
+    book.cls    2001/04/21 v1.4e Standard LaTeX document class
+    bk11.clo    2001/04/21 v1.4e Standard LaTeX file (size option)
+ makeidx.sty    2000/03/29 v1.0m Standard LaTeX package
+   times.sty    2002/04/24 PSNFSS-v9.0 (SPQR) 
+  a4wide.sty    1994/08/30
+      a4.sty    1999/03/03 v1.2f A4 based page layout
+ pdfsync.sty    2003/12/08 v0.3
+everyshi.sty    2001/05/15 v3.00 EveryShipout Package (MS)
+graphicx.sty    1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+  keyval.sty    1999/03/16 v1.13 key=value parser (DPC)
+graphics.sty    2001/07/07 v1.0n Standard LaTeX Graphics (DPC,SPQR)
+    trig.sty    1999/03/16 v1.09 sin cos tan (DPC)
+graphics.cfg    2001/08/31 v1.1 graphics configuration of teTeX/TeXLive
+  pdftex.def    2001/11/29 v0.03i graphics/color for pdftex
+    calc.sty    1998/07/07 v4.1b Infix arithmetic (KKT,FJ)
+  pifont.sty    2002/04/24 PSNFSS-v9.0 Pi font support (SPQR) 
+    upzd.fd    2001/06/04 font definitions for U/pzd.
+    upsy.fd    2001/06/04 font definitions for U/psy.
+   t1enc.sty    1994/06/01 Standard LaTeX package
+fancyheadings.sty    
+  xspace.sty    1997/10/13 v1.06 Space after command names (DPC)
+  ifthen.sty    2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+   alltt.sty    1997/06/16 v2.0g defines alltt environment
+ theorem.sty    1995/11/23 v2.2c Theorem extension package (FMi)
+     thp.sty    1995/11/23 v2.2c Theorem extension package (FMi)
+../macroes.tex
+     thb.sty    1995/11/23 v2.2c Theorem extension package (FMi)
+   t1ptm.fd    2001/06/04 font definitions for T1/ptm.
+supp-pdf.tex
+loopTitlePicture.pdf    Graphic file (type pdf)
+   t1pcr.fd    2001/06/04 font definitions for T1/pcr.
+   t1phv.fd    2001/06/04 scalable font definitions for T1/phv.
+loopStar60.pdf    Graphic file (type pdf)
+  indent.pdf    Graphic file (type pdf)
+loopPentagon.pdf    Graphic file (type pdf)
+loopHexagon.pdf    Graphic file (type pdf)
+loopPyramid.pdf    Graphic file (type pdf)
+loopPyramid10.pdf    Graphic file (type pdf)
+loopCross.pdf    Graphic file (type pdf)
+loopStair.pdf    Graphic file (type pdf)
+loopStylisedStair.pdf    Graphic file (type pdf)
+loopSimpleElement.pdf    Graphic file (type pdf)
+loopComb.pdf    Graphic file (type pdf)
+loopLadder.pdf    Graphic file (type pdf)
+ ***********
+
+
+LaTeX Warning: There were undefined references.
+
+ )
+(\end occurred when \ifx on line 396 was incomplete) 
+Here is how much of TeX's memory you used:
+ 1815 strings out of 60917
+ 23250 string characters out of 1188883
+ 4071745 words of memory out of 6527102
+ 4755 multiletter control sequences out of 10000+50000
+ 41459 words of font info for 53 fonts, out of 500000 for 1000
+ 54 hyphenation exceptions out of 1000
+ 27i,12n,27p,594b,841s stack positions out of 1500i,500n,5000p,200000b,5000s
+ 122 PDF objects out of 300000
+ 0 named destinations out of 131072
+ 65 words of extra memory for PDF output out of 65536
+</usr/local/teTeX/share/tex
+mf/fonts/type1/bluesky/cm/cmr10.pfb></usr/local/teTeX/share/texmf/fonts/type1/b
+luesky/cm/cmsy10.pfb></usr/local/teTeX/share/texmf/fonts/type1/bluesky/cm/cmmi1
+0.pfb>{/usr/local/teTeX/share/texmf/dvips/psnfss/8r.enc}</usr/local/teTeX/share
+/texmf/fonts/type1/bluesky/cm/cmbx12.pfb>
+Output written on BouclonsD.pdf (8 pages, 54125 bytes).

@@ -1,0 +1,119 @@
+% $Author: stef $
+% $Date: 2008-04-04 17:14:31 +0200 (Fri, 04 Apr 2008) $
+% $Revision: 318 $
+%=================================================================
+\ifx\wholebook\relax\else
+% --------------------------------------------
+% Lulu:
+    \documentclass[a4paper,10pt,twoside]{book}
+    \usepackage[
+        papersize={6in,9in},
+        hmargin={.75in,.75in},
+        vmargin={.75in,1in},
+        ignoreheadfoot
+    ]{geometry}
+    \input{../common.tex}
+    \pagestyle{headings}
+    \setboolean{lulu}{true}
+% --------------------------------------------
+% A4:
+%   \documentclass[a4paper,11pt,twoside]{book}
+%   \input{../common.tex}
+%   \usepackage{a4wide}
+% --------------------------------------------
+    \graphicspath{{figures/} {../figures/}}
+    \begin{document}
+%   \renewcommand{\nnbb}[2]{} % Disable editorial comments
+    \sloppy
+\fi
+
+\chapter{Preface}\label{cha:preface}
+
+\begin{quote}
+\textit{Knowledge is only one part of understanding.Genuine understanding comes 
+from hands-on experience.}
+,A\^iS. Papert
+\end{quote}
+
+
+\section*{Buts et Audience}
+Le but de ce livre est d'expliquer des concepts \'el\'ementaires de programmation (tels que des boucles, l'abstraction, la composition, et des conditions) aux d\'ebutants de tous les \^ages. Je crois que l'apprentissage par l'exp\'erimentation et la r\'esolution de probl\`emes est centrale \`a l'acquisition de connaissance humaine. Par cons\'equent, j'ai pr\'esent\'e des concepts de programmation \`a travers des probl\`emes simples tels que dessiner des rectangles d'or ou simuler le comportement animal.
+
+Mon objectif ultime est de vous enseigner la programmation orient\'ee objet, parce que ce paradigme particulier fournit une excellente m\'etaphore pour l'enseignement de la programmation. Cependant, la programmation orient\'ee objet exige encore plus de notions \'el\'ementaires de programmation ainsi que d''abstraction. Par cons\'equent, j'ai \'ecrit ce livre pour pr\'esenter ces concepts de programmation de base dans un environnement \'el\'ementaire de programmation avec la perspective sp\'eciale que ce livre soit le premier d'une s\'erie de deux livres. N\'eanmoins, ce livre est complet et ne requiert pas que vous lisiez le prochain. Le second  livre pr\'esente un autre petit environnement de programmation. Il se concentre sur des sujets de niveau interm\'ediaire telles que trouver un chemin dans un labyrinthe et dessiner des fractales. Il agit \'egalement en tant que livre de compagnon pour les lecteurs qui veulent savoir plus et qui veulent adapter l'environnement de ce livre \`a leurs propres besoins. En conclusion, il pr\'esente la programmation orient\'ee objet.
+
+Le lecteur id\'eal que j'ai \`a l'esprit est un individu qui veut avoir du plaisir \`a programmer. Cette personne peut \^etre un adolescent ou un adulte, un instituteur, ou quelqu'un enseignant la programmation aux enfants quelque soit l'organisation. Un tel individu n'a pas besoin de savoir utiliser couramment un langage de programmation. 
+
+Le contenu de ce livre a \'et\'e \`a l'origine d\'evelopp\'e pour mon \'epouse, qui est professeur de physique et de math\'ematiques, dans une \'ecole fran\c caise, o\`u les \'etudiants ont entre onze et quinze ans. Vers la fin de 1998, mon \'epouse a \'et\'e invit\'ee \`a enseigner l'informatique, et elle a \'et\'e constern\'ee par le manque de contenu appropri\'e. Elle a commenc\'e \`a enseigner du HTML, Word, et d'autres mati\`eres. Elle est rest\'ee insatisfaite, puisque ces approches n'ont pas favoris\'e une attitude scientifique envers l'informatique. Son but \'etait d'enseigner de l'informatique comme un processus de r\'esolution de probl\`emes afin de trouver des solutions.
+
+En tant qu'informaticien, j'\'etais conscient du travail sur le langage de programmation LOGO, et j'aimais particuli\`erement l'id\'ee des  exp\'erimentations comme base pour l'apprentissage. J'\'etais \'egalement au courant que le langage de programmation Smalltalk a \'et\'e influenc\'e par les id\'ees de Seymour Papert et ceux derri\`ere LOGO, et que cela avait provenu de l'enseignement de la programmation aux enfants. D'ailleurs, smalltalk dispose d'une syntaxe simple qui imite de langage naturel. Apr\`es quelque temps, l'environnement smalltalk est arriv\'e \`a un \'etat m\^ur, et des livres ont commenc\'e \`a devenir disponibles vers la fin de 1999. Mais ceux-ci \'etaient destin\'es aux programmeurs exp\'eriment\'es, donc j'ai commenc\'e et j'ai \'ecrit ce livre.
+
+Les environnements que j'emploie dans ce livre ainsi que son livre companion  sont enti\`erement fonctionnels. Ils sont pass\'es par plusieurs it\'erations d'am\'eliorations bas\'ees sur les remarques que j'ai re\c cues des professeurs. Une r\`egle directrice de notre travail a \'et\'e de modifier l'environnement smalltalk le moins possible, parce que notre but est que les lecteurs puissent prolonger les id\'ees pr\'esent\'ees dans ce livre et d'en d\'evelopper des neuves eux m\^emes.
+
+\section*{Structure orient\'ee objet et vocabulaire}
+
+Les chapitres de ce livre sont relativement petits, de sorte que chaque chapitre puisse \^etre vu en une ou deux heures de laboratoire. Je ne pr\'econise pas de pr\'esenter le contenu directement aux enfants pour l'auto-instruction, mais chaque chapitre de mani\`ere \`a ce que tout le contenu soit une approche.
+
+Bien que la programmation orient\'ee objet ne soit pas d\'evelopp\'ee dans ce livre, j'utilise son vocabulaire. C'est-\`a-dire, nous cr\'eons des objets \`a partir de classes et nous  envoyons des messages \`a ces objets. Le comportement d'un objet est d\'efini par des m\'ethodes. J'ai fait ce choix parce que la m\'etaphore offerte par la programmation orient\'ee objet est naturelle, et car les enfants ont une compr\'ehension intuitive de l'id\'ee des objets et de leur comportement.
+
+Ces derniers qui sont employ\'es dans LOGO peuvent se demander avec \'emerveillement pourquoi nos robots n'ont pas de m\'ethodes ``pen up'' et ``pen down'', des m\'ethodes ``go'' et ``jump,'' o\`u pourquoi, sous cette forme, un robot se d\'eplace en laissant une trace, alors que ce dernier fait avancer le robot sans laisser de trace. Je crois que le paradigme ``go and 
+jump''  est mieux est adapt\'e aux id\'ees de la programmation orient\'ee objet et de l'encapsulation des donn\'ees que la conception traditionnelle  ``pen up'' et ``pen down''. Une excellente analyse de ces deux approches a \'et\'e faite par Didier Besset, qui a collabor\'e avec moi sur ce projet dans ces phases pr\'eliminaires.
+
+\section*{Organisation}
+
+
+Le livre est divis\'e en cinq parties, d\'ecrites  ci-dessous.
+
+\begin{description}
+	\item D\'ebutons. La premi\`ere partie montre comment d\'emarrer avec l'environnement smalltalk. Elle explique le proc\'ed\'e d'installation et comment d\'emarrer Smalltalk, puis pr\'esente les robots ainsi que leur comportement. Un premier programme simple, tra\c cant quelques lignes, est pr\'esent\'e. 
+	\begin{center}
+	\includegraphics[width=5cm]{1-ChTurntitlePicture}
+	\end{center}
+	
+	\item Concepts \'el\'ementaires de programmation.La deuxi\`eme partie introduit les premiers concepts de la programmation tels que les boucles et les variables. Elle montre comment les messages, envoy\'es \`a un robot, sont trait\'es.
+	
+	\begin{center}
+	\includegraphics[width=4cm]{2-varLoopsTitle}
+	\end{center}
+	
+	\item Introduire l'abstraction dans un jeu. La troisi\`eme introduit la n\'ecessit\'e de l'abstraction, c.-\`a-d., les m\'ethodes ou les proc\'edures qui peuvent \^etre r\'eutilis\'ees par diff\'erents programmes. Le plus difficile concept pr\'esent\'e est l'id\'ee de composer de nouvelles m\'ethodes \`a partir de m\'ethodes existantes afin de r\'esoudre des probl\`emes plus complexes. Quelques exp\'eriences non triviales sont pr\'esent\'ees, comme la cr\'eation de rectangles d'or. Des techniques et les outils pour d\'ebugger des programmes sont \'egalement pr\'esent\'es.
+	
+	
+	\begin{center}
+	\includegraphics[width=5cm]{3-nborsteps}
+	\end{center}
+	
+	\item Conditions. La quatri\`eme partie pr\'esente la notion de conditions, des boucles conditionnelles, et des expressions bool\'eennes, qui sont centrales \`a la programmation. Cette  partie introduit \'egalement la notion de r\'ef\'erences dans un espace bidimensionnel ainsi que quelques types de comportement de robot. Pour finir, des mani\`eres d'utiliser des robots pour simuler des comportements animaliers simples sont pr\'esent\'ees.
+	
+	\begin{center}
+	\includegraphics[width=3cm]{4-followBorder2}\includegraphics[width=3cm]{5-oppositeBorderOfBox}
+	\end{center}
+
+
+\item Autres mondes Squeak. La cinqui\`eme partie pr\'esente deux environnements de programmations divertissant disponibles dans Squeak : le syst\`eme graphique eToy et l'environnement 3D Alice.
+
+\end{description}
+
+\section*{Pourquoi Squeak et Smalltalk ?}
+Vous pouvez vous demander pourquoi parmi le grand nombre de langages de programmation disponible aujourd'hui j'ai choisi Smalltalk. Smalltalk et Squeak ont \'et\'e choisis pour les raisons suivantes :
+
+\begin{itemize}
+\item  Smalltalk est une langue puissante. Vous pouvez construire des syst\`emes extr\^emement complexes dans un langage qui est simple et uniforme.
+\item  Smalltalk a \'et\'e con\c cu comme un langage d'enseignement. Il a \'et\'e influenc\'e par Logo et LISP, et Smalltalk  \`a son tour a fortement influenc\'e des langage telles que Java et C\#. Cependant, ces langages sont beaucoup trop complexes pour une premi\`ere exposition \`a la programmation. Elles ont perdu la beaut\'e de la simplicit\'e de Smalltalk.
+\item  Smalltalk est dynamiquement dactylographi\'e, et ceci fait transpara\^itre un certain nombre de soucis li\'es aux caract\`eres et au caract\`ere de coercition qui sont difficiles \`a expliquer et de peu d'int\'er\^et au novice.
+\item  Avec Smalltalk vous devez apprendre seulement des concepts principaux et essentiels, les concepts qui doivent \^etre trouv\'es dans tous les langagages de programmation. Ainsi avec Smalltalk je peux me concentrer sur l'explication des concepts importants sans devoir traiter les aspects difficiles ou peu int\'eressant des langages plus complexes.
+\item  Squeak est un environnement puissant de multim\'edia, ainsi apr\`es avoir lu mes livres vous pourriez \'etablir vos propres programmes dans un contexte v\'eritablement riche.
+\item  Squeak est disponible sans frais et fonctionne sur toutes les principales plates-formes de calcul d'aujourd'hui. Et devrait s'adapter facilement aux plates-formes du futur.
+\item  Squeak est populaire. Par exemple, en Espagne, il est employ\'e dans les \'ecoles, o\`u fonctionne dessus plus de 80.000 ordinateurs.
+\end{itemize}
+
+\ifx\wholebook\relax\else
+    \end{document}
+\fi
+
+%%% Local Variables:
+%%% coding: utf-8
+%%% mode: latex
+%%% TeX-master: t
+%%% TeX-PDF-mode: t
+%%% ispell-local-dictionary: "english"
+%%% End:

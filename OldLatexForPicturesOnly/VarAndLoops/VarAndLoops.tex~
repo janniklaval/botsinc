@@ -1,0 +1,429 @@
+\ifx\wholebook\relax\else
+\input{../Common.tex}
+\input{../macroes.tex}
+\begin{document}
+\fi
+
+\chapter{Loops and Variables}\label{ch:loopvar}
+
+\begin{chapterfigure}
+\includegraphics[width=0.9\linewidth]{varLoopsTitle}
+\end{chapterfigure}
+
+
+\hidden{
+this is not the title
+\begin{alltt}
+| caro length angle |
+caro := Turtle new.
+length := 5.
+angle := 179.
+200 timesRepeat: [ caro go: length.
+                 caro turnLeft: angle.
+                 length := length + 5]
+
+the one for the picture
+| caro length angle |
+caro := Turtle new.
+length := 5.
+angle := 178.
+110 timesRepeat: [ caro go: length.
+                 caro turnLeft: angle.
+                 length := length + 3]
+\end{alltt}}
+
+
+In this chapter we present how variables and loops can used
+together. We start by analyzing a simple problem that
+shows the need of using variables and loops together. We then
+experiment with some other problems. We introduce the new messages
+\ct{to:do:} and \ct{to:do:by:} that are more adapted to situations
+where sequences of numbers are needed.
+
+\section{A Motivating Example}
+
+Try to generate the strange stair shown in
+Figure~\ref{fig:strangestair}. Start for example by generating a
+normal stair and modify it. One of the problem that you should be
+facing is that the length of each step is growing regularly.
+
+\begin{figure}[!htbp]
+\centerline{\includegraphics[width=12cm]{varLoopsFlatStair}}
+\caption{A strange stair}
+\label{fig:strangestair}
+\end{figure}
+
+One of the simplest solution is described by the
+\scriptref{src:strange1} where the length of a step grows 10 by
+10 pixels. However, such a solution is not satisfactory because we have to compute manually the length of the next step and that we have to
+repeat stupidly the same sequence of messages.
+
+\begin{scriptwithtitle}{Strange stair}\label{src:strange1}
+| caro |
+caro := Turtle new.
+caro go: \bold{10}.
+caro turnLeft: 90.
+caro go: 5. 
+caro turnRight: 90.
+caro go: \bold{20}.
+caro turnLeft: 90.
+caro go: 5. 
+caro turnRight: 90.
+caro go: \bold{30}.
+caro turnLeft: 90.
+caro go: 5. 
+caro turnRight: 90.
+caro go: \bold{40}.
+caro turnLeft: 90.
+caro go: 5. 
+caro turnRight: 90.
+...
+\end{scriptwithtitle}
+
+We would like to be able to use the power of variables and combined it with the one of loops. First avoiding to repeat the sequence of messages can be possible using the \timesRepeat method.  Second when we analyze the \scriptref{src:strange1} we see that the length of a step is the length of the preceding one plus 10. Here, 20 = 10 + 10, 30 = 20 + 10, 40 = 30 + 10,.... If we use the variable \ct{length} to represent the length of a step, we see that the length of the second step is the length of the first step plus 10, that the length of the third step is the length of the second step... We can express this by the
+following expression \ct{length\ :=\ length\ + 10} which increases the value of the variable \ct{length} by 10.
+
+Let's combine everything! Now if we take the script of a normal stair (\scriptref{src:normalstair}), introduce the variable \ct{length} we obtain a similar method and drawing
+(\scriptref{src:normalstairlength}). Finally, if we modify the value of the variable \ct{length} each step of the loop, we obtain the stair we want (\scriptref{src:strangestair}).
+
+\begin{scriptwithtitle}{A stair with normal steps}\label{src:normalstair}
+| caro |
+caro := Turtle new.
+10 timesRepeat: [caro go: 10.
+                caro turnLeft: 90.
+                caro go: 5.
+                caro turnRight: 90]
+\end{scriptwithtitle}
+
+\begin{scriptwithtitle}{A stair with normal steps using \ct{length}}\label{src:normalstairlength}
+| caro \bold{length}|
+caro := Turtle new.
+\bold{length := 10.}
+10 timesRepeat: [caro go: \bold{length.}
+                caro turnLeft: 90.
+                caro go: 5.
+                caro turnRight: 90]
+\end{scriptwithtitle}
+
+\begin{scriptwithtitle}{The Solution}\label{src:strangestair}
+| caro \bold{length} |
+caro := Turtle new.
+\bold{length := 10.}
+10 timesRepeat: [caro go: \bold{length}.
+                caro turnLeft: 90.
+                caro go: 5.
+                caro turnRight: 90.
+                \bold{length := length + 10}]
+\end{scriptwithtitle}
+
+
+In the \scriptref{src:strangestair}, the sequence of messages in the loop first, make the turtle go forward of a distance that is given by the value of the variable \ct{length}, the first time 10, then  the turtle turns and draws the missing part of the stair, finally the value of the variable \ct{length} is increased by 10 and the loop restarts but with the variable \ct{length} having a value of 20. The same process will be repeated 10 times.
+Note that you should not forget the expression \ct{length\ :=\ length + 10} else the value of the variable will never change.
+
+\begin{exonofig}
+Change the last line of the loop for example put \ct{length\ :=\
+length\ +\ 15}.  Change also the place where such a line occurs in the
+loop. Can you explain what happen when you move the last line of the
+loop to the beginning of the loop?
+\end{exonofig}
+
+\begin{exofig}{varLoopsSquareStair}
+Change the \scriptref{src:strangestair} to produce the picture shown on 
+the right.
+\end{exofig}
+
+If you need more time to understand the solution proposed in the
+\scriptref{src:strangestair}, we suggest you to draw a box representing the variable \ct{length}, to simulate the messages sent and understand how the value of the variable \ct{length} is changed. If necessary read again the Chapters~\ref{ch:variables} and \ref{ch:furthervariables}.
+
+
+\section{Practicing: Mazes, Spirals and Other}
+Now let us see how combining variables and loops helps us to solve
+some other problems.
+
+\begin{exofigwithsizeandtitle}[0.5]{\includegraphics[width=6cm]{Argmirescr}}{Russian squares}\label{exo:russianSquares}Use the method \ct{square:} to build squares of different sizes asshown on figure on the right.\end{exofigwithsizeandtitle}
+
+
+\begin{exofigwithsizeandtitle}[0.4]{\includegraphics[width=6cm]{varLoopsMaze}}{Maze}\label{exo:maze}
+Define the method \ct{maze} that draws figure shown on the
+right.
+\end{exofigwithsizeandtitle}
+
+
+\begin{exofigwithsizeandtitle}[0.35]{\includegraphics[width=8cm]{varLoopsSpiral121}}{Spirale}\label{exo:spiral}
+Define the method \ct{spiral:} that given an angle draws a
+spiral. Have fun and try different angle values, you can create
+wonderful drawings.  The following script created the spiral shown on the right.
+\begin{alltt}
+| caro |
+caro := Turtle new.
+caro spiral: 121
+\end{alltt}
+\end{exofigwithsizeandtitle}
+
+\begin{exonofig}
+Experiment by computing the length of a side, not by adding a distance
+to the previous side length, but by multiplying by a given number. Pay
+attention multiplying by 1.1 means increasing of 10\%.
+\end{exonofig}
+
+\begin{exonofig}
+If we analyze a bit the way a maze or spiral is drawn, we see that it depends on different 4 parameters, namely the number of side, the starting size of a side, the distance the side is incremented and the angle to turn. Define a method named \ct{spiralNumber:size:add:angle:} that draws any spiral. Try for example the following scripts
+
+\begin{alltt}
+| caro | 
+caro := Turtle new.
+caro spiralNumber: 50 size: 10 add: 3 angle: 144.
+caro color: Color red.
+caro spiralNumber: 120 size: 1 add: 3 angle: 12
+\end{alltt}
+\end{exonofig}
+
+\begin{exofigwithsize}[0.5]{\includegraphics[width=3cm]{varLoopsfixedLengthOne}}\label{exo:crazy}
+Up until now, we created spirals by \strong{changing the distance} of which the turtle moved forward and kept \strong{turning with the same angle}. Experiment by doing the opposite, keep the distance fixed but changed the angle with a fixed increment.
+For that define a method with four arguments: the number of times you loop, the initial value of the angle, the angle increment and the length of a side.
+
+As shown by Figure~\ref{fig:crazy}, trying to predict the curves generated by this method is quite difficult.  But fell free to play with different values. Have fun with it!  figure shown on the right is produced with 100 iterations, an initial angle of 40 degree, an increment of 5 and a size length of 23 pixels. Figure~\ref{fig:crazy} presents two other variations.
+\end{exofigwithsize}
+
+
+
+\begin{figure}[!htbp]
+\begin{minipage}[c]{.5\linewidth}
+\centerline{\includegraphics[width=.9\linewidth]{varLoopsfixedLengthSpiral23}}
+\end{minipage}
+\begin{minipage}[c]{.5\linewidth}
+\centerline{\includegraphics[width=.9\linewidth]{varLoopsfixedLengthSpiral72}}
+\end{minipage}
+\caption{Left: iterations: 90, initial angle: 2, increment: 20, length: 30. 
+Right: iterations: 72, initial angle: 40, increment: of 30, length: 30.}
+\label{fig:crazy}
+\end{figure}
+
+
+\begin{exofig}{varLoopsfixedLengthSquare}
+If you change the method that you defined in the \exoref{exo:crazy} and draw 
+a small square instead of drawing a line, You can obtain really crazy pictures.\end{exofig}
+
+\begin{exofig}{varLoopsHerisson}
+Try to reproduce figure shown on the right.
+\end{exofig}
+
+
+\begin{teacher}
+Our experience showed that students literally loved to produce mazes, spirals and other crazy drawings. However, in the first version of this book we introduced this chapter just after the variables and realized that this was a mistake. In fact the students where losing the notion of finite loops --- this was especially true after playing too much with the last exercises.
+For example one student wrote a method to draw a square by looping far too much time. The problem of such exercises is that there is no simple stopping condition, so the students pick up randomly numbers whithout having any support to reason and understand the result they get. The second drawback of these kinds of exercises is that students associate variables only with loops. This is for these reasons that this chapter arrives so late in the book.
+\end{teacher}
+
+
+\section{Other Loops with Variables}
+In this section we would like to show you two new methods \ct{to:do:} and \ct{to:do:by:} that are handy when working with loops as you do not have to declare a loop variable, initialize it and increase it explicitly. 
+
+In the script~\ref{src:strangestair}, we defined and initialized the variable \ct{length}, then we increase ten times its contents by 10 that we show again in the script~\ref{src:strangestairagain}.
+\begin{scriptwithtitle}{Creating a flat growing stair.}\label{src:strangestairagain}
+| caro \bold{length} |
+caro := Turtle new.
+\bold{length := 10.}
+10 timesRepeat: [caro go: \bold{length}.
+                caro turnLeft: 90.
+                caro go: 5.
+                caro turnRight: 90.
+                \bold{length := length + 10}]
+\end{scriptwithtitle}
+
+We can rewrite this script using the loop method \ct{to:do:} as shown in the script~\ref{src:strangestairtodo}. 
+
+\begin{scriptwithtitle}{Using \ct{to:do:}}\label{src:strangestairtodo}
+| caro |
+caro := Turtle new.
+1 to: 10 do: [\bold{:length} | 
+               caro go: \bold{length} * 10.
+               caro turnLeft: 90.
+               caro go: 5.
+               caro turnRight: 90]
+\end{scriptwithtitle}
+
+If we look at the difference between the two scripts, we see that we do not need to declare the variable \ct{length} in the script. However, we have to declare the variable inside the block, \ie the sequence of messages we want to repeat. To declare a variable inside a block we prefix it with the character \ct{:} and the variable declaration is terminated by the character \ct{|}. Therefore the expression \ct{[ :length |} declares a variable named \ct{length} in the block.
+
+\largecadre{The block passed to the message \ct{to:do:} and \ct{to:by:do:} require an argument.}
+
+The other difference that we can see is that we do not have to initialize 
+the variable nor increase explicitly its value using an expression such as \ct{length := length + 10}. Indeed what the loop method does for us is that it will assign values from 1 to 10 to the variable of the block, here \ct{length} each time the block will be repeated. Hence the variable length will get the values 1, 2, 3, 4, 5, 6, 7, 8, 9 and 10 and the block will be repeated 10 times with one of these values assigned to \ct{length}. Note that a loop does not have to start at 1 but can start at any number. The section~\ref{sec:transloops} will present in detail these aspects.
+
+With the loop method \ct{to:do:} we were forced to multiply the length by 10 to get the distance that the turtle should move to draw the same stair. With the method \ct{to:by:do:} we can avoid to that as this message allows one to specify the increment from one value to the other. In fact \ct{to:do:} is equivalent to \ct{to:by:1:do:}.
+The script~\ref{src:strangestairtodoby} shows how the same method can be expressed. Note that here the values taken by the variable length are 10, 20, 30,... until 100 therefore we do not have to multiple \ct{length} as in the other script. Notice also that we start at 10 and not 1 because we want that the first value taken by the variable is 10 and not 1.
+
+\begin{scriptwithtitle}{Using \ct{to:do:}}\label{src:strangestairtodoby}
+| caro |caro := Turtle new.10 to: 100 by: 10 do: [\bold{:length} |                          caro go: length.                         caro turnLeft: 90.                         caro go: 5.                         caro turnRight: 90]
+\end{scriptwithtitle}
+
+
+
+\largecadre{Block arguments are similar to method argument. \ct{[:length | ...]} is a block defining an argument named length. \ct{:length} is the argument name.  As blocks may have several arguments, \ct{|} ends the argument list.}
+
+
+\paragraph{Some technical details.} The last argument of \ct{to:do:} and \ct{to:by:do:} is a block \ie sequence of messages like for the \timesRepeat method. However, for \ct{to:do:} and \ct{to:by:do:} the block requires one argument.  Block arguments are similar to method argument. \ct{[:length | ...]} is a block defining an argument named length. \ct{:length} is the argument name.  As blocks may have
+several arguments, \ct{|} ends the argument list.
+Do not give name to a block argument the name of a variable already
+existing in the script or method containing the block.
+
+
+
+
+
+
+
+\section{Tools for Understanding}
+Now we present some practices to understand loops. Such pratices can be used in general to understand how your program work and they are useful to find errors.  For this purpose we will present you the Transcript, a small window to which messages can be written, and show how we can write message into it. The subsequent section will then use this functionality with loops.
+
+\subsection{Transcript}
+The \ct{Transcript}, with an uppercase letter, is a global variable
+whose value is a small window in which output traces can be written as shown in Figure~\ref{fig:transcript}. A global variable is a variable that always exists, it had been defined once for all and that can be accessed from anywhere in the system. 
+
+To open the \ct{Transcript} bring the World menu and select the menu item 'open', then select the menu item 'transcript', you should get the window
+shown in Figure~\ref{fig:transcript}.  You also can pick
+the transcript thumbnail like you made for the script editor or browser in the tools flap on the right and drop it into your desktop.
+
+\begin{figure}[!htbp]
+\centerline{\includegraphics{Transcript}}
+\caption{Here we have a Transcript}
+\label{fig:transcript}
+\end{figure}
+
+
+\subsection{Using the Transcript}
+We can send messages to the Transcript so that it
+displays some texts. For example try the expression \ct{Transcript show: 'hello'}. It asks the Transcript to print the text 'hello'. More
+precisely it asks the Transcript to display a string. 'hello' is a string composed by the characters \ct{\$h}, \ct{\$e}, \ct{\$l}, \ct{\$l} and \ct{\$o}. In \st a character is represented by the symbol \$ and the
+character letter, but when we use \ct{''} we get a string composed of characters without needing to use \ct{\$}. 
+
+The script~\ref{scr:transcript} presents a sequence of messages that we suggest you to try line by line. You will learn that the Transcript simply displays the strings one after the other ones and that we have to put space to be sure that the strings are not touching each other. If you want the Transcript to display the new text to the next line, you should tell it using the message \ct{cr}. Note that as we usually do not want to repeat Transcript in all the messages sent to it, we use a cascade to group messages as shown by the fourth line of the script~\ref{scr:transcript}.
+
+The message \ct{show:} requires that you pass a string as argument, therefore if you want to print numbers you have to convert them into strings using the method \ct{printString}. \ct{12 printString} returns \ct{'12'} the string
+that has the character \ct{\$1} as first element and character \ct{\$2} as second element. The expression \ct{Transcript show: 12 printString} displays the string '12' in the Transcript. Note that you can take several strings and turn them in a single one by sending the message \ct{,} to a string and passing the other as argument. The expression \ct{'Squeak',' is ', 'fun'} appends the three strings and returns the string \ct{'Squeak is fun'}.
+
+\begin{scriptwithtitle}{Some expressions to write in the Transcript}\label{scr:transcript}
+Transcript show: 'hello'.Transcript show: ' on the same line'.Transcript cr.Transcript show: 'on another line it is better'; cr.Transcript show: 'Squeak' , ' is ', 'fun' ;cr
+\end{scriptwithtitle}
+
+
+\begin{figure}[!htbp]
+\centerline{\includegraphics{TranscriptWithHello}}
+\caption{A trace in the Transcript showing the value of the variable \ct{length} at the beginning and the end of the loop.}
+\label{fig:transcriptvalue}
+\end{figure}
+
+
+\begin{figure}[!htbp]
+\centerline{\includegraphics{TranscriptWithValues}}
+\caption{A trace in the Transcript showing the value of the variable \ct{length} at the beginning and the end of the loop.}
+\label{fig:transcriptvalue}
+\end{figure}
+
+
+
+\subsection{Trace in Loops}
+Using the Transcript functionalities we can now add trace generation to the
+\scriptref{src:strangestair} as shown in the \scriptref{src:trace}. Executing now the script produces in the Transcript the trace shown in Figure~\ref{fig:transcriptvalue}.
+
+
+\begin{scriptwithtitle}{Adding a trace to a script}\label{src:trace}
+| caro length |
+caro := Turtle new.
+length := 10.
+10 timesRepeat: [ Transcript show: '-start- length value is: ', 
+                                                 length printString ; cr.
+                caro go: length.
+                caro turnLeft: 90.
+                caro go: 5.
+                caro turnRight: 90.
+                length := length + 10.
+                Transcript show: '-end- length value is: ', 
+                                             length printString.
+                Transcript cr]
+\end{scriptwithtitle}
+
+We suggest you to do the same with the scripts~\ref{src:strangestairtodo} and \ref{src:strangestairtodoby}.
+
+\begin{scriptwithtitle}{Adding a trace to a script}\label{src:trace}
+| caro |
+caro := Turtle new.
+10 to: 100 by: 10  do: 
+              [\bold{:length} | 
+                 Transcript show: 'length: ', length printString; cr.
+                 caro go: \bold{length}.
+                 caro turnLeft: 90.
+                 caro go: 5.
+                 caro turnRight: 90]
+\end{scriptwithtitle}
+
+
+
+
+\subsection{Experimenting with Loops}\label{sec:transloops}
+Now we want to show you that using the right message for loops can really simplify your programs and the way you solved them. Imagine that we want to generate lengths from 14 pixels to 100 pixels 2 by 2. You could write it using \timesRepeat the following way:
+
+\begin{alltt}
+|len|
+len := 14.
+43 timesRepeat: [ Transcript show: len printString ; cr.
+                len := len + 2]
+\end{alltt}
+
+You may wonder where the 43 comes from. It comes from the following calculation 43 = 100 - 14 / 2. As you see this is not as
+straightforward as the next solution to the problem using \ct{to:by:do:}
+
+\begin{alltt}
+14 to: 100 by: 2 do: [:len | Transcript show: len printString ; cr.]
+\end{alltt}
+
+The loop is executed until the specified upper limit is reached, the
+limit itself included. For example, the following script produces 0, 3, 6, 9 and 12, while the following one only produces 0, 3, 6, 9 as 12 the next value is larger than the limit, 10, we specified.
+
+ 
+\begin{alltt}
+0 to: 12 by: 3 do: [:len| Transcript show: len printString;cr]
+\end{alltt}
+
+\begin{alltt}
+0 to: 10 by: 3 do: [:length| Transcript show: length printString;cr]
+\end{alltt}
+
+As we mentioned earlier, \ct{to:do:} is equivalent to \ct{to:by:do:} the following scripts both produce 1, 2, 3, 4 and 5.
+
+\begin{alltt}
+1 to: 5 do: [:length | Transcript show: length printString ; cr.]
+1 to: 5 by: 1 do: [:length | Transcript show: length printString ; cr.]
+\end{alltt}
+
+Note that with \ct{to:do:by:} you can also give negative numbers. The following script produces 4, 2, 0, -2 and -4.
+\begin{alltt}
+4 to: -4 by: -2 do: [:i | Transcript show: i printString ; cr.]
+\end{alltt}
+
+
+
+
+
+
+
+
+\summa
+
+\begin{itemize}
+\item The block passed to the message \ct{to:do:} and \ct{to:by:do:} require an argument. 
+
+\item Block arguments are similar to method argument. \ct{[:length | ...]} is a block defining an argument named length. \ct{:length} is the argument name.  As blocks may have several arguments, \ct{|} ends the argument list.
+
+\item Do not give name to a block argument the name of a variable already
+existing in the script or method containing the block.
+
+\end{itemize}
+	
+
+
+
+
+
+
+\ifx\wholebook\relax\else
+\end{document}\fi

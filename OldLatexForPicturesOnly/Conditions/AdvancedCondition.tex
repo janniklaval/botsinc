@@ -1,0 +1,120 @@
+\ifx\wholebook\relax\else\input{../Common.tex}\input{../macroes.tex}\begin{document}\fi\chapter{Various Points about Conditions}\label{cha:otherCondition}
+
+In this chapter we present some extra points about conditional such as how to use conditional to debug your code. The material presented here is more advanced and can be skip in a first reading. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Debugging using Conditional}
+Often one would like to check whether a conditional code has been executed. One way to do that is to insert expression such as \ct{Transcript show: 'I pass there' ; cr.}. Another approach is to insert \ct{self halt} that when executed opens a debugger. A third way is insert some messages that produce sounds. 
+
+\begin{scriptwithtitle}{Only clink}\label{scr:onlyclink}
+| caro |
+caro := Turtle new.caro distanceDetector.caro color = Color red   ifTrue: [Smalltalk beep].caro jump: 250.caro distanceDetector.caro color = Color green   ifTrue: [Smalltalk beep].\end{scriptwithtitle}
+      
+      
+Another interesting use of conditional is to specify conditional breakpoints. For example, when we want to stop when a loop arrives at a given point we just have to include an expression similar to \ct{myCondition ifTrue: [self halt]}.
+
+An interesting way to have a conditional stop of a program execution is to check when certain keys are pressed such as control or shift. The expression \ct{InputSensor default shiftPressed ifTrue: [self halt]} only opens a debugger when the shift key is pressed. The class \ct{InputSensor} defines other messages such as \ct{commandKeyPressed}, \ct{controlKeyPressed}, or \ct{anyButtonPressed} that can be used to define conditional break points.
+      
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Tricky Aspects of Parenthesis}\label{sec:conditionTricky}
+It may happen that you get some trouble with the syntax when using the methods \ct{ifTrue:} 
+and its companion methods \ct{ifFalse:}, \ct{ifTrue:ifFalse:}, and \ct{ifFalse:ifTrue:}. Indeed you 
+have to take care that the the boolean expression may be parenthesed. 
+
+In \tscrref{scr:iftrueExample} there is no problem because the expression used in the 
+boolean expression, \ct{Time now > (Time new hours: 8)} are not keywords messages, so they are evaluated prior to the \ct{ifTrue:} that is executed if the result of the expression is true.
+
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=8cm]{missingParenthesis}
+\caption{The environment is  trying to recover an error due to missing parenthesis. The message is not \ct{containsPoint:ifTrue:} and the boolean expression containing the message \ct{containsPoint:} should be enclosed by parentheses.\label{fig:missingParenthesis}}
+\end{center}
+\end{figure}
+
+In  \tscrref{scr:withParenthesis} the boolean expression uses a keyword message, \ct{containsPoint:}, which has the \textit{same weight} than the \ct{ifTrue:} message. So the boolean expression will not be evaluated first as the system believes that the message is in fact named \ct{containsPoint:ifTrue:}. To disambigate this situation parenthesis are required as shown in \tscrref{scr:withParenthesis}. 
+
+\begin{scriptwithtitle}{Conditional Requiring Parenthesis}\label{scr:withParenthesis}
+| aRect aTurtle |
+aTurtle := Turtle new.
+aRect := Rectangle origin: 100@200 corner: 300@400.
+\textbf{(}aRect \textbf{containsPoint:} aTurtle center\textbf{)}
+    \textbf{ifTrue:} [Smalltalk beep]
+\end{scriptwithtitle}
+
+\important{Surround boolean expressions with parenthesis when they contain keyword based messages to avoid message ambiguities}
+
+
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Factoring Commonalities}
+
+As we already mentioned it, duplicated logic is not a sign for potential improvements.  The method \ct{distanceDetector} exhibits some duplicated logic in each branch of the condition \ct{self color: }. Here the duplication is not severe but we use this method as a pretext to illustrate our point. 
+
+\begin{method}\label{mth:againDetector}
+distanceDetector   | dist aColor|    dist := self distanceFrom: World bounds center.   dist > 300     ifTrue: [ self color: Color green]     ifFalse: [dist < 200                ifTrue: [self color: Color red]                ifFalse: [self color: Color yellow]]
+\end{method}
+
+
+Let us start by factoring commonalities out of the conditions. As we mentioned earlier, the code in the conditions does not have to be the same. \Tscrref{mth:detector2} shows an equivalent version in which the expression \ct{self color:} has  been factored out of the condition. In this new version the conditional code returns the new color. The final line changes the receiver color using the selected color. This way is it easier to apply a consistent manipulation to the color such as darkening it.
+
+\begin{method}\label{mth:detector2}
+distanceDetector   | dist aColor|    dist := self distanceFrom: World bounds center.   aColor := dist > 300         ifTrue: [Color green]         ifFalse: [dist < 200            ifTrue: [Color red]            ifFalse: [Color yellow]].
+   self color: aColor
+\end{method}
+
+
+\section{About Method Returns}
+When a return statement, \ct{\^\ anExpression}, is encountered, the execution of the method is terminated and the result of the expression following the return is returned to the caller of the method. No other piece of code is executed in the method containing the return statement. This behavior can be used to write condition is a different way. \Tmthref{mth:coloredwithReturn} shows \tmthref{mth:correctcoloredTurn} using explicit return. 
+Here as soon as a boolean expression is true, the return statement is executed, \ie its expression is executed and the rest of the method is skipped. 
+
+\begin{method}\label{mth:coloredwithReturn}
+coloredTurn: anAngle    "change the color of the turtle so that it is blue aiming
+    at the north and red to the south"   self turn: anAngle.   self direction = 90      ifTrue: [^ self color: Color blue].   self direction = -90
+      ifTrue: [^ self color: Color red].   self color: Color green]
+\end{method}
+
+Note that per default in \sq, a method returns its receiver, even if the code does not show it as shown by the method~\ref{mth:doSomething} which is then equivalent to the method~\ref{mth:doSomething2}.
+
+\begin{method}\label{mth:doSomething}
+doSomething
+
+   Transcript show: 'doSomething' ; cr.
+\end{method}
+
+\begin{method}\label{mth:doSomething2}
+doSomething
+
+   Transcript show: 'doSomething' ; cr.
+   ^ self
+\end{method}
+
+\section{About Code Formatting}
+In Smalltalk, the code can be layouted in all kind of ways and the indentation (its shape regardings the left margin) has no semantics. However, using a clear indentation really helps the reader to understand the code. We suggest to follow the convention we chose to format \ct{ifTrue:ifFalse:} expressions.
+
+Again, the idea is that the block of expressions delimited by the characters \ct{[} and \ct{]} should form a visual and textual rectangle. First the boolean expression is always on one line and the keywords are always indented on the next line. Then when  the block fits into a single line we just put it after the \ct{ifTrue:} or \ct{ifFalse:} keyword to gain vertical space and we close the block with the \ct{]} at the end of the line as follow:
+
+\begin{alltt}
+self direction = 90      ifTrue: [self color: Color blue]
+\end{alltt}
+
+When the block cannot stand on one single line, we apply the same strategy that for \ct{timesRepeat:}. We start the block with \ct{[} on the next line  and align all the expressions inside the block to one tab and finish by \ct{]} that indicates that the block ends as follows: 
+
+\begin{alltt}
+dist < 200      ifTrue: [self color: Color red.
+              Transcript show: 'red' ; cr]      ifFalse: [self color: Color green
+               Transcript show: 'green' ; cr]
+\end{alltt}
+
+
+
+
+
+\ifx\wholebook\relax\else\end{document}\fi
+
+
+
+
+

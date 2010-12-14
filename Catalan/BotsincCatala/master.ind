@@ -1,0 +1,1536 @@
+\begin{theindex}
+
+  \item ' (cometes simples), utilitzades en cadenes de car\IeC {\`a}cters, 
+		229
+  \item '' (cometes), utilitzades en comentaris, 167
+  \item () (par\IeC {\`e}ntesi)
+    \subitem errors provocats per, 274--278
+    \subitem inclosos per alterar l'ordre d'execuci\IeC {\'o}, 146
+    \subitem utilitzats amb punts, 283
+  \item . (punt)
+    \subitem oblidar un, 31
+    \subitem utilitzar en missatges i \emph{scripts}, 24
+  \item // (divisi\IeC {\'o}), triar per conduir el volant d'eToy, 349
+  \item : (dos punts)
+    \subitem utilitzar en m\IeC {\`e}todes i m\IeC {\'u}ltiples arguments, 
+		196
+    \subitem utilitzar en m\IeC {\`e}todes i par\IeC {\`a}metres, 189
+    \subitem utilitzar en par\IeC {\`a}metres, 192
+    \subitem utilitzar en selectors de missatge, 184
+  \item := (expressi\IeC {\'o} d'assignaci\IeC {\'o})
+    \subitem parts dreta i esquerra, 119--120
+    \subitem utilitzar en traces, 237
+    \subitem utilitzar en variables, 107--108
+    \subitem utilitzar per fer traces, 235
+  \item @ m\IeC {\`e}tode, efecte del, 284
+  \item [] (claud\IeC {\`a}tors)
+    \subitem utilitzaci\IeC {\'o} de, 267
+    \subitem utilitzar en blocs condicionals, 246
+    \subitem utilitzar en repeticions, 94, 265
+  \item \& (conjunci\IeC {\'o}) missatge
+    \subitem error de par\IeC {\`e}ntesi relacionat amb, 277
+    \subitem exemples, 271--274, 278
+  \item \textasciicircum, retornar valors amb, 169
+  \item \textbar (disjunci\IeC {\'o}) missatge
+    \subitem error de par\IeC {\`e}ntesi relacionat amb, 277
+    \subitem exemples, 271--274
+  \item \textbar\textbar (barres verticals) posar variables entre, 107
+  \item 20 + (2 * 5) expressi\IeC {\'o}, descomposici\IeC {\'o}, 153
+  \item 20 + 2 * 5 expressi\IeC {\'o}, descomposici\IeC {\'o}, 152
+  \item 30 graus, girar, 47
+  \item 45 graus, girar, 51
+  \item (50@60) + (200@400), descompondre, 284
+  \item 50@60 + 200@400, descompondre, 284
+  \item 65@325 extent: 134@100 missatge, descompondre, 150
+
+  \indexspace
+
+  \item A
+    \subitem dibuixar, 41--42
+    \subitem forma de, 104
+    \subitem utilitzar moviments absoluts amb, 293--294
+    \subitem utilitzar variables, 108--109
+    \subitem variacions, 104--106
+  \item Abandon, bot\IeC {\'o}; a la finestra del depurador, efecte, 
+		203
+  \item absolut
+    \subitem moviment, versus moviment relatiu, 285--288
+  \item absoluta
+    \subitem orientaci\IeC {\'o}, versus orientaci\IeC {\'o} relativa, 
+		48--50
+  \item abstracci\IeC {\'o}, construint sobre els detalls de la definici\IeC {\'o}, 
+		178
+  \item acc\IeC {\'e}s (m\IeC {\`e}todes de), mostrar per les categories en eToy, 
+		333
+  \item accent circumflex (\textasciicircum), retornar valors amb, 169
+  \item accions
+    \subitem afegir per a un cotxe a eToy, 352
+    \subitem component a Alice, 364
+    \subitem crear a Alice, 365
+    \subitem definir a Alice, 375
+    \subitem eliminar a Alice, 376
+  \item accions BotsInc\dots submen\IeC {\'u}, descripci\IeC {\'o} de, 
+		61
+  \item accions relacionades amb el temps, definir a Alice, 370--371
+  \item aconsegueixImatgeDeClasse m\IeC {\`e}tode, descripci\IeC {\'o} i exemple, 
+		88
+  \item Actor Info (bot\IeC {\'o}) a l'editor d'\emph{scripts} d'Alice, 
+		361
+  \item actors a Alice
+    \subitem estructura jer\IeC {\`a}rquica, 359
+    \subitem interactuar directament amb, 359--361
+    \subitem mostrar informaci\IeC {\'o}, 361
+    \subitem moure, girar i rodar, 365--366
+    \subitem parts de, 366--367
+    \subitem posicionament relatiu, 370
+  \item addResponse:to: i respondWith:to: m\IeC {\`e}todes a Alice, comparar, 
+		375
+  \item agulles de rellotge, moure, 52--53
+  \item alarma, programar dins un \emph{Wonderland}, 374
+  \item algunes capses, Experiment, 179
+  \item Alice, entorn de creaci\IeC {\'o} personalitzada, 
+		\seealso{\emph{Wonderland}}{357}
+    \subitem accedir, 357
+    \subitem accions relacionades amb el temps, 370--371
+    \subitem aconseguint el temps per \emph{Wonderland}, 374
+    \subitem aturar animacions, 365
+    \subitem canviar de mida els receptors, 368
+    \subitem canviar la relaci\IeC {\'o} progenitor-fill dels objectes, 
+		367
+    \subitem compondre accions, 364
+    \subitem components, 361--362
+    \subitem crear \emph{Wonderland}, 372--373
+    \subitem definir animacions, 371--372
+    \subitem editor d'\emph{scripts}, 361
+    \subitem efectes especials, 373--374
+    \subitem eliminar accions, 375--376
+    \subitem especificant la durada d'una acci\IeC {\'o}, 370
+    \subitem executar missatges, 364
+    \subitem interacci\IeC {\'o} amb l'usuari, 375--376
+    \subitem interactuant amb els actors, 359--361
+    \subitem m\IeC {\'u}ltiples c\IeC {\`a}meres, 373--374
+    \subitem mostrar per pantalla, 358
+    \subitem moure, girar i rodar, 365--366
+    \subitem objectes de primera classe, 367
+    \subitem projectar \emph{morphs} 2D en 3D, 377
+    \subitem propietats de, 357
+    \subitem utilitzaci\IeC {\'o} d'\emph{scripts}, 362--366
+    \subitem utilitzaci\IeC {\'o} d'eToy amb, 378
+    \subitem utilitzaci\IeC {\'o} del m\IeC {\`e}tode destroy, 369
+    \subitem utilitzaci\IeC {\'o} del m\IeC {\`e}tode nudge, 368
+    \subitem utilitzaci\IeC {\'o} del m\IeC {\`e}tode place:, 370
+    \subitem utilitzaci\IeC {\'o} del m\IeC {\`e}tode pointAt:, 369
+    \subitem utilitzaci\IeC {\'o} del m\IeC {\`e}tode setColor:, 368
+    \subitem utilitzaci\IeC {\'o} dels m\IeC {\`e}todes hide i show, 
+		369
+    \subitem utilitzaci\IeC {\'o} dels m\IeC {\`e}todes moveTo: i move:, 
+		369
+    \subitem utilitzaci\IeC {\'o} dels m\IeC {\`e}todes standUp, 368
+    \subitem variacions de missatges, 367
+  \item una altra escala estranya, Experiment, 131
+  \item una altra espiral, Experiment, 216
+  \item altura, variable; relaci\IeC {\'o} amb l'amplada i la mitja altura, 
+		104
+  \item amplada, variable; relaci\IeC {\'o} amb l'altura i la mitja altura, 
+		104
+  \item anglePerApuntarA: m\IeC {\`e}tode
+    \subitem definici\IeC {\'o} per simular comportament animal, 325
+    \subitem descripci\IeC {\'o} i exemples de, 305
+    \subitem diagrama de i codi de, 304
+  \item angles
+    \subitem aleatoris, per simular comportament animal, 309
+    \subitem canviar els valors dels, 53
+    \subitem girar, 50--54
+    \subitem per missatges referents a direccions absolutes, 300
+    \subitem representar, 50
+    \subitem versus temps, 54
+    \subitem vincular amb la posici\IeC {\'o} del volant a eToy, 
+		348--350
+  \item animacions
+    \subitem aturar, dins d'Alice, 365
+    \subitem crear contenidors per a, 341
+    \subitem crear dibuixos senzills com a base de, 343
+    \subitem crear parts independents per a, 366
+    \subitem definir dins d'Alice, 371--372
+  \item aparenta* m\IeC {\`e}todes, descripci\IeC {\'o} i exemple, 88
+  \item aparentaBot missatge, efecte de, 77
+  \item aparentaCercle missatge, aplicat als robots, 77, 82
+  \item aparentaImatge missatge, efecte de, 85
+  \item aparentaTriangle missatge, efecte de, 77--79
+  \item aplicaci\IeC {\'o} (Squeak), fitxer de, resoldre problemes, 12
+  \item apuntaA: m\IeC {\`e}tode
+    \subitem  utilitzar en simulacions de comportament animal, 322
+    \subitem codi de, 303--304
+  \item Apuntar i Seleccionar amb el ratol\IeC {\'\i }, 63
+  \item aranya.frm fitxer de gr\IeC {\`a}fic, contingut de, 83
+  \item area: m\IeC {\`e}tode, descripci\IeC {\'o} i exemple, 88
+  \item area: missatge, canviar la mida del robot amb, 78
+  \item arguments
+    \subitem en missatges de paraula-clau, 145
+    \subitem i par\IeC {\`a}metres, 193--196
+    \subitem indicar pels receptors dels missatges, 142
+    \subitem per a m\IeC {\`e}todes, 189
+    \subitem utilitzar en m\IeC {\`e}todes, 184
+    \subitem variables com a, 195
+  \item art abstracte, Experiment, 40
+  \item asIs constant, utilitzar a Alice, 371
+  \item aspecte\dots submen\IeC {\'u}, descripci\IeC {\'o} de, 61
+  \item assignaci\IeC {\'o}, introduir a eToy, 345
+  \item asString missatge, exemple de, 233
+  \item avi\IeC {\'o}
+    \subitem afegir m\IeC {\`e}todes, 337
+    \subitem arrossegar i deixar un m\IeC {\`e}tode per crear nous \emph{scripts}, 
+		335
+    \subitem crear \emph{joystick} per, 339--340
+    \subitem dibuixar, 330
+    \subitem experimentar amb el \emph{joystick}, 339
+    \subitem fer una icona, 355
+    \subitem jugar amb l'halo, 330--337
+    \subitem volar, 337
+
+  \indexspace
+
+  \item bacteris, exemple
+    \subitem canviar direcci\IeC {\'o}, 316
+    \subitem incrementar velocitat, 316
+  \item bafarada, mostrant missatges mitjan\IeC {\c c}ant els, 7
+  \item barres verticals (\textbar\textbar) posar variables entre, 107
+  \item basic (bot\IeC {\'o}), pr\IeC {\'e}mer a eToy, 344
+  \item binaris, missatges, \seealso{missatges}{137}
+    \subitem exemples de, 139--141, 144
+    \subitem explicaci\IeC {\'o} de, 139--141
+    \subitem prioritat, 152
+  \item bloc condicional, exemple de, 246
+  \item blocs, sagnat de, 95
+  \item Bot nou patro4, execuci\IeC {\'o} de, 200
+  \item bot\IeC {\'o} central del ratol\IeC {\'\i }, conjunt d'operacions associades amb, 
+		63
+  \item bot\IeC {\'o} dret del ratol\IeC {\'\i }, conjunt d'operacions associades amb, 
+		63
+  \item bot\IeC {\'o} esquerre del ratol\IeC {\'\i }, conjunt d'operacions associades amb, 
+		63
+  \item botons del ratol\IeC {\'\i }
+    \subitem explicaci\IeC {\'o}, 63--65
+    \subitem i combinacions de tecles, 63
+  \item botons del ratol\IeC {\'\i }, operacions associades als, 63
+  \item br\IeC {\'u}ixola, apuntar els robots en les direccions principals de la, 
+		38
+  \item bucle controlat per les dades d'entrada proporcionades per l'usuari, afegir a una escala interactiva, 
+		266
+  \item bucles, \seealso{bucles imbricats}{131}
+    \subitem aturar, 263--264
+    \subitem combinar variables amb, 131--134
+    \subitem definir, 264
+    \subitem experimentar amb, 99--101
+    \subitem introduir variables als, 134
+    \subitem repetir seq{\"u}\IeC {\`e}ncies de missatges en, 93--95
+    \subitem i translacions, 295--296
+    \subitem utilitzar en un \emph{script} per dibuixar una pir\IeC {\`a}mide, 
+		97
+  \item bucles condicionals, \see{repeticions condicionals}{258}
+  \item bucles imbricats, exemples de, \seealso{bucles}{190}, 225--227
+  \item bucles infinits, aturar, 263--264
+
+  \indexspace
+
+  \item cadenes de car\IeC {\`a}cters
+    \subitem i car\IeC {\`a}cters, 231--233
+    \subitem i nombres, 233, 235
+    \subitem panorama general, 229
+  \item camins dibuixats per robots, eliminar a eToy, 355
+  \item canviar de direcci\IeC {\'o}, 38--40
+  \item canviar la direcci\IeC {\'o} de refer\IeC {\`e}ncia, Experiment, 
+		54
+  \item capses, 
+		\seealso{comportament d'un animal atrapat dins d'una capsa}{315}
+    \subitem afegint una sortida a, 315
+    \subitem moure robots dins de, 302--303
+  \item captura i guarda imatge, opci\IeC {\'o} del men\IeC {\'u}, accedir, 
+		67
+  \item capturar pantalla (opci\IeC {\'o} men\IeC {\'u}), accedir, 
+		66--67
+  \item carpetes, explorar, 65
+  \item carregaImatge: missatge
+    \subitem descripci\IeC {\'o} i exemple, 88
+    \subitem efecte de, 83--87
+  \item carretera
+    \subitem acolorir a eToy, 351
+    \subitem crear a eToy, 350
+  \item cas d'estudi del missatge d'error provocat pel missatge not, 
+		275
+  \item casa, dibuixar, 56
+  \item cascada, \seealso{missatges}{15}
+    \subitem enviar m\IeC {\'u}ltiples missatges amb, 15
+    \subitem usos de, 25
+  \item categories
+    \subitem crear pels m\IeC {\`e}todes, 163--164
+    \subitem mostrar en el visualitzador d'eToy, 333
+  \item center (missatge), descripci\IeC {\'o} i exemple, 298
+  \item center (missatge), descripci\IeC {\'o} i exemples, 305
+  \item centre versus posici\IeC {\'o}, 305
+  \item circular, forma; aplicar als robots, 77
+  \item classe Bot
+    \subitem associar gr\IeC {\`a}fics amb, 84--87
+    \subitem carregar i guardar gr\IeC {\`a}fics associats amb, 83
+    \subitem crear el robot aranya amb, 81--83
+    \subitem significat de, 26
+  \item classes, \seealso{f\IeC {\`a}briques de robots}{35}
+    \subitem com a f\IeC {\`a}briques, 35
+    \subitem crear objectes, 35
+    \subitem inicialitzar gr\IeC {\`a}fics per defecte, 84
+    \subitem obtenir nous objectes a partir de, 26
+    \subitem paper dins la programaci\IeC {\'o} orientada a objectes, 
+		20
+  \item claud\IeC {\`a}tors ([])
+    \subitem utilitzaci\IeC {\'o} de, 267
+    \subitem utilitzar en blocs condicionals, 246
+    \subitem utilitzar en repeticions, 94, 265
+  \item clear all pen trails m\IeC {\`e}tode, utilitzar a eToy, 355
+  \item codi, sagnat de, 95
+  \item collection categoria, buscar, 344
+  \item col\IeC {\textperiodcentered }locaci\IeC {\'o} de l'increment dins del bucle, Experiment, 
+		131
+  \item color (objectes), obtenir, 74
+  \item color (tests), personalitzar, 351
+  \item Color classe, efecte de, 27
+  \item color del text, canvis del, 31
+  \item Color r:g:b: expressi\IeC {\'o}, crear colors amb, 76
+  \item color sees m\IeC {\`e}tode, triar color en l'exemple del cotxe, 
+		351
+  \item Color, f\IeC {\`a}brica, propietats de, 76
+  \item color, missatges
+    \subitem efecte de, 9
+    \subitem executar, 70
+    \subitem noms de, 76
+  \item color: m\IeC {\`e}tode, descripci\IeC {\'o} i exemple, 88
+  \item colorLlapis: m\IeC {\`e}tode, descripci\IeC {\'o} i exemple, 88
+  \item colorLlapis: missatge, efecte de, 74--75
+  \item colors
+    \subitem canviar-los en els robots, 37, 43, 243--246, 248--250
+    \subitem canviar-los en quadr\IeC {\'\i }cules, 282
+    \subitem crear, 76
+    \subitem dels ll\IeC {\`a}pissos, 74--76
+    \subitem demanar a un robot, 70
+    \subitem relaci\IeC {\'o} amb la direcci\IeC {\'o} del robot, 
+		250--252
+    \subitem triar-los amb el m\IeC {\`e}tode fromUser, 76
+  \item comentaris, incloure dins dels m\IeC {\`e}todes, 167
+  \item cometes (''), utilitzades en comentaris, 167
+  \item cometes simples ('), utilitzades en cadenes de car\IeC {\`a}cters, 
+		229
+  \item compondre m\IeC {\`e}todes, definici\IeC {\'o} de, 
+		\seealso{m\IeC {\`e}todes}{172}, 176
+  \item compondre solucions, significat de, 213
+  \item comportament d'un animal atrapat dins d'una capsa, 
+		\seealso{capses}{312}
+    \subitem afegir una sortida a la capsa, 315
+    \subitem direcci\IeC {\'o} aleat\IeC {\`o}ria, 314
+    \subitem panorama general, 312--313
+    \subitem resseguir els costats, 313--314
+    \subitem volar al costat oposat, 314
+  \item compostes, expressions booleanes, utilitzar, 271--274
+  \item compostes, expressions, descomponent considerant els par\IeC {\`e}ntesis, 
+		150
+  \item condicionals m\IeC {\`e}todes, triar, 248
+  \item conill
+    \subitem moure a Alice, 359
+    \subitem \emph{script} de mostra, 373
+    \subitem transformar dins Alice, 361
+  \item conjunci\IeC {\'o} (\&) missatge
+    \subitem error de par\IeC {\`e}ntesi relacionat amb, 277
+    \subitem exemples, 271--274, 278
+  \item constants pel moviment a Alice, exemples de, 364
+  \item contenidor, elements de; canviar a eToy, 345--346
+  \item contenidors
+    \subitem crear per a animacions, 341
+    \subitem deixar els dibuixos dins del, 343
+    \subitem obrir dins del visualitzador, 344
+    \subitem variables com a, 118--119
+  \item contenidors de dibuixos, crear per les animacions d'eToy, 343
+  \item controlar els costats del pol\IeC {\'\i }gon, Experiment, 115
+  \item controls de c\IeC {\`a}mera, afegint i movent a Alice, 363, 
+		373--374
+  \item convenci\IeC {\'o} direccional, significat de, 47
+  \item copyUpTo: m\IeC {\`e}tode, exemple de, 232
+  \item costats variable, utilitzar en pol\IeC {\'\i }gons, 115
+  \item costats, examinar en el comportament d'un animal tancat en una capsa, 
+		313--314
+  \item cotxe
+    \subitem afegir accions per a , 352
+    \subitem afegir sensors a, 350
+    \subitem dibuixar a eToy, 347
+    \subitem expressar diferents comportaments per, 350
+    \subitem girar en cercles a eToy, 347
+  \item crear i moure un robot, Experiment, 37
+  \item una creu su{\"i}ssa, Experiment, 99
+  \item creu, dibuixar amb par\IeC {\`a}metres, 187
+  \item creuRecorregut1:recorregut2: m\IeC {\`e}tode, definir, 191
+  \item cuc, animar, 342
+  \item cursor, canviar a eToy el valor del, 346
+
+  \indexspace
+
+  \item daly, crear robot, 35
+  \item Debug, bot\IeC {\'o}; a la finestra del depurador, efecte, 203
+  \item declaraci\IeC {\'o} de variables, relaci\IeC {\'o} amb els missatges, 
+		24
+  \item depurador (\emph{debugger}), 
+		\seealso{errors; errors de programa}{206}
+    \subitem corregir errors amb par\IeC {\`e}ntesis amb el, 275
+    \subitem definici\IeC {\'o} del, 197
+    \subitem escriure arguments des del, 207
+    \subitem invocar, 202--203
+    \subitem tancar, 206
+    \subitem utilitzar als bucles infinits, 263
+  \item depurador, obrir la finestra del, 204
+  \item descompondre problemes, significat de, 213
+  \item destroy m\IeC {\`e}tode a Alice, utilitzar, 369
+  \item detectorDistancia m\IeC {\`e}tode
+    \subitem amb una tra\IeC {\c c}a, 246
+    \subitem canviar els colors amb, 244
+  \item dibuix, eina de; obrir, 79
+  \item dibuixar
+    \subitem ABC del, 41
+    \subitem capturar, 66--67
+    \subitem elements de l'animaci\IeC {\'o}, 342
+    \subitem escala, 128--131
+    \subitem estrella, 91--95
+    \subitem figures, 170--172
+    \subitem figures geom\IeC {\`e}triques, 96--97
+    \subitem hex\IeC {\`a}gon, 57
+    \subitem pent\IeC {\`a}gon, 57
+    \subitem pol\IeC {\'\i }gons regulars, 56
+    \subitem quadrats, 160--161, 168
+    \subitem robots, 79--81
+    \subitem triangle equil\IeC {\`a}ter, 55
+    \subitem ulleres de llarga vista, 75
+    \subitem una casa, 56
+  \item dibuixos de robots, guardar i carregar, 84
+  \item dibuixos, deixar-los dins de contenidors, 343
+  \item dibuixos, girar i fer zoom, 80
+  \item direcci\IeC {\'o}
+    \subitem aleat\IeC {\`o}ria pel comportament animal, 314
+    \subitem apuntar cap a una, 303--304
+    \subitem apuntar en una, 300--301
+    \subitem canviar de, 38--41, 43, 59
+    \subitem obtenir pels robots, 299
+  \item direcci\IeC {\'o} de refer\IeC {\`e}ncia, canviar, 54
+  \item direcci\IeC {\'o} nord, moure el robot en la, 259, 265
+  \item direccio m\IeC {\`e}tode
+    \subitem descripci\IeC {\'o} i exemples de, 305
+    \subitem exemple de, 303--305
+  \item direccions absolutes
+    \subitem angles associats amb, 301
+    \subitem significat de, 38--39
+  \item disjunci\IeC {\'o} (\textbar) missatge
+    \subitem error de par\IeC {\`e}ntesi relacionat amb, 277
+    \subitem exemples, 271--274
+  \item disjunci\IeC {\'o} (or) missatges, exemple de, 271, 274, 278
+  \item un disseny abstracte senzill, Experiment, 171
+  \item dist: m\IeC {\`e}tode, obtenir dist\IeC {\`a}ncia amb, 320
+  \item dist\IeC {\`a}ncia
+    \subitem comparar a les simulacions de comportament animal, 
+		319--321
+    \subitem especificar a Alice, 365
+  \item distanciaDesde: missatge
+    \subitem codi per, 301
+    \subitem descripci\IeC {\'o} i exemple de, 305
+  \item divisi\IeC {\'o} (//), triar per conduir el volant d'eToy, 349
+  \item dobleMarc m\IeC {\`e}tode, definir, 177--179
+  \item dobleMarcSenseCridarPatro m\IeC {\`e}tode, definir, 179
+  \item doesNotUnderstand m\IeC {\`e}tode, efecte de, 209
+  \item dos punts (:)
+    \subitem utilitzar en m\IeC {\`e}todes i m\IeC {\'u}ltiples arguments, 
+		196
+    \subitem utilitzar en m\IeC {\`e}todes i par\IeC {\`a}metres, 189
+    \subitem utilitzar en par\IeC {\`a}metres, 192
+    \subitem utilitzar en selectors de missatge, 184
+  \item drawGrids m\IeC {\`e}tode, utilitzar, 283
+  \item duplicar el marc, Experiment, 177
+  \item duraci\IeC {\'o}, especificar pels actors a Alice, 365
+  \item durada d'una acci\IeC {\'o}, especificar a Alice, 370
+
+  \indexspace
+
+  \item eachFrame constant, utilitzar a Alice, 371
+  \item editor d'\emph{scripts} a Alice, propietats del, 362
+  \item editor de text Espai de Treball Bot
+    \subitem guardar \emph{scripts} amb, 65
+    \subitem obtenir, 62
+    \subitem propietats, 17
+  \item editor de text, utilitzar l'Espai de Treball Bot com a, 17
+  \item efectes especials, utilitzar a Alice, 373
+  \item elements de l'animaci\IeC {\'o}
+    \subitem dibuixar, 342
+    \subitem mostrar, 344--345
+  \item Eliminar Bots (bot\IeC {\'o}), efecte de, 65
+  \item Eliminar camins (bot\IeC {\'o}), efecte de, 65
+  \item Eliminar-ho tot (bot\IeC {\'o}), efecte de, 65
+  \item el\IeC {\textperiodcentered }lipses
+    \subitem al voltant dels missatges, significat de, 141
+    \subitem canviar l'aparen\IeC {\c c}a a eToy, 345
+  \item enrajolar quadrats, 224--227
+  \item entorn
+    \subitem components del, 7
+    \subitem identificar robots, 7
+    \subitem instal\IeC {\textperiodcentered }lar, 3
+    \subitem obrir, 5--7
+    \subitem sortir i guardar, 10
+  \item errors, \seealso{depurador; errors de programa}{243}
+    \subitem aprendre de, 250--252
+    \subitem corregir, 209--211
+    \subitem generar-ne manipulant punts, 283--285
+  \item errors en el programa, \seealso{depurador; errors}{32}
+    \subitem detectar amb el color del text, 32--33
+    \subitem escriure malament el nom d'una variable, 28
+    \subitem escriure malament els selectors d'un missatge, 28
+    \subitem maj\IeC {\'u}scules versus min\IeC {\'u}scules, 29
+    \subitem oblidar un punt, 31
+    \subitem panorama general, 27
+    \subitem variables no utilitzades, 29
+  \item escala
+    \subitem dibuixar, 128--131
+    \subitem dibuixar amb esglaons, 235--237
+    \subitem versi\IeC {\'o} interactiva, 266
+  \item una escala, Experiment, 99
+  \item una escala de m\IeC {\`a}, Experiment, 101
+  \item escala sense al\IeC {\c c}adors, Experiment, 100
+  \item escala, Experiment, 40
+  \item escapant:ambSortida: m\IeC {\`e}tode, crear, 316
+  \item escriu-ho (p) opci\IeC {\'o} men\IeC {\'u}, seleccionar, 69
+  \item escriure
+    \subitem arguments des del depurador, 207
+    \subitem resultat d'una expressi\IeC {\'o}, 71
+  \item esdeveniments, men\IeC {\'u}; mostrar dins el sistema eToy, 337
+  \item esglaons
+    \subitem dibuixar una escala amb, 235--237
+    \subitem mesurar per dibuixar una escala, 129--131
+  \item espai, car\IeC {\`a}cter; representar, 232
+  \item una espiral a partir de l\IeC {\'\i }nies, Experiment, 218
+  \item una espiral amb quatre par\IeC {\`a}metres, Experiment, 217
+  \item una espiral d'angle constant, Experiment, 216
+  \item espiral d'angle constant, definici\IeC {\'o}, 216
+  \item espiral, dibuixar, 132
+  \item espirals a partir de quadrats, Experiment, 218
+  \item espirals amb dist\IeC {\`a}ncia constant, Experiment, 217
+  \item espirals, crear, 216
+  \item Esquerra a Dreta, ordre d'execuci\IeC {\'o}, exemples de, 
+		151--154
+  \item est missatge, exemple de, 38
+  \item est, indicar la direcci\IeC {\'o}, 51
+  \item estrella
+    \subitem dibuixar, 91--95
+  \item una estrella, Experiment, 180
+  \item una estrella amb seixanta branques, Experiment, 95
+  \item eToy, sistema
+    \subitem bot\IeC {\'o} basic, 344--345
+    \subitem canviar els elements d'un contenidor, 345
+    \subitem condicions i tests a, 350--351
+    \subitem cotxes i conductors, exemple, 347--353
+    \subitem crear animacions a, 341--347
+    \subitem crear icones a, 355--356
+    \subitem crear nous \emph{scripts} amb, 335
+    \subitem crear sensors, 350
+    \subitem crear una carretera, 350
+    \subitem eliminar camins dibuixats pels robots, 355
+    \subitem executar \emph{scripts}, 354
+    \subitem exemple pilotant un avi\IeC {\'o}, 330--339
+    \subitem internacionalitzaci\IeC {\'o}, 356
+    \subitem modificar noms dels dibuixos, 332
+    \subitem mostrar el men\IeC {\'u} d'esdeveniments, 337
+    \subitem obrir un visualitzador, 332
+    \subitem personalitzar, 353--356
+    \subitem personalitzar tests basats en colors, 351
+    \subitem propietats del, 329
+    \subitem utilitzar \emph{joystick} per l'exemple de l'avi\IeC {\'o}, 
+		339--340
+    \subitem utilitzar amb objectes 3D a Alice, 379
+    \subitem utilitzar observadors, 333
+    \subitem vincular objectes, 355
+  \item execuci\IeC {\'o} de programes, utiltzar el \emph{Transcript} per a la, 
+		234--235
+  \item Experiments, \seealso{\emph{Scripts}}{37}
+    \subitem algunes capses, 179
+    \subitem una altra escala estranya, 131
+    \subitem una altra espiral, 216
+    \subitem art abstracte, 40
+    \subitem canviar la direcci\IeC {\'o} de refer\IeC {\`e}ncia, 54
+    \subitem col\IeC {\textperiodcentered }locaci\IeC {\'o} de l'increment dins del bucle, 
+		131
+    \subitem controlar els costats del pol\IeC {\'\i }gon, 115
+    \subitem crear i moure un robot, 37
+    \subitem una creu su{\"i}ssa, 99
+    \subitem un disseny abstracte senzill, 171
+    \subitem duplicar el marc, 177
+    \subitem escala, 40
+    \subitem una escala, 99
+    \subitem una escala de m\IeC {\`a}, 101
+    \subitem escala sense al\IeC {\c c}adors, 100
+    \subitem una espiral a partir de l\IeC {\'\i }nies, 218
+    \subitem una espiral amb quatre par\IeC {\`a}metres, 217
+    \subitem una espiral d'angle constant, 216
+    \subitem espirals a partir de quadrats, 218
+    \subitem espirals amb dist\IeC {\`a}ncia constant, 217
+    \subitem una estrella, 180
+    \subitem una estrella amb seixanta branques, 95
+    \subitem fletxes, 294
+    \subitem frAnkenstein, 105
+    \subitem girar el quadrat, 49
+    \subitem una grapa, 100
+    \subitem hex\IeC {\`a}gon regular, 97
+    \subitem un senzill laberint, 132
+    \subitem un m\IeC {\`e}tode pel marc art nouveau, 172
+    \subitem un m\IeC {\`e}tode per dibuixar un hex\IeC {\`a}gon, 186
+    \subitem un m\IeC {\`e}tode per dibuixar una creu, 187
+    \subitem moure les agulles del rellotge, 53
+    \subitem ones quadrades en un estany quadrat, 214
+    \subitem un passad\IeC {\'\i }s llarg, 133
+    \subitem un passad\IeC {\'\i }s, 215
+    \subitem pent\IeC {\`a}gon regular, 97
+    \subitem PICA, 41
+    \subitem una pinta, 100
+    \subitem pir\IeC {\`a}mide, 136
+    \subitem pir\IeC {\`a}mide amb deu esglaons, 98
+    \subitem una pir\IeC {\`a}mide amb un nombre variable d'esglaons, 
+		113
+    \subitem una pir\IeC {\`a}mide amb una mida variable de l'esgla\IeC {\'o}, 
+		113
+    \subitem la pir\IeC {\`a}mide esglaonada de Saqqara, 40
+    \subitem Una Pir\IeC {\`a}mide Rectangular, 225
+    \subitem una pir\IeC {\`a}mide triangular, 226
+    \subitem posar una tra\IeC {\c c}a dins del bucle, 236
+    \subitem quadrat, 39
+    \subitem un quadrat relatiu, 48
+    \subitem un quadrat trencat, 49
+    \subitem un quadrat utilitzant un bucle, 96
+    \subitem quadrats, 136
+    \subitem quadrats que fan tombarelles, 101
+    \subitem Quadrats Russos, 215
+    \subitem quadrats russos, 133
+    \subitem rectangle 1, 288
+    \subitem rectangle 2, 288
+    \subitem el rectangle d'or, 111
+    \subitem rectangles d'or incrementals, 224
+    \subitem un rellotge ``real'', 55
+    \subitem una roda, 177
+    \subitem \emph{scripts} misteriosos, 47
+    \subitem \emph{Scripts} que no funcionen, 112
+    \subitem SOS, 38
+    \subitem tauler de dames, 226
+    \subitem traslladar un robot a un punt, 296
+    \subitem Triangle 1, 289
+    \subitem triangle 2, 292
+    \subitem trieu vosaltres, 180
+    \subitem utilitzar el m\IeC {\`e}tode trasllada: 1, 297
+    \subitem utilitzar el m\IeC {\`e}tode trasllada: 2, 297
+  \item Explorador de la classe Bot
+    \subitem propietats de, 161
+    \subitem utilitzar el, 162
+  \item expressi\IeC {\'o} Bot nou est, descomposici\IeC {\'o}, 151
+  \item expressi\IeC {\'o} Bot nou, executar, 70
+  \item expressi\IeC {\'o} d'assignaci\IeC {\'o} (:=)
+    \subitem parts dreta i esquerra, 119--120
+    \subitem utilitzar en variables, 106--108
+  \item expressions
+    \subitem components de, 140
+    \subitem equivalents amb par\IeC {\`e}ntesis, 154
+    \subitem escriure els resultats de, 71
+    \subitem executar, 72
+    \subitem exemples de, 23
+    \subitem per dibuixar una escala, 131
+    \subitem relaci\IeC {\'o} amb els m\IeC {\`e}todes, 167
+    \subitem relaci\IeC {\'o} amb els programes, 19, 21
+    \subitem self halt, 202--203
+    \subitem utilitzar claud\IeC {\`a}tors ([]) amb, 267
+    \subitem utilitzar variables dins de, 121
+  \item expressions booleanes
+    \subitem combinar, 271--274
+    \subitem errors, 275
+    \subitem exemples de, 269--271
+  \item expressions condicionals
+    \subitem amb una sola bifurcaci\IeC {\'o}, 247--248
+    \subitem components de, 246
+    \subitem imbricar, 248--250
+    \subitem utilitzar per canviar els colors d'un robot, 243--245
+    \subitem utilitzar traces amb, 245--246
+
+  \indexspace
+
+  \item f\IeC {\`a}briques
+    \subitem classes com a, 36
+    \subitem f\IeC {\`a}brica Color, 76
+    \subitem relaci\IeC {\'o} amb objectes manufacturats, 19
+  \item f\IeC {\`a}briques de robots, \seealso{classes}{82}
+    \subitem enviar missatges a les, 10
+    \subitem re-equipar, 82--83
+  \item false i true, objectes; retornar amb expressions booleanes, 270
+  \item Fes-ho (bot\IeC {\'o}), efecte de, 65
+  \item fes-ho (d) missatge, efecte de, 69
+  \item Fes-ho tot (bot\IeC {\'o}), efecte de, 17--19, 65
+  \item figures
+    \subitem dibuixar, 170--172
+    \subitem exemples de, 176--178
+  \item figures geom\IeC {\`e}triques, dibuixar, 96--97
+  \item finsA100 m\IeC {\`e}tode
+    \subitem afegir una tra\IeC {\c c}a a, 260--262
+    \subitem efecte de, 258
+  \item finsA100Infinit, m\IeC {\`e}tode; executar, 264
+  \item first m\IeC {\`e}tode, exemple de, 232
+  \item fitxer \emph{changes}, resoldre problemes amb, 12--13
+  \item fitxer de l'aplicaci\IeC {\'o} Squeak, resoldre problemes relacionats amb, 
+		12
+  \item fitxer imatge, resoldre problemes amb, 12--13
+  \item fitxers
+    \subitem importar, 67
+    \subitem problemes amb, 12--13
+  \item fletxes, Experiment, 294
+  \item for: m\IeC {\`e}tode; utilitzar a Alice, 366
+  \item forma dels robots, canviar, 77--79
+  \item forward m\IeC {\`e}tode, arrossegar i deixar a eToy, 347
+  \item frAnkenstein, Experiment, 105
+  \item fromUser m\IeC {\`e}tode, triar colors amb, 76
+
+  \indexspace
+
+  \item \emph{getter}, m\IeC {\`e}todes; mostrar per a les categories a eToy, 
+		333
+  \item giraA: m\IeC {\`e}tode; efecte de, 300--301, 305
+  \item giraA: unAngleAbsolutEnGraus, missatge; codi del, 300
+  \item giraDreta: missatge, efecte de, 45--47, 52--54
+  \item giraEsquerra: missatge, efecte de, 9, 45--47
+  \item girar a l'esquerra 45 graus, resultat de, 51
+  \item girar dibuixos, 80
+  \item girar dins Alice, panorama general, 365--366
+  \item girar el quadrat, Experiment, 49
+  \item girar:, m\IeC {\`e}tode; efecte de, 47
+  \item girDeColors: m\IeC {\`e}tode
+    \subitem definir, 250
+    \subitem depurar, 251--252
+  \item girs, examinar en el comportament animal, 310--314
+  \item Glossari per a m\IeC {\`e}todes, 173
+  \item gr\IeC {\`a}fics
+    \subitem associar amb la classe Bot, 85--87
+    \subitem carregar, 81
+    \subitem carregar i guardar, 84
+    \subitem carregar i guardar per a la classe Bot, 84
+    \subitem dibuixar i preservar pels robots, 79--81
+    \subitem guardar i restaurar, 81--87
+    \subitem utilitzar \emph{scripts} amb, 83--87
+  \item una grapa, Experiment, 100
+  \item guardaImatge m\IeC {\`e}tode, descripci\IeC {\'o} i exemple, 88
+  \item guardaImatge: missatge, efecte de, 84
+  \item guardar el contingut, opci\IeC {\'o} del men\IeC {\'u}, accedir, 
+		65
+  \item guardar l'entorn Squeak, 10
+
+  \indexspace
+
+  \item halo de nanses
+    \subitem accedir, 67, 71
+    \subitem aconseguir-ne informaci\IeC {\'o}, 72
+    \subitem explicaci\IeC {\'o}, 63--65
+    \subitem manipular per l'avi\IeC {\'o}, 330--337
+    \subitem obtenir en dibuixar robots, 67, 79
+    \subitem per conduir el volant a eToy, 348
+  \item \emph{heading} valor, per conduir el volant a eToy, 348
+  \item hept\IeC {\`a}gon, dibuixar amb el m\IeC {\`e}tode poligon100:, 
+		188
+  \item hex\IeC {\`a}gon regular, exemple de, 114
+  \item hex\IeC {\`a}gon regular, Experiment, 97
+  \item hex\IeC {\`a}gons
+    \subitem dibuixar, 57
+    \subitem dibuixar amb par\IeC {\`a}metres, 186
+    \subitem exemple de, 114
+  \item hide i show m\IeC {\`e}todes a Alice, utilitzar, 369
+
+  \indexspace
+
+  \item icona, crear dins d'eToy, 355
+  \item idiomes, tria a eToy, 356
+  \item ifFalse:, m\IeC {\`e}tode, \see{siFals:}{34}
+  \item ifTrue:ifFalse:, m\IeC {\`e}tode, \see{siCert:siFals:}{34}
+  \item imatges
+    \subitem aplicar als robots, 87
+    \subitem canviar, 85
+    \subitem guardar, 84
+    \subitem restaurar les classes, 84
+  \item importar fitxers, 67
+  \item indicar els arguments per a, 142
+  \item inicialitzaci\IeC {\'o} de variables, 134
+  \item inicialitzaImatge (missatge de la classe Bot), efecte de, 84
+  \item instal\IeC {\textperiodcentered }laci\IeC {\'o}
+    \subitem ajuts a la, 7
+    \subitem en sistemes Windows i Macintosh, 3
+    \subitem problemes amb, 12--13
+  \item interactiva, aplicaci\IeC {\'o}; exemple de, 265--266
+  \item internacionalitzaci\IeC {\'o}, implementar a eToy, 356
+  \item interpreta: m\IeC {\`e}tode, definir, 252
+  \item interpretar un petit llenguatge, 252
+  \item Into, bot\IeC {\'o}; utilitzar al depurador, 206
+  \item invisibilitat i visibilitat, aplicar als robots, 42
+
+  \indexspace
+
+  \item \emph{joystick}
+    \subitem crear per a un avi\IeC {\'o}, 339
+    \subitem experimentar amb, 339
+    \subitem vincular a un \emph{script}, 339--340
+
+  \indexspace
+
+  \item un senzill laberint, Experiment, 132
+  \item laberints, crear, 214--215
+  \item Lindenmeyer sistemes, significat de, 252
+  \item liniaDivisoria: m\IeC {\`e}tode, desenvolupar per a rectangles daurats, 
+		222
+  \item l\IeC {\'\i }nies
+    \subitem crear espirals a partir de, 218
+    \subitem dibuixar i acolorir, 74--75
+    \subitem dibuixar per a una estrella, 92
+  \item l\IeC {\'\i }nies de refer\IeC {\`e}ncia, dibuixar, 53
+  \item llapis, mida i color, 74--75
+  \item llenguatge de programaci\IeC {\'o} orientat a objectes, Smalltalk com a, 
+		19
+  \item llenguatge petit, interpretar, 252--254
+  \item llenguatges de programaci\IeC {\'o}, 19
+  \item lletra A
+    \subitem dibuixar, 41--42
+    \subitem forma de, 104
+    \subitem utilitzar moviments absoluts amb, 293--294
+    \subitem utilitzar variables, 108--109
+    \subitem variacions, 104--106
+  \item llista de fitxers (\emph{file list}), carregar \emph{scripts} amb, 
+		65
+  \item llocs web
+    \subitem eToy, 329
+    \subitem Squeak, 3
+  \item longitud, examinar la influ\IeC {\`e}ncia en el moviment de vagar de la, 
+		309
+  \item longitudCami, variable
+    \subitem canviar dues vegades, 122
+    \subitem declarar, 120--123
+    \subitem definir variable amb, 123
+    \subitem escriure i llegir, 120
+    \subitem inicialitzar, 123--124
+  \item longitudTotal variable, utilitzar en pol\IeC {\'\i }gons, 115
+  \item lookLike m\IeC {\`e}tode, crear \emph{scripts} amb, 344
+
+  \indexspace
+
+  \item m\IeC {\`a}quina virtual (MV), fitxer d'aplicaci\IeC {\'o} Squeak com a, 
+		12
+  \item m\IeC {\`e}todes d'\emph{scripting a eToy}, 354
+  \item Macintosh
+    \subitem instal\IeC {\textperiodcentered }lar Squeak en un, 4
+    \subitem obrir l'entorn en un, 5
+  \item maj\IeC {\'u}scules, lletres; errors relacionats amb, 29
+  \item mantenirOrientaci\IeC {\'o}: m\IeC {\`e}tode, definir, 322
+  \item menjar, trobar-ne a les simulacions de comportament animal, 
+		319--326
+  \item mentreCert: bucle
+    \subitem components de, 259
+    \subitem convertir a mentreFals:, 262
+    \subitem descripci\IeC {\'o} i exemple de, 268
+    \subitem efecte de, 257
+  \item mentreFals: bucle
+    \subitem components de, 259
+    \subitem descripci\IeC {\'o} i exemple de, 268
+    \subitem efecte de, 257
+  \item men\IeC {\'u} principal, opcions del, 61
+  \item men\IeC {\'u}, opcions del; explicacions, 62
+  \item men\IeC {\'u}s contextuals, accedir a, 65
+  \item men\IeC {\'u}s, mostrar per M\IeC {\'o}n, 11
+  \item m\IeC {\`e}tode capsa, definir m\IeC {\`e}tode estrella amb, 
+		180
+  \item un m\IeC {\`e}tode pel marc art nouveau, Experiment, 172
+  \item un m\IeC {\`e}tode per dibuixar un hex\IeC {\`a}gon, Experiment, 
+		186
+  \item un m\IeC {\`e}tode per dibuixar una creu, Experiment, 187
+  \item m\IeC {\`e}todes, \seealso{compondre m\IeC {\`e}todes}{196}
+    \subitem afegir per a l'avi\IeC {\'o}, 337--339
+    \subitem afegir traces, 260--263
+    \subitem arrossegar i deixar anar per crear nous \emph{scripts} per a l'avi\IeC {\'o}, 
+		335
+    \subitem compilar i comprovar, 166
+    \subitem components de, 166--168
+    \subitem cridar altres m\IeC {\`e}todes amb, 178
+    \subitem definici\IeC {\'o} dels, 25
+    \subitem definir amb el m\IeC {\`e}tode quadrat, 179
+    \subitem definir amb l'Explorador de la classe Bot, 162, 165--166
+    \subitem definir amb m\IeC {\'u}ltiples arguments, 184
+    \subitem definir amb m\IeC {\'u}ltiples par\IeC {\`a}metres, 189
+    \subitem definir per dibuixar rectangles d'or, 219--221
+    \subitem depurar, 207
+    \subitem entrar sense executar, 207--209
+    \subitem mostrar pel \emph{joystick} de l'avi\IeC {\'o}, 339
+    \subitem mostrar per a les categories d'eToy, 333
+    \subitem per dibuixar quadrats, 184--185
+    \subitem recompilar amb el depurador, 209
+    \subitem relaci\IeC {\'o} amb les expressions, 167
+    \subitem utilitzar arguments amb, 184, 189
+    \subitem utilitzar i reutilitzar, 166, 178
+    \subitem valor retornat per, 246
+    \subitem variables en, 187--189
+    \subitem versus \emph{scripts}, 160--161, 168--169
+  \item m\IeC {\`e}todes, categories de, 163--164
+  \item m\IeC {\`e}todes, definicions; modificar amb el depurador, 209, 
+		211
+  \item m\IeC {\`e}todes, execuci\IeC {\'o}, 195--196
+  \item mida dels robots, canviar, 77--79
+  \item mida, variable; declarar, 198
+  \item midaCostat par\IeC {\`a}metre
+    \subitem utilitzar a l'experiment dels quadrats russos, 133
+    \subitem utilitzar al m\IeC {\`e}tode quadrat:, 185
+  \item midaEsglaons variable, utilitzar en pir\IeC {\`a}mide, 113
+  \item midaLlapis m\IeC {\`e}tode, descripci\IeC {\'o} i exemple, 88
+  \item min\IeC {\'u}scules, lletres; errors relacionats amb, 29
+  \item missatge Bot nou ves: 100 + 20, descomposici\IeC {\'o}, 149
+  \item missatge, enviaments de
+    \subitem efecte de, 142
+    \subitem prioritat dels, 153
+  \item missatge, examinar l'execuci\IeC {\'o} del, 199--200
+  \item missatge, selectors de
+    \subitem Color, per a la classe, 74
+    \subitem escriure malament els, 28
+    \subitem utilitzar dos punts (:) amb, 184
+  \item missatges, 
+		\seealso{binaris, missatges; cascades; paraula-clau, missatges; ordre d'execuci\IeC {\'o}; unaris, missatges}{202}
+    \subitem components dels, 139
+    \subitem enviar a f\IeC {\`a}briques de robots, 10
+    \subitem enviar als robots, 7--10
+    \subitem enviar amb cascades, 15
+    \subitem enviar parts dels actors, a Alice, 367--368
+    \subitem executar, 207
+    \subitem executar, a Alice, 364
+    \subitem exemples comuns de, 63
+    \subitem exemples de, 7, 23--24
+    \subitem identificar, 141--143
+    \subitem oblidar punts entre, 31
+    \subitem ordre d'execuci\IeC {\'o} dels, 276, 284
+    \subitem resultats dels, 67
+    \subitem tipus de, 139--141
+    \subitem utilitzar bucles amb, 93--95
+    \subitem utilitzar en expressions booleanes, 270--274
+    \subitem variacions a Alice, 366
+  \item missatges compostos
+    \subitem definici\IeC {\'o} de, 9
+    \subitem enviar, 9
+    \subitem exemples de, 9--10
+    \subitem representar, 147--148
+  \item mitja altura, variable; relaci\IeC {\'o} amb l'amplada i l'altura, 
+		104
+  \item M\IeC {\'o}n (\emph{World}) men\IeC {\'u}
+    \subitem canviar la mida de la pantalla amb, 283
+    \subitem mostrar, 11
+    \subitem obrir projectes \emph{morphic} amb, 329
+  \item \emph{morphic}, projecte; obrir, 329
+  \item \emph{morphs}, crear a Alice, 377
+  \item Morse, codi; dibuixar missatge SOS en, 37
+  \item moure les agulles del rellotge, Experiment, 53
+  \item move toward m\IeC {\`e}tode, utilitzar a eToy, 355--356
+  \item move: m\IeC {\`e}tode, utilitzar a Alice, 365--366
+  \item moveTo: i move: m\IeC {\`e}todes a Alice, utilitzar, 369
+  \item moviment, \seealso{robots en moviment}{364}
+    \subitem a Alice, 365--366
+    \subitem relatiu versus absolut, 285--288
+  \item moviments absoluts
+    \subitem fer, 285
+    \subitem significat de, 292--294
+  \item moviments de robot, seguiment dins dels \emph{scripts}, 235
+  \item MV (m\IeC {\`a}quina virtual), fitxer d'aplicaci\IeC {\'o} Squeak com a, 
+		12
+
+  \indexspace
+
+  \item n vegadesRepetir: [], efecte de, 93, 101
+  \item nanses, \see{halo de nanses}{329}
+  \item nanses de l'halo, descripci\IeC {\'o} de, 330
+  \item negaci\IeC {\'o} (not) missatge, exemple de, 271--274, 278
+  \item negated m\IeC {\`e}tode, utilitzar en punts, 295
+  \item negreta (tipus de lletra), significat de , 200
+  \item nil valor, significat de, 197--199, 210--211
+  \item nom dels dibuixos, modificar a eToy, 332
+  \item nom\IeC {\'e}s lectura, identificar fitxers de, 12
+  \item nombreDeCostats variable, utilitzar en m\IeC {\`e}todes, 188
+  \item nombreEsglaons variable, utilitzar en pir\IeC {\`a}mide, 113
+  \item nombres i cadenes, panorama general, 233, 235
+  \item nord missatge, exemple de, 38
+  \item nordEst missatge, exemple de, 38
+  \item nordOest missatge, exemple de, 38
+  \item not (negaci\IeC {\'o}) missatge
+    \subitem error amb par\IeC {\`e}ntesis, 275
+    \subitem exemple de, 271--274, 278
+  \item nou, missatge; efecte de, 10
+  \item nudge: m\IeC {\`e}tode, utilitzar a Alice, 368
+
+  \indexspace
+
+  \item o (\textbar) missatge
+    \subitem error de par\IeC {\`e}ntesi relacionat amb, 277
+    \subitem exemple de, 271, 273--274, 278
+  \item o (disjunci\IeC {\'o}) missatge
+    \subitem exemple de, 273--274, 278
+  \item objectes
+    \subitem classes com a f\IeC {\`a}briques de, 274
+    \subitem comportament a Smalltalk, 67
+    \subitem crear per classes, 36
+    \subitem en missatges binaris, 144
+    \subitem manipular dins d'Alice, 367
+    \subitem obtenir de classes, 26
+    \subitem relaci\IeC {\'o} amb missatges binaris, 140
+    \subitem vincular dins d'eToy, 355--356
+  \item obre\dots submen\IeC {\'u}, descripci\IeC {\'o} de, 61
+  \item observadors, utilitzar a eToy, 333
+  \item oest missatge, exemple de, 38
+  \item ones quadrades en un estany quadrat, Experiment, 214
+  \item operadors booleans, exemples de, 274
+  \item oques volant, patrons de, 291, 295--296
+  \item ordre d'execuci\IeC {\'o}, \seealso{missatges}{276}
+    \subitem de missatges, 277, 283--285
+    \subitem panorama general, 146--147
+    \subitem Regla 1, 146--150, 154
+    \subitem Regla 2, 146, 150--151
+    \subitem Regla 3, 146, 151--154
+  \item origen, missatge; efecte de, 301
+  \item Over, bot\IeC {\'o}; utilitzar al depurador, 207
+
+  \indexspace
+
+  \item pablo, variable; declarar, 118--119
+  \item Paint, eina; obrir per dibuixar un avi\IeC {\'o}, 330
+  \item pantalla
+    \subitem canviant la mida de la, 283
+    \subitem mostrant informaci\IeC {\'o} a la, 230--231
+    \subitem posicionar robots al centre de la, 301
+  \item pantalla completa, mode; canviar a, 283
+  \item pantalla, capturar regions de la, 67
+  \item par\IeC {\`e}ntesi (())
+    \subitem errors provocats per, 274--278
+    \subitem inclosos per alterar l'ordre d'execuci\IeC {\'o}, 146, 154
+    \subitem utilitzats amb punts, 283
+  \item paral\IeC {\textperiodcentered }lel, moviment; exemple de, 286
+  \item par\IeC {\`a}metres
+    \subitem i arguments, 193--196
+    \subitem declarar, 192
+    \subitem definici\IeC {\'o} de, 184
+    \subitem definir m\IeC {\`e}todes amb, 188
+    \subitem dibuixar quadrats amb, 192
+    \subitem donar nom als, 190
+    \subitem no es pot assignar valors als, 192
+    \subitem propietats dels, 192
+    \subitem utilitzar, 186
+    \subitem utilitzar en pol\IeC {\'\i }gons, 187
+    \subitem utillitzar amb espirals, 216
+    \subitem i variables, 191--193
+  \item par\IeC {\`a}metres, canviar el valor dels, 192
+  \item paraula-clau, missatges, \seealso{missatges}{137}
+    \subitem exemples de, 139--141, 145
+    \subitem explicaci\IeC {\'o} de, 139--141
+  \item paraules, seleccionar en un \emph{script}, 69
+  \item un passad\IeC {\'\i }s llarg, Experiment, 133
+  \item un passad\IeC {\'\i }s, Experiment, 215
+  \item passaImatgeAClasse m\IeC {\`e}tode, descripci\IeC {\'o} i exemple, 
+		88
+  \item passaImatgeAClasse missatge, efecte de, 82
+  \item patro, m\IeC {\`e}tode
+    \subitem definir, 199
+    \subitem depurar, 209
+    \subitem examinar, 207
+    \subitem recompilar amb el depurador, 211
+    \subitem seleccionar a la finestra del depurador, 204
+  \item patro4, m\IeC {\`e}tode
+    \subitem definir, 176--178, 199
+    \subitem seleccionar dins del depurador, 205
+  \item patroInclinat m\IeC {\`e}tode, significat de, 178
+  \item patrons, \see{figures}{178}
+  \item pent\IeC {\`a}gon regular, exemple de, 114
+  \item pent\IeC {\`a}gon regular, Experiment, 97
+  \item pent\IeC {\`a}gon, dibuixar amb el m\IeC {\`e}tode poligon100:, 
+		189
+  \item pent\IeC {\`a}gon, exemple de, 114
+  \item pica color, expressi\IeC {\'o}; executar, 70
+  \item pica color: Color groc, descomposici\IeC {\'o} de l'execuci\IeC {\'o} de, 
+		147
+  \item pica midaLlapis: pica midaLlapis + 2 expressi\IeC {\'o}, descomposici\IeC {\'o} de, 
+		149
+  \item pica ves: 100 + 20 expressi\IeC {\'o}, descomposici\IeC {\'o} de, 
+		148
+  \item PICA, Experiment, 41
+  \item pica, robot
+    \subitem assignar un gr\IeC {\`a}fic a, 86
+    \subitem com a variable, 108
+    \subitem crear, 35
+  \item pica, variable; declarar, 118--122
+  \item pila d'execuci\IeC {\'o}, exemple de, 200
+  \item pila, depurador; anar pas a pas per la, 206
+  \item una pinta, Experiment, 100
+  \item pintar amb la nansa vermella, utilitzar en animacions, 342
+  \item pir\IeC {\`a}mide amb deu esglaons, Experiment, 98
+  \item una pir\IeC {\`a}mide amb un nombre variable d'esglaons, Experiment, 
+		113
+  \item una pir\IeC {\`a}mide amb una mida variable de l'esgla\IeC {\'o}, Experiment, 
+		113
+  \item la pir\IeC {\`a}mide esglaonada de Saqqara, Experiment, 40
+  \item Una Pir\IeC {\`a}mide Rectangular, Experiment, 225
+  \item una pir\IeC {\`a}mide triangular, Experiment, 226
+  \item pir\IeC {\`a}mide, Experiment, 136
+  \item p\IeC {\'\i }xels
+    \subitem determinar pel moviment endavant del robot, 121
+    \subitem significat de, 22
+  \item place: m\IeC {\`e}tode a Alice, utilitzar, 370
+  \item playerAtCursor m\IeC {\`e}tode, arrossegant a eToy, 345
+  \item playfield options men\IeC {\'u}, mostrar a eToy, 353
+  \item pointAt: m\IeC {\`e}tode d'Alice, 369
+  \item pol\IeC {\'\i }gon100, 188
+  \item pol\IeC {\'\i }gon
+    \subitem automatitzar amb variables, 114--115
+    \subitem de mida fixa, 115
+    \subitem dibuixar, 56--57
+    \subitem utilitzar variables i par\IeC {\`a}metres amb, 187
+  \item pol\IeC {\'\i }gon regular
+    \subitem de mida fixa, 115
+    \subitem dibuixar, 56--57
+  \item poligon:mida: m\IeC {\`e}tode, definir, 189
+  \item Pooh, generar formes 3D a partir de figures 2D amb el sistema, 
+		378--379
+  \item PopUp men\IeC {\'u}, exemple de, 230--231
+  \item posar una tra\IeC {\c c}a dins del bucle, Experiment, 236
+  \item posici\IeC {\'o}
+    \subitem determinar la, 305
+    \subitem especular amb, 301
+    \subitem representaci\IeC {\'o} com a punts, 280
+    \subitem saltar a una, 285
+    \subitem versus centre, 305
+    \subitem vincular amb l'angle del volant a eToy, 348--350
+  \item posici\IeC {\'o} actual dels robots, determinar, 305
+  \item posici\IeC {\'o} missatge, descripci\IeC {\'o} i exemple de, 
+		305
+  \item posicioSiVes: m\IeC {\`e}tode, codi per, 302
+  \item Primer els Par\IeC {\`e}ntesis, ordre d'execuci\IeC {\'o}; exemples de, 
+		150--151
+  \item primera classe, objectes de; descripci\IeC {\'o} a Alice, 367
+  \item Proceed, bot\IeC {\'o}; utilitzar al depurador, 203, 206, 211
+  \item profunditat de color, comprovar i modificar, 358
+  \item programes
+    \subitem definici\IeC {\'o}, 19
+    \subitem escriure i executar, 20
+  \item punt (.)
+    \subitem oblidar un, 31
+    \subitem utilitzar en missatges i \emph{scripts}, 24
+  \item punt1 $*$ nombre missatge, descripci\IeC {\'o} i exemple, 298
+  \item punt1 + punt2 missatge, descripci\IeC {\'o} i exemple, 298
+  \item punt1 negated missatge, descripci\IeC {\'o} i exemple, 298
+  \item punts
+    \subitem apuntar cap a un, 303--304
+    \subitem dist\IeC {\`a}ncia des d'un, 301
+    \subitem i moviments absoluts, 292--294
+    \subitem panorama general, 280--282
+    \subitem per simular visi\IeC {\'o} en comportaments animals, 
+		319--322
+    \subitem traslladar robots a, 296
+    \subitem utilitzar negated amb els m\IeC {\`e}todes setX:setY:, 294
+
+  \indexspace
+
+  \item quadr\IeC {\'\i }cules, utilitzar, 282--283
+  \item quadrat, Experiment, 39
+  \item un quadrat relatiu, Experiment, 48
+  \item un quadrat trencat, Experiment, 49
+  \item un quadrat utilitzant un bucle, Experiment, 96
+  \item quadrat, \emph{script}, utilitzar variable amb, 191
+  \item quadrat: m\IeC {\`e}tode
+    \subitem definir m\IeC {\`e}todes amb, 179
+    \subitem execuci\IeC {\'o} de, 195
+    \subitem reproduir figures amb, 224--227
+    \subitem retornar el receptor del missatge amb, 170
+    \subitem utilitzar el par\IeC {\`a}metre midaCostat amb, 185
+  \item quadrats, 
+		\seealso{quadrats centrats; quadrats conc\IeC {\`e}ntrics}{48}
+    \subitem dibuixar, 48, 96, 160--161
+    \subitem dibuixar amb m\IeC {\`e}todes, 184--187
+  \item quadrats centrats, crear, 214--215, \seealso{quadrats}{227}
+  \item quadrats conc\IeC {\`e}ntrics, dibuixar, 133, 
+		\seealso{quadrats}{137}
+  \item quadrats que fan tombarelles, Experiment, 101
+  \item Quadrats Russos, Experiment, 215
+  \item quadrats russos, Experiment, 133
+  \item quadrats, Experiment, 136
+  \item Quick Reference, bot\IeC {\'o} dins l'editor d'\emph{scripts} d'Alice; descripci\IeC {\'o} de, 
+		361
+
+  \indexspace
+
+  \item reaccions, tractant-les dins Alice, 376
+  \item receptors
+    \subitem amagar i mostrar, 59
+    \subitem enviar missatges a, 169
+    \subitem explicaci\IeC {\'o} de, 142
+    \subitem moure si va a parar dins d'un rectangle, 302
+    \subitem retornar amb el m\IeC {\`e}tode quadrat, 170
+    \subitem trobar-ne la posici\IeC {\'o} en simulacions de comportament animal, 
+		319
+  \item receptors dels missatges, \see{missatges}{202}
+  \item rectangle 1, Experiment, 288
+  \item rectangle 2, Experiment, 288
+  \item el rectangle d'or, Experiment, 111
+  \item rectangleAmplada:altura: m\IeC {\`e}tode, definici\IeC {\'o}, 
+		190
+  \item rectangleDaurat: m\IeC {\`e}todes, desenvolupar i exemples de, 
+		221--224
+  \item rectangles, \seealso{capses; rectangles d'or}{312}
+    \subitem centrats en animals, 312
+    \subitem com a regions segures, 317
+    \subitem com a sortides d'un animal atrapat dins d'una capsa, 315
+    \subitem dibuixar, 16, 302
+    \subitem moure robots dins de, 302--303
+  \item rectangles d'or, \seealso{rectangles}{219}
+    \subitem dibuixar, 219--220
+    \subitem imbricar, 219, 222
+    \subitem un-rectangle-per-l\IeC {\'\i }nia, 220--224
+  \item rectangles d'or incrementals, Experiment, 224
+  \item Rectangles, experiments, 288
+  \item regi\IeC {\'o} segura, imaginar un rectangle com a, 317
+  \item Regla 1 de l'ordre d'execuci\IeC {\'o}
+    \subitem conseq\"u\IeC {\`e}ncies, 154
+    \subitem explicaci\IeC {\'o} de, 146
+    \subitem Unari $>$ Binari $>$ Paraula-clau, 147--150
+  \item Regla 2 de l'ordre d'execuci\IeC {\'o}
+    \subitem explicaci\IeC {\'o} de, 146
+    \subitem primer els par\IeC {\`e}ntesis, 150--151
+  \item Regla 3 de l'ordre d'execuci\IeC {\'o}
+    \subitem d'esquerra a dreta, 151--154
+    \subitem explicaci\IeC {\'o} de, 146
+  \item relatiu
+    \subitem moviment, versus moviment absolut, 285--288
+  \item relativa
+    \subitem orientaci\IeC {\'o}, versus orientaci\IeC {\'o} absoluta, 
+		48--50, 279
+  \item un rellotge ``real'', Experiment, 55
+  \item rellotge robot, crear, 55
+  \item rellotge, crear, 54
+  \item repeticions condicionals
+    \subitem components de, 258--260
+    \subitem definir, 262
+    \subitem efecte d'executar nom\IeC {\'e}s un cop, 263
+    \subitem exemple de, 257--260
+  \item request:initialAnswer: missatge, efecte de, 231
+  \item resize: m\IeC {\`e}tode, utilitzar dins Alice, 368
+  \item resoldre problemes d'instal\IeC {\textperiodcentered }laci\IeC {\'o} d'Squeak, 
+		12--13
+  \item Restart, bot\IeC {\'o}; utilitzar al depurador, 206
+  \item resultats d'un missatge, significat de, 67
+  \item \emph{return} car\IeC {\`a}cters, representar, 232
+  \item robot aranya, crear amb la classe Bot, 81--83
+  \item robots
+    \subitem acolorir, 248--250
+    \subitem aplicar imatges als, 87
+    \subitem apuntar en les direccions principals de la, 38
+    \subitem canviar colors, 43, 76, 243--245
+    \subitem canviar els colors, 37
+    \subitem canviar l'aparen\IeC {\c c}a, 85
+    \subitem canviar la direcci\IeC {\'o} dels, 59
+    \subitem canviar la forma i la mida, 77--79
+    \subitem crear, 10, 26, 35, 43
+    \subitem crear picas, 17
+    \subitem determinar els colors dels, 70
+    \subitem determinar la posici\IeC {\'o} actual, 305
+    \subitem dibuixar, 79--81
+    \subitem enviar missatges a, 7
+    \subitem fer moviments absoluts amb, 285
+    \subitem girar un angle determinat, 46
+    \subitem identificar dins l'entorn, 7
+    \subitem interactuar amb, 9
+    \subitem moure, 42, 72
+    \subitem moure al nord, 259, 266
+    \subitem moure dins de, 302--303
+    \subitem obtenir direcci\IeC {\'o} pels robots, 299
+    \subitem obtenir informaci\IeC {\'o} sobre, 7
+    \subitem pintar, 79
+    \subitem tornar al centre de la pantalla, 301
+    \subitem tornar invisible, 42
+    \subitem traslladar a un punt, 297
+  \item una roda, Experiment, 177
+  \item rodar a Alice, panorama general, 365--366
+  \item rotaci\IeC {\'o}, determinar pel volant d'eToy, 348--350
+
+  \indexspace
+
+  \item salta: m\IeC {\`e}tode, utilitzar a l'experiment PICA, 41
+  \item salta: missatges
+    \subitem efecte de, 37
+    \subitem efecte en moviments absoluts, 285
+  \item saltaA: m\IeC {\`e}tode versus vesA: unPunt, 285
+  \item saltaA: missatge, descripci\IeC {\'o} i exemple, 298
+  \item salts, dibuixar la lletra A amb, 293
+  \item scheduler getTime expressi\IeC {\'o}, utilitzar dins \emph{Wonderland}, 
+		374
+  \item \emph{script} amb diversos actors a Alice, exemple de, 373
+  \item \emph{scripts}, \seealso{Experiments}{237}
+    \subitem afegir traces als, 237
+    \subitem analitzar, 21--22, 120--124
+    \subitem analitzar a Alice, 364
+    \subitem carregar, 65
+    \subitem crear amb el m\IeC {\`e}tode lookLike, 344
+    \subitem crear per a l'avi\IeC {\'o}, 335
+    \subitem declarar variables pels, 43
+    \subitem definici\IeC {\'o} de, 15
+    \subitem escriure, 17--18
+    \subitem executar, 69--71
+    \subitem executar a eToy, 354
+    \subitem guardar amb l'Espai de Treball Bot, 65
+    \subitem pel rectangle d'or, 111
+    \subitem relaci\IeC {\'o} amb les expressions, 20
+    \subitem seleccionar el text complet de, 69
+    \subitem utilitzar dins d'Alice, 362--366
+    \subitem utilitzar en operacions gr\IeC {\`a}fiques, 83--84
+    \subitem versus m\IeC {\`e}todes, 160--161, 168--169
+    \subitem vincular el \emph{joystick} de l'avi\IeC {\'o} amb, 
+		339--340
+  \item \emph{scripts} amb nom, \see{m\IeC {\`e}todes}{101}
+  \item \emph{scripts} misteriosos, Experiment, 47
+  \item \emph{Scripts} que no funcionen, Experiment, 112
+  \item secci\IeC {\'o} \IeC {\`a}uria, calcular, 219
+  \item segments de l\IeC {\'\i }nia, dibuixar, 37
+  \item seleccionar amb el ratol\IeC {\'\i }, 65
+  \item selectors de missatges matem\IeC {\`a}tics, prioritats, 154
+  \item self halt expressi\IeC {\'o}, obrir el depurador amb, 202--203
+  \item self variable, relaci\IeC {\'o} amb els m\IeC {\`e}todes, 168, 
+		196
+  \item sensors pel cotxe, crear a eToy, 350
+  \item set language\dots men\IeC {\'u}, mostrar a eToy, 356
+  \item setColor: m\IeC {\`e}tode, utilitzar a Alice, 368
+  \item \emph{setter}, m\IeC {\`e}todes; mostrar per a les categories a eToy, 
+		333
+  \item setX:setY: m\IeC {\`e}tode, utilitzar en punts, 295
+  \item siCert:siFals: m\IeC {\`e}tode
+    \subitem efecte de, 244
+    \subitem utilitzar bloc condicional buit amb, 247
+  \item siFals: m\IeC {\`e}tode, efecte de, 247--248
+  \item simulacions de comportament animal
+    \subitem atrapat dins una capsa, 312--316
+    \subitem decr\IeC {\`e}ixer la velocitat, 319
+    \subitem trobar menjar, 319--326
+    \subitem vagar, 307--312
+    \subitem visi\IeC {\'o}, 324--326
+  \item sistema de coordenades a Smalltalk, descripci\IeC {\'o} de, 281
+  \item sisteme de coordenades matem\IeC {\`a}tic, comparaci\IeC {\'o} amb Smalltalk, 
+		281
+  \item size m\IeC {\`e}tode, exemple de, 232
+  \item Smalltalk
+    \subitem anomenar les variables, 117
+    \subitem blocs (\emph{block}), 94
+    \subitem comportament dels objectes a, 67
+    \subitem donar forma al codi en, 96
+    \subitem llenguatge de programaci\IeC {\'o}, 36
+    \subitem selectors de missatges matem\IeC {\`a}tics, 154
+    \subitem significat de, 19--20
+    \subitem sistema de coordenades, 281
+  \item solapa
+    \subitem definici\IeC {\'o} de, 7
+    \subitem obtenir Espai de Treball Bot, 62
+  \item sortir de l'entorn Squeak, 10
+  \item SOS missatge en codi morse, dibuixar, 37
+  \item SOS, Experiment, 38
+  \item sources, fitxer; resoldre problemes amb, 12
+  \item speed: m\IeC {\`e}tode, utilitzar a Alice, 365
+  \item Squeak
+    \subitem \emph{downloading}, 3
+    \subitem fitxers necessaris per a, 12
+    \subitem instal\IeC {\textperiodcentered }laci\IeC {\'o}, 3--5
+    \subitem interaccionar amb, 63
+    \subitem i el llenguatge de programaci\IeC {\'o} Smalltalk, 19--20
+    \subitem sortir i guardar l'entorn, 10
+  \item standUp m\IeC {\`e}tode, aplicar a actors dins Alice, 360
+  \item start script m\IeC {\`e}tode, utilitzar a eToy, 354
+  \item subfinestres de l'Explorador de la Classe Bot, explicaci\IeC {\'o} de, 
+		162
+  \item submen\IeC {\'u}, explicaci\IeC {\'o} de, 61
+  \item subratllats, receptors de missatge; significat de, 141--143
+  \item sud missatge, exemple de, 38
+  \item sudEst missatge, exemple de, 38
+  \item sudOest missatge, exemple de, 38
+
+  \indexspace
+
+  \item tab car\IeC {\`a}cter, representar, 232
+  \item tallar i enganxar, generar pol\IeC {\'\i }gons regulars amb, 57
+  \item tauler de dames, Experiment, 226
+  \item tauler, construcci\IeC {\'o} de, 136
+  \item tecles, combinacions i botons del ratol\IeC {\'\i }, explicacions, 
+		63
+  \item temps
+    \subitem con\IeC {\`e}ixer dins del \emph{Wonderland} a Alice, 374
+    \subitem versus angles, 55
+  \item text, color; canvis del, 31
+  \item timesRepeat:, \see{vegadesRepetir:}{94}
+  \item tornarInvisible i tornarVisible m\IeC {\`e}todes, efectes de, 
+		45, 59, 305
+  \item traces
+    \subitem afegir als m\IeC {\`e}todes, 260--263
+    \subitem endevinar les generades pel moviment dels animals, 309
+    \subitem fer que l'avi\IeC {\'o} dibuixi, 337
+    \subitem generar, 235--237
+    \subitem per simular la visi\IeC {\'o} en el comportament animal, 
+		324--326
+    \subitem utilitzar en expressions condicionals, 245--246
+  \item \emph{Transcript}, eina
+    \subitem generar traces de programes amb, 235--237
+    \subitem utilitzar al m\IeC {\`e}tode finsA100, 261
+    \subitem utilitzar el, 234--235
+    \subitem utilitzar en expressions condicionals, 245--246
+  \item translacions
+    \subitem i bucles, 295--296
+    \subitem d'oques volant, 291--292
+    \subitem panorama general, 288--290
+    \subitem de triangles, 290--291
+  \item traslladar un robot a un punt, Experiment, 296
+  \item tres radis, dibuixar figura amb, 58
+  \item Triangle 1, Experiment, 289
+  \item triangle 2, Experiment, 292
+  \item triangle equil\IeC {\`a}ter, dibuixar, 55
+  \item triangles
+    \subitem dibuixar, 55
+    \subitem traslladar, 290--291
+  \item triangular, forma; aplicar als robots, 77
+  \item trieu vosaltres, Experiment, 180
+  \item trobaAreaAlimentPerDistancia: m\IeC {\`e}tode; implementar, 
+		320--321
+  \item true i false, objectes retornats amb expressions booleanes, 
+		269--271
+  \item turn: m\IeC {\`e}tode
+    \subitem afegir per a un avi\IeC {\'o}, 337
+    \subitem arrossegar i deixar a eToy, 347
+    \subitem utilitzar dins Alice, 365--366
+
+  \indexspace
+
+  \item ulleres de llarga vista, dibuixar, 75
+  \item unaCondici\IeC {\'o} (m\IeC {\`e}tode), descripci\IeC {\'o} i exemple de, 
+		255
+  \item Unari $>$ Binari $>$ Paraula-clau ordre d'execuci\IeC {\'o}, exemples de, 
+		147--150
+  \item unaris, missatges, \seealso{missatges}{137}
+    \subitem exemples de, 141, 143
+    \subitem explicaci\IeC {\'o} de, 139--141
+    \subitem ordre d'execuci\IeC {\'o}, 146
+  \item unDrawGrids m\IeC {\`e}tode, utilitzar, 283
+  \item until: m\IeC {\`e}tode; utilitzar a Alice, 365
+  \item usuari, comunicaci\IeC {\'o} amb, 230--231
+  \item usuari, interacci\IeC {\'o} amb; implementar dins Alice, 
+		375--376
+  \item utilitzar el m\IeC {\`e}tode trasllada: 1, Experiment, 297
+  \item utilitzar el m\IeC {\`e}tode trasllada: 2, Experiment, 297
+
+  \indexspace
+
+  \item vagar, simular, 307--312
+  \item valor dels arguments, visualitzant-los amb el depurador, 207
+  \item valorMida par\IeC {\`a}metre, exemple de, 190
+  \item valors
+    \subitem assignar a variables, 107
+    \subitem canviar el d'una variable, 134
+    \subitem excloure d'una variable, 123
+    \subitem modificar els de les variables a eToy, 333
+    \subitem relaci\IeC {\'o} amb les variables, 107
+    \subitem representar amb nil, 197--199
+    \subitem retornar, 169--170
+    \subitem retornat pels m\IeC {\`e}todes, 246
+  \item valors booleans, exemples de, 269
+  \item variable angle
+    \subitem utilitzaci\IeC {\'o} amb pol\IeC {\'\i }gons, 115
+    \subitem utilitzaci\IeC {\'o} en m\IeC {\`e}todes, 188
+  \item variable, nom de
+    \subitem escriure malament, 28
+    \subitem import\IeC {\`a}ncia, 118
+    \subitem self, 168
+  \item variable, valor; canviar, 193
+  \item variables
+    \subitem anomenar, 117
+    \subitem com a argument, 194
+    \subitem assignar valors a, 107
+    \subitem automatitzar pol\IeC {\'\i }gons amb, 114--115
+    \subitem canviar el valor de les, 134
+    \subitem combinar amb bucles, 131--134
+    \subitem com a contenidors, 118--119
+    \subitem declarar, 107
+    \subitem declarar i assignar, 116
+    \subitem declarar per \emph{scripts}, 42
+    \subitem declarar, inicialitzar i utilitzar, 120--122
+    \subitem definir, 106
+    \subitem definir amb la variable longitudCami, 123
+    \subitem errors relacionats amb, 28--29
+    \subitem experimentar amb, 111--114
+    \subitem expressar relacions entre, 110--111
+    \subitem inicialitzar, 106--107, 134
+    \subitem introduir en bucles, 134
+    \subitem en m\IeC {\`e}todes, 187--189
+    \subitem modificar els valors a eToy, 333
+    \subitem i par\IeC {\`a}metres, 191--193
+    \subitem per a la longitud en el cam\IeC {\'\i } de pica, 121
+    \subitem pot\IeC {\`e}ncia de, 110
+    \subitem referir-nos a les, 108
+    \subitem utilitzar, 134
+    \subitem utilitzar dins d'expressions, 121
+    \subitem utilitzar en dibuixar una escala, 129
+    \subitem utilitzar en l'\emph{script} del quadrat, 192
+    \subitem utilitzar en l'Experiment de la pir\IeC {\`a}mide de Saqqara, 
+		113
+    \subitem utilitzar en la lletra A, 108--109
+    \subitem utilitzar sense valor, 122
+    \subitem valor per defecte de, 197--199
+  \item vegadesRepetir: m\IeC {\`e}tode
+    \subitem arguments de, 94
+    \subitem efecte de, 93, 101
+    \subitem mostrar en el depurador, 205
+  \item ves missatge
+    \subitem avan\IeC {\c c}ar p\IeC {\'\i }xels, 37
+    \subitem dibuixar rectangles amb, 16
+    \subitem efecte de, 9
+  \item ves:siDinsCapsa: m\IeC {\`e}tode, codi per al, 302
+  \item vesA: m\IeC {\`e}tode
+    \subitem descripci\IeC {\'o} i exemple, 297
+    \subitem versus saltaA: unPunt, 285
+  \item \emph{viewer}, \see{visualitzador}{333}
+  \item visi\IeC {\'o}, simular en el comportament animal, 324--326
+  \item visibilitat del robot, controlar, 42
+  \item visibilitat i invisibilitat, aplicar als robots, 42
+  \item visualitzador (\emph{viewer})
+    \subitem de la base de l'animaci\IeC {\'o}, 343
+    \subitem mostrar categories en el, 333
+    \subitem obrir dins eToy, 333
+    \subitem obrir un contenidor en un, 344
+    \subitem parts de, 334
+  \item vocabulari, subfinestra; llistar missatges a la, 62
+  \item volant
+    \subitem dibuixar a eToy, 347
+    \subitem utilitzar la direcci\IeC {\'o} del, 348--350
+
+  \indexspace
+
+  \item w makePlaneNamed: expressi\IeC {\'o}; utilitzar a Alice, 372
+  \item whileFalse: bucle, \see{mentreFals: bucle}{34}
+  \item whileTrue: bucle, \see{mentreCert: bucle}{34}
+  \item \emph{widgets}, solapa; obrir per dibuixar avi\IeC {\'o}, 330
+  \item Windows
+    \subitem instal\IeC {\textperiodcentered }lar Squeak a, 4
+    \subitem obrir l'entorn a, 5
+  \item \emph{Wonderland}, 
+		\seealso{Alice, entorn de creaci\IeC {\'o} personalitzada}{374}
+    \subitem alarmes, 374
+    \subitem crear dins Alice, 372--373
+    \subitem obrir per utilitzar amb Pooh, 378
+  \item \emph{The Worlds of Squeak} finestra, mostrar, 357
+
+  \indexspace
+
+  \item x@y missatge, descripci\IeC {\'o} i exemple, 298
+
+  \indexspace
+
+  \item yertle, robot; aparici\IeC {\'o} de, 86
+
+  \indexspace
+
+  \item zoom, fer amb els dibuixos, 80
+
+\end{theindex}

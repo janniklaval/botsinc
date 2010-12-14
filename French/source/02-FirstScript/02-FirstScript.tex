@@ -1,0 +1,373 @@
+% $Author: stef $
+% $Date: 2008-04-04 17:14:31 +0200 (Fri, 04 Apr 2008) $
+% $Revision: 318 $
+%=================================================================
+\ifx\wholebook\relax\else
+% --------------------------------------------
+% Lulu:
+    \documentclass[a4paper,10pt,twoside]{book}
+    \usepackage[
+        papersize={6in,9in},
+        hmargin={.75in,.75in},
+        vmargin={.75in,1in},
+        ignoreheadfoot
+    ]{geometry}
+    \input{../common.tex}
+    \pagestyle{headings}
+    \setboolean{lulu}{true}
+% --------------------------------------------
+% A4:
+%   \documentclass[a4paper,11pt,twoside]{book}
+%   \input{../common.tex}
+%   \usepackage{a4wide}
+% --------------------------------------------
+    \graphicspath{{figures/} {../figures/}}
+    \begin{document}
+%   \renewcommand{\nnbb}[2]{} % Disable editorial comments
+    \sloppy
+\fi
+
+\chapter{Un premier script et ses implications}\label{cha:script}
+
+Alors que l'envoi de messages en utilisant une interaction directe est une fa\c con plaisante et efficace de programmer les robots, il s'agit d'une technique plut\^ot limit\'ee pour l'\'ecriture de programmes complexes. Pour \'elargir vos horizons de programmation, je vais vous enseigner la notion de ``script'', qui est une s\'equence d'expressions, ainsi que tous les concepts fondamentaux et le vocabulaire dont vous aurez besoin pour le reste de ce livre. Cela sert aussi de carte pour les chapitres suivants, qui pr\'esentera en profondeur les concepts pr\'esent\'es bri\`evement dans ce chapitre.
+
+Tout d'abord, je vais vous montrer comment envoyer plusieurs messages au m'me robot, en s\'eparant une s\'equence de messages avec des points-virgules. Ensuite, vous apprendrez \`a \'ecrire un script \`a l'aide d'un outil d\'edi\'e appel\'e `espace de travail'. Je d\'ecrirai les diff\'erents \'el\'ements qui composent un script et  montrerai quelques erreurs que l'on peut faire lors de l'\'ecriture d'un programme.
+
+\newpage 
+\section{Utilisation d'une cascade pour envoyer plusieurs messages}
+
+Supposons que vous souhaitez avoir votre robot \`a l'\'ecran pour dessiner un rectangle de 200 pixels de hauteur et de 100 pixels de largeur. Pour cela, vous pouvez cliquer sur votre robot, puis commencez \`a taper le premier message \ct{go: 100}, appuyez sur la touche \emph{retour}, puis, cliquez sur le robot et \'ecrivez la deuxi\`eme expression \ct{turnleft:90}, puis appuyez sur la touche retour, puis cliquez sur le robot et \'ecrivez l'expression \ct{go:200}, etc. Vous remarquerez rapidement que c'est une m\'ethode simple d'interagir avec votre robot. Il serait plus correct que vous puissiez commencer par \'ecrire toutes les instructions et ensuite appuyer sur le bouton pour avoir une s\'equence d'instructions ex\'ecut\'ees.
+
+En fait, vous pouvez envoyer plusieurs messages \`a un robot en s\'eparant les messages avec le caract\`ere point virgule\ct{;} pour envoyer au robot les messages \ct{go:100}, \ct{turnleft:90}, et \ct{go:200} s\'eparez les simplement avec un point virgule comme il suit: \ct{go:100; turnleft:90; go:200} (voir figure~\ref{fig:cascading}). Cette m\'ethode d'envoyer plusieurs messages au m'me robot est appel\'ee \emph{une cascade de messages} dans le jargon \Squeak.
+
+
+\begin{figure}[!h]
+\center{\includegraphics[width=10cm]{1-goturnleftgo2}}
+\center{\includegraphics[width=\linewidth]{2-goturnleftgoLong2}}
+\caption{Vous pouvez envoyer diff\'erents messages \`a un robot en une seule fois en utilisant le caract\`ere point virgule (;). \label{fig:cascading}}
+\end{figure}
+
+Cependant la technique d'\'ecrire en cascade des messages (qui est, d'envoyer \`a un robot diff\'erents messages s\'epar\'es par un point virgule) ne marche pas tr\`es bien pour des programmes complexes. En effet, m'me pour dessiner un rectangle simple, la chaine de caract\`ere de message grandit rapidement comme le montre le second message figure~\ref{fig:cascading}. Il y a \'egalement d'autres probl\`emes. Par exemple, les programmeurs doivent tenir compte de diff\'erents cas tel que si ils peuvent enregistrer une s\'equence de message et la rejouer apr\`es ou s'ils peuvent r\'eutiliser leurs messages et ne pas avoir \`a les r\'e\'ecrire tout le temps. Pour toutes ses raisons, nous avons d'autres mani\`eres de programmer les robots. La premi\`ere mani\`ere que nous \'etudieront est d'\'ecrire une s\'equence de messages appel\'ee un \emph{script} dans un \'editeur de texte, et d'appeler l'environnement pour ex\'ecuter votre script.
+
+\section{Un premier script}
+
+The BotInc environment provides a small text editor, called the Bot Workspace, which is dedi- 
+cated to script execution (that is, executing the expressions that constitute a script). Click on the bottom flap, called Working. By default, it contains a Bot Workspace editor, as shown in Figure~\ref{fig:TurtleWorkspace}. 
+
+L'environnement Botinc produit un petit \'editeur de texte, appel\'e le ``Bot Workspace``, qui est d\'edi\'e au script d'ex\'ecution ( qui est, d'ex\'ecuter les expressions constituant le script). Cliquez sur le flap en bas, appel\'e \emph{working}. Par d\'efaut, il contient un \'editeur de \emph{Bot Workspace} tel que nous le voyons figure ~\ref{fig:TurtleWorkspace}. 
+
+\begin{figure}[!h]
+\center{\includegraphics[width=10cm]{3-TurtleWorkspace}}
+\caption{Un Bot Workspace est un petit \'editeur de texte d\'edi\'e \`a l'ex\'ecution de script de robots. 
+  \label{fig:TurtleWorkspace}}
+\end{figure}
+
+Je vais commencer par \'ecrire un script qui dessine un rectangle, puis j'expliquerai cela en d\'etail (Script~\ref{scr:helloworld}). 
+
+
+\begin{script}[helloworld]{Le robot pica a \'et\'e cr\'e\'e pour bouger et tourner.}
+	| pica | 
+	pica := Bot new. 
+	pica go: 100. 
+	pica turnLeft: 90. 
+	pica go: 200. 
+	pica turnLeft: 90. 
+	pica go: 100. 
+	pica turnLeft: 90. 
+	pica go: 200. 
+	pica turnLeft: 90
+\end{script}
+
+La figure~\ref{fig:doit} montre le script dans le Bot Workspace ainsi que l'ex\'ecution obtenue en pressant le bouton \menu{Do it all}. Essayez d'obtenir le m'me r\'esultat: \'ecrivez le script puis appuyez sur le bouton \menu{do it all}. J'ai nomm\'e le robot pica qui est un diminutif du mot Picasso, depuis que nos robots dessinent des images telles que ceux de ce grand artiste espagnol.
+
+Le bouton \menu{do it all} du Bot Workspace ex\'ecute \emph{tous} les messages que le Workspace contient. Cependant avant d'\'ecrire un script, assurez-vous qu'aucun autre texte n'est d\'ej\`a pr\'esent dans le Bot Workspace. De plus, les ordinateurs et les langages de programmation ne peuvent pas g\'erer, m'me la plus \'evidente des erreurs, donc soyez attentif \`a \'ecrire exactement le texte tel qu'il est pr\'esent\'e dans le script~\ref{scr:helloworld}. 
+
+Par exemple, vous devez \'ecrire le ``B`` du Bot sur la seconde ligne, et vous devez terminer chaque ligne avec un \emph{point} ( Il n'y a pas besoin d'\'ecrire un \emph{point} \`a la fin de la derni\`ere ligne, car les \emph{point} s\'eparent les messages dans le script. Il n'y a pas non plus besoin de \emph{point} apr\`es la premi\`ere ligne car elle ne contient pas de message.) Mais nous en verrons plus un peu plus tard dans le chapitre. Le script et les r\'esultats sont pr\'esent\'es dans la figure~\ref{fig:doit}.
+
+
+\begin{figure}[!h]
+\center{\includegraphics[width=10cm]{4-fsdoit}}
+\caption{Un script ex\'ecute utilisant le bouton \menu{Do It All} sur le Bot Workspace et ses r\'esultats.
+\label{fig:doit}}
+\end{figure}
+
+
+\section{Squeak et Smalltalk}
+Script~\ref{scr:helloworld} is admittedly simple, but nonetheless, it constitutes a genuine computer program. A \emph{program} is a list of \emph{expressions} that a computer can execute. To define programs we need programming languages, that is, languages that allow programmers to write instructions that a computer can ``understand'' and execute. 
+
+Le script~\ref{scr:helloworld} est relativement simple, mais n\'eanmoins, il constitue un programme ing\'enieux. Un \emph{programme} est une liste \emph{d'expressions} que l'ordinateur peut ex\'ecuter. Pour d\'efinir un programme nous avons besoin d'un langage de programmation qui est, un langage permettant au programmeur d'\'ecrire des instructions pouvant 'tre comprises par un ordinateur puis ex\'ecut\'ees.
+
+\subsection{Langage de programmation}
+
+Un langage de programmation bien con\c cu aide les programmeurs \`a trouver des solutions \`a leurs probl\`emes. Par aide, je veux dire que le langage devrait, parmi d'autres choses, faciliter l'expression de la tache \`a ex\'ecuter, en donnant des codes sources ex\'ecutable efficaces, donner au programmeur les moyens de prouver que son programme est correct, d'encourager la production de codes visibles, et de permettre au programmeur de modifier simplement ses applications. Il n'y a pas de langage de programmation meilleur ou id\'eal qui satisfasse toutes ses propri\'et\'es d\'esirables, et diff\'erents langages de programmation sont meilleurs selon les diff\'erentes sortes de probl\`emes.
+
+\subsection{Smalltalk et Squeak}
+
+Ce livre vous apprendra comment programmer dans le \emph{langage de programmation} Smalltalk avec \emph{l'environnement de programmation} Squeak. Un environnement de programmation est un ensemble d'outils que le programmeur utilise pour d\'evelopper des applications. Squeak contient un large nombre d'outils int\'eressants: des \'editeurs de textes, des ``codes browsers``, un debugger, un inspecteur d'objets, un compilateur, ``widgets``, et beaucoup d'autres. Est ce n'est pas tout! Dans l'environnement Squeak, vous pouvez programmer de la musique, animer des fichiers flash, acc\'eder \`a internet, afficher des objet 3D, et bien plus encore. Cependant, avant que vous ne commenciez \`a programmer des applications complexes, vous devez apprendre des principes de base, et c'est le sujet de ce livre.
+
+Les programmeurs Squeak d\'eveloppent leur application en \'ecrivant des programmes utilisant le langage de programmation appel\'e Smalltalk. Smalltalk est un langage de programmation orient\'e objet. D'autres langages de programmation orient\'es objet sont java et C++, mais smalltalk est le plus pur et le plus simple. Comme le terme \emph{orient\'e objet} le sugg\`ere, les langages de programmation utilisent des objets. Les objets qui sont cr\'e\'e et utilis\'e ne sont pas, bien sur, de r\'eels objets, mais des structures logiques ou objet virtuels dans l'ordinateur. Mais ils sont appel\'es objet car c'est plus simple de penser que ses structures sont des choses cr\'e\'ees ``manufactured contraptions``, tel qu'un robot, par exemple, qui est capable de comprendre des messages, qui lui sont envoy\'es et qui ex\'ecutent toutes les instructions contenu dans ce message. Le point de l'analogie objet est que nous pouvons utiliser un robot, ou une cam\'era, ou une radio, sans comprendre sa structure interne. Nous avons seulement besoin de savoir comment l'utiliser en appuyant sur ses boutons ou en lui envoyant des messages via la t\'el\'ecommande.
+
+D'o\`u proviennent les objets manufactur\'es? D'une usine bien sur. Les usines utilis\'ees pour cr\'eer des objet sont appel\'ees \emph{classes} dans les langages de programmation orient\'e objet. D\'efinir des classes est quelque chose de compliqu\'e tel que la programmation orient\'e objet en g\'en\'eral, donc dans ce livre d'introduction, je ne vous montrerai pas comment d\'efinir des classes. A la place, vous verrez seulement comment d\'efinir de nouveau types de comportement pour vos robots, et cela vous donnera de bonnes bases dans les concepts de programmation basique.
+
+J'ai choisi Smalltalk comme langage pour ce livre car il est simple, uniforme et pur. Il est pur car dans Smalltalk, \emph{tout} est un objet qui envoi et qui re\c coit des messages vers et en provenance d'autres objets. Il est simple car dans Smalltalk, il n'y a que quelques r\`egles basiques, et il est uniforme car ses r\`egles sont toujours appliqu\'ees. En fait, Smalltalk a \'et\'e originellement con\c cu pour apprendre \`a des d\'ebutants comment programmer. Mais cela ne signifie pas que Smalltalk soit utilisable seulement pour \'ecrire des ``baby`` ou ``toys`` application. En cons\'equence, les applications larges et complexes ont \'et\'e \'ecrites en Smalltalk, tel que des applications contr\^olant les machines que produit le AMD corporation microprocesseur qui peut fonctionner dans votre ordinateur.
+
+Une autre application \'ecrite enti\`erement en Smalltalk est l'environnement Squeak lui m'me. C'est maintenant que \c ca devient int\'eressant! Cela signifie qu'une fois que vous avez acquis une bonne compr\'ehension de Smalltalk, vous pouvez modifier l'environnement Squeak afin d'adapter le syst\`eme \`a vos propres besoins ou simplement en apprendre plus \`a propos de ce syst\`eme. Avec Smalltalk, vous avez pas mal de pouvoir entre vos mains.
+
+J'esp\`ere que cette discussion \`a propos des langages de programmation en g\'en\'eral, et de Smalltalk en particulier, vous a motiv\'e \`a apprendre \`a programmer. Mais s'il vous plait prenez en compte qu'apprendre \`a programmer est comme apprendre \`a jouer du piano ou peindre \`a l'huile. Ce n'est pas simple donc ne vous d\'ecouragez pas si vous rencontrez quelques difficult\'es. De la m'me mani\`ere qu'un apprenti pianiste qui ne commence pas avec \emph{Waldstein Sonata} de Beethoven, et apprenti peintre n'apprends pas \`a reproduire le plafond de la Chapelle Sixtine de Michel Ange. L'apprenti programmeur ne d\'ebutera qu'avec des simples taches. J'ai con\c cu ce livre pour que les sujets soient introduits dans un ordre logique, donc c'est pourquoi vous devez apprendre chaque chapitres en tenant compte des connaissances acquise des pr\'ec\'edents chapitres et vous pr\'eparer pour les connaissances des chapitres \`a venir.
+
+\section{Programmes, Expressions et messages}
+
+Maintenant nous sommes pr't a regarder de plus pr\'es votre premier script et expliquer ce qu'il va arriver.
+
+\subsection{\'Ecrire et Ex\'ecuter des programmes}
+
+Quand vous \'ecrivez le script~\ref{scr:helloworld}, vous \'ecrivez du texte, constitu\'e d'une s\'equence d'expressions, puis vous demandez \`a Squeak de l'ex\'ecuter en pressant le bouton \menu{do it all}. Squeak a ex\'ecut\'e la s\'equence d'expressions; c'est \`a dire, il a transform\'e la repr\'esentation textuelle de votre programme vers une forme qui est compr\'ehensible par l'ordinateur, puis chaque expression a \'et\'e ex\'ecut\'ee en s\'equences. Dans le premier script, le fait d'ex\'ecuter la s\'equence d'expressions a cr\'e\'e un robot appel\'e \ct{pica}, puis \ct{pica} s'est ex\'ecut\'e, et l'un apr\`es l'autre des messages lui ont \'et\'e envoy\'e.
+
+Un programme dans Squeak consiste en une s\'equence \emph{d'expressions} qui sont ex\'ecut\'e par l'environnement Squeak. Dans ce livre, une telle s\'equence est appel\'ee un \emph{script}.
+
+\important{Un script est une s\'equence d'expressions.}
+
+Un programme est un peu comme une recette de g\^ateau au chocolat. Une bonne recette de g\^ateau d\'ecrit tout les pas \`a tenir compte dans un ordre correct: m\'elanger le beurre et le sucre; faites fondre le chocolat, ajouter le chocolat au m\'elange de beurre et de sucre; tamiser la farine, puis comme de bien entendu placer la plat rempli du g\^ateau dans un four \`a 350$\deg$, faire refroidir le g\^ateau cuit sur un rack, et saupoudrez le de gla\c cage. R\'egalez vous! Similairement, un programme d'ordinateur d\'ecrit tous les pas en s\'equence requises pour produire un certain effet: d\'eclarer un nom pour un robot; cr\'eer un robot avec ce nom; demander au robot de se d\'eplacer sur 100 pixels; demander au robot de tourner; etc.
+
+\subsection{L'anatomie d'un script}
+
+Le temps est venu d'analyser votre premier script qui a \'et\'e copi\'e ici sous le nom de script~\ref{scr:scr2}. 
+
+\begin{script}[scr2]{Un script simple, mais un programme}
+	| pica | 
+	pica := Bot new. 
+	pica go: 100. 
+	pica turnLeft: 90. 
+	pica go: 200. 
+	pica turnLeft: 90. 
+	pica go: 100. 
+	pica turnLeft: 90. 
+	pica go: 200. 
+	pica turnLeft: 90 
+\end{script}
+
+En un mot, le script~\ref{scr:scr2} d\'ebute en d\'eclarant qu'il va utiliser une \emph{variable} nomm\'ee \ct{pica} pour se r\'ef\'erer au robot qu'il va cr\'eer. Une fois que le robot est associ\'e \`a la variable \ct{pica}, le script demande au robot d'ex\'ecuter une s\'equence de mouvements vers diff\'erents endroits de l'\'ecran pendant qu'il tourne de 90$\deg$ vers la gauche apr\`es chaque mouvement. Maintenant analysons chaque ligne pas \`a pas. Ne vous inqui\'etez pas si certains concepts tels que la notion de variable vous para\^it un peu confus. Tout sera trait\'e en temps voulu, et si ce n'est pas dans ce chapitre, ce sera dans un chapitre futur.
+
+\begin{description}
+\item \ct{| pica |} cette premi\`ere ligne d\'eclare une variable. Cela demande \`a Squeak que nous voulons utiliser le nom \ct{pica} pour r\'ef\'erer un objet. Pense comme si tu disais \`a un ami, que maintenant je vasi utiliser le mot \ct{pica} dans mes phrases, pour r\'ef\'erer vers le robot que je suis pr't \`a commander au \emph{robot usine}. Vous en apprendrez plus sur les variables au chapitre 8.
+
+\item \ct{pica := Bot new.} Cette ligne cr\'e\'e un nouveau robot en envoyant le message \ct{new} au robot usine (classe) appel\'e \ct{Bot} et associ\'e au robot en utilisant le nom \ct{pica}, la variable qui a \'et\'e d\'eclar\'ee pr\'ec\'edemment. Le mot \ct{Bot} n\'ecessite une lettre majuscule \ct{B} car il est une \ct{classe}, dans ce cas, la classe est une usine pour produire des robots.
+
+\item \ct{pica go: 100.} Dans cette expression, le message go:100 est envoy\'e au robot que nous avons appel\'e pica. Cette ligne peut 'tre comprise de la mani\`ere suivante: ``pica, d\'eplace-toi de 100 unit\'e \`a travers l'\'ecran d'ordinateur.`` C'est implicite dans cette expression, que le robot recevant un message \ct{go:} connaisse dans quelle direction voyager. En fait, un robot pointe toujours vers une direction, et quand il re\c coit un message \ct{go:} il sait se d\'eplacer dans la direction dans laquelle il se trouve entrain de pointer. De plus, notons que le message nomm\'e \ct{go:} termine avec  deux points. Ceci indique que ce message n\'ecessite des informations additionnelles, dans ce cas une  distance. Par exemple, \ct{go: 100} signifie que le robot devrait se d\'eplacer de 100 pixels. Le nom du message est go:.
+
+\item \ct{pica turnLeft: 90.} Cette ligne demande \`a pica de tourner de 90$\deg$ vers la gauche (dans le sens inverse des aiguilles d'une montre). Cette ligne est aussi un message envoy\'e au robot appel\'e pica. Le message appel\'e \ct{turnLeft:} se termine par deux points, donc des informations additionnelles sont requises, cette fois, un angle.
+
+\end{description}
+
+\important{Chaque nom de message se terminant par un deux point indique que le message n\'ecessite des informations additionnelles, telles qu'une distance ou un angle. Par exemple, le message nomm\'e \ct{turnLeft:} requiet un nombre repr\'esentant un angle que le robot va utiliser pour tourner dans le sens inverse des aiguilles d'une montre.}
+
+\paragraph{A propos des pixels}
+
+Sur un \'ecran d'ordinateur, l'unit\'e de distance est appel\'ee un pixel. Ce mot \`a \'et\'e invent\'e dans les ann\'ees 1970 et est un diminutif de \emph{picture element}. Un pixel est la taille du plus petit point pouvant 'tre dessin\'e \`a l'\'ecran d'ordinateur. D\'ependant du type d'\'ecran d'ordinateur que vous utilisez, la taille actuelle d'un pixel peut varier. Vous pouvez voir des pixel individuels en regardant l'\'ecran \`a travers un verre grossissant.
+
+
+\subsection{Expressions, Messages et M\'ethodes}
+
+J'ai utilis\'e les termes \emph{expression} et \emph{message}. Et maintenant il est temps de les d\'efinir. Je vais \'egalement d\'efinir le terme important \emph{method}.
+
+\paragraph{Expression.}
+Une expression est un \'el\'ement significatif d'un programme. Ici nous avons quelques exemples d'expressions:
+\begin{itemize} 
+\item \ct{| pica |} est une expression qui d\'eclare une variable (plus de d\'etails dans le chapitre 8).
+
+\item \ct{pica := Bot new} est une expression comprenant une op\'eration appel\'ee \emph{assignement} qui associe une valeur avec une variable.(voir chapitre 8). Ici le robot r\'ecemment cr\'e\'e obtenu en envoyant le message \ct{new}  \`a la place \ct{Bot} est associ\'e \`a la variable \ct{pica}.
+
+\item \ct{pica go: 100} est une expression qui envoi un message \`a un objet. Une telle expression est appel\'ee un \emph{envoi de message}. Le message \ct{go:100} est envoy\'e \`a l'objet appel\'e \ct{pica}. 
+
+\item \ct{100 + 200} est aussi un message envoy\'e. Le message \ct{+ 200} est envoy\'e \`a l'objet \ct{100}. 
+\end{itemize}
+
+\paragraph{Message.} 
+
+Un message est une paire compos\'e du nom du message appel\'ee alors un ``s\'electeur de message`` , et \'eventuellement des arguments du message, lesquels sont des valeurs que l'objet recevant le message \`a besoin pour ex\'ecuter le message. Ses relations sont illustr\'ees \`a la figure~\ref{fig:firstScriptMessage}. L'objet recevant un message est appel\'e un \emph{destinataire du message}. Un message accol\'e au destinataire du message est appel\'e un \emph{message envoy\'e}. Ici sont pr\'esent\'es quelques exemples de messages:
+
+\begin{itemize} 
+\item Dans l'expression \ct{pica beInvisible}, le message dit \ct{beInvisible} est envoy\'e au destinataire, un robot. Ce message n'a pas d'argument.
+
+\item Dans l'expression \ct{pica go: 100}, le message \ct{go: 100} est envoy\'e au destinataire, un robot appel\'e pica. Il est compos\'e du selecteur de m\'ethode \ct{go:} et d'un unique argument, le nombre 100. Ici, 1\`a\`a repr\'esente la distance en pixels sur laquelle le robot doit se d\'eplacer. Notons que le carat\`ere \ct{deux point} est une partie du s\'electeur de message.
+
+\item  Dans l'expression \ct{33 between: 30 and: 50}, le message \ct{between: 30 and: 50} est compos\'e d'un selecteur de m\'ethode \ct{between:and:} ainsi que de deux arguments, 30 et 50. Ce message demande au destinataire, ici le nombre 33 s'il est compris entre deux valeurs, ici les nombres 30 et 50.
+
+\item Dans l'expression \ct{4 timesRepeat: [ pica go: 100 ]}, le message \ct{timesRepeat: [ pica go: 100 ]}, qui est envoy\'e au nombre 4, est compos\'e du selecteur de message \ct{timesRepeat:} et de l'argument \ct{[ pica go: 100 ]}. Cet argument est appel\'e un \emph{bloc} qui est une s\'equence d'expressions (dans ce cas, une expression simple) entre crochets (plus d\'etaill\'e au chapitre 7).
+
+\item Dans l'expression \ct{100 + 200}, le message \ct{+ 200} est compos\'e du selecteur de m\'ethode + et d'un argument, le nombre 200. Le destinataire est le nombre 100.
+
+\end{itemize}
+
+\begin{figure}[h]
+\begin{center}\includegraphics[width=8cm]{5-message}
+\caption{Deux messages sont envoy\'es, compos\'es d'un destinataire, d'un nom de message (ou s\'electeur de message) et d'un ensemble d'arguments.\label{fig:firstScriptMessage}}\end{center}
+\end{figure}
+
+\subsection{S\'eparation des messages}
+
+Comme mentionn\'e plus t\^ot chaque ligne du script~\ref{scr:21}, except\'e le premier et le dernier, est termin\'e par un \ct{:}. La premi\`ere ligne ne contient pas de message. Une telle ligne est appel\'ee \emph{d\'eclaration de variable} dans le jargon informatique. Ainsi, nous pouvons faire les observations suivantes: chaque message envoy\'e doit 'tre s\'epar\'e du suivant par un deux points. Notons que le fait de mettre un \emph{deux points} apr\`es le dernier message est possible mais pas n\'ecessaire. Smalltalk accepte les deux.
+
+\important{Les messages envoy\'es doivent 'tre s\'epar\'es par un point virgule. La derni\`ere d\'eclaration ne requiers pas de \emph{deux points} final.}
+
+Ici nous avons quatre messages s\'epar\'es par trois points.
+\begin{code}{}
+	pica := Bot new. 
+	pica go: 100. 
+	pica turnLeft: 90. 
+	pica go: 100 
+\end{code}
+
+
+\important{Le caract\`ere \emph{point} \ct{.} est un s\'eparateur de messages, donc il n'est pas n\'ecessaire d'en placer un apr\`es un message envoy\'e s'il n'y a pas de message suivant. Cependant, aucun point n'est n\'ecessaire \`a la fin d'un script ou d'un bloc de messages.}
+
+\subsection{M\'ethode}
+
+Lorsqu'un robot (ou un autre objet) re\c coit un message, il ex\'ecute une m\'ethode, qui ex\'ecute une sorte de script disposant d'un nom. Plus formellement, une m\'ethode est appel\'ee une s\'equence d'expression qu'un objet destinataire ex\'ecute en r\'eponse de la r\'eception d'un message. Une m\'ethode est ex\'ecut\'ee lorsqu'un objet re\c coit un message disposant du m'me nom que l'une de ses m\'ethodes. Par exemple, un robot ex\'ecute sa m\'ethode \ct{go:} lorsqu'il re\c coit un message dont le nom est \ct{go:}. Ainsi l'expression \ct{pica go: 224} demande au destinataire pica d'ex\'ecuter sa m\'ethode\ct{go:} avec l'argument \ct{224}. Cela engendre son d\'eplacement de \ct{224} pixels en direction de sa direction courante. Plus tard dans le livre, je vous expliquerai comment vous pouvez d\'efinir des nouvelles m\'ethodes pour votre robot, mais pour maintenant, nous n'avons pas besoin de cela pour d\'ebuter la programmation.
+
+\subsection{Cascade}
+
+Comme je l'ai mentionn\'e dans la premi\`ere section de ce chapitre, vous pouvez envoyer diff\'erents messages \`a un robot en les s\'eparant par un point virgule. Une telle s\'equence de message est appel\'ee une cascade. Vous pouvez ainsi utiliser une cascade dans un script pour envoyer diff\'erents messages \`a un robot. Le script~\ref{scr:23} est \'equivalent au script~\ref{scr:22}, except\'e que pour le moment tous les messages envoy\'es au robot pica sont s\'epar\'e par des points virgule. Utiliser des cascades est pratique lorsque vous voulez \'eviter d'\'ecrire encore et encore le nom du destinataire d'une multitude de messages. Les cascades sont utiles car ils r\'eduisent la taille du script. Cependant, faites attention! Raccourcir un script peut vous conduire \`a des probl\`emes si vous ne regardez pas chaque \'etape, donc soyez sur que vous avez r\'eellement l'intention d'envoyer tous vos messages a un seul et m'me destinataire.
+
+\begin{script}[23]{Utilis\'e une cascade}
+| pica | 
+pica := Bot new. 
+pica 
+   go: 100 ; turnLeft: 90 ; go: 200 ; turnLeft: 90 ; 
+   go: 100 ; turnLeft: 90 ; go: 200 ; turnLeft: 90. 
+\end{script}
+
+\important{Pour envoyer une multitude de messages \`a un robot, envoyez le caract\`ere point virgule \ct{;} pour s\'eparer les messages en suivant le mod\`ele suivant: \ct{aBot message1 ; message2}. Voici un exemple: \ct{pica go: 100 ; turnLeft: 90 ;go: 200 ; turnLeft: 90}}
+
+\subsection{La cr\'eation de nouveaux robots}
+
+Pour obtenir un nouveau robot, vous devez envoyer un ordre au robot usine pour qu'il en fabrique un pour vous. C'est \`a dire, vous devez envoyer le message \ct{new} a la classe \ct{Bot}. Il n'y a rien de nouveau ici. C'est exactement ce que vous avez fait dans le chapitre pr\'ec\'edent lorsque vous cliquiez sur la boite bleue et orange appel\'ee \ct{Bot}, qui repr\'esente la classe du m'me nom, et \'ecriviez \ct{new} dans la bulle. Dans squeak, nous envoyons toujours des messages aux robots, ou d'autres objets, ou classes, pour interagir avec eux. Il n'y a aucune diff\'erence en termes de traitement, except\'e que les classes et les objets comprennent des messages diff\'erents. D'autre part, les classes n'ont g\'en\'eralement pas des couleurs et ne savent pas comment se d\'eplacer, et donc l'envoi d'un message \ct{color} ou \ct{go: 135} \`a une classe n'a pas de sens, et peut  mener \`a une erreur.N\'eanmoins, dans les deux cas, vous envoyez des messages!
+
+La classe \ct{Bot} n'est pas la seule usine de fabrication dans l'environnement Squeak.Il ya d'autres classes comprenant diff\'erents  messages et utilisant diff\'erentes m\'ethodes pour cr\'eer diff\'erents types d'objets.Par exemple, la classe \ct{Color} fabrique des objets couleur.Elle retourne un objet de couleur bleu ou vert en r\'eponse \`a un message bleu ou vert. A chaque fois que dans ce livre un nouvel objet doit 'tre obtenu \`a partir d'une classe sp\'ecifique, je vous dirais comment proc\'eder.
+
+\important{Pour obtenir un nouvel objet d'une classe, vous devez g\'en\'eralement envoyer le message \ct{new} \`a la classe.Ainsi le \ct{Bot new} un nouveau robot.D'autres classes peuvent offrir diff\'erents messages pour obtenir de nouveaux objets.Par exemple, \ct{Color blue} demande \`a la classe \ct{Color} de cr\'eer un nouvel objet Color \ct{blue}.}
+
+\section{Erreurs dans les programmes}
+
+Les ordinateurs sont tr\`es bons \`a faire des calculs tr\`es complexes \`a une vitesse incroyable, mais ils manquent d'intelligence pour corriger des petites erreurs.Si j'ai accidentellement \'ecrit: ``Maintenant, allumez votre ordynateur``, vous pouvez rire sur mon orthographe, mais vous n'auriez pas de difficult\'e \`a comprendre ce que je voulais dire.Mais les ordinateurs n'ont pas une telle intelligence, ce qui signifie que chaque expression donn\'ee \`a un ordinateur doit 'tre donn\'ee avec pr\'ecision, sans la moindre erreur.La moindre erreur apparemment insignifiante dans un programme, m'me quelque chose d'aussi trivial que l'utilisation d'une lettre minuscule au lieu d'une lettre majuscule, sera certainement mal compris par l'ordinateur.Si vous avez des erreurs dans vos scripts, deux choses peuvent mal tourner: soit un message d'erreur appara\^itra sur l'\'ecran, ce qui est susceptible de se produire quand vous faites vos premi\`eres exp\'eriences, soit le programme sera ex\'ecut\'e, mais le r\'esultat ne sera pasce \`a quoi vous vous attendiez.Alors, quand les choses vont mal, ne d\'esesp\'erez pas et essayer de trouver l'erreur dans votre programme.
+
+Squeak dispose d'une  pr\'evention et d'une correction d'erreur tr\`es utile. Il colore les lettres pendant que vous tapez.Quand un mot devient rouge, cela signifie que vous \'ecrivez quelque chose que Squeak ne comprend pas.Un exemple est pr\'esent\'e dans la Figure~\ref{fig:unknowSelector}.Quand un mot est en bleu, pour une variable ou un message, ou noir, pour une classe, cela indique que tout est structurellement correct.
+
+Si vous essayez d'ex\'ecuter une expression contenant une erreur, Squeak essaie de vous aider en vous informant s'il rencontre une erreur dans votre code.Les messages d'erreur que Squeak utilise sont en fait les menus.La partie sup\'erieure de la fen'tre du menu contient une br\`eve description de l'erreur, puis, selon le type d'erreur, des suggestions de correction peuvent 'tre r\'epertori\'es comme options. Si vous n'aimez pas l'une des options, vous pouvez toujours annuler l'ex\'ecution, en choisissant ``Cancel`` dans le menu.Ensuite, vous devez localiser le lieu dans votre script que Squeak ne comprend pas, puis le corriger et essayer \`a nouveau d'ex\'ecuter le script.
+
+Je vais maintenant vous parler de quelques-unes des erreurs les plus courantes.
+
+\subsection{Faute d'orthographe dans un s\'electeur de messages}
+
+Mal orthographi\'e le nom d'un message conduit \`a une erreur.Dans la figure~\ref{fig:unknowSelector}, j'ai mal orthographi\'e le s\'electeur de messages \ct{go:} en \'ecrivant \ct{god:} \`a la place.Le message \ct{god:} n'existe pas dans Squeak, il est \'ecrit en rouge. En ignorant cet avertissement amical de Squeak, j'ai essay\'e d'ex\'ecuter le script.Squeak a essay\'e de deviner ce s\'electeur de messages que j'avais en t'te, et m'a propos\'e un menu de possibilit\'es.\`A ce stade, je pouvais choisir le s\'electeur de message correct (\ct{go:}), et le message \ct{god:} sera remplac\'e par \ct{go:}.Ou je peux simplement choisir ``Cancel``. Si je prends cette derni\`ere option, je vais devoir changer \ct{god:} en  \ct{go:} manuellement.
+
+\begin{figure}[ht!]
+\begin{center}\includegraphics[width=6cm]{6-errorOne}
+\caption{J'ai mal orthographi\'e le message \ct{go:} en \'ecrivant par erreur \ct{god:}.Le message \ct{god:} n'existe pas (en Squeak).Par cons\'equent, Squeak vous invite \`a une correction \'eventuelle. \label{fig:unknowSelector}}\end{center}
+\end{figure}
+
+\subsection{Faute d'orthographe dans un nom de variable}
+
+Il ya deux fa\c cons de mal orthographier le nom d'une variable: dans le corps du script lui-m'me ou lorsqu'elle est d\'eclar\'ee (entre deux barres verticales comme dans \ct{| pica |}).La figure~\ref{fig:twoErrors} montre les deux cas: Dans la figure de gauche j'ai d\'eclar\'e une variable \ct{pica}, mais ensuite j'ai tap\'e\ct{pica1} au lieu de \ct{pica} dans le script.Squeak a remarqu\'e que j'ai tent\'e d'utiliser une variable non d\'eclar\'ee, il a modifi\'e le texte en rouge, ce qui sugg\`ere que je dois d\'eclarer la variable non d\'eclar\'ee, en d\'eclarant \ct{pica1} comme une nouvelle variable, ou remplacer \ct{pica1} par \ct{pica}.Comme \ct{pica} est le nom de la variable que je voulais, et que \ct{pica1} \'etait juste une faute de frappe, j'ai choisi l'option de \ct{pica}, comme le montre la figure.La figure de droite montre que j'ai accidentellement tap\'e un espace entre le C et A dans pica quand j'ai essay\'e de d\'eclarer la variable \ct{pica}.Squeak ne consid\`ere pas cette erreur.Il a tout simplement pens\'e que je tentais de d\'eclarer deux variables, \ct{pic} et \ct{a}.Ensuite, dans le script, j'ai tap\'e \ct{pica}, pensant que j'avais d\'eclar\'e cette variable.Mais Squeak a vu qu'en fait, \ct{pica} \'etait une variable non d\'eclar\'ee, il a mis le texte en rouge et m'a propos\'e quelques options, notamment d\'eclarer une nouvelle variable avec le nom de \ct{pica}, ou bien remplacer ce que j'avais tap\'e avec le la variable \ct{pic} d\'eclar\'ee.
+
+\begin{figure}[ht!]
+\begin{center}\includegraphics[width=6cm]{mispellVariable}\includegraphics[width=6cm]{mispellVariable}
+\caption{Deux exemples d'erreurs.A gauche: j'ai tap\'e \ct{pica1} \`a la place de la variable d\'eclar\'ee \ct{pica}.A droite: J'ai accidentellement tap\'e \ct{pic a}, alors que j'essayais de d\'eclarer la variable \ct{pica}.Cela a eu pour r\'esultat de d\'eclarer les variables \ct{pic} et \ct{a} et non une seule variable appel\'ee \ct{pica}. \label{fig:twoErrors}}\end{center}
+\end{figure}
+
+\subsection{Variables inutilis\'ees}
+
+Il peut arriver que vous avez accidentellement d\'eclar\'e des variables en trop.Par exemple, vous pouvez d\'eclarer les variables \ct{pica} et \ct{Daly}, en pensant que vous aurez besoin de deux robots, mais alors vous n'allez  jamais utiliser Daly dans votre script.Ce n'est pas vraiment une erreur, et votre programme fonctionnera correctement, m'me si une variable a \'et\'e d\'eclar\'ee sans 'tre utilis\'ee.C'est similaire \`a l'achat de deux valises, juste au cas o\`u, alors qu'en fait vous n'utilisez que l'une d'entre elles.Il suffit de quelques bagages suppl\'ementaires autour de ce que vous n'utilisez pas.Mais juste au cas o\`u vous avez vraiment l'intention d'utiliser la variable \ct{Daly} et que vous l'avez oubli\'e, Squeak v\'erifie les variables d\'eclar\'ees qui n'ont pas \'et\'e utilis\'ees et s'il  en trouve, il sugg\`ere que vous pouvez les supprimer.Par exemple, dans la Figure~\ref{fig:unusedVariables}, le script d\'eclare les variables \ct{pica} et \ct{Daly}, mais utilise seulement \ct{pica}.Squeak vous demande si vous souhaitez supprimer la variable inutilis\'ee \ct{Daly}.
+
+\begin{figure}[h]
+\begin{center}\includegraphics[width=7cm]{unusedVariables}
+\caption{Toutes les variables et messages envoy\'es sont corrects. Cependant, la variable \ct{daly} est d\'eclar\'ee mais non utilis\'ee, donc \sq nous indique cela et sugg\`ere que nous pourrions vouloir supprimer la variable inutilis\'ee. Une variable inutilis\'ee n'est pas une erreur, mais un bon entretien sugg\`ere quevous devez garder les choses simples et les supprimer.\label{fig:unusedVariables}}\end{center}
+\end{figure}
+
+\subsection{Majuscules ou en minuscules?}
+
+Une autre erreur fr\'equente est d'oublier une lettre majuscule requise.Les noms de classes commencent par une lettre majuscule, donc il ne faut pas l'oublier lorsque vous voulez envoyer un message \`a un objet usine.  La figure~\ref{fig:TMissing} montre que j'ai tap\'e sans r\'efl\'echir \ct{bot} au lieu de \ct{Bot}. Squeak essaye de comprendre ce que je voulais dire, mais il a \'echou\'e, et si aucune des options qu'il m'offre pour r\'egler le probl\`eme ne fait l'affaire.Dans un tel cas, vous devez corriger l'erreur vous-m'me. Dans le cadre de ce livre, les classes dont vous avez \`a vous soucier sont \ct{Bot}, l'usine \`a robots, \ct{Color} et l'usine \`a \ct{color}.
+
+\begin{figure}
+\begin{center}\includegraphics[width=7cm]{BMissing}
+\caption{J'ai oubli\'e la majuscule B dans le nom de la classe \ct{Bot}, le robot usine.Squeak sait que quelque chose ne va pas, mais il n'est pas s\^ur de ce que c'est.Je vais devoir corriger l'erreur moi-m\^eme.\label{fig:TMissing}}\end{center}
+\end{figure}
+
+\subsection{Oublier un point}
+
+Enfin, l'une des erreurs les plus courantes, celle que m'me les programmeurs font couramment, est d'oublier une point entre deux message ``send`` ou un point-virgule entre deux messages dans une cascade.Un point indique qu'un nouveau message ``send`` est sur le point de commencer, mais sans le point, Squeak pense que le message en cours se poursuit, et que la variable destin\'e \`a 'tre le destinataire du message d'un nouveau message est juste un autre s\'electeur de messages.Comme il n'y a pas de s\'electeur de message avec le nom d'une de vos variables, Squeak vous dit que vous avez tap\'e un s\'electeur inconnu et vous propose quelques corrections \'eventuelles.Par exemple, dans la figure~\ref{fig:periodMissing}, un point  est manquant apr\`es l'expression \ct{pica := Bot new}, et Squeak essaie d'analyser (c'est-\`a-comprendre la structure de) le message \ct{pica := Bot new pica go: 120}, etselon les r\`egles de la syntaxe de message (structure), que vous apprendrez au chapitre 11, \ct{pica} devrait 'tre un s\'electeur de message.Mais un tel s\'electeur de message n'existe pas, donc Squeak proteste et propose des remplacements possibles. Puisque vous savez que \ct{pica} est votre variable d\'eclar\'ee et non un s\'electeur de message, vous vous rendez compte que vous avez oubli\'e un point  et vous s\'electionnez ``Cancel`` et vous \'ecrivez le point manuellement.
+
+\begin{figure}[h!]
+\begin{center}\includegraphics[width=6cm]{periodMissing}
+\caption{Deux exemples d'erreurs. Nous avons mal orthographi\'e le nom de la variable. Premi\`erement, le script \ct{pica1} n'a pas \'et\'e d\'eclar\'e et secondement, la d\'efinition de la variable: \ct{car o} d\'efinit deux variables \ct{car} et \ct{o}, mais pas la variable \ct{pica}. \label{fig:periodMissing}}\end{center}
+\end{figure}
+
+
+\subsection{Les mots qui changent de couleur}
+
+Squeak essaie d'identifier les erreurs pendant que vous tapez vos scripts.S'il d\'etecte quelque chose de louche, il change la couleur du texte et donne des rep\`eres visuels qui sugg\`erent ce qui pourrait 'tre faux.La figure 2-10 montre quelques situations typiques. Malheureusement, la figure en noir et blanc ne montre les vraies couleurs.Mais utiliser votre imagination!
+
+\begin{figure}[h!]
+\begin{center}\includegraphics[width=12cm]{coloring}
+\caption{\sq utilise les couleurs pour vous aidez \`a trouver les erreurs. \label{fig:coloring}}\end{center}
+\end{figure} 
+
+Voici une aide de la figure:
+
+\begin{itemize}
+\item (a) j'ai commenc\'e \`a \'ecrire la premi\`ere lettre d'une variable non d\'eclar\'ee ou inconnue. \'Etant donn\'e qu'aucune variable commen\c cant par la lettre ``x'' n'ait \'et\'e d\'eclar\'ee, Squeak affiche le ``x'' en rouge et me laisse savoir que quelque chose ne va pas.
+
+\item (b) J'ai fini d'\'ecrire une variable qui a \'et\'e d\'eclar\'ee.Squeak me montre que j'ai \'ecrit une variable d\'eclar\'ee correctement en tournant le texte en bleu.
+
+\item (c) Je suis en train d'\'ecrire le nom d'une variable.Aussi longtemps que j'\'ecris le d\'ebut du nom d'une variable d\'eclar\'ee, Squeak la souligne pour me faire savoir que, jusqu'\`a pr\'esent, tout est correct.
+
+\item (d) D\`es que je tape un caract\`ere dans un nom de variable qui se traduit par une s\'equence de lettres qui n'est pas le d\'ebut du nom d'une variable d\'eclar\'ee, Squeak tourne le mot rouge.Notez la diff\'erence avec le cas pr\'ec\'edent.Dans le cas (c), je pouvais avoir tap\'e le caract\`ere A et ainsi achev\'e la variable d\'eclar\'ee \ct{pica}, comme en (a).Cependant, j'ai tap\'e le caract\`ere b, et Squeak s'est retrouv\'e avec une s\'equence de lettres (\ct{picb}) qui n'est pas le d\'ebut du nom d'une variable d\'eclar\'ee.
+
+\item (e) Apr\`es avoir tap\'e le nom d'une variable d\'eclar\'ee (\ct{pica}, comme dans le cas (b)), j'ai accidentellement ajout\'e un caract\`ere suppl\'ementaire a, ce qui conduit \`a la s\'equence de lettres (\ct{picaa}), qui n'est pas le d\'ebut d'un nomd'une variable d\'eclar\'ee.
+
+\item (f) Squeak essaie de faire de m'me pour les s\'electeurs de messages comme c'est le cas pour les noms de variables.Ici, j'ai mal tap\'e le message \ct{go:} et j'ai \'ecris \ct{gou}.Squeak est \`a la recherche d'un s\'electeur  de message, et d\`es que j'ai tap\'e le caract\`ere u, il a r\'ealis\'e qu'il n'y a pas de s\'electeur de message qui commence \ct{gou}. Il modifie alors le texte en rouge.
+
+\item (g) Squeak essaie de faire la m'me chose pour les classes comme c'est le cas pour les variables et les s\'electeurs de messages.Ici, j'ai tap\'e le caract\`ere \ct{w} apr\`es \ct{Bot}, et Squeak, attend un nom de classe en raison de la  majuscule B dans \ct{Botw}, indique en tournant le texte en rouge, qu'il n'y a pas de classe dans le syst\`eme dont le nom commence \ct{Botw}.
+
+\end{itemize}
+
+\section{R\'esum\'e}
+
+\begin{itemize}
+
+\item Pour ex\'ecuter une expression.Appuyez sur le bouton \menu{Do It All} dans l'espace de travail.
+	
+\item Un script est une s\'equence d'expressions qui accomplit une t\^ache.
+
+\item Un message est compos\'e d'un s\'electeur de messages et, \'eventuellement, d'un ou plusieurs arguments.Certains s\'electeurs de messages ne prennent pas d'arguments, comme dans le message send pica beInvisible.
+
+\item  Tout s\'electeur de message qui se termine par un point virgule requiert des informations suppl\'ementaires (un ou plusieurs arguments), comme une longueur ou un angle.Par exemple, le s\'electeur turnLeft: requiert un argument dont la valeur est un nombre repr\'esentant l'angle \`a partir duquel le robot doit tourner dans le sens antihoraire.
+
+\item  Pour obtenir un nouvel objet, vous devez g\'en\'eralement envoyer le message \ct{new} \`a une classe.Par exemple, \ct{Bot new} cr\'ee un nouveau robot.D'autres classes peuvent comprendre diff\'erents messages pour produire de nouveaux objets.Par exemple, \ct{Color yellow} demande \`a la classe \ct{Color} de cr\'eer un nouvel objet \ct{Color} jaune. 
+
+\item  Une classe est une usine pour produire des objets.Les noms de classes commencent toujours par une lettre majuscule.Par exemple, \ct{Bot} est l'usine pour la cr\'eation de nouveaux robots, et \ct{Color} est l'usine de couleurs.Le message \ct{Bot new color: Color yellow} demande \`a la classe \ct{Bot} de cr\'eer un nouveau robot, puis l'usine \`a couleurs est appel\'ee \`a cr\'eer un objet de couleur jaune.Finalement, le message \ct{color:} est envoy\'e au nouveau robot avec l'objet Color yellow comme argument, ce qui entra\^ine un nouveau robot ayant sa couleur chang\'ee \`a jaune.
+
+\item  Les messages ``sends`` doivent 'tre s\'epar\'es par un point.Un point final apr\`es le dernier message envoy\'e n'est pas n\'ecessaire.Voici un exemple de quatre messages ``sends`` s\'epar\'es par trois points :
+\begin{code}{}
+pica := Bot new. 
+pica go: 100. 
+pica turnLeft: 90. 
+pica go: 100 
+\end{code}
+
+\item  Pour envoyer plusieurs messages au m'me objet, il faut utiliser un point-virgule pour s\'eparer les messages, comme dans \ct{aBot message1; message2}. Par exemple, \ct{pica go: 100 ; turnLeft: 90 ; go: 200 ; turnLeft: 90} envoie la s\'equence de quatre messages (1) \ct{go: 100}, (2) \ct{turnLeft: 90}, (3) \ct{go: 200}, (4) \ct{turnLeft: 90} au robot nomm\'e \ct{pica}. 
+\end{itemize}
+
+
+
+\ifx\wholebook\relax\else
+    \end{document}
+\fi
+
+%%% Local Variables:
+%%% coding: utf-8
+%%% mode: latex
+%%% TeX-master: t
+%%% TeX-PDF-mode: t
+%%% ispell-local-dictionary: ``english``
+%%% End:

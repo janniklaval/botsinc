@@ -1,0 +1,85 @@
+
+Ducasse Ch15
+************
+
+My summary of this chapter is characterized by my last comment at the end, which I repeat here: my sense is you may have dug a little too deep to be appropriate on these topics at this particular point. Just an impression when I read this. I would guess that 90% of your audience will only take in maybe 60-75% of the content you've presented in this form. Maybe that's OK - your call. It could disrupt some of your readers in my view though. Do you need to cover every point made in this chapter for this book?
+
+
+
+p131
+"behaviour can be parameterized" --> is there a simpler way of saying this for the reader?
+
+>> done 
+
+p131
+"We would like to be able... do not want to define a method"
+In my view, you were all set before this sentence to nail the points you are making, but then these 2 sentences come across as a little abstract and unclear. I wonder if you would consider rewriting to make more explicit what you mean? I also wonder whether a schematic diagram would help the reader's "see" what's happening here in terms of parameters being passed to methods etc.
+
+>> I like what I wrote
+
+p132
+"Come to think of it...just like the method go:"
+This is a REALLY great point to make to the reader, I think it could help them a lot. I wonder if you have not yet quite delivered your point fully though? Really make it clear to the reader, perhaps really showing with a mockup method call or two? At the moment, it is like you understand the point, Stepane, and you allude to it, but you do not fully explain it to your readers. It is like a note rather than an explanation.
+
+>> I tried but it did not work. So I added something else.
+
+p132
+"Now let us analyze..."
+In this little sequence, perhaps refer directly and explicitly to square:size because you don't actually do that so the reader definitely knows which part of the method definition you are refering to. Many will work it out, but why make it cognitively harder for others to work out when you can just refer to the line directly as you discuss it? This applies to all the method and script lines you analyze - why not state explicitly which line you are analyzing? why give some readers extra cognitive demands on their deduction engine?
+
+
+
+>>> fixed
+
+
+
+p133 Experiment 15.1
+The use of the phrase "of a given size" -- I'm not sure this lets the reader know you are asking (I assume) for hexagons of ANY size? (through parameter passing)
+
+>>fixed
+
+p133 Experiment 15.2
+The "given size" thing again, although it's clearer here. But perhaps consider "of a given size that is passed by a parameter" for instance? On anther note on this example, the hint is a tiny bit obscure if the reader is still getting used to handling parameters etc.
+
+>> I know but cant really do something
+
+p134
+The box with "To define a method with multiple..." would perhaps be better inside the next section rather than sitting between sections? You are about to introduce multiple arguments in the next section, this box seems out of place in the logical flow of the chapter?
+
+>> done
+
+
+p134
+The Implementation Remark: very hard to understand the language here; recommend rewrite this, I don't think I follow you myself, apologies.
+
+>> done
+
+
+p136 "always gets the value specified by the message that uses the method" --> it's a good point, made harder to understand without just showing the reader the line of script, say, that uses the method. The example would just make this simpler to understand I believe.
+
+>> done
+
+p137
+"We use the two terms..." this whole paragraph is a little more difficult than it needs to be in my view, because you refer to everything at a distance. I think it would be much clearer to the reader if you broke this paragraph out and explained everything more literally? Also, the particular sentence "Another way to understand...a variable inside a method representing an input..." is rather complex for your reader imo.
+
+>> done
+
+p137 "(self))" note the extra parenthesis typo - can't be sure CE will remove this as it is in code format
+
+>> done
+
+
+p137 Figure 15.3
+Be nice if that came after the text "About Method Execution" ?
+
+>> done
+
+
+p138
+"This may look complex" --> my sense is you may have dug a little too deep to be appropriate on these topics at this particular point. Just an impression when I read this. I would guess that 90% of your audience will only take in maybe 60-75% of the content you've presented in this form. Maybe that's OK - your call. It could disrupt some of your readers in my view though. Do you need to cover every point made in this chapter for this book?
+
+
+
+
+
+

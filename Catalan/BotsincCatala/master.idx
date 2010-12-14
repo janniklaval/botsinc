@@ -1,0 +1,1628 @@
+\indexentry{entorn!instal\IeC {\textperiodcentered }lar}{3}
+\indexentry{instal\IeC {\textperiodcentered }laci\IeC {\'o}!en sistemes Windows i Macintosh}{3}
+\indexentry{Squeak!instalacio@instal\IeC {\textperiodcentered }laci\IeC {\'o}|(}{3}
+\indexentry{Squeak!downloading@\emph{downloading}}{3}
+\indexentry{llocs web!Squeak}{3}
+\indexentry{Macintosh!instal\IeC {\textperiodcentered }lar Squeak en un}{4}
+\indexentry{Windows!instal\IeC {\textperiodcentered }lar Squeak a}{4}
+\indexentry{Squeak!instalacio@instal\IeC {\textperiodcentered }laci\IeC {\'o}|)}{5}
+\indexentry{entorn!obrir|(}{5}
+\indexentry{Macintosh!obrir l'entorn en un}{5}
+\indexentry{Windows!obrir l'entorn a}{5}
+\indexentry{instal\IeC {\textperiodcentered }laci\IeC {\'o}!ajuts a la}{7}
+\indexentry{entorn!obrir|)}{7}
+\indexentry{robots!identificar dins l'entorn}{7}
+\indexentry{entorn!components del}{7}
+\indexentry{solapa!definici\IeC {\'o} de}{7}
+\indexentry{bafarada, mostrant missatges mitjan\IeC {\c c}ant els}{7}
+\indexentry{entorn!identificar robots}{7}
+\indexentry{robots!obtenir informaci\IeC {\'o} sobre}{7}
+\indexentry{missatges!exemples de}{7}
+\indexentry{missatges!enviar als robots|(}{7}
+\indexentry{robots!enviar missatges a}{7}
+\indexentry{missatges compostos!definici\IeC {\'o} de}{9}
+\indexentry{missatges compostos!exemples de|(}{9}
+\indexentry{missatges compostos!enviar}{9}
+\indexentry{ves missatge!efecte de}{9}
+\indexentry{giraEsquerra: missatge, efecte de}{9}
+\indexentry{color, missatges!efecte de}{9}
+\indexentry{robots!interactuar amb}{9}
+\indexentry{missatges compostos!exemples de|)}{10}
+\indexentry{robots!crear}{10}
+\indexentry{missatges!enviar als robots|)}{10}
+\indexentry{nou, missatge; efecte de}{10}
+\indexentry{fabriques de robots@f\IeC {\`a}briques de robots!enviar missatges a les}{10}
+\indexentry{missatges!enviar a f\IeC {\`a}briques de robots}{10}
+\indexentry{Squeak!sortir i guardar l'entorn}{10}
+\indexentry{guardar l'entorn Squeak}{10}
+\indexentry{entorn!sortir i guardar}{10}
+\indexentry{sortir de l'entorn Squeak}{10}
+\indexentry{menus@men\IeC {\'u}s, mostrar per M\IeC {\'o}n}{11}
+\indexentry{Mon@M\IeC {\'o}n (\emph{World}) men\IeC {\'u}!mostrar}{11}
+\indexentry{fitxer changes@fitxer \emph{changes}, resoldre problemes amb|(}{12}
+\indexentry{fitxer imatge, resoldre problemes amb|(}{12}
+\indexentry{fitxers!problemes amb|(}{12}
+\indexentry{instal\IeC {\textperiodcentered }laci\IeC {\'o}!problemes amb|(}{12}
+\indexentry{resoldre problemes d'instal\IeC {\textperiodcentered }laci\IeC {\'o} d'Squeak|(}{12}
+\indexentry{Squeak!fitxers necessaris per a}{12}
+\indexentry{sources, fitxer; resoldre problemes amb}{12}
+\indexentry{fitxer de l'aplicaci\IeC {\'o} Squeak, resoldre problemes relacionats amb}{12}
+\indexentry{MV (m\IeC {\`a}quina virtual), fitxer d'aplicaci\IeC {\'o} Squeak com a}{12}
+\indexentry{m\IeC {\`a}quina virtual (MV), fitxer d'aplicaci\IeC {\'o} Squeak com a}{12}
+\indexentry{aplicaci\IeC {\'o} (Squeak), fitxer de, resoldre problemes}{12}
+\indexentry{nom\IeC {\'e}s lectura, identificar fitxers de}{12}
+\indexentry{fitxer changes@fitxer \emph{changes}, resoldre problemes amb|)}{13}
+\indexentry{fitxers!problemes amb|)}{13}
+\indexentry{instal\IeC {\textperiodcentered }laci\IeC {\'o}!problemes amb|)}{13}
+\indexentry{resoldre problemes d'instal\IeC {\textperiodcentered }laci\IeC {\'o} d'Squeak|)}{13}
+\indexentry{fitxer imatge, resoldre problemes amb|)}{13}
+\indexentry{scripts@\emph{scripts}!definici\IeC {\'o} de}{15}
+\indexentry{cascada|seealso{missatges}}{15}
+\indexentry{cascada!enviar m\IeC {\'u}ltiples missatges amb}{15}
+\indexentry{missatges!enviar amb cascades}{15}
+\indexentry{ves missatge!dibuixar rectangles amb}{16}
+\indexentry{rectangles!dibuixar}{16}
+\indexentry{scripts@\emph{scripts}!escriure|(}{17}
+\indexentry{editor de text Espai de Treball Bot!propietats}{17}
+\indexentry{editor de text, utilitzar l'Espai de Treball Bot com a}{17}
+\indexentry{Fes-ho tot (bot\IeC {\'o}), efecte de|(}{17}
+\indexentry{robots!crear picas}{17}
+\indexentry{scripts@\emph{scripts}!escriure|)}{18}
+\indexentry{Smalltalk!significat de|(}{19}
+\indexentry{Squeak!llenguatge@i el llenguatge de programaci\IeC {\'o} Smalltalk|(}{19}
+\indexentry{Fes-ho tot (bot\IeC {\'o}), efecte de|)}{19}
+\indexentry{expressions!relaci\IeC {\'o} amb els programes}{19}
+\indexentry{programes!definici\IeC {\'o}}{19}
+\indexentry{llenguatges de programaci\IeC {\'o}}{19}
+\indexentry{llenguatge de programaci\IeC {\'o} orientat a objectes, Smalltalk com a}{19}
+\indexentry{f\IeC {\`a}briques!relaci\IeC {\'o} amb objectes manufacturats}{19}
+\indexentry{classes!paper dins la programaci\IeC {\'o} orientada a objectes}{20}
+\indexentry{Smalltalk!significat de|)}{20}
+\indexentry{Squeak!llenguatge@i el llenguatge de programaci\IeC {\'o} Smalltalk|)}{20}
+\indexentry{scripts@\emph{scripts}!relaci\IeC {\'o} amb les expressions}{20}
+\indexentry{programes!escriure i executar}{20}
+\indexentry{expressions!relaci\IeC {\'o} amb els programes}{21}
+\indexentry{scripts@\emph{scripts}!analitzar|(}{21}
+\indexentry{scripts@\emph{scripts}!analitzar|)}{22}
+\indexentry{pixels@p\IeC {\'\i }xels!significat de}{22}
+\indexentry{expressions!exemples de}{23}
+\indexentry{missatges!exemples de|(}{23}
+\indexentry{missatges!exemples de|)}{24}
+\indexentry{. (punt)!utilitzar en missatges i \emph{scripts}}{24}
+\indexentry{punt (.)!utilitzar en missatges i \emph{scripts}}{24}
+\indexentry{declaraci\IeC {\'o} de variables, relaci\IeC {\'o} amb els missatges}{24}
+\indexentry{metodes@m\IeC {\`e}todes!definici\IeC {\'o} dels}{25}
+\indexentry{cascada!usos de}{25}
+\indexentry{classes!obtenir nous objectes a partir de}{26}
+\indexentry{robots!crear|(}{26}
+\indexentry{classe Bot!significat de}{26}
+\indexentry{objectes!obtenir de classes}{26}
+\indexentry{robots!crear|)}{26}
+\indexentry{Color classe, efecte de}{27}
+\indexentry{errors en el programa!panorama general}{27}
+\indexentry{missatge, selectors de!escriure malament els}{28}
+\indexentry{errors en el programa!escriure malament els selectors d'un missatge}{28}
+\indexentry{variables!errors relacionats amb|(}{28}
+\indexentry{variable, nom de!escriure malament}{28}
+\indexentry{errors en el programa!escriure malament el nom d'una variable}{28}
+\indexentry{errors en el programa!variables no utilitzades}{29}
+\indexentry{variables!errors relacionats amb|)}{29}
+\indexentry{min\IeC {\'u}scules, lletres; errors relacionats amb}{29}
+\indexentry{maj\IeC {\'u}scules, lletres; errors relacionats amb}{29}
+\indexentry{errors en el programa!maj\IeC {\'u}scules versus min\IeC {\'u}scules}{29}
+\indexentry{. (punt)!oblidar un}{31}
+\indexentry{punt (.)!oblidar un}{31}
+\indexentry{missatges!oblidar punts entre}{31}
+\indexentry{errors en el programa!oblidar un punt}{31}
+\indexentry{color del text, canvis del}{31}
+\indexentry{text, color; canvis del}{31}
+\indexentry{errors en el programa|seealso{depurador; errors}}{32}
+\indexentry{errors en el programa!detectar amb el color del text|(}{32}
+\indexentry{errors en el programa!detectar amb el color del text|)}{33}
+\indexentry{ifTrue:ifFalse:, m\IeC {\`e}tode|see{siCert:siFals:}}{34}
+\indexentry{ifFalse:, m\IeC {\`e}tode|see{siFals:}}{34}
+\indexentry{whileTrue: bucle|see{mentreCert: bucle}}{34}
+\indexentry{whileFalse: bucle|see{mentreFals: bucle}}{34}
+\indexentry{robots!crear}{35}
+\indexentry{classes|seealso{f\IeC {\`a}briques de robots}}{35}
+\indexentry{classes!crear objectes}{35}
+\indexentry{classes!com a f\IeC {\`a}briques}{35}
+\indexentry{daly, crear robot}{35}
+\indexentry{pica, robot!crear}{35}
+\indexentry{f\IeC {\`a}briques!classes com a}{36}
+\indexentry{objectes!crear per classes}{36}
+\indexentry{Smalltalk!llenguatge de programaci\IeC {\'o}}{36}
+\indexentry{colors!canviar-los en els robots}{37}
+\indexentry{robots!canviar els colors}{37}
+\indexentry{ves missatge!avan\IeC {\c c}ar p\IeC {\'\i }xels}{37}
+\indexentry{segments de l\IeC {\'\i }nia, dibuixar}{37}
+\indexentry{salta: missatges!efecte de}{37}
+\indexentry{Experiments|seealso{\emph{Scripts}}}{37}
+\indexentry{crear i moure un robot, Experiment}{37}
+\indexentry{Experiments!crear i moure un robot}{37}
+\indexentry{Morse, codi; dibuixar missatge SOS en}{37}
+\indexentry{SOS missatge en codi morse, dibuixar}{37}
+\indexentry{SOS, Experiment}{38}
+\indexentry{Experiments!SOS}{38}
+\indexentry{direccions absolutes!significat de|(}{38}
+\indexentry{canviar de direcci\IeC {\'o}|(}{38}
+\indexentry{direcci\IeC {\'o}!canviar de|(}{38}
+\indexentry{br\IeC {\'u}ixola, apuntar els robots en les direccions principals de la}{38}
+\indexentry{robots!apuntar en les direccions principals de la}{38}
+\indexentry{est missatge, exemple de}{38}
+\indexentry{oest missatge, exemple de}{38}
+\indexentry{nord missatge, exemple de}{38}
+\indexentry{sud missatge, exemple de}{38}
+\indexentry{sudEst missatge, exemple de}{38}
+\indexentry{sudOest missatge, exemple de}{38}
+\indexentry{nordEst missatge, exemple de}{38}
+\indexentry{nordOest missatge, exemple de}{38}
+\indexentry{direccions absolutes!significat de|)}{39}
+\indexentry{quadrat @quadrat, Experiment}{39}
+\indexentry{Experiments!quadrat @quadrat}{39}
+\indexentry{escala, Experiment}{40}
+\indexentry{Experiments!escala}{40}
+\indexentry{pir\IeC {\`a}mide esglaonada@la pir\IeC {\`a}mide esglaonada de Saqqara, Experiment}{40}
+\indexentry{Experiments!pir\IeC {\`a}mide esglaonada@la pir\IeC {\`a}mide esglaonada de Saqqara}{40}
+\indexentry{art abstracte, Experiment}{40}
+\indexentry{Experiments!art abstracte}{40}
+\indexentry{canviar de direcci\IeC {\'o}|)}{40}
+\indexentry{A!dibuixar|(}{41}
+\indexentry{lletra A!dibuixar|(}{41}
+\indexentry{direcci\IeC {\'o}!canviar de|)}{41}
+\indexentry{dibuixar!ABC del}{41}
+\indexentry{PICA, Experiment}{41}
+\indexentry{Experiments!PICA}{41}
+\indexentry{salta: m\IeC {\`e}tode, utilitzar a l'experiment PICA}{41}
+\indexentry{A!dibuixar|)}{42}
+\indexentry{lletra A!dibuixar|)}{42}
+\indexentry{visibilitat i invisibilitat, aplicar als robots}{42}
+\indexentry{visibilitat del robot, controlar}{42}
+\indexentry{robots!tornar invisible}{42}
+\indexentry{robots!moure}{42}
+\indexentry{invisibilitat i visibilitat, aplicar als robots}{42}
+\indexentry{variables!declarar per \emph{scripts}}{42}
+\indexentry{direcci\IeC {\'o}!canviar de}{43}
+\indexentry{scripts@\emph{scripts}!declarar variables pels}{43}
+\indexentry{colors!canviar-los en els robots}{43}
+\indexentry{robots!canviar colors}{43}
+\indexentry{robots!crear}{43}
+\indexentry{tornarInvisible i tornarVisible m\IeC {\`e}todes, efectes de}{45}
+\indexentry{giraDreta: missatge, efecte de|(}{45}
+\indexentry{giraEsquerra: missatge, efecte de|(}{45}
+\indexentry{robots!girar un angle determinat}{46}
+\indexentry{scripts misteriosos@\emph{scripts} misteriosos, Experiment}{47}
+\indexentry{Experiments!scripts misteriosos@\emph{scripts} misteriosos}{47}
+\indexentry{convenci\IeC {\'o} direccional, significat de}{47}
+\indexentry{giraDreta: missatge, efecte de|)}{47}
+\indexentry{giraEsquerra: missatge, efecte de|)}{47}
+\indexentry{30 graus, girar}{47}
+\indexentry{girar:, m\IeC {\`e}tode; efecte de}{47}
+\indexentry{absoluta!orientaci\IeC {\'o}, versus orientaci\IeC {\'o} relativa|(}{48}
+\indexentry{relativa!orientaci\IeC {\'o}, versus orientaci\IeC {\'o} absoluta|(}{48}
+\indexentry{quadrats|seealso{quadrats centrats; quadrats conc\IeC {\`e}ntrics}}{48}
+\indexentry{quadrats!dibuixar}{48}
+\indexentry{quadrat relatiu@un quadrat relatiu, Experiment}{48}
+\indexentry{Experiments!quadrat relatiu@un quadrat relatiu}{48}
+\indexentry{girar el quadrat, Experiment}{49}
+\indexentry{Experiments!girar el quadrat}{49}
+\indexentry{quadrat trencat@un quadrat trencat, Experiment}{49}
+\indexentry{Experiments!quadrat trencat@un quadrat trencat}{49}
+\indexentry{absoluta!orientaci\IeC {\'o}, versus orientaci\IeC {\'o} relativa|)}{50}
+\indexentry{relativa!orientaci\IeC {\'o}, versus orientaci\IeC {\'o} absoluta|)}{50}
+\indexentry{angles!girar|(}{50}
+\indexentry{angles!representar}{50}
+\indexentry{45 graus, girar}{51}
+\indexentry{est, indicar la direcci\IeC {\'o}}{51}
+\indexentry{girar a l'esquerra 45 graus, resultat de}{51}
+\indexentry{agulles de rellotge, moure|(}{52}
+\indexentry{giraDreta: missatge, efecte de|(}{52}
+\indexentry{angles!canviar els valors dels}{53}
+\indexentry{agulles de rellotge, moure|)}{53}
+\indexentry{linies de@l\IeC {\'\i }nies de refer\IeC {\`e}ncia, dibuixar}{53}
+\indexentry{moure les agulles del rellotge, Experiment}{53}
+\indexentry{Experiments!moure les agulles del rellotge}{53}
+\indexentry{canviar la direcci\IeC {\'o} de refer\IeC {\`e}ncia, Experiment}{54}
+\indexentry{Experiments!canviar la direcci\IeC {\'o} de refer\IeC {\`e}ncia}{54}
+\indexentry{direcci\IeC {\'o} de refer\IeC {\`e}ncia, canviar}{54}
+\indexentry{angles!girar|)}{54}
+\indexentry{giraDreta: missatge, efecte de|)}{54}
+\indexentry{rellotge, crear}{54}
+\indexentry{angles!versus temps}{54}
+\indexentry{rellotge real@un rellotge ``real'', Experiment}{55}
+\indexentry{Experiments!rellotge real@un rellotge ``real''}{55}
+\indexentry{rellotge robot, crear}{55}
+\indexentry{temps!versus angles}{55}
+\indexentry{triangles!dibuixar}{55}
+\indexentry{dibuixar!triangle equil\IeC {\`a}ter}{55}
+\indexentry{triangle equil\IeC {\`a}ter, dibuixar}{55}
+\indexentry{casa, dibuixar}{56}
+\indexentry{dibuixar!una casa}{56}
+\indexentry{dibuixar!pol\IeC {\'\i }gons regulars}{56}
+\indexentry{poligon@pol\IeC {\'\i }gon!dibuixar|(}{56}
+\indexentry{poligon regular@pol\IeC {\'\i }gon regular!dibuixar|(}{56}
+\indexentry{dibuixar!pent\IeC {\`a}gon}{57}
+\indexentry{dibuixar!hex\IeC {\`a}gon}{57}
+\indexentry{hex\IeC {\`a}gons!dibuixar}{57}
+\indexentry{tallar i enganxar, generar pol\IeC {\'\i }gons regulars amb}{57}
+\indexentry{poligon@pol\IeC {\'\i }gon!dibuixar|)}{57}
+\indexentry{poligon regular@pol\IeC {\'\i }gon regular!dibuixar|)}{57}
+\indexentry{tres radis, dibuixar figura amb}{58}
+\indexentry{tornarInvisible i tornarVisible m\IeC {\`e}todes, efectes de}{59}
+\indexentry{direcci\IeC {\'o}!canviar de}{59}
+\indexentry{receptors!amagar i mostrar}{59}
+\indexentry{robots!canviar la direcci\IeC {\'o} dels}{59}
+\indexentry{menu@men\IeC {\'u} principal, opcions del}{61}
+\indexentry{aspecte\dots submen\IeC {\'u}, descripci\IeC {\'o} de}{61}
+\indexentry{accions BotsInc\dots submen\IeC {\'u}, descripci\IeC {\'o} de}{61}
+\indexentry{obre\dots submen\IeC {\'u}, descripci\IeC {\'o} de}{61}
+\indexentry{submen\IeC {\'u}, explicaci\IeC {\'o} de}{61}
+\indexentry{editor de text Espai de Treball Bot!obtenir|(}{62}
+\indexentry{solapa!obtenir Espai de Treball Bot}{62}
+\indexentry{menu@men\IeC {\'u}, opcions del; explicacions}{62}
+\indexentry{editor de text Espai de Treball Bot!obtenir|)}{62}
+\indexentry{vocabulari, subfinestra; llistar missatges a la}{62}
+\indexentry{halo de nanses!explicaci\IeC {\'o}|(}{63}
+\indexentry{missatges!exemples comuns de}{63}
+\indexentry{Squeak!interaccionar amb|(}{63}
+\indexentry{botons del ratol\IeC {\'\i }, operacions associades als}{63}
+\indexentry{tecles, combinacions i botons del ratol\IeC {\'\i }, explicacions}{63}
+\indexentry{bot\IeC {\'o} esquerre del ratol\IeC {\'\i }, conjunt d'operacions associades amb}{63}
+\indexentry{bot\IeC {\'o} central del ratol\IeC {\'\i }, conjunt d'operacions associades amb}{63}
+\indexentry{bot\IeC {\'o} dret del ratol\IeC {\'\i }, conjunt d'operacions associades amb}{63}
+\indexentry{botons del ratol\IeC {\'\i }!explicaci\IeC {\'o}|(}{63}
+\indexentry{botons del ratol\IeC {\'\i }!i combinacions de tecles}{63}
+\indexentry{Apuntar i Seleccionar amb el ratol\IeC {\'\i }}{63}
+\indexentry{Squeak!interaccionar amb|)}{63}
+\indexentry{scripts@\emph{scripts}!guardar amb l'Espai de Treball Bot}{65}
+\indexentry{guardar el contingut, opci\IeC {\'o} del men\IeC {\'u}, accedir}{65}
+\indexentry{botons del ratol\IeC {\'\i }!explicaci\IeC {\'o}|)}{65}
+\indexentry{editor de text Espai de Treball Bot!guardar \emph{scripts} amb}{65}
+\indexentry{halo de nanses!explicaci\IeC {\'o}|)}{65}
+\indexentry{Fes-ho tot (bot\IeC {\'o}), efecte de}{65}
+\indexentry{Fes-ho (bot\IeC {\'o}), efecte de}{65}
+\indexentry{Eliminar camins (bot\IeC {\'o}), efecte de}{65}
+\indexentry{Eliminar Bots (bot\IeC {\'o}), efecte de}{65}
+\indexentry{Eliminar-ho tot (bot\IeC {\'o}), efecte de}{65}
+\indexentry{seleccionar amb el ratol\IeC {\'\i }}{65}
+\indexentry{menu@men\IeC {\'u}s contextuals, accedir a}{65}
+\indexentry{llista de fitxers (\emph{file list}), carregar \emph{scripts} amb}{65}
+\indexentry{scripts@\emph{scripts}!carregar}{65}
+\indexentry{carpetes, explorar}{65}
+\indexentry{capturar pantalla (opci\IeC {\'o} men\IeC {\'u}), accedir|(}{66}
+\indexentry{dibuixar!capturar|(}{66}
+\indexentry{captura i guarda imatge, opci\IeC {\'o} del men\IeC {\'u}, accedir|(}{67}
+\indexentry{capturar pantalla (opci\IeC {\'o} men\IeC {\'u}), accedir|)}{67}
+\indexentry{fitxers!importar}{67}
+\indexentry{halo de nanses!accedir}{67}
+\indexentry{halo de nanses!obtenir en dibuixar robots}{67}
+\indexentry{importar fitxers}{67}
+\indexentry{captura i guarda imatge, opci\IeC {\'o} del men\IeC {\'u}, accedir|)}{67}
+\indexentry{pantalla, capturar regions de la}{67}
+\indexentry{Smalltalk!comportament dels objectes a}{67}
+\indexentry{dibuixar!capturar|)}{67}
+\indexentry{missatges!resultats dels}{67}
+\indexentry{objectes!comportament a Smalltalk}{67}
+\indexentry{resultats d'un missatge, significat de}{67}
+\indexentry{scripts@\emph{scripts}!executar|(}{69}
+\indexentry{fes-ho (d) missatge, efecte de}{69}
+\indexentry{escriu-ho (p) opci\IeC {\'o} men\IeC {\'u}, seleccionar}{69}
+\indexentry{scripts@\emph{scripts}!seleccionar el text complet de}{69}
+\indexentry{paraules, seleccionar en un \emph{script}}{69}
+\indexentry{colors!demanar a un robot|(}{70}
+\indexentry{robots!determinar els colors dels|(}{70}
+\indexentry{pica color, expressi\IeC {\'o}; executar|(}{70}
+\indexentry{expressi\IeC {\'o} Bot nou, executar}{70}
+\indexentry{color, missatges!executar}{70}
+\indexentry{colors!demanar a un robot|)}{70}
+\indexentry{pica color, expressi\IeC {\'o}; executar|)}{70}
+\indexentry{robots!determinar els colors dels|)}{70}
+\indexentry{expressions!escriure els resultats de}{71}
+\indexentry{halo de nanses!accedir}{71}
+\indexentry{escriure!resultat d'una expressi\IeC {\'o}}{71}
+\indexentry{scripts@\emph{scripts}!executar|)}{71}
+\indexentry{expressions!executar}{72}
+\indexentry{robots!moure}{72}
+\indexentry{halo de nanses!aconseguir-ne informaci\IeC {\'o}}{72}
+\indexentry{color (objectes), obtenir}{74}
+\indexentry{colors!dels ll\IeC {\`a}pissos|(}{74}
+\indexentry{linies@l\IeC {\'\i }nies!dibuixar i acolorir|(}{74}
+\indexentry{llapis, mida i color|(}{74}
+\indexentry{colorLlapis: missatge, efecte de|(}{74}
+\indexentry{missatge, selectors de!Color, per a la classe}{74}
+\indexentry{dibuixar!ulleres de llarga vista}{75}
+\indexentry{ulleres de llarga vista, dibuixar}{75}
+\indexentry{linies@l\IeC {\'\i }nies!dibuixar i acolorir|)}{75}
+\indexentry{llapis, mida i color|)}{75}
+\indexentry{colorLlapis: missatge, efecte de|)}{75}
+\indexentry{colors!dels ll\IeC {\`a}pissos|)}{76}
+\indexentry{color, missatges!noms de}{76}
+\indexentry{robots!canviar colors}{76}
+\indexentry{Color, f\IeC {\`a}brica, propietats de}{76}
+\indexentry{Color r:g:b: expressi\IeC {\'o}, crear colors amb}{76}
+\indexentry{colors!triar-los amb el m\IeC {\`e}tode fromUser}{76}
+\indexentry{f\IeC {\`a}briques!f\IeC {\`a}brica Color}{76}
+\indexentry{fromUser m\IeC {\`e}tode, triar colors amb}{76}
+\indexentry{colors!crear}{76}
+\indexentry{forma dels robots, canviar|(}{77}
+\indexentry{mida dels robots, canviar|(}{77}
+\indexentry{robots!canviar la forma i la mida|(}{77}
+\indexentry{circular, forma; aplicar als robots}{77}
+\indexentry{triangular, forma; aplicar als robots}{77}
+\indexentry{aparentaBot missatge, efecte de}{77}
+\indexentry{aparentaCercle missatge, aplicat als robots}{77}
+\indexentry{aparentaTriangle missatge, efecte de|(}{77}
+\indexentry{area: missatge, canviar la mida del robot amb}{78}
+\indexentry{robots!canviar la forma i la mida|)}{79}
+\indexentry{forma dels robots, canviar|)}{79}
+\indexentry{mida dels robots, canviar|)}{79}
+\indexentry{dibuixar!robots|(}{79}
+\indexentry{robots!dibuixar|(}{79}
+\indexentry{gr\IeC {\`a}fics!dibuixar i preservar pels robots|(}{79}
+\indexentry{halo de nanses!obtenir en dibuixar robots}{79}
+\indexentry{aparentaTriangle missatge, efecte de|)}{79}
+\indexentry{dibuix, eina de; obrir}{79}
+\indexentry{robots!pintar}{79}
+\indexentry{dibuixos, girar i fer zoom}{80}
+\indexentry{girar dibuixos}{80}
+\indexentry{zoom, fer amb els dibuixos}{80}
+\indexentry{gr\IeC {\`a}fics!dibuixar i preservar pels robots|)}{81}
+\indexentry{dibuixar!robots|)}{81}
+\indexentry{robots!dibuixar|)}{81}
+\indexentry{gr\IeC {\`a}fics!guardar i restaurar|(}{81}
+\indexentry{classe Bot!crear el robot aranya amb|(}{81}
+\indexentry{robot aranya, crear amb la classe Bot|(}{81}
+\indexentry{gr\IeC {\`a}fics!carregar}{81}
+\indexentry{fabriques de robots@f\IeC {\`a}briques de robots|seealso{classes}}{82}
+\indexentry{fabriques de robots@f\IeC {\`a}briques de robots!re-equipar|(}{82}
+\indexentry{passaImatgeAClasse missatge, efecte de}{82}
+\indexentry{aparentaCercle missatge, aplicat als robots}{82}
+\indexentry{scripts@\emph{scripts}!utilitzar en operacions gr\IeC {\`a}fiques|(}{83}
+\indexentry{fabriques de robots@f\IeC {\`a}briques de robots!re-equipar|)}{83}
+\indexentry{classe Bot!crear el robot aranya amb|)}{83}
+\indexentry{robot aranya, crear amb la classe Bot|)}{83}
+\indexentry{aranya.frm fitxer de gr\IeC {\`a}fic, contingut de}{83}
+\indexentry{gr\IeC {\`a}fics!utilitzar \emph{scripts} amb|(}{83}
+\indexentry{carregaImatge: missatge!efecte de|(}{83}
+\indexentry{classe Bot!carregar i guardar gr\IeC {\`a}fics associats amb}{83}
+\indexentry{guardaImatge: missatge, efecte de}{84}
+\indexentry{dibuixos de robots, guardar i carregar}{84}
+\indexentry{inicialitzaImatge (missatge de la classe Bot), efecte de}{84}
+\indexentry{classes!inicialitzar gr\IeC {\`a}fics per defecte}{84}
+\indexentry{gr\IeC {\`a}fics!carregar i guardar}{84}
+\indexentry{gr\IeC {\`a}fics!carregar i guardar per a la classe Bot}{84}
+\indexentry{imatges!restaurar les classes}{84}
+\indexentry{imatges!guardar}{84}
+\indexentry{classe Bot!associar gr\IeC {\`a}fics amb|(}{84}
+\indexentry{scripts@\emph{scripts}!utilitzar en operacions gr\IeC {\`a}fiques|)}{84}
+\indexentry{gr\IeC {\`a}fics!associar amb la classe Bot|(}{85}
+\indexentry{imatges!canviar}{85}
+\indexentry{aparentaImatge missatge, efecte de}{85}
+\indexentry{robots!canviar l'aparen\IeC {\c c}a}{85}
+\indexentry{pica, robot!assignar un gr\IeC {\`a}fic a}{86}
+\indexentry{yertle, robot; aparici\IeC {\'o} de}{86}
+\indexentry{imatges!aplicar als robots}{87}
+\indexentry{robots!aplicar imatges als}{87}
+\indexentry{classe Bot!associar gr\IeC {\`a}fics amb|)}{87}
+\indexentry{gr\IeC {\`a}fics!associar amb la classe Bot|)}{87}
+\indexentry{gr\IeC {\`a}fics!guardar i restaurar|)}{87}
+\indexentry{gr\IeC {\`a}fics!utilitzar \emph{scripts} amb|)}{87}
+\indexentry{carregaImatge: missatge!efecte de|)}{87}
+\indexentry{color: m\IeC {\`e}tode, descripci\IeC {\'o} i exemple}{88}
+\indexentry{area: m\IeC {\`e}tode, descripci\IeC {\'o} i exemple}{88}
+\indexentry{aparenta* m\IeC {\`e}todes, descripci\IeC {\'o} i exemple}{88}
+\indexentry{carregaImatge: missatge!descripci\IeC {\'o} i exemple}{88}
+\indexentry{guardaImatge m\IeC {\`e}tode, descripci\IeC {\'o} i exemple}{88}
+\indexentry{colorLlapis: m\IeC {\`e}tode, descripci\IeC {\'o} i exemple}{88}
+\indexentry{midaLlapis m\IeC {\`e}tode, descripci\IeC {\'o} i exemple}{88}
+\indexentry{passaImatgeAClasse m\IeC {\`e}tode, descripci\IeC {\'o} i exemple}{88}
+\indexentry{aconsegueixImatgeDeClasse m\IeC {\`e}tode, descripci\IeC {\'o} i exemple}{88}
+\indexentry{dibuixar!estrella|(}{91}
+\indexentry{estrella!dibuixar|(}{91}
+\indexentry{linies@l\IeC {\'\i }nies!dibuixar per a una estrella}{92}
+\indexentry{missatges!utilitzar bucles amb|(}{93}
+\indexentry{vegadesRepetir: m\IeC {\`e}tode!efecte de}{93}
+\indexentry{bucles!repetir seq{\"u}\IeC {\`e}ncies de missatges en|(}{93}
+\indexentry{n vegadesRepetir: [], efecte de}{93}
+\indexentry{Smalltalk!blocs (\emph{block})}{94}
+\indexentry{[] (claud\IeC {\`a}tors)!utilitzar en repeticions}{94}
+\indexentry{claud\IeC {\`a}tors ([])!utilitzar en repeticions}{94}
+\indexentry{vegadesRepetir: m\IeC {\`e}tode!arguments de}{94}
+\indexentry{timesRepeat:|see{vegadesRepetir:}}{94}
+\indexentry{estrella amb seix@una estrella amb seixanta branques, Experiment}{95}
+\indexentry{Experiments!estrella amb seix@una estrella amb seixanta branques}{95}
+\indexentry{missatges!utilitzar bucles amb|)}{95}
+\indexentry{bucles!repetir seq{\"u}\IeC {\`e}ncies de missatges en|)}{95}
+\indexentry{dibuixar!estrella|)}{95}
+\indexentry{estrella!dibuixar|)}{95}
+\indexentry{blocs, sagnat de}{95}
+\indexentry{codi, sagnat de}{95}
+\indexentry{Smalltalk!donar forma al codi en}{96}
+\indexentry{dibuixar!figures geom\IeC {\`e}triques|(}{96}
+\indexentry{figures geom\IeC {\`e}triques, dibuixar|(}{96}
+\indexentry{quadrats!dibuixar}{96}
+\indexentry{quadrat utili@un quadrat utilitzant un bucle, Experiment}{96}
+\indexentry{Experiments!quadrat utili@un quadrat utilitzant un bucle}{96}
+\indexentry{pent\IeC {\`a}gon regular, Experiment}{97}
+\indexentry{Experiments!pent\IeC {\`a}gon regular}{97}
+\indexentry{hex\IeC {\`a}gon regular, Experiment}{97}
+\indexentry{Experiments!hex\IeC {\`a}gon regular}{97}
+\indexentry{dibuixar!figures geom\IeC {\`e}triques|)}{97}
+\indexentry{figures geom\IeC {\`e}triques, dibuixar|)}{97}
+\indexentry{bucles!utilitzar en un \emph{script} per dibuixar una pir\IeC {\`a}mide}{97}
+\indexentry{pir\IeC {\`a}mide amb deu esglaons, Experiment}{98}
+\indexentry{Experiments!pir\IeC {\`a}mide amb deu esglaons}{98}
+\indexentry{bucles!experimentar amb|(}{99}
+\indexentry{creu su@una creu su{\"i}ssa, Experiment}{99}
+\indexentry{Experiments!creu su@una creu su{\"i}ssa}{99}
+\indexentry{escala @una escala, Experiment}{99}
+\indexentry{Experiments!escala @una escala}{99}
+\indexentry{escala sense al\IeC {\c c}adors, Experiment}{100}
+\indexentry{Experiments!escala sense al\IeC {\c c}adors}{100}
+\indexentry{grapa @una grapa, Experiment}{100}
+\indexentry{Experiments!grapa @una grapa}{100}
+\indexentry{pinta @una pinta, Experiment}{100}
+\indexentry{Experiments!pinta @una pinta}{100}
+\indexentry{escala de m\IeC {\`a}@una escala de m\IeC {\`a}, Experiment}{101}
+\indexentry{Experiments!escala de m\IeC {\`a}@una escala de m\IeC {\`a}}{101}
+\indexentry{quadrats que fan tombarelles, Experiment}{101}
+\indexentry{Experiments!quadrats que fan tombarelles}{101}
+\indexentry{bucles!experimentar amb|)}{101}
+\indexentry{n vegadesRepetir: [], efecte de}{101}
+\indexentry{vegadesRepetir: m\IeC {\`e}tode!efecte de}{101}
+\indexentry{scripts@\emph{scripts} amb nom|see{m\IeC {\`e}todes}}{101}
+\indexentry{A!forma de}{104}
+\indexentry{lletra A!forma de}{104}
+\indexentry{altura, variable; relaci\IeC {\'o} amb l'amplada i la mitja altura}{104}
+\indexentry{mitja altura, variable; relaci\IeC {\'o} amb l'amplada i l'altura}{104}
+\indexentry{amplada, variable; relaci\IeC {\'o} amb l'altura i la mitja altura}{104}
+\indexentry{A!variacions|(}{104}
+\indexentry{lletra A!variacions|(}{104}
+\indexentry{frAnkenstein, Experiment}{105}
+\indexentry{Experiments!frAnkenstein}{105}
+\indexentry{A!variacions|)}{106}
+\indexentry{lletra A!variacions|)}{106}
+\indexentry{expressi\IeC {\'o} d'assignaci\IeC {\'o} (:=)!utilitzar en variables|(}{106}
+\indexentry{variables!inicialitzar|(}{106}
+\indexentry{variables!definir}{106}
+\indexentry{variables!declarar}{107}
+\indexentry{\textbar\textbar (barres verticals) posar variables entre}{107}
+\indexentry{barres verticals (\textbar\textbar) posar variables entre}{107}
+\indexentry{variables!inicialitzar|)}{107}
+\indexentry{variables!assignar valors a}{107}
+\indexentry{valors!assignar a variables}{107}
+\indexentry{valors!relaci\IeC {\'o} amb les variables}{107}
+\indexentry{:= (expressi\IeC {\'o} d'assignaci\IeC {\'o})!utilitzar en variables|(}{107}
+\indexentry{variables!referir-nos a les}{108}
+\indexentry{expressi\IeC {\'o} d'assignaci\IeC {\'o} (:=)!utilitzar en variables|)}{108}
+\indexentry{:= (expressi\IeC {\'o} d'assignaci\IeC {\'o})!utilitzar en variables|)}{108}
+\indexentry{pica, robot!com a variable}{108}
+\indexentry{A!utilitzar variables|(}{108}
+\indexentry{lletra A!utilitzar variables|(}{108}
+\indexentry{variables!utilitzar en la lletra A|(}{108}
+\indexentry{A!utilitzar variables|)}{109}
+\indexentry{lletra A!utilitzar variables|)}{109}
+\indexentry{variables!utilitzar en la lletra A|)}{109}
+\indexentry{variables!potencia@pot\IeC {\`e}ncia de|(}{110}
+\indexentry{variables!potencia@pot\IeC {\`e}ncia de|)}{110}
+\indexentry{variables!expressar relacions entre|(}{110}
+\indexentry{variables!expressar relacions entre|)}{111}
+\indexentry{variables!experimentar amb|(}{111}
+\indexentry{rectangle d'or@el rectangle d'or, Experiment}{111}
+\indexentry{Experiments!rectangle d'or@el rectangle d'or}{111}
+\indexentry{scripts@\emph{scripts}!pel rectangle d'or}{111}
+\indexentry{scripts que no@\emph{Scripts} que no funcionen, Experiment}{112}
+\indexentry{Experiments!scripts que no@\emph{Scripts} que no funcionen}{112}
+\indexentry{pir\IeC {\`a}mide amb un nombre@una pir\IeC {\`a}mide amb un nombre variable d'esglaons, Experiment}{113}
+\indexentry{Experiments!pir\IeC {\`a}mide amb un nombre@una pir\IeC {\`a}mide amb un nombre variable d'esglaons}{113}
+\indexentry{nombreEsglaons variable, utilitzar en pir\IeC {\`a}mide}{113}
+\indexentry{pir\IeC {\`a}mide amb una mida@una pir\IeC {\`a}mide amb una mida variable de l'esgla\IeC {\'o}, Experiment}{113}
+\indexentry{Experiments!pir\IeC {\`a}mide amb una mida@una pir\IeC {\`a}mide amb una mida variable de l'esgla\IeC {\'o}}{113}
+\indexentry{midaEsglaons variable, utilitzar en pir\IeC {\`a}mide}{113}
+\indexentry{variables!utilitzar en l'Experiment de la pir\IeC {\`a}mide de Saqqara}{113}
+\indexentry{variables!experimentar amb|)}{114}
+\indexentry{variables!automatitzar pol\IeC {\'\i }gons amb|(}{114}
+\indexentry{poligon@pol\IeC {\'\i }gon!automatitzar amb variables|(}{114}
+\indexentry{hex\IeC {\`a}gons!exemple de}{114}
+\indexentry{pent\IeC {\`a}gon, exemple de}{114}
+\indexentry{hex\IeC {\`a}gon regular, exemple de}{114}
+\indexentry{pent\IeC {\`a}gon regular, exemple de}{114}
+\indexentry{variable angle!utilitzaci\IeC {\'o} amb pol\IeC {\'\i }gons}{115}
+\indexentry{costats variable, utilitzar en pol\IeC {\'\i }gons}{115}
+\indexentry{poligon@pol\IeC {\'\i }gon!automatitzar amb variables|)}{115}
+\indexentry{variables!automatitzar pol\IeC {\'\i }gons amb|)}{115}
+\indexentry{poligon@pol\IeC {\'\i }gon!de mida fixa}{115}
+\indexentry{controlar els costats del pol\IeC {\'\i }gon, Experiment}{115}
+\indexentry{Experiments!controlar els costats del pol\IeC {\'\i }gon}{115}
+\indexentry{poligon regular@pol\IeC {\'\i }gon regular!de mida fixa}{115}
+\indexentry{longitudTotal variable, utilitzar en pol\IeC {\'\i }gons}{115}
+\indexentry{variables!declarar i assignar}{116}
+\indexentry{Smalltalk!anomenar les variables}{117}
+\indexentry{variables!anomenar}{117}
+\indexentry{variable, nom de!import\IeC {\`a}ncia}{118}
+\indexentry{variables!contenidors@com a contenidors|(}{118}
+\indexentry{contenidors!variables com a|(}{118}
+\indexentry{pica, variable; declarar|(}{118}
+\indexentry{pablo, variable; declarar|(}{118}
+\indexentry{pablo, variable; declarar|)}{119}
+\indexentry{contenidors!variables com a|)}{119}
+\indexentry{variables!contenidors@com a contenidors|)}{119}
+\indexentry{:= (expressi\IeC {\'o} d'assignaci\IeC {\'o})!parts dreta i esquerra|(}{119}
+\indexentry{expressi\IeC {\'o} d'assignaci\IeC {\'o} (:=)!parts dreta i esquerra|(}{119}
+\indexentry{longitudCami, variable!escriure i llegir}{120}
+\indexentry{scripts@\emph{scripts}!analitzar|(}{120}
+\indexentry{variables!declarar, inicialitzar i utilitzar|(}{120}
+\indexentry{expressi\IeC {\'o} d'assignaci\IeC {\'o} (:=)!parts dreta i esquerra|)}{120}
+\indexentry{:= (expressi\IeC {\'o} d'assignaci\IeC {\'o})!parts dreta i esquerra|)}{120}
+\indexentry{longitudCami, variable!declarar|(}{120}
+\indexentry{expressions!utilitzar variables dins de}{121}
+\indexentry{variables!per a la longitud en el cam\IeC {\'\i } de pica}{121}
+\indexentry{variables!utilitzar dins d'expressions}{121}
+\indexentry{pixels@p\IeC {\'\i }xels!determinar pel moviment endavant del robot}{121}
+\indexentry{pica, variable; declarar|)}{122}
+\indexentry{variables!declarar, inicialitzar i utilitzar|)}{122}
+\indexentry{variables!utilitzar sense valor}{122}
+\indexentry{longitudCami, variable!canviar dues vegades}{122}
+\indexentry{valors!excloure d'una variable}{123}
+\indexentry{variables!definir amb la variable longitudCami}{123}
+\indexentry{longitudCami, variable!declarar|)}{123}
+\indexentry{longitudCami, variable!definir variable amb}{123}
+\indexentry{longitudCami, variable!inicialitzar|(}{123}
+\indexentry{scripts@\emph{scripts}!analitzar|)}{124}
+\indexentry{longitudCami, variable!inicialitzar|)}{124}
+\indexentry{dibuixar!escala|(}{128}
+\indexentry{escala!dibuixar|(}{128}
+\indexentry{esglaons!mesurar per dibuixar una escala|(}{129}
+\indexentry{variables!utilitzar en dibuixar una escala}{129}
+\indexentry{expressions!per dibuixar una escala}{131}
+\indexentry{colocacio@col\IeC {\textperiodcentered }locaci\IeC {\'o} de l'increment dins del bucle, Experiment}{131}
+\indexentry{Experiments!colocacio@col\IeC {\textperiodcentered }locaci\IeC {\'o} de l'increment dins del bucle}{131}
+\indexentry{dibuixar!escala|)}{131}
+\indexentry{escala!dibuixar|)}{131}
+\indexentry{esglaons!mesurar per dibuixar una escala|)}{131}
+\indexentry{bucles|seealso{bucles imbricats}}{131}
+\indexentry{variables!combinar amb bucles|(}{131}
+\indexentry{bucles!combinar variables amb|(}{131}
+\indexentry{altra escala@una altra escala estranya, Experiment}{131}
+\indexentry{Experiments!altra escala@una altra escala estranya}{131}
+\indexentry{laberint senzill@un senzill laberint, Experiment}{132}
+\indexentry{Experiments!laberint senzill@un senzill laberint}{132}
+\indexentry{espiral, dibuixar}{132}
+\indexentry{quadrats russos, Experiment}{133}
+\indexentry{Experiments!quadrats russos}{133}
+\indexentry{midaCostat par\IeC {\`a}metre!utilitzar a l'experiment dels quadrats russos}{133}
+\indexentry{passad\IeC {\'\i }s llarg@un passad\IeC {\'\i }s llarg, Experiment}{133}
+\indexentry{Experiments!passad\IeC {\'\i }s llarg@un passad\IeC {\'\i }s llarg}{133}
+\indexentry{quadrats conc\IeC {\`e}ntrics, dibuixar}{133}
+\indexentry{bucles!combinar variables amb|)}{134}
+\indexentry{variables!combinar amb bucles|)}{134}
+\indexentry{inicialitzaci\IeC {\'o} de variables}{134}
+\indexentry{variables!inicialitzar}{134}
+\indexentry{variables!utilitzar}{134}
+\indexentry{variables!introduir en bucles}{134}
+\indexentry{bucles!introduir variables als}{134}
+\indexentry{variables!canviar el valor de les}{134}
+\indexentry{valors!canviar el d'una variable}{134}
+\indexentry{quadrats, Experiment}{136}
+\indexentry{Experiments!quadrats}{136}
+\indexentry{tauler, construcci\IeC {\'o} de}{136}
+\indexentry{pir\IeC {\`a}mide, Experiment}{136}
+\indexentry{Experiments!pir\IeC {\`a}mide}{136}
+\indexentry{quadrats conc\IeC {\`e}ntrics, dibuixar|seealso{quadrats}}{137}
+\indexentry{binaris, missatges|seealso{missatges}}{137}
+\indexentry{unaris, missatges|seealso{missatges}}{137}
+\indexentry{paraula-clau, missatges|seealso{missatges}}{137}
+\indexentry{binaris, missatges!exemples de|(}{139}
+\indexentry{binaris, missatges!explicaci\IeC {\'o} de|(}{139}
+\indexentry{unaris, missatges!explicaci\IeC {\'o} de|(}{139}
+\indexentry{paraula-clau, missatges!exemples de|(}{139}
+\indexentry{paraula-clau, missatges!explicaci\IeC {\'o} de|(}{139}
+\indexentry{missatges!components dels}{139}
+\indexentry{missatges!tipus de|(}{139}
+\indexentry{expressions!components de}{140}
+\indexentry{objectes!relaci\IeC {\'o} amb missatges binaris}{140}
+\indexentry{binaris, missatges!exemples de|)}{141}
+\indexentry{binaris, missatges!explicaci\IeC {\'o} de|)}{141}
+\indexentry{unaris, missatges!explicaci\IeC {\'o} de|)}{141}
+\indexentry{paraula-clau, missatges!exemples de|)}{141}
+\indexentry{paraula-clau, missatges!explicaci\IeC {\'o} de|)}{141}
+\indexentry{missatges!identificar|(}{141}
+\indexentry{missatges!tipus de|)}{141}
+\indexentry{elipses@el\IeC {\textperiodcentered }lipses!al voltant dels missatges, significat de}{141}
+\indexentry{subratllats, receptors de missatge; significat de|(}{141}
+\indexentry{unaris, missatges!exemples de}{141}
+\indexentry{arguments!indicar pels receptors dels missatges}{142}
+\indexentry{missatge, enviaments de!efecte de}{142}
+\indexentry{receptors!explicaci\IeC {\'o} de}{142}
+\indexentry{indicar els arguments per a}{142}
+\indexentry{missatges!identificar|)}{143}
+\indexentry{subratllats, receptors de missatge; significat de|)}{143}
+\indexentry{unaris, missatges!exemples de}{143}
+\indexentry{binaris, missatges!exemples de}{144}
+\indexentry{objectes!en missatges binaris}{144}
+\indexentry{paraula-clau, missatges!exemples de}{145}
+\indexentry{arguments!en missatges de paraula-clau}{145}
+\indexentry{Regla 1 de l'ordre d'execuci\IeC {\'o}!explicaci\IeC {\'o} de}{146}
+\indexentry{Regla 2 de l'ordre d'execuci\IeC {\'o}!explicaci\IeC {\'o} de}{146}
+\indexentry{Regla 3 de l'ordre d'execuci\IeC {\'o}!explicaci\IeC {\'o} de}{146}
+\indexentry{() (par\IeC {\`e}ntesi)!inclosos per alterar l'ordre d'execuci\IeC {\'o}|(}{146}
+\indexentry{par\IeC {\`e}ntesi (())!inclosos per alterar l'ordre d'execuci\IeC {\'o}|(}{146}
+\indexentry{ordre d'execuci\IeC {\'o}!panorama general|(}{146}
+\indexentry{unaris, missatges!ordre d'execuci\IeC {\'o}}{146}
+\indexentry{ordre d'execuci\IeC {\'o}!Regla 1}{146}
+\indexentry{ordre d'execuci\IeC {\'o}!Regla 2}{146}
+\indexentry{ordre d'execuci\IeC {\'o}!Regla 3}{146}
+\indexentry{() (par\IeC {\`e}ntesi)!inclosos per alterar l'ordre d'execuci\IeC {\'o}|)}{146}
+\indexentry{par\IeC {\`e}ntesi (())!inclosos per alterar l'ordre d'execuci\IeC {\'o}|)}{146}
+\indexentry{Unari $>$ Binari $>$ Paraula-clau ordre d'execuci\IeC {\'o}, exemples de|(}{147}
+\indexentry{Regla 1 de l'ordre d'execuci\IeC {\'o}!Unari $>$ Binari $>$ Paraula-clau|(}{147}
+\indexentry{missatges compostos!representar|(}{147}
+\indexentry{ordre d'execuci\IeC {\'o}!panorama general|)}{147}
+\indexentry{ordre d'execuci\IeC {\'o}!Regla 1|(}{147}
+\indexentry{pica color: Color groc, descomposici\IeC {\'o} de l'execuci\IeC {\'o} de}{147}
+\indexentry{missatges compostos!representar|)}{148}
+\indexentry{pica ves: 100 + 20 expressi\IeC {\'o}, descomposici\IeC {\'o} de}{148}
+\indexentry{pica midaLlapis: pica midaLlapis + 2 expressi\IeC {\'o}, descomposici\IeC {\'o} de}{149}
+\indexentry{missatge Bot nou ves: 100 + 20, descomposici\IeC {\'o}}{149}
+\indexentry{Regla 1 de l'ordre d'execuci\IeC {\'o}!Unari $>$ Binari $>$ Paraula-clau|)}{150}
+\indexentry{Unari $>$ Binari $>$ Paraula-clau ordre d'execuci\IeC {\'o}, exemples de|)}{150}
+\indexentry{Regla 2 de l'ordre d'execuci\IeC {\'o}!primer els par\IeC {\`e}ntesis|(}{150}
+\indexentry{ordre d'execuci\IeC {\'o}!Regla 1|)}{150}
+\indexentry{ordre d'execuci\IeC {\'o}!Regla 2|(}{150}
+\indexentry{Primer els Par\IeC {\`e}ntesis, ordre d'execuci\IeC {\'o}; exemples de|(}{150}
+\indexentry{compostes, expressions, descomponent considerant els par\IeC {\`e}ntesis}{150}
+\indexentry{65"@325 extent: 134"@100 missatge, descompondre}{150}
+\indexentry{Primer els Par\IeC {\`e}ntesis, ordre d'execuci\IeC {\'o}; exemples de|)}{151}
+\indexentry{Regla 2 de l'ordre d'execuci\IeC {\'o}!primer els par\IeC {\`e}ntesis|)}{151}
+\indexentry{Regla 3 de l'ordre d'execuci\IeC {\'o}!d'esquerra a dreta|(}{151}
+\indexentry{Esquerra a Dreta, ordre d'execuci\IeC {\'o}, exemples de|(}{151}
+\indexentry{ordre d'execuci\IeC {\'o}!Regla 2|)}{151}
+\indexentry{ordre d'execuci\IeC {\'o}!Regla 3|(}{151}
+\indexentry{expressi\IeC {\'o} Bot nou est, descomposici\IeC {\'o}}{151}
+\indexentry{20 + 2 * 5 expressi\IeC {\'o}, descomposici\IeC {\'o}}{152}
+\indexentry{binaris, missatges!prioritat}{152}
+\indexentry{20 + (2 * 5) expressi\IeC {\'o}, descomposici\IeC {\'o}}{153}
+\indexentry{missatge, enviaments de!prioritat dels}{153}
+\indexentry{selectors de missatges matem\IeC {\`a}tics, prioritats}{154}
+\indexentry{Smalltalk!selectors de missatges matem\IeC {\`a}tics}{154}
+\indexentry{expressions!equivalents amb par\IeC {\`e}ntesis}{154}
+\indexentry{Esquerra a Dreta, ordre d'execuci\IeC {\'o}, exemples de|)}{154}
+\indexentry{ordre d'execuci\IeC {\'o}!Regla 3|)}{154}
+\indexentry{ordre d'execuci\IeC {\'o}!Regla 1}{154}
+\indexentry{par\IeC {\`e}ntesi (())!inclosos per alterar l'ordre d'execuci\IeC {\'o}}{154}
+\indexentry{Regla 1 de l'ordre d'execuci\IeC {\'o}!conseq\"u\IeC {\`e}ncies}{154}
+\indexentry{Regla 3 de l'ordre d'execuci\IeC {\'o}!d'esquerra a dreta|)}{154}
+\indexentry{scripts@\emph{scripts}!versus m\IeC {\`e}todes|(}{160}
+\indexentry{dibuixar!quadrats|(}{160}
+\indexentry{metodes@m\IeC {\`e}todes!versus \emph{scripts}|(}{160}
+\indexentry{quadrats!dibuixar|(}{160}
+\indexentry{scripts@\emph{scripts}!versus m\IeC {\`e}todes|)}{161}
+\indexentry{quadrats!dibuixar|)}{161}
+\indexentry{dibuixar!quadrats|)}{161}
+\indexentry{metodes@m\IeC {\`e}todes!versus \emph{scripts}|)}{161}
+\indexentry{Explorador de la classe Bot!propietats de}{161}
+\indexentry{Explorador de la classe Bot!utilitzar el}{162}
+\indexentry{subfinestres de l'Explorador de la Classe Bot, explicaci\IeC {\'o} de}{162}
+\indexentry{metodes@m\IeC {\`e}todes!definir amb l'Explorador de la classe Bot}{162}
+\indexentry{categories!crear pels m\IeC {\`e}todes|(}{163}
+\indexentry{metodes, categories@m\IeC {\`e}todes, categories de|(}{163}
+\indexentry{categories!crear pels m\IeC {\`e}todes|)}{164}
+\indexentry{metodes, categories@m\IeC {\`e}todes, categories de|)}{164}
+\indexentry{metodes@m\IeC {\`e}todes!definir amb l'Explorador de la classe Bot|(}{165}
+\indexentry{metodes@m\IeC {\`e}todes!compilar i comprovar}{166}
+\indexentry{metodes@m\IeC {\`e}todes!definir amb l'Explorador de la classe Bot|)}{166}
+\indexentry{metodes@m\IeC {\`e}todes!utilitzar i reutilitzar}{166}
+\indexentry{metodes@m\IeC {\`e}todes!components de|(}{166}
+\indexentry{comentaris, incloure dins dels m\IeC {\`e}todes}{167}
+\indexentry{'' (cometes), utilitzades en comentaris}{167}
+\indexentry{cometes (''), utilitzades en comentaris}{167}
+\indexentry{expressions!relaci\IeC {\'o} amb els m\IeC {\`e}todes}{167}
+\indexentry{metodes@m\IeC {\`e}todes!relaci\IeC {\'o} amb les expressions}{167}
+\indexentry{scripts@\emph{scripts}!versus m\IeC {\`e}todes|(}{168}
+\indexentry{metodes@m\IeC {\`e}todes!components de|)}{168}
+\indexentry{metodes@m\IeC {\`e}todes!versus \emph{scripts}|(}{168}
+\indexentry{dibuixar!quadrats}{168}
+\indexentry{self variable, relaci\IeC {\'o} amb els m\IeC {\`e}todes}{168}
+\indexentry{variable, nom de!self}{168}
+\indexentry{receptors!enviar missatges a}{169}
+\indexentry{scripts@\emph{scripts}!versus m\IeC {\`e}todes|)}{169}
+\indexentry{valors!retornar|(}{169}
+\indexentry{metodes@m\IeC {\`e}todes!versus \emph{scripts}|)}{169}
+\indexentry{accent circumflex (\textasciicircum), retornar valors amb}{169}
+\indexentry{\textasciicircum, retornar valors amb}{169}
+\indexentry{receptors!retornar amb el m\IeC {\`e}tode quadrat}{170}
+\indexentry{quadrat: m\IeC {\`e}tode!retornar el receptor del missatge amb}{170}
+\indexentry{valors!retornar|)}{170}
+\indexentry{dibuixar!figures|(}{170}
+\indexentry{figures!dibuixar|(}{170}
+\indexentry{disseny abstracte@un disseny abstracte senzill, Experiment}{171}
+\indexentry{Experiments!disseny abstracte@un disseny abstracte senzill}{171}
+\indexentry{dibuixar!figures|)}{172}
+\indexentry{figures!dibuixar|)}{172}
+\indexentry{metode pel marc@un m\IeC {\`e}tode pel marc art nouveau, Experiment}{172}
+\indexentry{Experiments!metode pel marc@un m\IeC {\`e}tode pel marc art nouveau}{172}
+\indexentry{compondre m\IeC {\`e}todes, definici\IeC {\'o} de|seealso{m\IeC {\`e}todes}}{172}
+\indexentry{Glossari per a m\IeC {\`e}todes}{173}
+\indexentry{compondre m\IeC {\`e}todes, definici\IeC {\'o} de}{176}
+\indexentry{figures!exemples de|(}{176}
+\indexentry{patro4, m\IeC {\`e}tode!definir|(}{176}
+\indexentry{roda @una roda, Experiment}{177}
+\indexentry{Experiments!roda @una roda}{177}
+\indexentry{duplicar el marc, Experiment}{177}
+\indexentry{Experiments!duplicar el marc}{177}
+\indexentry{dobleMarc m\IeC {\`e}tode, definir|(}{177}
+\indexentry{metodes@m\IeC {\`e}todes!utilitzar i reutilitzar}{178}
+\indexentry{patrons|see{figures}}{178}
+\indexentry{figures!exemples de|)}{178}
+\indexentry{patro4, m\IeC {\`e}tode!definir|)}{178}
+\indexentry{patroInclinat m\IeC {\`e}tode, significat de}{178}
+\indexentry{abstracci\IeC {\'o}, construint sobre els detalls de la definici\IeC {\'o}}{178}
+\indexentry{metodes@m\IeC {\`e}todes!cridar altres m\IeC {\`e}todes amb}{178}
+\indexentry{dobleMarc m\IeC {\`e}tode, definir|)}{179}
+\indexentry{dobleMarcSenseCridarPatro m\IeC {\`e}tode, definir}{179}
+\indexentry{quadrat: m\IeC {\`e}tode!definir m\IeC {\`e}todes amb}{179}
+\indexentry{metodes@m\IeC {\`e}todes!definir amb el m\IeC {\`e}tode quadrat}{179}
+\indexentry{algunes capses, Experiment}{179}
+\indexentry{Experiments!algunes capses}{179}
+\indexentry{trieu vosaltres, Experiment}{180}
+\indexentry{Experiments!trieu vosaltres}{180}
+\indexentry{estrella @una estrella, Experiment}{180}
+\indexentry{Experiments!estrella @una estrella}{180}
+\indexentry{metode@m\IeC {\`e}tode capsa, definir m\IeC {\`e}tode estrella amb}{180}
+\indexentry{parametres@par\IeC {\`a}metres!definici\IeC {\'o} de}{184}
+\indexentry{arguments!utilitzar en m\IeC {\`e}todes}{184}
+\indexentry{missatge, selectors de!utilitzar dos punts (:) amb}{184}
+\indexentry{metodes@m\IeC {\`e}todes!utilitzar arguments amb}{184}
+\indexentry{metodes@m\IeC {\`e}todes!definir amb m\IeC {\'u}ltiples arguments}{184}
+\indexentry{: (dos punts)!utilitzar en selectors de missatge}{184}
+\indexentry{dos punts (:)!utilitzar en selectors de missatge}{184}
+\indexentry{metodes@m\IeC {\`e}todes!per dibuixar quadrats|(}{184}
+\indexentry{quadrats!dibuixar amb m\IeC {\`e}todes|(}{184}
+\indexentry{midaCostat par\IeC {\`a}metre!utilitzar al m\IeC {\`e}tode quadrat:}{185}
+\indexentry{quadrat: m\IeC {\`e}tode!utilitzar el par\IeC {\`a}metre midaCostat amb}{185}
+\indexentry{metodes@m\IeC {\`e}todes!per dibuixar quadrats|)}{185}
+\indexentry{parametres@par\IeC {\`a}metres!utilitzar}{186}
+\indexentry{metode per dibuixar un hex\IeC {\`a}gon@un m\IeC {\`e}tode per dibuixar un hex\IeC {\`a}gon, Experiment}{186}
+\indexentry{Experiments!metode per dibuixar un hex\IeC {\`a}gon@un m\IeC {\`e}tode per dibuixar un hex\IeC {\`a}gon}{186}
+\indexentry{hex\IeC {\`a}gons!dibuixar amb par\IeC {\`a}metres}{186}
+\indexentry{metode per dibuixar una creu@un m\IeC {\`e}tode per dibuixar una creu, Experiment}{187}
+\indexentry{Experiments!metode per dibuixar una creu@un m\IeC {\`e}tode per dibuixar una creu}{187}
+\indexentry{creu, dibuixar amb par\IeC {\`a}metres}{187}
+\indexentry{variables!metodes@en m\IeC {\`e}todes|(}{187}
+\indexentry{metodes@m\IeC {\`e}todes!variables en|(}{187}
+\indexentry{parametres@par\IeC {\`a}metres!utilitzar en pol\IeC {\'\i }gons}{187}
+\indexentry{poligon@pol\IeC {\'\i }gon!utilitzar variables i par\IeC {\`a}metres amb}{187}
+\indexentry{quadrats!dibuixar amb m\IeC {\`e}todes|)}{187}
+\indexentry{nombreDeCostats variable, utilitzar en m\IeC {\`e}todes}{188}
+\indexentry{variable angle!utilitzaci\IeC {\'o} en m\IeC {\`e}todes}{188}
+\indexentry{hept\IeC {\`a}gon, dibuixar amb el m\IeC {\`e}tode poligon100:}{188}
+\indexentry{parametres@par\IeC {\`a}metres!definir m\IeC {\`e}todes amb}{188}
+\indexentry{pol\IeC {\'\i }gon100}{188}
+\indexentry{pent\IeC {\`a}gon, dibuixar amb el m\IeC {\`e}tode poligon100:}{189}
+\indexentry{variables!metodes@en m\IeC {\`e}todes|)}{189}
+\indexentry{metodes@m\IeC {\`e}todes!variables en|)}{189}
+\indexentry{: (dos punts)!utilitzar en m\IeC {\`e}todes i par\IeC {\`a}metres}{189}
+\indexentry{dos punts (:)!utilitzar en m\IeC {\`e}todes i par\IeC {\`a}metres}{189}
+\indexentry{arguments!per a m\IeC {\`e}todes}{189}
+\indexentry{metodes@m\IeC {\`e}todes!utilitzar arguments amb}{189}
+\indexentry{metodes@m\IeC {\`e}todes!definir amb m\IeC {\'u}ltiples par\IeC {\`a}metres}{189}
+\indexentry{poligon:mida: m\IeC {\`e}tode, definir}{189}
+\indexentry{valorMida par\IeC {\`a}metre, exemple de}{190}
+\indexentry{bucles imbricats, exemples de|seealso{bucles}}{190}
+\indexentry{parametres@par\IeC {\`a}metres!donar nom als}{190}
+\indexentry{rectangleAmplada:altura: m\IeC {\`e}tode, definici\IeC {\'o}}{190}
+\indexentry{creuRecorregut1:recorregut2: m\IeC {\`e}tode, definir}{191}
+\indexentry{variables!parametres@i par\IeC {\`a}metres|(}{191}
+\indexentry{parametres@par\IeC {\`a}metres!variables@i variables|(}{191}
+\indexentry{quadrat, \emph{script}, utilitzar variable amb}{191}
+\indexentry{variables!utilitzar en l'\emph{script} del quadrat}{192}
+\indexentry{parametres@par\IeC {\`a}metres!dibuixar quadrats amb}{192}
+\indexentry{parametres@par\IeC {\`a}metres!propietats dels}{192}
+\indexentry{: (dos punts)!utilitzar en par\IeC {\`a}metres}{192}
+\indexentry{dos punts (:)!utilitzar en par\IeC {\`a}metres}{192}
+\indexentry{parametres@par\IeC {\`a}metres, canviar el valor dels}{192}
+\indexentry{parametres@par\IeC {\`a}metres!declarar}{192}
+\indexentry{parametres@par\IeC {\`a}metres!no es pot assignar valors als}{192}
+\indexentry{parametres@par\IeC {\`a}metres!variables@i variables|)}{193}
+\indexentry{variable, valor; canviar}{193}
+\indexentry{variables!parametres@i par\IeC {\`a}metres|)}{193}
+\indexentry{arguments!i par\IeC {\`a}metres|(}{193}
+\indexentry{parametres@par\IeC {\`a}metres!arguments@i arguments|(}{193}
+\indexentry{variables!argument@com a argument}{194}
+\indexentry{arguments!variables com a}{195}
+\indexentry{metodes, exec@m\IeC {\`e}todes, execuci\IeC {\'o}|(}{195}
+\indexentry{quadrat: m\IeC {\`e}tode!execuci\IeC {\'o} de}{195}
+\indexentry{metodes@m\IeC {\`e}todes|seealso{compondre m\IeC {\`e}todes}}{196}
+\indexentry{self variable, relaci\IeC {\'o} amb els m\IeC {\`e}todes}{196}
+\indexentry{metodes, exec@m\IeC {\`e}todes, execuci\IeC {\'o}|)}{196}
+\indexentry{: (dos punts)!utilitzar en m\IeC {\`e}todes i m\IeC {\'u}ltiples arguments}{196}
+\indexentry{dos punts (:)!utilitzar en m\IeC {\`e}todes i m\IeC {\'u}ltiples arguments}{196}
+\indexentry{arguments!i par\IeC {\`a}metres|)}{196}
+\indexentry{parametres@par\IeC {\`a}metres!arguments@i arguments|)}{196}
+\indexentry{depurador (\emph{debugger})!definici\IeC {\'o} del}{197}
+\indexentry{nil valor, significat de|(}{197}
+\indexentry{variables!valor per defecte de|(}{197}
+\indexentry{valors!representar amb nil|(}{197}
+\indexentry{mida, variable; declarar}{198}
+\indexentry{nil valor, significat de|)}{199}
+\indexentry{valors!representar amb nil|)}{199}
+\indexentry{variables!valor per defecte de|)}{199}
+\indexentry{missatge, examinar l'execuci\IeC {\'o} del|(}{199}
+\indexentry{patro, m\IeC {\`e}tode!definir}{199}
+\indexentry{patro4, m\IeC {\`e}tode!definir}{199}
+\indexentry{negreta (tipus de lletra), significat de |(}{200}
+\indexentry{negreta (tipus de lletra), significat de |)}{200}
+\indexentry{Bot nou patro4, execuci\IeC {\'o} de}{200}
+\indexentry{pila d'execuci\IeC {\'o}, exemple de}{200}
+\indexentry{missatge, examinar l'execuci\IeC {\'o} del|)}{200}
+\indexentry{depurador (\emph{debugger})!invocar|(}{202}
+\indexentry{expressions!self halt|(}{202}
+\indexentry{self halt expressi\IeC {\'o}, obrir el depurador amb|(}{202}
+\indexentry{receptors dels missatges|see{missatges}}{202}
+\indexentry{missatges|seealso{binaris, missatges; cascades; paraula-clau, missatges; ordre d'execuci\IeC {\'o}; unaris, missatges}}{202}
+\indexentry{expressions!self halt|)}{203}
+\indexentry{Abandon, bot\IeC {\'o}; a la finestra del depurador, efecte}{203}
+\indexentry{Debug, bot\IeC {\'o}; a la finestra del depurador, efecte}{203}
+\indexentry{depurador (\emph{debugger})!invocar|)}{203}
+\indexentry{self halt expressi\IeC {\'o}, obrir el depurador amb|)}{203}
+\indexentry{Proceed, bot\IeC {\'o}; utilitzar al depurador}{203}
+\indexentry{depurador, obrir la finestra del}{204}
+\indexentry{patro, m\IeC {\`e}tode!seleccionar a la finestra del depurador}{204}
+\indexentry{patro4, m\IeC {\`e}tode!seleccionar dins del depurador}{205}
+\indexentry{vegadesRepetir: m\IeC {\`e}tode!mostrar en el depurador}{205}
+\indexentry{pila, depurador; anar pas a pas per la}{206}
+\indexentry{depurador (\emph{debugger})|seealso{errors; errors de programa}}{206}
+\indexentry{depurador (\emph{debugger})!tancar}{206}
+\indexentry{Proceed, bot\IeC {\'o}; utilitzar al depurador}{206}
+\indexentry{Restart, bot\IeC {\'o}; utilitzar al depurador}{206}
+\indexentry{Into, bot\IeC {\'o}; utilitzar al depurador}{206}
+\indexentry{Over, bot\IeC {\'o}; utilitzar al depurador}{207}
+\indexentry{missatges!executar}{207}
+\indexentry{metodes@m\IeC {\`e}todes!depurar}{207}
+\indexentry{patro, m\IeC {\`e}tode!examinar}{207}
+\indexentry{valor dels arguments, visualitzant-los amb el depurador}{207}
+\indexentry{depurador (\emph{debugger})!escriure arguments des del}{207}
+\indexentry{metodes@m\IeC {\`e}todes!entrar sense executar|(}{207}
+\indexentry{escriure!arguments des del depurador}{207}
+\indexentry{metodes, definic@m\IeC {\`e}todes, definicions; modificar amb el depurador}{209}
+\indexentry{metodes@m\IeC {\`e}todes!entrar sense executar|)}{209}
+\indexentry{doesNotUnderstand m\IeC {\`e}tode, efecte de}{209}
+\indexentry{errors!corregir|(}{209}
+\indexentry{metodes@m\IeC {\`e}todes!recompilar amb el depurador}{209}
+\indexentry{patro, m\IeC {\`e}tode!depurar}{209}
+\indexentry{nil valor, significat de|(}{210}
+\indexentry{Proceed, bot\IeC {\'o}; utilitzar al depurador}{211}
+\indexentry{patro, m\IeC {\`e}tode!recompilar amb el depurador}{211}
+\indexentry{errors!corregir|)}{211}
+\indexentry{metodes, definic@m\IeC {\`e}todes, definicions; modificar amb el depurador}{211}
+\indexentry{nil valor, significat de|)}{211}
+\indexentry{compondre solucions, significat de}{213}
+\indexentry{descompondre problemes, significat de}{213}
+\indexentry{laberints, crear|(}{214}
+\indexentry{quadrats centrats, crear|(}{214}
+\indexentry{ones quadrades en un estany quadrat, Experiment}{214}
+\indexentry{Experiments!ones quadrades en un estany quadrat}{214}
+\indexentry{passadis @un passad\IeC {\'\i }s, Experiment}{215}
+\indexentry{Experiments!passadis @un passad\IeC {\'\i }s}{215}
+\indexentry{Quadrats Russos, Experiment}{215}
+\indexentry{Experiments!Quadrats Russos}{215}
+\indexentry{quadrats centrats, crear|)}{215}
+\indexentry{laberints, crear|)}{215}
+\indexentry{espirals, crear}{216}
+\indexentry{parametres@par\IeC {\`a}metres!utillitzar amb espirals}{216}
+\indexentry{espiral d'angle constant@una espiral d'angle constant, Experiment}{216}
+\indexentry{Experiments!espiral d'angle constant@una espiral d'angle constant}{216}
+\indexentry{espiral d'angle constant, definici\IeC {\'o}}{216}
+\indexentry{altra espiral@una altra espiral, Experiment}{216}
+\indexentry{Experiments!altra espiral@una altra espiral}{216}
+\indexentry{espiral amb quatre@una espiral amb quatre par\IeC {\`a}metres, Experiment}{217}
+\indexentry{Experiments!espiral amb quatre@una espiral amb quatre par\IeC {\`a}metres}{217}
+\indexentry{espirals amb dist\IeC {\`a}ncia constant, Experiment}{217}
+\indexentry{Experiments!espirals amb dist\IeC {\`a}ncia constant}{217}
+\indexentry{espirals a partir de quadrats, Experiment}{218}
+\indexentry{Experiments!espirals a partir de quadrats}{218}
+\indexentry{espiral a partir de l\IeC {\'\i }nies@una espiral a partir de l\IeC {\'\i }nies, Experiment}{218}
+\indexentry{Experiments!espiral a partir de l\IeC {\'\i }nies@una espiral a partir de l\IeC {\'\i }nies}{218}
+\indexentry{linies@l\IeC {\'\i }nies!crear espirals a partir de}{218}
+\indexentry{rectangles d'or|seealso{rectangles}}{219}
+\indexentry{rectangles d'or!dibuixar|(}{219}
+\indexentry{rectangles d'or!imbricar}{219}
+\indexentry{secci\IeC {\'o} \IeC {\`a}uria, calcular}{219}
+\indexentry{metodes@m\IeC {\`e}todes!definir per dibuixar rectangles d'or|(}{219}
+\indexentry{rectangles d'or!dibuixar|)}{220}
+\indexentry{rectangles d'or!un-rectangle-per-l\IeC {\'\i }nia|(}{220}
+\indexentry{metodes@m\IeC {\`e}todes!definir per dibuixar rectangles d'or|)}{221}
+\indexentry{rectangleDaurat: m\IeC {\`e}todes, desenvolupar i exemples de|(}{221}
+\indexentry{liniaDivisoria: m\IeC {\`e}tode, desenvolupar per a rectangles daurats|(}{222}
+\indexentry{liniaDivisoria: m\IeC {\`e}tode, desenvolupar per a rectangles daurats|)}{222}
+\indexentry{rectangles d'or!imbricar}{222}
+\indexentry{rectangles d'or!un-rectangle-per-l\IeC {\'\i }nia|)}{224}
+\indexentry{rectangles d'or incrementals, Experiment}{224}
+\indexentry{Experiments!rectangles d'or incrementals}{224}
+\indexentry{rectangleDaurat: m\IeC {\`e}todes, desenvolupar i exemples de|)}{224}
+\indexentry{quadrat: m\IeC {\`e}tode!reproduir figures amb|(}{224}
+\indexentry{enrajolar quadrats|(}{224}
+\indexentry{bucles imbricats, exemples de|(}{225}
+\indexentry{pir\IeC {\`a}mide rectangular@Una Pir\IeC {\`a}mide Rectangular, Experiment}{225}
+\indexentry{Experiments!pir\IeC {\`a}mide rectangular@Una Pir\IeC {\`a}mide Rectangular}{225}
+\indexentry{pir\IeC {\`a}mide triangular@una pir\IeC {\`a}mide triangular, Experiment}{226}
+\indexentry{Experiments!pir\IeC {\`a}mide triangular@una pir\IeC {\`a}mide triangular}{226}
+\indexentry{tauler de dames, Experiment}{226}
+\indexentry{Experiments!tauler de dames}{226}
+\indexentry{enrajolar quadrats|)}{227}
+\indexentry{quadrat: m\IeC {\`e}tode!reproduir figures amb|)}{227}
+\indexentry{bucles imbricats, exemples de|)}{227}
+\indexentry{quadrats centrats, crear|seealso{quadrats}}{227}
+\indexentry{cadenes de car\IeC {\`a}cters!panorama general}{229}
+\indexentry{' (cometes simples), utilitzades en cadenes de car\IeC {\`a}cters}{229}
+\indexentry{cometes simples ('), utilitzades en cadenes de car\IeC {\`a}cters}{229}
+\indexentry{usuari, comunicaci\IeC {\'o} amb|(}{230}
+\indexentry{PopUp men\IeC {\'u}, exemple de|(}{230}
+\indexentry{pantalla!mostrant informaci\IeC {\'o} a la|(}{230}
+\indexentry{request:initialAnswer: missatge, efecte de}{231}
+\indexentry{pantalla!mostrant informaci\IeC {\'o} a la|)}{231}
+\indexentry{usuari, comunicaci\IeC {\'o} amb|)}{231}
+\indexentry{cadenes de car\IeC {\`a}cters!i car\IeC {\`a}cters|(}{231}
+\indexentry{PopUp men\IeC {\'u}, exemple de|)}{231}
+\indexentry{first m\IeC {\`e}tode, exemple de}{232}
+\indexentry{size m\IeC {\`e}tode, exemple de}{232}
+\indexentry{return@\emph{return} car\IeC {\`a}cters, representar}{232}
+\indexentry{copyUpTo: m\IeC {\`e}tode, exemple de}{232}
+\indexentry{espai, car\IeC {\`a}cter; representar}{232}
+\indexentry{tab car\IeC {\`a}cter, representar}{232}
+\indexentry{asString missatge, exemple de}{233}
+\indexentry{cadenes de car\IeC {\`a}cters!i car\IeC {\`a}cters|)}{233}
+\indexentry{nombres i cadenes, panorama general}{233}
+\indexentry{cadenes de car\IeC {\`a}cters!i nombres}{233}
+\indexentry{execuci\IeC {\'o} de programes, utiltzar el \emph{Transcript} per a la|(}{234}
+\indexentry{Transcript@\emph{Transcript}, eina!utilitzar el|(}{234}
+\indexentry{nombres i cadenes, panorama general}{235}
+\indexentry{cadenes de car\IeC {\`a}cters!i nombres}{235}
+\indexentry{traces!generar|(}{235}
+\indexentry{Transcript@\emph{Transcript}, eina!utilitzar el|)}{235}
+\indexentry{execuci\IeC {\'o} de programes, utiltzar el \emph{Transcript} per a la|)}{235}
+\indexentry{Transcript@\emph{Transcript}, eina!generar traces de programes amb|(}{235}
+\indexentry{:= (expressi\IeC {\'o} d'assignaci\IeC {\'o})!utilitzar per fer traces}{235}
+\indexentry{moviments de robot, seguiment dins dels \emph{scripts}}{235}
+\indexentry{escala!dibuixar amb esglaons|(}{235}
+\indexentry{esglaons!dibuixar una escala amb|(}{235}
+\indexentry{posar una tra\IeC {\c c}a dins del bucle, Experiment}{236}
+\indexentry{Experiments!posar una tra\IeC {\c c}a dins del bucle}{236}
+\indexentry{scripts@\emph{scripts}|seealso{Experiments}}{237}
+\indexentry{scripts@\emph{scripts}!afegir traces als}{237}
+\indexentry{:= (expressi\IeC {\'o} d'assignaci\IeC {\'o})!utilitzar en traces}{237}
+\indexentry{escala!dibuixar amb esglaons|)}{237}
+\indexentry{traces!generar|)}{237}
+\indexentry{Transcript@\emph{Transcript}, eina!generar traces de programes amb|)}{237}
+\indexentry{esglaons!dibuixar una escala amb|)}{237}
+\indexentry{errors|seealso{depurador; errors de programa}}{243}
+\indexentry{colors!canviar-los en els robots|(}{243}
+\indexentry{robots!canviar colors|(}{243}
+\indexentry{expressions condicionals!utilitzar per canviar els colors d'un robot|(}{243}
+\indexentry{detectorDistancia m\IeC {\`e}tode!canviar els colors amb}{244}
+\indexentry{siCert:siFals: m\IeC {\`e}tode!efecte de}{244}
+\indexentry{robots!canviar colors|)}{245}
+\indexentry{expressions condicionals!utilitzar per canviar els colors d'un robot|)}{245}
+\indexentry{expressions condicionals!utilitzar traces amb|(}{245}
+\indexentry{traces!utilitzar en expressions condicionals|(}{245}
+\indexentry{Transcript@\emph{Transcript}, eina!utilitzar en expressions condicionals|(}{245}
+\indexentry{detectorDistancia m\IeC {\`e}tode!amb una tra\IeC {\c c}a}{246}
+\indexentry{valors!retornat pels m\IeC {\`e}todes}{246}
+\indexentry{metodes@m\IeC {\`e}todes!valor retornat per}{246}
+\indexentry{colors!canviar-los en els robots|)}{246}
+\indexentry{bloc condicional, exemple de}{246}
+\indexentry{expressions condicionals!utilitzar traces amb|)}{246}
+\indexentry{traces!utilitzar en expressions condicionals|)}{246}
+\indexentry{Transcript@\emph{Transcript}, eina!utilitzar en expressions condicionals|)}{246}
+\indexentry{[] (claud\IeC {\`a}tors)!utilitzar en blocs condicionals}{246}
+\indexentry{claud\IeC {\`a}tors ([])!utilitzar en blocs condicionals}{246}
+\indexentry{expressions condicionals!components de}{246}
+\indexentry{expressions condicionals!amb una sola bifurcaci\IeC {\'o}|(}{247}
+\indexentry{siFals: m\IeC {\`e}tode, efecte de|(}{247}
+\indexentry{siCert:siFals: m\IeC {\`e}tode!utilitzar bloc condicional buit amb}{247}
+\indexentry{condicionals m\IeC {\`e}todes, triar}{248}
+\indexentry{expressions condicionals!imbricar|(}{248}
+\indexentry{siFals: m\IeC {\`e}tode, efecte de|)}{248}
+\indexentry{expressions condicionals!amb una sola bifurcaci\IeC {\'o}|)}{248}
+\indexentry{colors!canviar-los en els robots|(}{248}
+\indexentry{robots!acolorir|(}{248}
+\indexentry{colors!canviar-los en els robots|)}{250}
+\indexentry{robots!acolorir|)}{250}
+\indexentry{girDeColors: m\IeC {\`e}tode!definir}{250}
+\indexentry{colors!relaci\IeC {\'o} amb la direcci\IeC {\'o} del robot|(}{250}
+\indexentry{expressions condicionals!imbricar|)}{250}
+\indexentry{errors!aprendre de|(}{250}
+\indexentry{girDeColors: m\IeC {\`e}tode!depurar|(}{251}
+\indexentry{girDeColors: m\IeC {\`e}tode!depurar|)}{252}
+\indexentry{colors!relaci\IeC {\'o} amb la direcci\IeC {\'o} del robot|)}{252}
+\indexentry{errors!aprendre de|)}{252}
+\indexentry{interpretar un petit llenguatge}{252}
+\indexentry{llenguatge petit, interpretar|(}{252}
+\indexentry{Lindenmeyer sistemes, significat de}{252}
+\indexentry{interpreta: m\IeC {\`e}tode, definir}{252}
+\indexentry{llenguatge petit, interpretar|)}{254}
+\indexentry{unaCondici\IeC {\'o} (m\IeC {\`e}tode), descripci\IeC {\'o} i exemple de}{255}
+\indexentry{repeticions condicionals!exemple de|(}{257}
+\indexentry{mentreCert: bucle!efecte de}{257}
+\indexentry{mentreFals: bucle!efecte de}{257}
+\indexentry{bucles condicionals|see{repeticions condicionals}}{258}
+\indexentry{repeticions condicionals!components de|(}{258}
+\indexentry{finsA100 m\IeC {\`e}tode!efecte de}{258}
+\indexentry{robots!moure al nord}{259}
+\indexentry{direcci\IeC {\'o} nord, moure el robot en la}{259}
+\indexentry{mentreCert: bucle!components de}{259}
+\indexentry{mentreFals: bucle!components de}{259}
+\indexentry{repeticions condicionals!components de|)}{260}
+\indexentry{repeticions condicionals!exemple de|)}{260}
+\indexentry{metodes@m\IeC {\`e}todes!afegir traces|(}{260}
+\indexentry{traces!afegir als m\IeC {\`e}todes|(}{260}
+\indexentry{finsA100 m\IeC {\`e}tode!afegir una tra\IeC {\c c}a a|(}{260}
+\indexentry{Transcript@\emph{Transcript}, eina!utilitzar al m\IeC {\`e}tode finsA100}{261}
+\indexentry{finsA100 m\IeC {\`e}tode!afegir una tra\IeC {\c c}a a|)}{262}
+\indexentry{mentreCert: bucle!convertir a mentreFals:}{262}
+\indexentry{repeticions condicionals!definir}{262}
+\indexentry{repeticions condicionals!efecte d'executar nom\IeC {\'e}s un cop}{263}
+\indexentry{metodes@m\IeC {\`e}todes!afegir traces|)}{263}
+\indexentry{traces!afegir als m\IeC {\`e}todes|)}{263}
+\indexentry{depurador (\emph{debugger})!utilitzar als bucles infinits}{263}
+\indexentry{bucles infinits, aturar|(}{263}
+\indexentry{bucles!aturar|(}{263}
+\indexentry{bucles!definir}{264}
+\indexentry{bucles!aturar|)}{264}
+\indexentry{finsA100Infinit, m\IeC {\`e}tode; executar}{264}
+\indexentry{bucles infinits, aturar|)}{264}
+\indexentry{[] (claud\IeC {\`a}tors)!utilitzar en repeticions}{265}
+\indexentry{claud\IeC {\`a}tors ([])!utilitzar en repeticions}{265}
+\indexentry{direcci\IeC {\'o} nord, moure el robot en la}{265}
+\indexentry{interactiva, aplicaci\IeC {\'o}; exemple de|(}{265}
+\indexentry{escala!versi\IeC {\'o} interactiva}{266}
+\indexentry{interactiva, aplicaci\IeC {\'o}; exemple de|)}{266}
+\indexentry{robots!moure al nord}{266}
+\indexentry{bucle controlat per les dades d'entrada proporcionades per l'usuari, afegir a una escala interactiva}{266}
+\indexentry{[] (claud\IeC {\`a}tors)!utilitzaci\IeC {\'o} de}{267}
+\indexentry{claud\IeC {\`a}tors ([])!utilitzaci\IeC {\'o} de}{267}
+\indexentry{expressions!utilitzar claud\IeC {\`a}tors ([]) amb}{267}
+\indexentry{mentreCert: bucle!descripci\IeC {\'o} i exemple de}{268}
+\indexentry{mentreFals: bucle!descripci\IeC {\'o} i exemple de}{268}
+\indexentry{expressions booleanes!exemples de|(}{269}
+\indexentry{true i false, objectes retornats amb expressions booleanes|(}{269}
+\indexentry{valors booleans, exemples de}{269}
+\indexentry{false i true, objectes; retornar amb expressions booleanes|(}{270}
+\indexentry{missatges!utilitzar en expressions booleanes|(}{270}
+\indexentry{false i true, objectes; retornar amb expressions booleanes|)}{270}
+\indexentry{expressions booleanes!exemples de|)}{271}
+\indexentry{true i false, objectes retornats amb expressions booleanes|)}{271}
+\indexentry{disjunci\IeC {\'o} (or) missatges, exemple de}{271}
+\indexentry{expressions booleanes!combinar|(}{271}
+\indexentry{compostes, expressions booleanes, utilitzar|(}{271}
+\indexentry{negaci\IeC {\'o} (not) missatge, exemple de|(}{271}
+\indexentry{not (negaci\IeC {\'o}) missatge!exemple de|(}{271}
+\indexentry{o (\textbar) missatge!exemple de}{271}
+\indexentry{\& (conjunci\IeC {\'o}) missatge!exemples|(}{271}
+\indexentry{conjunci\IeC {\'o} (\&) missatge!exemples|(}{271}
+\indexentry{\textbar (disjunci\IeC {\'o}) missatge!exemples|(}{271}
+\indexentry{disjunci\IeC {\'o} (\textbar) missatge!exemples|(}{271}
+\indexentry{negaci\IeC {\'o} (not) missatge, exemple de|)}{273}
+\indexentry{not (negaci\IeC {\'o}) missatge!exemple de|)}{273}
+\indexentry{o (\textbar) missatge!exemple de|(}{273}
+\indexentry{o (disjunci\IeC {\'o}) missatge!exemple de|(}{273}
+\indexentry{expressions booleanes!combinar|)}{274}
+\indexentry{compostes, expressions booleanes, utilitzar|)}{274}
+\indexentry{missatges!utilitzar en expressions booleanes|)}{274}
+\indexentry{objectes!classes com a f\IeC {\`a}briques de|(}{274}
+\indexentry{disjunci\IeC {\'o} (or) missatges, exemple de}{274}
+\indexentry{operadors booleans, exemples de}{274}
+\indexentry{negaci\IeC {\'o} (not) missatge, exemple de}{274}
+\indexentry{not (negaci\IeC {\'o}) missatge!exemple de}{274}
+\indexentry{\& (conjunci\IeC {\'o}) missatge!exemples|)}{274}
+\indexentry{conjunci\IeC {\'o} (\&) missatge!exemples|)}{274}
+\indexentry{\textbar (disjunci\IeC {\'o}) missatge!exemples|)}{274}
+\indexentry{disjunci\IeC {\'o} (\textbar) missatge!exemples|)}{274}
+\indexentry{objectes!classes com a f\IeC {\`a}briques de|)}{274}
+\indexentry{o (\textbar) missatge!exemple de|)}{274}
+\indexentry{o (disjunci\IeC {\'o}) missatge!exemple de|)}{274}
+\indexentry{() (par\IeC {\`e}ntesi)!errors provocats per|(}{274}
+\indexentry{par\IeC {\`e}ntesi (())!errors provocats per|(}{274}
+\indexentry{expressions booleanes!errors}{275}
+\indexentry{cas d'estudi del missatge d'error provocat pel missatge not}{275}
+\indexentry{not (negaci\IeC {\'o}) missatge!error amb par\IeC {\`e}ntesis}{275}
+\indexentry{depurador (\emph{debugger})!corregir errors amb par\IeC {\`e}ntesis amb el}{275}
+\indexentry{ordre d'execuci\IeC {\'o}|seealso{missatges}}{276}
+\indexentry{missatges!ordre d'execuci\IeC {\'o} dels}{276}
+\indexentry{ordre d'execuci\IeC {\'o}!de missatges}{277}
+\indexentry{\& (conjunci\IeC {\'o}) missatge!error de par\IeC {\`e}ntesi relacionat amb}{277}
+\indexentry{conjunci\IeC {\'o} (\&) missatge!error de par\IeC {\`e}ntesi relacionat amb}{277}
+\indexentry{\textbar (disjunci\IeC {\'o}) missatge!error de par\IeC {\`e}ntesi relacionat amb}{277}
+\indexentry{disjunci\IeC {\'o} (\textbar) missatge!error de par\IeC {\`e}ntesi relacionat amb}{277}
+\indexentry{o (\textbar) missatge!error de par\IeC {\`e}ntesi relacionat amb}{277}
+\indexentry{() (par\IeC {\`e}ntesi)!errors provocats per|)}{278}
+\indexentry{par\IeC {\`e}ntesi (())!errors provocats per|)}{278}
+\indexentry{disjunci\IeC {\'o} (or) missatges, exemple de}{278}
+\indexentry{negaci\IeC {\'o} (not) missatge, exemple de}{278}
+\indexentry{not (negaci\IeC {\'o}) missatge!exemple de}{278}
+\indexentry{\& (conjunci\IeC {\'o}) missatge!exemples}{278}
+\indexentry{conjunci\IeC {\'o} (\&) missatge!exemples}{278}
+\indexentry{o (\textbar) missatge!exemple de}{278}
+\indexentry{o (disjunci\IeC {\'o}) missatge!exemple de}{278}
+\indexentry{relativa!orientaci\IeC {\'o}, versus orientaci\IeC {\'o} absoluta}{279}
+\indexentry{posici\IeC {\'o}!representaci\IeC {\'o} com a punts}{280}
+\indexentry{punts!panorama general|(}{280}
+\indexentry{sistema de coordenades a Smalltalk, descripci\IeC {\'o} de}{281}
+\indexentry{sisteme de coordenades matem\IeC {\`a}tic, comparaci\IeC {\'o} amb Smalltalk}{281}
+\indexentry{Smalltalk!sistema de coordenades}{281}
+\indexentry{punts!panorama general|)}{282}
+\indexentry{colors!canviar-los en quadr\IeC {\'\i }cules}{282}
+\indexentry{quadr\IeC {\'\i }cules, utilitzar|(}{282}
+\indexentry{drawGrids m\IeC {\`e}tode, utilitzar}{283}
+\indexentry{unDrawGrids m\IeC {\`e}tode, utilitzar}{283}
+\indexentry{pantalla completa, mode; canviar a}{283}
+\indexentry{pantalla!canviant la mida de la}{283}
+\indexentry{Mon@M\IeC {\'o}n (\emph{World}) men\IeC {\'u}!canviar la mida de la pantalla amb}{283}
+\indexentry{quadr\IeC {\'\i }cules, utilitzar|)}{283}
+\indexentry{errors!generar-ne manipulant punts|(}{283}
+\indexentry{ordre d'execuci\IeC {\'o}!de missatges|(}{283}
+\indexentry{() (par\IeC {\`e}ntesi)!utilitzats amb punts}{283}
+\indexentry{par\IeC {\`e}ntesi (())!utilitzats amb punts}{283}
+\indexentry{missatges!ordre d'execuci\IeC {\'o} dels|(}{284}
+\indexentry{"@ m\IeC {\`e}tode, efecte del}{284}
+\indexentry{50"@60 + 200"@400, descompondre}{284}
+\indexentry{missatges!ordre d'execuci\IeC {\'o} dels|)}{284}
+\indexentry{50"@60@(50"@60) + (200"@400), descompondre}{284}
+\indexentry{errors!generar-ne manipulant punts|)}{285}
+\indexentry{ordre d'execuci\IeC {\'o}!de missatges|)}{285}
+\indexentry{moviments absoluts!fer|(}{285}
+\indexentry{robots!fer moviments absoluts amb|(}{285}
+\indexentry{saltaA: m\IeC {\`e}tode versus vesA: unPunt|(}{285}
+\indexentry{vesA: m\IeC {\`e}tode!versus saltaA: unPunt|(}{285}
+\indexentry{salta: missatges!efecte en moviments absoluts|(}{285}
+\indexentry{moviments absoluts!fer|)}{285}
+\indexentry{saltaA: m\IeC {\`e}tode versus vesA: unPunt|)}{285}
+\indexentry{vesA: m\IeC {\`e}tode!versus saltaA: unPunt|)}{285}
+\indexentry{salta: missatges!efecte en moviments absoluts|)}{285}
+\indexentry{posici\IeC {\'o}!saltar a una}{285}
+\indexentry{robots!fer moviments absoluts amb|)}{285}
+\indexentry{absolut!moviment, versus moviment relatiu|(}{285}
+\indexentry{relatiu!moviment, versus moviment absolut|(}{285}
+\indexentry{moviment!relatiu versus absolut|(}{285}
+\indexentry{paralel@paral\IeC {\textperiodcentered }lel, moviment; exemple de}{286}
+\indexentry{absolut!moviment, versus moviment relatiu|)}{288}
+\indexentry{relatiu!moviment, versus moviment absolut|)}{288}
+\indexentry{moviment!relatiu versus absolut|)}{288}
+\indexentry{Rectangles, experiments}{288}
+\indexentry{rectangle 1, Experiment}{288}
+\indexentry{Experiments!rectangle 1}{288}
+\indexentry{rectangle 2, Experiment}{288}
+\indexentry{Experiments!rectangle 2}{288}
+\indexentry{translacions!panorama general|(}{288}
+\indexentry{Triangle 1, Experiment}{289}
+\indexentry{Experiments!Triangle 1}{289}
+\indexentry{translacions!panorama general|)}{290}
+\indexentry{translacions!triangles@de triangles|(}{290}
+\indexentry{triangles!traslladar|(}{290}
+\indexentry{translacions!d'oques volant|(}{291}
+\indexentry{translacions!triangles@de triangles|)}{291}
+\indexentry{triangles!traslladar|)}{291}
+\indexentry{oques volant, patrons de}{291}
+\indexentry{triangle 2, Experiment}{292}
+\indexentry{Experiments!triangle 2}{292}
+\indexentry{translacions!d'oques volant|)}{292}
+\indexentry{moviments absoluts!significat de|(}{292}
+\indexentry{punts!moviments ab@i moviments absoluts|(}{292}
+\indexentry{A!utilitzar moviments absoluts amb|(}{293}
+\indexentry{lletra A!utilitzar moviments absoluts amb|(}{293}
+\indexentry{salts, dibuixar la lletra A amb}{293}
+\indexentry{fletxes, Experiment}{294}
+\indexentry{Experiments!fletxes}{294}
+\indexentry{A!utilitzar moviments absoluts amb|)}{294}
+\indexentry{lletra A!utilitzar moviments absoluts amb|)}{294}
+\indexentry{moviments absoluts!significat de|)}{294}
+\indexentry{punts!moviments ab@i moviments absoluts|)}{294}
+\indexentry{punts!utilitzar negated amb els m\IeC {\`e}todes setX:setY:}{294}
+\indexentry{oques volant, patrons de|(}{295}
+\indexentry{translacions!bucles@i bucles|(}{295}
+\indexentry{bucles!translacions@i translacions|(}{295}
+\indexentry{negated m\IeC {\`e}tode, utilitzar en punts}{295}
+\indexentry{setX:setY: m\IeC {\`e}tode, utilitzar en punts}{295}
+\indexentry{oques volant, patrons de|)}{296}
+\indexentry{bucles!translacions@i translacions|)}{296}
+\indexentry{translacions!bucles@i bucles|)}{296}
+\indexentry{traslladar un robot a un punt, Experiment}{296}
+\indexentry{Experiments!traslladar un robot a un punt}{296}
+\indexentry{punts!traslladar robots a}{296}
+\indexentry{robots!traslladar a un punt}{297}
+\indexentry{utilitzar el m\IeC {\`e}tode trasllada: 1, Experiment}{297}
+\indexentry{Experiments!utilitzar el m\IeC {\`e}tode trasllada: 1}{297}
+\indexentry{utilitzar el m\IeC {\`e}tode trasllada: 2, Experiment}{297}
+\indexentry{Experiments!utilitzar el m\IeC {\`e}tode trasllada: 2}{297}
+\indexentry{vesA: m\IeC {\`e}tode!descripci\IeC {\'o} i exemple}{297}
+\indexentry{center (missatge), descripci\IeC {\'o} i exemple}{298}
+\indexentry{saltaA: missatge, descripci\IeC {\'o} i exemple}{298}
+\indexentry{punt1 $*$ nombre missatge, descripci\IeC {\'o} i exemple}{298}
+\indexentry{punt1 + punt2 missatge, descripci\IeC {\'o} i exemple}{298}
+\indexentry{punt1 negated missatge, descripci\IeC {\'o} i exemple}{298}
+\indexentry{x"@y missatge, descripci\IeC {\'o} i exemple}{298}
+\indexentry{direcci\IeC {\'o}!obtenir pels robots}{299}
+\indexentry{robots!obtenir direcci\IeC {\'o} pels robots}{299}
+\indexentry{direcci\IeC {\'o}!apuntar en una|(}{300}
+\indexentry{giraA: m\IeC {\`e}tode; efecte de|(}{300}
+\indexentry{angles!per missatges referents a direccions absolutes}{300}
+\indexentry{giraA: unAngleAbsolutEnGraus, missatge; codi del}{300}
+\indexentry{direccions absolutes!angles associats amb}{301}
+\indexentry{giraA: m\IeC {\`e}tode; efecte de|)}{301}
+\indexentry{direcci\IeC {\'o}!apuntar en una|)}{301}
+\indexentry{punts!dist\IeC {\`a}ncia des d'un}{301}
+\indexentry{distanciaDesde: missatge!codi per}{301}
+\indexentry{robots!tornar al centre de la pantalla}{301}
+\indexentry{pantalla!posicionar robots al centre de la}{301}
+\indexentry{origen, missatge; efecte de}{301}
+\indexentry{posici\IeC {\'o}!especular amb}{301}
+\indexentry{posicioSiVes: m\IeC {\`e}tode, codi per}{302}
+\indexentry{capses!moure robots dins de|(}{302}
+\indexentry{rectangles!moure robots dins de|(}{302}
+\indexentry{robots!moure dins de|(}{302}
+\indexentry{ves:siDinsCapsa: m\IeC {\`e}tode, codi per al}{302}
+\indexentry{rectangles!dibuixar}{302}
+\indexentry{receptors!moure si va a parar dins d'un rectangle}{302}
+\indexentry{robots!moure dins de|)}{303}
+\indexentry{capses!moure robots dins de|)}{303}
+\indexentry{rectangles!moure robots dins de|)}{303}
+\indexentry{direccio m\IeC {\`e}tode!exemple de|(}{303}
+\indexentry{direcci\IeC {\'o}!apuntar cap a una|(}{303}
+\indexentry{punts!apuntar cap a un|(}{303}
+\indexentry{apuntaA: m\IeC {\`e}tode!codi de|(}{303}
+\indexentry{anglePerApuntarA: m\IeC {\`e}tode!diagrama de i codi de}{304}
+\indexentry{apuntaA: m\IeC {\`e}tode!codi de|)}{304}
+\indexentry{direcci\IeC {\'o}!apuntar cap a una|)}{304}
+\indexentry{punts!apuntar cap a un|)}{304}
+\indexentry{center (missatge), descripci\IeC {\'o} i exemples}{305}
+\indexentry{centre versus posici\IeC {\'o}}{305}
+\indexentry{direccio m\IeC {\`e}tode!exemple de|)}{305}
+\indexentry{posici\IeC {\'o}!determinar la}{305}
+\indexentry{posici\IeC {\'o} actual dels robots, determinar}{305}
+\indexentry{robots!determinar la posici\IeC {\'o} actual}{305}
+\indexentry{anglePerApuntarA: m\IeC {\`e}tode!descripci\IeC {\'o} i exemples de}{305}
+\indexentry{tornarInvisible i tornarVisible m\IeC {\`e}todes, efectes de}{305}
+\indexentry{direccio m\IeC {\`e}tode!descripci\IeC {\'o} i exemples de}{305}
+\indexentry{distanciaDesde: missatge!descripci\IeC {\'o} i exemple de}{305}
+\indexentry{posici\IeC {\'o}!versus centre}{305}
+\indexentry{posici\IeC {\'o} missatge, descripci\IeC {\'o} i exemple de}{305}
+\indexentry{giraA: m\IeC {\`e}tode; efecte de}{305}
+\indexentry{simulacions de comportament animal!vagar|(}{307}
+\indexentry{vagar, simular|(}{307}
+\indexentry{angles!aleatoris, per simular comportament animal|(}{309}
+\indexentry{traces!endevinar les generades pel moviment dels animals}{309}
+\indexentry{angles!aleatoris, per simular comportament animal|)}{309}
+\indexentry{longitud, examinar la influ\IeC {\`e}ncia en el moviment de vagar de la}{309}
+\indexentry{girs, examinar en el comportament animal|(}{310}
+\indexentry{vagar, simular|)}{312}
+\indexentry{girs, examinar en el comportament animal|)}{312}
+\indexentry{comportament d'un animal atrapat dins d'una capsa|seealso{capses}}{312}
+\indexentry{comportament d'un animal atrapat dins d'una capsa!panorama general|(}{312}
+\indexentry{rectangles|seealso{capses; rectangles d'or}}{312}
+\indexentry{rectangles!centrats en animals}{312}
+\indexentry{simulacions de comportament animal!vagar|)}{312}
+\indexentry{simulacions de comportament animal!atrapat dins una capsa|(}{312}
+\indexentry{girs, examinar en el comportament animal|(}{313}
+\indexentry{comportament d'un animal atrapat dins d'una capsa!panorama general|)}{313}
+\indexentry{comportament d'un animal atrapat dins d'una capsa!resseguir els costats|(}{313}
+\indexentry{costats, examinar en el comportament d'un animal tancat en una capsa|(}{313}
+\indexentry{costats, examinar en el comportament d'un animal tancat en una capsa|)}{314}
+\indexentry{comportament d'un animal atrapat dins d'una capsa!volar al costat oposat}{314}
+\indexentry{comportament d'un animal atrapat dins d'una capsa!resseguir els costats|)}{314}
+\indexentry{comportament d'un animal atrapat dins d'una capsa!direcci\IeC {\'o} aleat\IeC {\`o}ria}{314}
+\indexentry{direcci\IeC {\'o}!aleat\IeC {\`o}ria pel comportament animal}{314}
+\indexentry{girs, examinar en el comportament animal|)}{314}
+\indexentry{capses|seealso{comportament d'un animal atrapat dins d'una capsa}}{315}
+\indexentry{rectangles!com a sortides d'un animal atrapat dins d'una capsa}{315}
+\indexentry{capses!afegint una sortida a}{315}
+\indexentry{comportament d'un animal atrapat dins d'una capsa!afegir una sortida a la capsa}{315}
+\indexentry{simulacions de comportament animal!atrapat dins una capsa|)}{316}
+\indexentry{escapant:ambSortida: m\IeC {\`e}tode, crear}{316}
+\indexentry{bacteris, exemple!canviar direcci\IeC {\'o}}{316}
+\indexentry{bacteris, exemple!incrementar velocitat}{316}
+\indexentry{regi\IeC {\'o} segura, imaginar un rectangle com a}{317}
+\indexentry{rectangles!com a regions segures}{317}
+\indexentry{simulacions de comportament animal!decr\IeC {\`e}ixer la velocitat}{319}
+\indexentry{receptors!trobar-ne la posici\IeC {\'o} en simulacions de comportament animal}{319}
+\indexentry{simulacions de comportament animal!trobar menjar|(}{319}
+\indexentry{menjar, trobar-ne a les simulacions de comportament animal|(}{319}
+\indexentry{dist\IeC {\`a}ncia!comparar a les simulacions de comportament animal|(}{319}
+\indexentry{punts!per simular visi\IeC {\'o} en comportaments animals|(}{319}
+\indexentry{dist: m\IeC {\`e}tode, obtenir dist\IeC {\`a}ncia amb}{320}
+\indexentry{trobaAreaAlimentPerDistancia: m\IeC {\`e}tode; implementar|(}{320}
+\indexentry{trobaAreaAlimentPerDistancia: m\IeC {\`e}tode; implementar|)}{321}
+\indexentry{dist\IeC {\`a}ncia!comparar a les simulacions de comportament animal|)}{321}
+\indexentry{punts!per simular visi\IeC {\'o} en comportaments animals|)}{322}
+\indexentry{apuntaA: m\IeC {\`e}tode! utilitzar en simulacions de comportament animal}{322}
+\indexentry{mantenirOrientaci\IeC {\'o}: m\IeC {\`e}tode, definir}{322}
+\indexentry{simulacions de comportament animal!visi\IeC {\'o}|(}{324}
+\indexentry{visi\IeC {\'o}, simular en el comportament animal|(}{324}
+\indexentry{traces!per simular la visi\IeC {\'o} en el comportament animal|(}{324}
+\indexentry{anglePerApuntarA: m\IeC {\`e}tode!definici\IeC {\'o} per simular comportament animal}{325}
+\indexentry{traces!per simular la visi\IeC {\'o} en el comportament animal|)}{326}
+\indexentry{visi\IeC {\'o}, simular en el comportament animal|)}{326}
+\indexentry{simulacions de comportament animal!visi\IeC {\'o}|)}{326}
+\indexentry{menjar, trobar-ne a les simulacions de comportament animal|)}{326}
+\indexentry{simulacions de comportament animal!trobar menjar|)}{326}
+\indexentry{nanses|see{halo de nanses}}{329}
+\indexentry{morphic@\emph{morphic}, projecte; obrir}{329}
+\indexentry{llocs web!eToy}{329}
+\indexentry{Mon@M\IeC {\'o}n (\emph{World}) men\IeC {\'u}!obrir projectes \emph{morphic} amb}{329}
+\indexentry{eToy, sistema!propietats del}{329}
+\indexentry{eToy, sistema!exemple pilotant un avi\IeC {\'o}|(}{330}
+\indexentry{avi\IeC {\'o}!dibuixar}{330}
+\indexentry{widgets@\emph{widgets}, solapa; obrir per dibuixar avi\IeC {\'o}}{330}
+\indexentry{Paint, eina; obrir per dibuixar un avi\IeC {\'o}}{330}
+\indexentry{avi\IeC {\'o}!jugar amb l'halo|(}{330}
+\indexentry{nanses de l'halo, descripci\IeC {\'o} de}{330}
+\indexentry{halo de nanses!manipular per l'avi\IeC {\'o}|(}{330}
+\indexentry{eToy, sistema!obrir un visualitzador}{332}
+\indexentry{eToy, sistema!modificar noms dels dibuixos}{332}
+\indexentry{nom dels dibuixos, modificar a eToy}{332}
+\indexentry{visualitzador (\emph{viewer})!obrir dins eToy}{333}
+\indexentry{categories!mostrar en el visualitzador d'eToy}{333}
+\indexentry{viewer@\emph{viewer}|see{visualitzador}}{333}
+\indexentry{visualitzador (\emph{viewer})!mostrar categories en el}{333}
+\indexentry{getter@\emph{getter}, m\IeC {\`e}todes; mostrar per a les categories a eToy}{333}
+\indexentry{setter@\emph{setter}, m\IeC {\`e}todes; mostrar per a les categories a eToy}{333}
+\indexentry{acc\IeC {\'e}s (m\IeC {\`e}todes de), mostrar per les categories en eToy}{333}
+\indexentry{valors!modificar els de les variables a eToy}{333}
+\indexentry{variables!modificar els valors a eToy}{333}
+\indexentry{metodes@m\IeC {\`e}todes!mostrar per a les categories d'eToy}{333}
+\indexentry{eToy, sistema!utilitzar observadors}{333}
+\indexentry{observadors, utilitzar a eToy}{333}
+\indexentry{visualitzador (\emph{viewer})!parts de}{334}
+\indexentry{avi\IeC {\'o}!arrossegar i deixar un m\IeC {\`e}tode per crear nous \emph{scripts}}{335}
+\indexentry{scripts@\emph{scripts}!crear per a l'avi\IeC {\'o}}{335}
+\indexentry{metodes@m\IeC {\`e}todes!arrossegar i deixar anar per crear nous \emph{scripts} per a l'avi\IeC {\'o}}{335}
+\indexentry{eToy, sistema!crear nous \emph{scripts} amb}{335}
+\indexentry{avi\IeC {\'o}!jugar amb l'halo|)}{337}
+\indexentry{avi\IeC {\'o}!afegir m\IeC {\`e}todes|(}{337}
+\indexentry{halo de nanses!manipular per l'avi\IeC {\'o}|)}{337}
+\indexentry{metodes@m\IeC {\`e}todes!afegir per a l'avi\IeC {\'o}|(}{337}
+\indexentry{turn: m\IeC {\`e}tode!afegir per a un avi\IeC {\'o}}{337}
+\indexentry{avi\IeC {\'o}!volar}{337}
+\indexentry{traces!fer que l'avi\IeC {\'o} dibuixi}{337}
+\indexentry{avi\IeC {\'o}!afegir m\IeC {\`e}todes|)}{337}
+\indexentry{eToy, sistema!mostrar el men\IeC {\'u} d'esdeveniments}{337}
+\indexentry{esdeveniments, men\IeC {\'u}; mostrar dins el sistema eToy}{337}
+\indexentry{metodes@m\IeC {\`e}todes!afegir per a l'avi\IeC {\'o}|)}{339}
+\indexentry{avi\IeC {\'o}!crear \emph{joystick} per|(}{339}
+\indexentry{eToy, sistema!exemple pilotant un avi\IeC {\'o}|)}{339}
+\indexentry{eToy, sistema!utilitzar \emph{joystick} per l'exemple de l'avi\IeC {\'o}|(}{339}
+\indexentry{joystick@\emph{joystick}!crear per a un avi\IeC {\'o}}{339}
+\indexentry{avi\IeC {\'o}!experimentar amb el \emph{joystick}}{339}
+\indexentry{joystick@\emph{joystick}!experimentar amb}{339}
+\indexentry{metodes@m\IeC {\`e}todes!mostrar pel \emph{joystick} de l'avi\IeC {\'o}}{339}
+\indexentry{joystick@\emph{joystick}!vincular a un \emph{script}|(}{339}
+\indexentry{scripts@\emph{scripts}!vincular el \emph{joystick} de l'avi\IeC {\'o} amb|(}{339}
+\indexentry{avi\IeC {\'o}!crear \emph{joystick} per|)}{340}
+\indexentry{eToy, sistema!utilitzar \emph{joystick} per l'exemple de l'avi\IeC {\'o}|)}{340}
+\indexentry{joystick@\emph{joystick}!vincular a un \emph{script}|)}{340}
+\indexentry{scripts@\emph{scripts}!vincular el \emph{joystick} de l'avi\IeC {\'o} amb|)}{340}
+\indexentry{eToy, sistema!crear animacions a|(}{341}
+\indexentry{animacions!crear contenidors per a}{341}
+\indexentry{contenidors!crear per a animacions}{341}
+\indexentry{elements de l'animaci\IeC {\'o}!dibuixar}{342}
+\indexentry{dibuixar!elements de l'animaci\IeC {\'o}}{342}
+\indexentry{cuc, animar}{342}
+\indexentry{pintar amb la nansa vermella, utilitzar en animacions}{342}
+\indexentry{contenidors!deixar els dibuixos dins del}{343}
+\indexentry{dibuixos, deixar-los dins de contenidors}{343}
+\indexentry{contenidors de dibuixos, crear per les animacions d'eToy}{343}
+\indexentry{animacions!crear dibuixos senzills com a base de}{343}
+\indexentry{visualitzador (\emph{viewer})!de la base de l'animaci\IeC {\'o}}{343}
+\indexentry{lookLike m\IeC {\`e}tode, crear \emph{scripts} amb}{344}
+\indexentry{scripts@\emph{scripts}!crear amb el m\IeC {\`e}tode lookLike}{344}
+\indexentry{elements de l'animaci\IeC {\'o}!mostrar|(}{344}
+\indexentry{contenidors!obrir dins del visualitzador}{344}
+\indexentry{visualitzador (\emph{viewer})!obrir un contenidor en un}{344}
+\indexentry{basic (bot\IeC {\'o}), pr\IeC {\'e}mer a eToy}{344}
+\indexentry{collection categoria, buscar}{344}
+\indexentry{eToy, sistema!bot\IeC {\'o} basic|(}{344}
+\indexentry{elipses@el\IeC {\textperiodcentered }lipses!canviar l'aparen\IeC {\c c}a a eToy}{345}
+\indexentry{eToy, sistema!bot\IeC {\'o} basic|)}{345}
+\indexentry{playerAtCursor m\IeC {\`e}tode, arrossegant a eToy}{345}
+\indexentry{elements de l'animaci\IeC {\'o}!mostrar|)}{345}
+\indexentry{eToy, sistema!canviar els elements d'un contenidor|(}{345}
+\indexentry{contenidor, elements de; canviar a eToy|(}{345}
+\indexentry{assignaci\IeC {\'o}, introduir a eToy}{345}
+\indexentry{eToy, sistema!canviar els elements d'un contenidor|)}{345}
+\indexentry{cursor, canviar a eToy el valor del}{346}
+\indexentry{contenidor, elements de; canviar a eToy|)}{346}
+\indexentry{eToy, sistema!crear animacions a|)}{347}
+\indexentry{eToy, sistema!cotxes i conductors, exemple|(}{347}
+\indexentry{cotxe!dibuixar a eToy}{347}
+\indexentry{volant!dibuixar a eToy}{347}
+\indexentry{cotxe!girar en cercles a eToy}{347}
+\indexentry{forward m\IeC {\`e}tode, arrossegar i deixar a eToy}{347}
+\indexentry{turn: m\IeC {\`e}tode!arrossegar i deixar a eToy}{347}
+\indexentry{volant!utilitzar la direcci\IeC {\'o} del|(}{348}
+\indexentry{angles!vincular amb la posici\IeC {\'o} del volant a eToy|(}{348}
+\indexentry{posici\IeC {\'o}!vincular amb l'angle del volant a eToy|(}{348}
+\indexentry{rotaci\IeC {\'o}, determinar pel volant d'eToy|(}{348}
+\indexentry{halo de nanses!per conduir el volant a eToy}{348}
+\indexentry{heading@\emph{heading} valor, per conduir el volant a eToy}{348}
+\indexentry{// (divisi\IeC {\'o}), triar per conduir el volant d'eToy}{349}
+\indexentry{divisi\IeC {\'o} (//), triar per conduir el volant d'eToy}{349}
+\indexentry{rotaci\IeC {\'o}, determinar pel volant d'eToy|)}{350}
+\indexentry{angles!vincular amb la posici\IeC {\'o} del volant a eToy|)}{350}
+\indexentry{posici\IeC {\'o}!vincular amb l'angle del volant a eToy|)}{350}
+\indexentry{volant!utilitzar la direcci\IeC {\'o} del|)}{350}
+\indexentry{cotxe!afegir sensors a}{350}
+\indexentry{sensors pel cotxe, crear a eToy}{350}
+\indexentry{eToy, sistema!crear sensors}{350}
+\indexentry{carretera!crear a eToy}{350}
+\indexentry{eToy, sistema!crear una carretera}{350}
+\indexentry{cotxe!expressar diferents comportaments per}{350}
+\indexentry{eToy, sistema!condicions i tests a|(}{350}
+\indexentry{eToy, sistema!condicions i tests a|)}{351}
+\indexentry{carretera!acolorir a eToy}{351}
+\indexentry{color sees m\IeC {\`e}tode, triar color en l'exemple del cotxe}{351}
+\indexentry{color (tests), personalitzar}{351}
+\indexentry{eToy, sistema!personalitzar tests basats en colors}{351}
+\indexentry{accions!afegir per a un cotxe a eToy}{352}
+\indexentry{cotxe!afegir accions per a }{352}
+\indexentry{eToy, sistema!cotxes i conductors, exemple|)}{353}
+\indexentry{eToy, sistema!personalitzar|(}{353}
+\indexentry{playfield options men\IeC {\'u}, mostrar a eToy}{353}
+\indexentry{eToy, sistema!executar \emph{scripts}}{354}
+\indexentry{scripts@\emph{scripts}!executar a eToy}{354}
+\indexentry{m\IeC {\`e}todes d'\emph{scripting a eToy}}{354}
+\indexentry{start script m\IeC {\`e}tode, utilitzar a eToy}{354}
+\indexentry{clear all pen trails m\IeC {\`e}tode, utilitzar a eToy}{355}
+\indexentry{eToy, sistema!eliminar camins dibuixats pels robots}{355}
+\indexentry{camins dibuixats per robots, eliminar a eToy}{355}
+\indexentry{eToy, sistema!crear icones a|(}{355}
+\indexentry{move toward m\IeC {\`e}tode, utilitzar a eToy|(}{355}
+\indexentry{objectes!vincular dins d'eToy|(}{355}
+\indexentry{icona, crear dins d'eToy}{355}
+\indexentry{eToy, sistema!vincular objectes}{355}
+\indexentry{avi\IeC {\'o}!fer una icona}{355}
+\indexentry{eToy, sistema!crear icones a|)}{356}
+\indexentry{objectes!vincular dins d'eToy|)}{356}
+\indexentry{move toward m\IeC {\`e}tode, utilitzar a eToy|)}{356}
+\indexentry{eToy, sistema!personalitzar|)}{356}
+\indexentry{eToy, sistema!internacionalitzaci\IeC {\'o}}{356}
+\indexentry{internacionalitzaci\IeC {\'o}, implementar a eToy}{356}
+\indexentry{idiomes, tria a eToy}{356}
+\indexentry{set language\dots men\IeC {\'u}, mostrar a eToy}{356}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!accedir}{357}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!propietats de}{357}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada|seealso{\emph{Wonderland}}}{357}
+\indexentry{Worlds of@\emph{The Worlds of Squeak} finestra, mostrar}{357}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!mostrar per pantalla}{358}
+\indexentry{profunditat de color, comprovar i modificar}{358}
+\indexentry{actors a Alice!estructura jer\IeC {\`a}rquica}{359}
+\indexentry{actors a Alice!interactuar directament amb|(}{359}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!interactuant amb els actors|(}{359}
+\indexentry{conill!moure a Alice}{359}
+\indexentry{standUp m\IeC {\`e}tode, aplicar a actors dins Alice}{360}
+\indexentry{conill!transformar dins Alice}{361}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!components|(}{361}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!editor d'\emph{scripts}}{361}
+\indexentry{actors a Alice!interactuar directament amb|)}{361}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!interactuant amb els actors|)}{361}
+\indexentry{Actor Info (bot\IeC {\'o}) a l'editor d'\emph{scripts} d'Alice}{361}
+\indexentry{actors a Alice!mostrar informaci\IeC {\'o}}{361}
+\indexentry{Quick Reference, bot\IeC {\'o} dins l'editor d'\emph{scripts} d'Alice; descripci\IeC {\'o} de}{361}
+\indexentry{editor d'\emph{scripts} a Alice, propietats del}{362}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!components|)}{362}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!utilitzaci\IeC {\'o} d'\emph{scripts}|(}{362}
+\indexentry{scripts@\emph{scripts}!utilitzar dins d'Alice|(}{362}
+\indexentry{controls de c\IeC {\`a}mera, afegint i movent a Alice}{363}
+\indexentry{scripts@\emph{scripts}!analitzar a Alice}{364}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!executar missatges}{364}
+\indexentry{accions!component a Alice}{364}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!compondre accions}{364}
+\indexentry{constants pel moviment a Alice, exemples de}{364}
+\indexentry{missatges!executar, a Alice}{364}
+\indexentry{moviment|seealso{robots en moviment}}{364}
+\indexentry{accions!crear a Alice}{365}
+\indexentry{actors a Alice!moure, girar i rodar|(}{365}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!moure, girar i rodar|(}{365}
+\indexentry{moviment!a Alice|(}{365}
+\indexentry{rodar a Alice, panorama general|(}{365}
+\indexentry{turn: m\IeC {\`e}tode!utilitzar dins Alice|(}{365}
+\indexentry{girar dins Alice, panorama general|(}{365}
+\indexentry{move: m\IeC {\`e}tode, utilitzar a Alice|(}{365}
+\indexentry{speed: m\IeC {\`e}tode, utilitzar a Alice}{365}
+\indexentry{dist\IeC {\`a}ncia!especificar a Alice}{365}
+\indexentry{duraci\IeC {\'o}, especificar pels actors a Alice}{365}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!aturar animacions}{365}
+\indexentry{animacions!aturar, dins d'Alice}{365}
+\indexentry{until: m\IeC {\`e}tode; utilitzar a Alice}{365}
+\indexentry{for: m\IeC {\`e}tode; utilitzar a Alice}{366}
+\indexentry{missatges!variacions a Alice}{366}
+\indexentry{actors a Alice!moure, girar i rodar|)}{366}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!moure, girar i rodar|)}{366}
+\indexentry{moviment!a Alice|)}{366}
+\indexentry{turn: m\IeC {\`e}tode!utilitzar dins Alice|)}{366}
+\indexentry{actors a Alice!parts de|(}{366}
+\indexentry{rodar a Alice, panorama general|)}{366}
+\indexentry{animacions!crear parts independents per a}{366}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!utilitzaci\IeC {\'o} d'\emph{scripts}|)}{366}
+\indexentry{girar dins Alice, panorama general|)}{366}
+\indexentry{scripts@\emph{scripts}!utilitzar dins d'Alice|)}{366}
+\indexentry{move: m\IeC {\`e}tode, utilitzar a Alice|)}{366}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!variacions de missatges}{367}
+\indexentry{missatges!enviar parts dels actors, a Alice|(}{367}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!objectes de primera classe}{367}
+\indexentry{primera classe, objectes de; descripci\IeC {\'o} a Alice|(}{367}
+\indexentry{objectes!manipular dins d'Alice}{367}
+\indexentry{actors a Alice!parts de|)}{367}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!canviar la relaci\IeC {\'o} progenitor-fill dels objectes}{367}
+\indexentry{primera classe, objectes de; descripci\IeC {\'o} a Alice|)}{367}
+\indexentry{missatges!enviar parts dels actors, a Alice|)}{368}
+\indexentry{resize: m\IeC {\`e}tode, utilitzar dins Alice|(}{368}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!canviar de mida els receptors|(}{368}
+\indexentry{resize: m\IeC {\`e}tode, utilitzar dins Alice|)}{368}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!canviar de mida els receptors|)}{368}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!utilitzaci\IeC {\'o} del m\IeC {\`e}tode nudge}{368}
+\indexentry{nudge: m\IeC {\`e}tode, utilitzar a Alice}{368}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!utilitzaci\IeC {\'o} dels m\IeC {\`e}todes standUp}{368}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!utilitzaci\IeC {\'o} del m\IeC {\`e}tode setColor:}{368}
+\indexentry{setColor: m\IeC {\`e}tode, utilitzar a Alice}{368}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!utilitzaci\IeC {\'o} del m\IeC {\`e}tode destroy}{369}
+\indexentry{destroy m\IeC {\`e}tode a Alice, utilitzar}{369}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!utilitzaci\IeC {\'o} dels m\IeC {\`e}todes hide i show}{369}
+\indexentry{hide i show m\IeC {\`e}todes a Alice, utilitzar}{369}
+\indexentry{moveTo: i move: m\IeC {\`e}todes a Alice, utilitzar|(}{369}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!utilitzaci\IeC {\'o} dels m\IeC {\`e}todes moveTo: i move:|(}{369}
+\indexentry{moveTo: i move: m\IeC {\`e}todes a Alice, utilitzar|)}{369}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!utilitzaci\IeC {\'o} dels m\IeC {\`e}todes moveTo: i move:|)}{369}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!utilitzaci\IeC {\'o} del m\IeC {\`e}tode pointAt:}{369}
+\indexentry{pointAt: m\IeC {\`e}tode d'Alice}{369}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!utilitzaci\IeC {\'o} del m\IeC {\`e}tode place:}{370}
+\indexentry{place: m\IeC {\`e}tode a Alice, utilitzar}{370}
+\indexentry{actors a Alice!posicionament relatiu}{370}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!accions relacionades amb el temps|(}{370}
+\indexentry{accions relacionades amb el temps, definir a Alice|(}{370}
+\indexentry{durada d'una acci\IeC {\'o}, especificar a Alice}{370}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!especificant la durada d'una acci\IeC {\'o}}{370}
+\indexentry{eachFrame constant, utilitzar a Alice}{371}
+\indexentry{asIs constant, utilitzar a Alice}{371}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!definir animacions|(}{371}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!accions relacionades amb el temps|)}{371}
+\indexentry{accions relacionades amb el temps, definir a Alice|)}{371}
+\indexentry{animacions!definir dins d'Alice|(}{371}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!definir animacions|)}{372}
+\indexentry{Wonderland@\emph{Wonderland}!crear dins Alice|(}{372}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!crear \emph{Wonderland}|(}{372}
+\indexentry{animacions!definir dins d'Alice|)}{372}
+\indexentry{w makePlaneNamed: expressi\IeC {\'o}; utilitzar a Alice}{372}
+\indexentry{Wonderland@\emph{Wonderland}!crear dins Alice|)}{373}
+\indexentry{efectes especials, utilitzar a Alice}{373}
+\indexentry{controls de c\IeC {\`a}mera, afegint i movent a Alice|(}{373}
+\indexentry{conill!script@\emph{script} de mostra}{373}
+\indexentry{script@\emph{script} amb diversos actors a Alice, exemple de}{373}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!m\IeC {\'u}ltiples c\IeC {\`a}meres|(}{373}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!crear \emph{Wonderland}|)}{373}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!efectes especials|(}{373}
+\indexentry{controls de c\IeC {\`a}mera, afegint i movent a Alice|)}{374}
+\indexentry{Wonderland@\emph{Wonderland}|seealso{Alice, entorn de creaci\IeC {\'o} personalitzada}}{374}
+\indexentry{Wonderland@\emph{Wonderland}!alarmes}{374}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!m\IeC {\'u}ltiples c\IeC {\`a}meres|)}{374}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!efectes especials|)}{374}
+\indexentry{alarma, programar dins un \emph{Wonderland}}{374}
+\indexentry{scheduler getTime expressi\IeC {\'o}, utilitzar dins \emph{Wonderland}}{374}
+\indexentry{temps!con\IeC {\`e}ixer dins del \emph{Wonderland} a Alice}{374}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!aconseguint el temps per \emph{Wonderland}}{374}
+\indexentry{accions!definir a Alice}{375}
+\indexentry{usuari, interacci\IeC {\'o} amb; implementar dins Alice|(}{375}
+\indexentry{addResponse:to: i respondWith:to: m\IeC {\`e}todes a Alice, comparar}{375}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!eliminar accions|(}{375}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!interacci\IeC {\'o} amb l'usuari|(}{375}
+\indexentry{accions!eliminar a Alice}{376}
+\indexentry{reaccions, tractant-les dins Alice}{376}
+\indexentry{usuari, interacci\IeC {\'o} amb; implementar dins Alice|)}{376}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!eliminar accions|)}{376}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!interacci\IeC {\'o} amb l'usuari|)}{376}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!projectar \emph{morphs} 2D en 3D|(}{377}
+\indexentry{morphs@\emph{morphs}, crear a Alice}{377}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!projectar \emph{morphs} 2D en 3D|)}{377}
+\indexentry{Wonderland@\emph{Wonderland}!obrir per utilitzar amb Pooh}{378}
+\indexentry{Pooh, generar formes 3D a partir de figures 2D amb el sistema|(}{378}
+\indexentry{Alice, entorn de creaci\IeC {\'o} personalitzada!utilitzaci\IeC {\'o} d'eToy amb}{378}
+\indexentry{eToy, sistema!utilitzar amb objectes 3D a Alice}{379}
+\indexentry{Pooh, generar formes 3D a partir de figures 2D amb el sistema|)}{379}

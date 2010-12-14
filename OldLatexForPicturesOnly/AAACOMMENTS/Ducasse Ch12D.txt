@@ -1,0 +1,106 @@
+Nothing left: 22 dec 2004
+
+
+Ducasse Ch12
+************
+
+
+This is a very heavy chapter - the first where I felt the fun versus work factor falls over? It just keeps driving hte reader deeper into hard work with little play. You think there might be a way to go easier on your reader here? Not only is it currently very hard going, but you also threaten your reader by saying this chapter is "fundamental" to the rest of the book. This is potentially a *REAL* hurdle in my view. I urge you to spend less heavy time in this chapter. I advise you make your *core* points more succinctly so the reader can continue with the book. If you really want the heavier parts, perhaps make those optional? I understand that plenty is fundamental to the rest of the book, but do you need to have everything here??
+
+
+>> This chapter went over several rewrite already and I cannot do less than that. I already removed all the unnecessary stuff. 
+Imagine that this is the only thing that a person should know to understand how to send messages so this is quite small compared
+to all the languages out there. 
+
+I need that chapter because else people do not understand and get frustrated. At least my wife was not understanding the rest, 
+and urge me to add this chapter since it was really missing to her. The other reviewers did not complain. And they were 
+representative of my audience: adults and programmers. 
+
+
+
+I found "messages" very disorienting at first -- at least until Script 12.1 (and 12.3) where you nailed your metaphor by phrasing the script lines in quotes "..." as in messages. I wonder if you could find a way to let the reader see this sooner? At first I thought, is he meaning expressions, etc. etc. running through my head.
+
+>> This was presented in the chapter 5. I just remind it to the reader but I do not understand what you misunderstood.
+
+Also it feels at first like you aren't going to explain "unary" etc. You, further into the chapter, but the reader wasn't sure for a while !  I wonder if you should signpost early in the chapter that you WILL explain this and that, but first you want to teach how to identify message receivers etc.
+
+
+
+
+p103 "execute the mesages sent to objects" 
+Will your reader know what you mean here??
+Infact the first paragraph is very dangerous because I think you will lose most readers.
+But at the same time you are saying how important this is. Fear factor thru the roof?
+
+>> I'm sorry but this is based on what I explained in Chapter 5 and before. I was ALWAYS talking about messages. 
+
+
+p103
+"unary" etc. you leave it a while to explain what this is I thought
+
+
+>>> On page 103
+I wrote: 
+"\item \index{unary messages}\textit{unary messages} are messsages sent to an object without any other information. For example in \ct{\caro color}, \ct{color} is a unary message. The message \ct{color} does not require any other information."
+
+So I do not understand your point. 
+
+
+
+
+p103
+"We propose you to help you
+with a graphical notation. In the figures of this chapter, we underline the message receiver to help you
+identify them and encourage you to exercise yourself with all the code presented. We also surround
+each expression in an ellipse and number them starting from the first expression that will be executed
+to help you remember how messages are executed. The Figure 12.1 represents two expressions Color"
+--->
+Show practice examples right then and there, I recommend!!
+
+>>
+This is exactly the goal of the picture 1 that immediately follow. I can't squizz it in the two lines left.
+
+--->
+So what are dotted ellipses etc? If your reader knows what an ellipse is etc.
+
+
+p104
+"Every message is sent to an object that is called the message receiver. Note that receivers are not
+limited to be graphical robots but can be anything from numbers to windows."
+--->
+I would consider a visual to help make this point
+
+>>>
+I prefer not
+
+p108 Script 12.6
+Just need to make sure everything is lined up nicely so this diagram makes its point. It might also help if there was some sense of temporality as the reader travels downwards (through the processing)... that is where the "decomposing" happens?
+
+>> I tried to make that clearer.
+In fact these are not script but decomposition of script so I change the kind of "texts" it was from script to "StepByStep"
+and explain the first one. I also fixed all the indentation of the other step by step as it was broken. 
+
+p110
+This chapter is getting a little heavy for some readers now imo. I feel for the first time the fun/work ratio has tipped over. perhaps you feel that is inevitable - it would be a shame though...??
+
+>>> Really I tried my best: reduce the contents to its bare minimum, added examples, added pictures and graphical notation
+I reasonably can do not less. 
+
+p111
+"Hint... At the beginning put parenthesis when you have multiple binary messages."
+I think most will not get this Stephane - explain more fully?
+
+>>> Ok fixed
+
+
+
+
+
+
+
+
+
+
+
+
+

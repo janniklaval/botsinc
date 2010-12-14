@@ -1,0 +1,603 @@
+% $Author: stef $
+% $Date: 2008-04-04 17:14:31 +0200 (Fri, 04 Apr 2008) $
+% $Revision: 318 $
+%=================================================================
+\ifx\wholebook\relax\else
+% --------------------------------------------
+% Lulu:
+    \documentclass[a4paper,10pt,twoside]{book}
+    \usepackage[
+        papersize={6in,9in},
+        hmargin={.75in,.75in},
+        vmargin={.75in,1in},
+        ignoreheadfoot
+    ]{geometry}
+    \input{../common.tex}
+    \pagestyle{headings}
+    \setboolean{lulu}{true}
+% --------------------------------------------
+% A4:
+%   \documentclass[a4paper,11pt,twoside]{book}
+%   \input{../common.tex}
+%   \usepackage{a4wide}
+% --------------------------------------------
+    \graphicspath{{figures/} {../figures/}}
+    \begin{document}
+%   \renewcommand{\nnbb}[2]{} % Disable editorial comments
+    \sloppy
+\fi
+
+\chapter{S'Amuser avec les Robots }\label{cha:fun}
+
+
+\noindent\hrule
+\begin{center}\includegraphics{beasts}\end{center}
+\vspace{0.2cm}
+\noindent\hrule\vspace{1.5cm}
+
+
+L'aspect basic d'un robot est plut\^ot simple. Ne serait-il pas agr\'eable d'\^etre capable de cr\'eer 
+des robots qui ont un peu plus de design. Heureusement, vous pouvez cr\'eer des robots personnalis\'es, 
+et dans ce chapitre je vous montrerais comment changer la forme, la taille de l'\'ecriture, et la 
+couleur de vos robots. Vous pouvez faire ressembler votre robot \`a un animal, un monstre, ou 
+encore au fameux robot R2D2 du film Star Wars.
+
+
+\section{Des Manipulations du Robot}
+
+Vous avez d\'ej\`a appris comment ouvrir une bulle pour les messages pour ensuite pouvoir  
+envoyer un message \`a un robot en cliquant sur celui-ci. Maintenant vous allez apprendre 
+\`a vous procurer l'acc\`es d'autres fonctions du robot telles que la duplication, le d\'eplacement 
+et le changement d'apparence du robot. Ces fonctionnalit\'es suppl\'ementaires sont disponibles via 
+le halo de manipulations, comme il a \'et\'e mentionn\'e bri\`evement dans le chapitre 5, vous pouvez 
+avoir acc\`es en cliquant droit (la commande clic sur un Mac) sur un robot. Les manipulations 
+sont les petites icônes rondes qui entourent le robot comme un halo, comme le montre la 
+figure 6-1. J'expliquerai le fonctionnement des diff\'erentes manipulations en fonction des 
+besoins. Vous pouvez obtenir des informations \`a propos d'une manipulation en laissant votre 
+souris poser sur celle-ci; ensuite une bulle surgira et expliquera le but de cette manipulation. 
+Maintenant essayons de faire une copie d'un robot en cliquant sur la manipulation verte 
+("dupliquer le robot"), de bouger le robot en cliquant sur la manipulation blanche 
+("s\'electionner le robot") et de traîner le robot, ou de d\'etruire le robot en utilisant la 
+manipulation rose pale ("d\'etruire le robot) avec le "X".
+
+\begin{figure}[h]
+	\centerline{\includegraphics{picaAllHaloAnnotated}}
+	\caption{clic droit (commande clic) sur le robot apporte un halo de fonctions. \label{fig:halos}}
+\end{figure}
+
+
+\section{Taille de Police et Couleur}
+
+Lorsque nos robots se d\'eplaçaient sur l'\'ecran dans les chapitres pr\'ec\'edents, ils laissaient une 
+trace noire dans leur sillage. Mais vous n'\^etes pas limit\'e \`a la couleur noire affich\'ee par d\'efaut. 
+Vous pouvez changer la couleur de la plume d'un robot en envoyant le message  \ct{penColor:} avec 
+un objet de couleur comme argument. L'une des façons d'obtenir un objet couleur est d'envoyer un 
+message avec le nom d'une couleur de la classe Color, qui est l'usine qui cr\'ee l'objet couleur. 
+Par exemple, \ct{Color blue} produit un objet de couleur bleu, et  \ct{Color yellow} cr\'ee un objet 
+de couleur jaune. Ainsi, vous pouvez changer la couleur du crayon du robot pica par la couleur 
+bleue en envoyant le message \ct{pica penColor: Color blue}. Je vous en expliquerai plus au sujet des 
+couleurs dans la section suivante.
+
+Vous pouvez \'egalement modifier l'\'epaisseur de la plume du robot en envoyant le message penSize: 
+avec un nombre en argument. Par exemple, \ct{pica penSize: 5} ordonne \`a pica de changer la taille 
+de sa plume \`a une \'epaisseur de 5 pixels. Le Script~\ref{scr:pen} dessine une ligne bleue \'epaisse 
+d'une largeur de 5 pixels.
+
+
+\begin{script}[pen]{Pica peut dessiner une ligne bleue \'epaisse.}
+| pica | 
+pica := Bot new. 
+!\textbf{pica penColor: Color blue.}!
+pica go: 100. 
+!\textbf{pica penSize: 5.}!
+pica go: 100 
+\end{script}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{scriptfigwithsize}[0.4]{\includegraphics[width=5cm]{turtleMPenSize}}{Pica dessiner une longue vue.}\label{scr:spyglass}
+| pica | 
+pica := Bot new. 
+pica go: 40. 
+!\textbf{pica penSize: 2.}!
+pica go: 40. 
+!\textbf{pica penSize: 4.}!
+pica go: 40. 
+!\textbf{pica penSize: 6.}!
+pica go: 40. 
+\end{scriptfigwithsize}
+
+Vous pouvez changer la couleur du robot en utilisant la m\'ethode \ct{color:}. Par exemple, 
+le message envoy\'e \ct{berthe color: Color yellow} change la couleur du robot \ct{berthe}en jaune. 
+Le Script~\ref{scr:color} dit \`a \ct{berthe} de changer sa couleur en jaune et d'aller ensuite sur 
+l'avant de 100 pixels, tandis que \ct{pica} iest rest\'e derri\`ere avec sa couleur par d\'efaut et sans bouger.
+
+\begin{script}[color]{Berthe change de couleur et se prom\`ene, tandis que pica reste sans bouger. }
+	| pica berthe | 
+	pica := Bot new. 
+	berthe:= Bot new. 
+	berthe color: Color yellow. 
+	berthe go: 100. 
+\end{script}
+
+\section{Encore plus de Couleurs}
+
+Comme il a \'et\'e mentionn\'e pr\'ec\'edemment, Squeak est un environnement qui est construit \`a partir 
+d'objets et qui utilise des objets. Par cons\'equent, la programmation dans Squeak revient \`a cr\'eer 
+des objets et \`a leur envoyer des messages. En particulier, une couleur est un objet cr\'e\'e par la 
+classe \ct{Color}. Pour obtenir un objet de couleur, vous envoyez un message \`a la classe Color.
+
+Certains messages de couleur sont nomm\'es de la couleur qu'ils repr\'esentent en anglais. Par exemple, 
+\ct{Color red} entraîne la classe \ct{Color} \`a cr\'eer un objet de couleur rouge. Voici la liste de 
+messages s\'electeurs pr\'ed\'efinis que vous pouvez envoyer \`a la classe \ct{Color} pour cr\'eer une couleur : 
+\ct{black}, \ct{veryVeryDarkGray}, \ct{veryDarkGray}, \ct{darkGray}, \ct{gray}, \ct{lightGray}, \ct{veryLightGray},
+\ct{veryVeryLightGray}~, \ct{white}, \ct{red}, \ct{yellow}, \ct{green}, \ct{cyan}, \ct{blue}, \ct{magenta}, \ct{brown}, \ct{orange}, \ct{lightRed}, \ct{lightYellow}, \ct{lightGreen}, \ct{lightCyan}, 
+\ct{lightBlue}, \ct{lightMagenta}, \ct{lightBrown}, \ct{lightOrange}, \ct{paleBuff},
+\ct{paleBlue}, \ct{paleYellow}, \ct{paleGreen}, \ct{paleRed}, \ct{veryPaleRed}, \ct{paleTan}, \ct{paleMagenta}, \ct{paleOrange}, et \ct{palePeach}. 
+
+La class \ct{Color} est comme une usine de peinture de la vie r\'eelle. Non seulement il peut faire 
+un grand nombre de couleurs standard, mais il peut aussi cr\'eer une couleur personnalis\'ee pour vous 
+en combinant diff\'erentes quantit\'es de rouge, vert et bleu. Le tableau 6-1 montre quelques exemples 
+de la mani\`ere \`a cr\'eer des couleurs en utilisant le message \ct{r:redAmount g: greenAmountb: blueAmount}. 
+TLes arguments pris par le message s\'electeur \ct{r:g:b:} devront \^etre des nombres d\'ecimaux entre 0 
+et 1 qui repr\'esentent la quantit\'e de rouge, vert et bleu \`a combin\'ees. Par exemple, l'expression 
+\ct{Color r: 1 g: 0 b: 0} 0 cr\'ee la m\^eme couleur rouge pur que celle venant de \ct{Color red}. 
+. En utilisant la m\^eme quantit\'e de chacune des trois couleurs on obtient une nuance de gris. Les 
+quantit\'es des 3 couleurs mises \`a 1 produisent du blanc, et toutes les 3 \`a z\'eros produisent du noir.
+
+\noindent
+\begin{table}[h!]
+\caption{Cr\'eations de Couleuts avec  \textsf{\upshape Color r:g:b:}}
+\label{tab0601}
+\begin{center}
+{\small \begin{tabular}{p{20mm}p{20mm}p{20mm}p{20mm}}
+\hline
+{\small \textbf{Couleur}} & {\small \textbf{r: (Rouge)}} & {\small \textbf{g: (Vert)}} & {\small \textbf{b: (Bleu)}}\\
+\hline
+{\small rouge} & {\small 1} & {\small 0} & {\small 0}\\
+{\small gris clair} & {\small 0.1} & {\small 0.1} & {\small 0.1}\\
+{\small jaune} & {\small 1} & {\small 1} & {\small 0}\\
+{\small blanc} & {\small 1} & {\small 1} & {\small 1}\\
+{\small noir} & {\small 0} & {\small 0} & {\small 0}\\
+{\small gris} & {\small 0.5} & {\small 0.5} & {\small 0.5}\\
+{\small vert pale} & {\small 0.8739} & {\small 1} & {\small 0.8348}\\
+\hline
+\end{tabular}}
+\end{center}
+\end{table}
+
+Finalement, la m\'ethode \ct{fromUser} vous permet de choisir une couleur dans une palette de l'\'ecran, 
+et vous montre les ingr\'edients de couleur, comme l'illustre la Figure ~\ref{fig:palette} (2 (bien 
+qu'il vous faut imaginer les couleurs). Pour cela, vous devez ex\'ecuter l'expression \ct{Color fromUser} 
+en utilisant le menu print it (imprimer) pour obtenir le r\'esultat de la s\'election imprim\'es.
+
+\begin{figure}[h]
+	\centerline{\includegraphics{colorFromUser}}
+	\caption{Choisir votre couleur \`a partir d'une palette de couleur avec le message d'envoi Color fromUser. 
+	\label{fig:palette}}
+\end{figure}
+
+\section{Changer la Forme et la Taille d'un Robot}
+
+Vous pouvez changer la forme d'un robot aussi bien que sa couleur. En plus de la forme par d\'efaut 
+du robot, deux formes, un cercle et un triangle, sont construits dans la fabrique \ct{Bot} (mais 
+vous pouvez \'egalement dessiner la forme du robot avec un outil \`a dessin, comme indiqu\'e dans la 
+section suivante). Le message \ct{lookLikeTriangle} donne une forme triangulaire \`a un robot. Le 
+message \ct{lookLikeCircle} gidonne une forme circulaire \`a un robot. La forme de d\'efaut est produite 
+par l'envoi du message \ct{lookLikeBot}. 
+
+Un autre aspect que vous pouvez changer est la taille d'un robot en utilisant le message \ct{extent: widthAndHeight}, 
+, où les valeurs de \ct{widthAndHeight} repr\'esentent la largeur et la hauteur du rectangle \`a 
+partir duquel le robot est dessin\'e. L'argument \ct{widthAndHeight}widthAndHeight est une paire de 
+num\'eros, appel\'es aussi un point dans Squeak. Il est compos\'e de deux nombres s\'epar\'es par le symbole 
+\ct{@} symbol. @. Par exemple, le point \ct{50@100} repr\'esente un rectangle de 50 pixels de large et 
+100 pixels de haut.
+
+Ainsi, pour cr\'eer un robot nomm\'e \ct{bigpica} ayant une forme de triangle qui tient \`a l'int\'erieur 
+d'un carr\'e avec des dimensions \ct{150@150}, vous devez d'abord envoyer \`a\ct{bigpica} le message 
+\ct{lookLikeTriangle} puis le message \ct{extent: 150@150}. 
+
+La Figure~\ref{fig:shapeAndSize} montre quelques formes de robots cr\'e\'es en utilisant les formes 
+de triangle encastr\'e et de cercle, et le Script~\ref{scr:shape} montre comment cr\'eer des robots de 
+ces dimensions et formes et ensuite comment les d\'eplacer vers des positions comme le montre la figure.
+
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=8cm]{shapeAndSize}
+\caption{Des robots peuvent prendre diff\'erentes formes et tailles. \label{fig:shapeAndSize}}
+\end{center}
+\end{figure}
+
+
+\begin{script}[shape]{Cr\'eation de robots de diff\'erentes formes et tailles (cercles et triangles)}
+| pica daly bigpica | 
+pica := Bot new. 
+pica lookLikeTriangle. 
+pica west. 
+pica color: Color red. 
+pica penColor: Color green. 
+pica penSize: 3. 
+pica go: 100. 
+daly := Bot new. 
+daly extent: 60@60. 
+daly east. 
+daly go: 100. 
+bigpica := Bot new. 
+bigpica lookLikeTriangle. 
+bigpica extent: 150@150. 
+bigpica penSize: 5. 
+bigpica north. 
+bigpica go: 80. 
+\end{script}
+
+\section{Dessiner votre Propre Robot}
+
+Squeak vous permet de dessiner un robot personnalis\'e. Vous pouvez m\^eme cr\'eer un robot qui ressemble 
+\`a l'une des figures indiqu\'e au d\'ebut de ce chapitre. Je vais maintenant d\'ecrire \'etape par \'etape 
+comment dessiner votre propre robot. 
+
+\paragraph{Etape 1: Ouvrez l'outil de peinture au moyen de l'icône rouge.}
+
+La premi\`ere \'etape consiste \`a ouvrir l'outil de peinture qui est inclus dans Squeak. Cliquez droit 
+(ou la commande clic pour Mac) pour augmenter le halo autour du robot que vous voulez peindre, 
+comme le montre la Figure ~\ref{fig:paintToolCaroFlap}. Cliquez sur le symbole rouge, celui avec 
+l'icône d'un stylo \`a l'int\'erieur. Cela ouvrira l'\'editeur de peinture, qui est d\'ecrit dans la 
+Figure~\ref{fig:paintOpen}. Ne vous inqui\'etez pas pour les autres symboles. Notez que si vous 
+avez d\'ej\`a dessin\'e un graphique, ce graphique sera affich\'e \`a l'int\'erieur de l'outil de peinture.
+
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=6cm]{picaHaloAnnotated} 
+\end{center}
+\caption{Clic droit (ou commande clic) pour obtenir le halo. Choisir l'\'editeur de peinture 
+par le symbole rouge\label{fig:paintToolCaroFlap}}
+\end{figure}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=\textwidth]{paintOpen}
+\caption{L'\'editeur de peinture. \label{fig:paintOpen}}
+\end{center}
+\end{figure}
+
+\paragraph{Dessinez le nouveau robot restyl\'e.}
+
+La deuxi\`eme \'etape consiste \`a dessiner un nouveau graphisme pour votre robot. Dessinez votre robot 
+pointant \`a droite, comme le montre la Figure 6-6. L'\'editeur de peinture a les caract\'eristiques 
+habituelles des programmes graphiques, tels que la s\'election de la taille du pinceau, le 
+remplissage d'une r\'egion, la r\'ep\'etition d'une zone s\'electionn\'ee, et la s\'election de la couleur 
+de peinture. L'outil de peinture a \'egalement deux boutons (voir la Figure~\ref{fig:zoomandrotate}) 
+pour faire pivoter et agrandir votre dessin.
+
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=\textwidth]{editingSpider}
+\end{center}
+\caption{Ce robot ressemble \`a une araign\'ee tachet\'ee.\label{fig:spottedspider}}
+\end{figure}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=5cm]{zoomButton} \includegraphics[width=5cm]{rotateButton}
+\end{center}
+\caption{Les boutons de l'agrandissement et de la rotation. \label{fig:zoomandrotate}}
+\end{figure}
+
+
+\paragraph{Step 3:Pr\'eserver votre graphique.}
+OUne fois que vous \^etes satisfait de votre dessin, vous devez appuyer sur le bouton\button{keep}. 
+Cela ferme l'outil de peinture. Maintenant votre robot ressemble \`a l'image que vous avez cr\'e\'ee.
+
+\section{Sauvegarde et restauration d'images graphiques}
+
+Si vous avez pass\'e beaucoup de temps \`a la conception d'un robot et vous voulez le sauvegarder 
+pour une future r\'ef\'erence, vous pouvez l'enregistrer dans un fichier. Une fois qu'il a \'et\'e 
+sauvegard\'e, vous pourrez le charger dans des environnements diff\'erents et le partager avec vos 
+amis. Vous pouvez commencer \`a cr\'eer une biblioth\`eque de graphismes de robot au fil du temps. 
+Maintenant, je vais vous montrer comment sauvegarder et charger une image. Alors je vais montrer 
+comment vous pouvez associer une image avec un seul robot ou encore \`a une classe (usine de robots), 
+de sorte que tous les robots nouvellement cr\'e\'es auront l'aspect graphique que vous avez dessin\'e. 
+Je vais commencer en vous montrant comment effectuer toutes ces manipulations en interagissant 
+directement avec les robots, et ensuite comment \'ecrire des scripts pour faire ces choses automatiquement.
+
+
+\subsection{La fonction de "sauvegarde d'images graphiques"}
+
+Pour enregistrer une image, cliquez simplement sur le bouton bleu, celui avec l'icône du fichier 
+(Figure~\ref{fig:PicaHaloSaveAndLoadAnnotated}). J'ai choisi la couleur bleue pour vous faire 
+penser \`a un lac gel\'e: sauvegarder le dessin graphique «g\`ele» la forme de votre robot pour le 
+pr\'eserver. Le syst\`eme vous demandera alors de donner un nom au graphique enregistr\'e, comme le 
+montre la Figure 6-9. Cette op\'eration sauvegarde votre graphique dans un fichier, dans le m\^eme 
+dossier que l'image Squeak, avec le nom que vous avez entrez et avec l'extension \ct{.frm}. 
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics{picaHaloSaveAndLoadAnnotated}
+\end{center}
+\caption{Le robot ressemble maintenant \`a une araign\'ee. Il pointe vers la droite.  \label{fig:PicaHaloSaveAndLoadAnnotated}}
+\end{figure}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=\textwidth]{nameOfSaveAnnotated}
+\end{center}
+\caption{Cliquer sur la poign\'ee bleue lance une invite pour un nom.  \label{fig:prompt}}
+\end{figure}
+
+Vous pouvez effectuer l'op\'eration inverse et charger une image graphique en cliquant sur la 
+poign\'ee rose dans le halo du robot, celle avec une icône qui ressemble \`a un outil que pourrait 
+utiliser un robot. J'ai choisi la couleur rose pour vous faire penser \`a donner vie \`a votre robot. 
+Lorsque vous cliquez sur la poign\'ee rose, le syst\`eme vous demande le nom de l'image que vous 
+voulez charger. Votre robot prendra l'apparence de l'image graphique que vous choisissez.
+
+\section{R\'eorganisation de l'usine de robots}
+
+Vous avez \'etabli et enregistr\'e une belle araign\'ee tachet\'ee, et vous souhaitez que l'usine de robot 
+vous cr\'ee un robot avec ce dessin, mais lorsque vous dites \`a la classe \ct{Bot} pour cr\'eer un nouveau 
+robot, il en cr\'ee un en utilisant le graphique par d\'efaut. Pour que la classe \ct{Bot} soit en mesure 
+de cr\'eer votre robot en forme d'araign\'ee, vous devez dire \`a votre robot de passer son dessin graphique \`a la classe en utilisant le message 
+\ct{passImageToClass}. Apr\`es avoir envoy\'e ce message, si vous cr\'eez un nouveau robot et lui demandez de 
+ressembler \`a l'image, il ressemblera \`a l'image que vous venez de tracer.
+
+Une autre façon d'obtenir le m\^eme r\'esultat est d'envoyer \ct{lookLikeImage} ou l'un des messages 
+\ct{lookLike} de la classe Bot elle-m\^eme. Ensuite, la classe sera configur\'e pour cr\'eer de nouveaux 
+robots en fonction de la nouvelle configuration. Par exemple, si vous envoyez le message\ct{lookLikeCircle} 
+\`a la classe \ct{Bot}, tous les robots nouvellement cr\'e\'es ressembleront \`a un cercle. Ainsi, 
+si vous voulez avoir des robots cr\'e\'es \`a partir de la classe Bot qui ressemblent \`a des araign\'ees, 
+vous devez (1) obtenir un robot, (2) dessiner l'araign\'ee ou charger une araign\'ee graphique 
+pr\'ealablement enregistr\'ee, (3) passer l'image d'araign\'ee \`a la classe et (4) dites \`a la classe de 
+faire des robots avec cette image en lui envoyant le message \ct{lookLikeImage}. Ensuite, tous vos 
+robots nouvellement cr\'e\'es ressembleront \`a une araign\'ee, comme le montre la Figure~\ref{fig:allGraphics}.
+
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=\textwidth]{allGraphics2}
+\end{center}
+\caption{Passage d'une image \`a la class Bot et envoi du message lookLikeImageresults 
+pour donner \`a tous les robots nouvellement cr\'e\'es une ressemblance \`a cette image.. \label{fig:allGraphics}}
+\end{figure}
+
+\section{Op\'erations Graphiques \`a l'Aide de Scripts}
+
+Vous pouvez \'egalement \'ecrire un script pour charger et enregistrer des graphiques et les 
+associer avec un seul robot ou avec une classe. 
+
+Le Script~\ref{scr:load1} cr\'ee deux robots et charge un graphique pour chacun d'eux en utilisant 
+deux m\'ethodes diff\'erentes. Apr\`es que pica soit cr\'e\'e, il envoie le message \ct{loadImage}, qui se 
+lance une invite \`a l'utilisateur pour le nom de l'image \`a charger. Ensuite, berthe est cr\'e\'e, et 
+envoie un message \ct{loadImage: 'spider'}, qui lui donne l'image contenue dans le fichier image \ct{spider.frm}. 
+
+Notons l'importante de la distinction entre les messages \ct{loadImageandloadImage: 'fileName'}. 
+. Le premier de ces messages n'a aucun param\`etre, et l'utilisateur est invit\'e \`a entrer le nom du 
+fichier graphique \`a charger. Le deuxi\`eme message a un param\`etre, où ici 'fileName'  repr\'esente le 
+nom du fichier image \`a l'int\'erieur des cotes (et sans l'extension de fichier).
+
+Vous pouvez enregistrer l'image en utilisant le message \ct{saveImage} ou \ct{saveImage: 'fileName'}. Premi\`erement 
+\ct{berthe} envoie le message \ct{saveImage}, qui invite l'utilisateur \`a entrer le nom sous 
+lequel l'image doit \^etre sauvegard\'e. Enfin, \ct{pica} envoie le message \ct{saveImage: 'spider2'}, 
+qui sauve son image sous le nom du fichier \ct{spider2.frm}. 
+
+
+
+
+\begin{script}[load1]{Deux façons de charger et sauvegarder les dessins graphiques d'un robot}
+	| pica berthe | 
+	pica := Bot new. 
+	pica loadImage.             "L'utilisateur est invit\'e \`a entrer le nom de l'image \`a charger" 
+	berthe := Bot new. 
+	berthe loadImage: 'spider'   "Un param\`etre donne le nom du fichier \`a charger" 
+	berthe saveImage.           "L'utilisateur est invit\'e \`a nommer le fichier de sauvegarde de l'image" 
+	pica saveImage: 'spider2'   "Un param\`etre donne le nom de l'image enregistr\'ee" 
+\end{script}
+
+Tout comme vous pouvez charger et sauvegarder des graphiques associ\'es \`a un robot, 
+vous pouvez charger et enregistrer des graphiques pour qu'ils soient associ\'es \`a une classe, 
+telle que la classe Bot. Les m\^emes messages sont utilis\'es pour la classe qui ont \'et\'e utilis\'es 
+pour un robot. Ils sont juste envoy\'e \`a Bot au lieu de \ct{pica}ou \ct{berthe}. Le Script~\ref{scr:load2} associe la premi\`ere image spider.frm \`a la classe Bot. 
+Ensuite, l'image est enregistr\'ee sous un autre nom, spiderBot.frm. 
+
+A la place des m\'ethodes  \ct{loadImage:} et \ct{saveImage:}, :, vous pouvez utiliser \ct{loadImage} et \ct{saveImage} 
+(pas de deux-points, aucun argument), qui invite l'utilisateur \`a donner un nom de fichier. 
+L'expression \ct{Bot clearImage} r\'einitialise la classe \ct{Bot} au m\^eme \'etat que lorsque vous l'aviez utilis\'e pour 
+la premi\`ere fois. Ceci restaure l'image de d\'efaut du robot \`a la classe, ce qui signifie que 
+lorsque vous ex\'ecutez le script, vous pouvez reproduire un sc\'enario pr\'evisible.
+
+\begin{script}[load2]{Chargement et sauvegarde d'un graphique associ\'e \`a la classe \ct{Bot}}
+| pica berthe | 
+Bot clearImage.           "efface tous les graphiques qui ont \'et\'e pr\'ec\'edemment associ\'e \`a la classe Bot." 
+berthe := Bot new.        "berthe ressemble au robot par d\'efaut" 
+Bot loadImage: 'spider'.  "L'image dans spider.frm est associ\'ee \`a la classe Bot" 
+Bot lookLikeImage 
+pica := Bot new.          "Le pica robot ressemble \`a une araign\'e" 
+Bot saveImage: 'spider3'  "L'image d'araign\'ee est enregistr\'e sous le nom de spider3.frm" 
+\end{script}
+
+
+
+
+Les scripts suivants (Script~\ref{scr:clear} et 6-8) suppose que trois fichiers image, \ct{luth.frm}, 
+\ct{spider.frm}, et \ct{airplane.frm} sont situ\'es dans le r\'epertoire contenant l'image Squeak. Ces 
+fichiers sont inclus dans la distribution de l'environnement utilis\'ee dans ce livre. 
+
+Le Script~\ref{scr:clear} utilise la m\'ethode \ct{loadImage:} pour associer une image \`a un robot, et la m\'ethode 
+\ct{lookLikeImage} pour ordonner \`a un robot de ressembler \`a l'image \`a laquelle il est associ\'e. Ensuite le robot 
+\ct{pica} est cr\'e\'e, il lui est demand\'e de ressembler \`a son image associ\'ee (\ct{pica lookLikeImage}). Comme 
+aucun graphique n'a \'et\'e associ\'e \`a pica, lui demander de ressembler \`a une image ne produit aucun 
+effet. Mais alors l'image du fichier  \ct{luth.frm} est associ\'ee \`a \ct{pica} en lui envoyant le message 
+\ct{loadImage:'luth'}. Maintenant lorsque \ct{pica} reçois le message \ct{lookLikeImage}, son 
+apparence est chang\'ee, et il ressemble \`a une tortue de mer luth. Dans la derni\`ere ligne du script,
+ un fichier image diff\'erent est associ\'e \`a pica. Une fois qu'il a \'et\'e donn\'e le message 
+ \ct{lookLikeImage}, un robot ressemblera \`a n'importe qu'elle image associ\'ee avec lui. 
+ Ainsi, lorsque l' expression \ct{pica loadImage: 'spider'} est execut\'ee, \ct{pica} ressemblera \`a une araign\'ee.
+
+Le script se poursuit avec un nouveau robot, \ct{berthe}, en cours de cr\'eation. Comme la classe \ct{Bot} 
+n'a pas aucune image qui lui est associ\'ee, \ct{berthe} aura le graphique d'un robot par d\'efaut, et si vous 
+lui envoyez le message \ct{lookLikeImage}, rien ne changera, car elle ne dispose d'aucune image associ\'ee.
+
+
+\begin{script}[clear]{Changer l'image d'un robot}
+	| pica berthe | 
+	Bot clearImage. 
+	pica := Bot new. 
+	pica lookLikeImage. 
+	"Aucune image charg\'e ou cr\'e\'e, rien ne change" 
+	pica loadImage: 'luth'. 
+	pica lookLikeImage 
+	"Charger une image et demander au robot de lui ressembler" 
+	pica loadImage: 'spider'. 
+	"Charger une autre image, et lorsque le message lookLikeImage sera envoy\'e, pica ressemblera \`a la nouvelle image" 
+	berthe := Bot new. 
+	berthe lookLikeImage. 
+	"Lorsque Berthe est cr\'e\'ee, elle ressemble au robot par d\'efaut, et depuis aucune image n'a \'et\'e charg\'e 
+	dans la classe, le message lookLikeImage ne change rien"
+\end{script}
+
+Le Script~\ref{scr:asso} montre comment informer la classe \ct{Bot} cque tous les robots 
+nouvellement cr\'e\'es devraient avoir un graphique particulier. Contrairement \`a la situation 
+d\'ecrite dans le Script ~\ref{scr:clear}, le message \ct{loadImage: 'fileName'} est envoy\'e directement 
+\`a la classe Bot et non au robot particulier. Tout comme un nageur et un joueur de billard qui ont 
+des r\'eactions diff\'erentes du mot  “pool,” (pour le nageur ce mot signifie piscine et pour le 
+joueur il signifie billard), les diff\'erents objets et classes ont une compr\'ehension diff\'erente 
+du m\^eme message. C'est parce que chaque objet ou chaque classe a sa propre m\'ethode qui r\'epond \`a 
+un message donn\'e, et ces m\'ethodes peuvent \^etre diff\'erentes pour un m\^eme message. Dans notre cas, 
+\ct{loadImage:} a un comportement diff\'erent lorsqu'il est reçu par la classe\ct{Bot} ou bien lorsqu'il 
+est reçu par un robot, qui est une instance de la classe. Lors de la r\'eception chez la classe Bot, 
+le message \ct{loadImage: 'fileName'} conduit \`a la classe de chargement et d'association des 
+graphiques \`a partir du fichier, de sorte que les instances nouvellement cr\'e\'ees (robots) peuvent 
+utiliser le nouveau graphique. Lors de la r\'eception par un robot, seul le robot recevant le 
+message peut utiliser ce graphique. 
+
+
+\begin{script}[asso]{Association d'un graphique \`a une classe \emph{Bot}}
+	| berthe daly pica yertle | 
+	Bot loadImage: 'spider'. 
+	berthe := Bot new. 
+	berthe lookLikeImage. 
+	"Berthe, comme une instance de la classe Bot, ressemble maintenant \`a une araign\'ee" 
+	daly := Bot new. 
+	daly lookLikeImage. 
+	"Daly ressemble maintenant \'egalement \`a une araign\'ee" 
+	pica := Bot new. 
+	pica loadImage: 'luth'. 
+	pica lookLikeImage. 
+	"Mais un robot sp\'ecifique peut encore changer ses propres graphiques; pica ressemble maintenant \`a une tortue" 
+	pica getImageFromClass. 
+	"pica obtient son image de la classe Bot, maintenant il ressemble de nouveau \`a une araign\'ee" 
+	Bot loadImage: 'luth'. 
+	Bot lookLikeImage. 
+	yertle := Bot new. 
+	"Maintenant, la classe va cr\'eer des robots qui ressemblent \`a des tortues luth"
+\end{script}
+
+Le Script~\ref{scr:asso} commence par le chargement d'un nouveau graphique \`a partir d'un fichier et l'associe \`a 
+la classe \ct{Bot} elle-m\^eme. Ensuite, le nouveau robot \ct{berthe}est cr\'e\'e, et le message lui est envoy\'e 
+pour lui dire d'utiliser le nouveau graphique. Puis il y a la cr\'eation d'un autre robot, Daly, et 
+il lui est envoy\'e le message \ct{lookLikeImage} qui lui fait aussi ressembler \`a l'image associ\'ee \`a la classe.
+
+Tous les robots cr\'e\'es peuvent \^etre faits pour ressembler \`a une araign\'ee. Toutefois, un robot particulier, tel 
+que le robot \ct{pica} dans le script, peut lui \^etre donn\'e sa propre image en lui envoyant le message
+\ct{loadImage: 'fileName'}. L'image associ\'ee au robot remplace l'image de la classe. Le message 
+\ct{getImageFromClass} permet de restaurer l'image associ\'ee \`a la classe. La derni\`ere s\'equence de 
+messages montre que nous pouvons associer un nouveau graphisme \`a une classe, en remplaçant l'image 
+actuellement associ\'ee. L'envoi du message \ct{loadImage: 'fileName'} \`a la classe \ct{Bot} 
+associe le graphique dans le fichier \ct{fileName.frm} \`a la classe. Ensuite, l'envoi du message 
+\ct{lookLikeImage} assure que les nouveaux robots cr\'e\'es ressembleront par d\'efaut au graphique 
+d\'esormais associ\'e \`a la classe. D'où le robot \ct{yertle} qui ressemble \`a une tortue.
+
+
+\section{R\'esum\'e}
+\noindent
+{\small \begin{tabular}{p{20mm}p{50mm}p{30mm}}
+\hline
+\textbf{M\'ethode} & \textbf{Description} & \textbf{Exemple}\\
+\hline
+\textsf{lookLikeCircle} & Changer la forme du destinataire en un cercle. & \textsf{Bot new lookLikeCircle} \\
+
+\textsf{lookLikeBot} & Changer la forme du destinataire en un robot. & \textsf{Bot new lookLikeBot} \\
+
+\textsf{lookLikeTriangle} & Changer la forme du destinataire en un triangle. & \textsf{Bot new lookLikeTriangle} \\
+
+\textsf{lookLikeImage} & Changer l'apparence du destinataire par le graphique que vous avez dessin\'e. & \textsf{Bot new lookLikeImage} \\
+
+\textsf{lookLikeCircle} & L'envoie de ce message \`a la classe permettra aux robots nouvellement cr\'e\'es d'avoir la forme d'un cercle. 
+& \textsf{Bot lookLikeCircle} \\
+
+\textsf{lookLikeBot} & L'envoie de ce message \`a la classe permettra aux robots nouvellement cr\'e\'es d'avoir la forme d'un robot. & \textsf{Bot lookLikeBot} \\
+
+\textsf{lookLikeTriangle} & L'envoie de ce message \`a la classe permettra aux robots nouvellement cr\'e\'es d'avoir la forme d'un triangle. 
+& \textsf{Bot lookLikeTriangle} \\
+
+\textsf{lookLikeImage} & L'envoie de ce message \`a la classe permettra aux robots nouvellement cr\'e\'es d'avoir la forme d'un graphique que vous avez dessin\'e ou charg\'e. & \textsf{Bot lookLikeImage} \\
+
+\textsf{loadImage: '{\itshape fileName}'} & Charger le fichier image \emph{fileName.frm} \`a la classe ou au robot.
+& \textsf{Bot loadImage: 'spider'} \newline or \newline \textsf{berthe loadImage: 'spider'} \\
+
+\textsf{loadImage} & Demander \`a l'utilisateur le nom d'un fichier image pour le charger dans la classe ou au robot. 
+& \textsf{Bot loadImage} or \newline  \textsf{berthe loadImage} \\
+
+\textsf{saveImage: '{\itshape fileName}'} & Sauvegarder l'image de la classe ou du robot vers le fichier nomm\'e
+\emph{fileName.frm}. & \textsf{Bot saveImage: 'spider'} \newline or \newline  \textsf{berthe saveImage: 'spider'} \\
+
+\textsf{saveImage} & Sauvegarder l'image de la classe ou du robot en demandant \`a l'utilisateur un nom de fichier. 
+& \textsf{Bot saveImage} or \newline  \textsf{berthe saveImage} \\
+
+\textsf{penColor: {\itshape aColor}} & 
+Changer la couleur de la plume.
+& \textsf{berthe penColor: Color blue} \\
+\hline
+\end{tabular}}
+
+\noindent
+{\small \begin{tabular}{p{20mm}p{50mm}p{30mm}}
+\hline
+\textbf{Method} & \textbf{Description} & \textbf{Example}\\
+\hline
+
+\textsf{penSize: {\itshape aNumber}} & 
+Modifier la taille de la plume. La taille par d\'efaut est \`a 1.
+& \textsf{berthe penSize: 3} \\
+
+\textsf{color: {\itshape aColor}} & Changer la couleur du destinataire \`a la couleur sp\'ecifi\'ee. 
+& \textsf{berthe color: Color yellow} \\ 
+
+\textsf{extent: {\itshape aPoint}} & Changer la taille du recepteur aux dimensions donn\'ees par \textsf{aPoint}
+où \textsf{aPoint} est donn\'e par\textsf{w@h}, où \textsf{w} est la largeur et \textsf{h} est la hauteur. & \textsf{berthe extent: 80@100} \\
+
+ \textsf{passImageToClass} & Passez le graphique du destinataire \`a la classe. Apr\`es ce message, les robots cr\'e\'es par la classe auront comme graphique le graphique du robot en cours. & \textsf{berthe passImageToClass} \\
+ 
+ \textsf{getImageFromClass} & Obtenez le graphique de la classe. Apr\`es ce message, le destinaire ressemblera aux robots qui seraient cr\'e\'es par la classe.  & \textsf{berthe getImageFromClass} \\
+\hline
+\end{tabular}}
+
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{exofigwithsize}[0.5]{\includegraphics[width=3cm]{turtleMSmallStairs}}{A Staircase}\label{xp:letterA}
+% You are not limited in your robot drawings to squares. You can create a wide range of geometrical figures.
+% For example, here is a drawing of a small staircase. Write a script to reproduce this drawing. 
+% \end{exofigwithsize}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{exonofigtitle}{Moving Clock Hands}
+% Experiment with different angle values for each of the two robots; that is,change the angle values for the two turn 
+% methods. Then, compare the effect of the method \ct{turnLeft: 60} (for pica) and \ct{turnRight: 300} (for daly). 
+% You can see that turning left 60 degrees yields the same result as turning right 300 degrees. This is so because 
+% the sum of the two values is 360 degrees, that is, a full circle. 
+% \end{exonofigtitle}
+
+\ifx\wholebook\relax\else
+    \end{document}
+\fi
+
+%%% Local Variables:
+%%% coding: utf-8
+%%% mode: latex
+%%% TeX-master: t
+%%% TeX-PDF-mode: t
+%%% ispell-local-dictionary: "english"
+%%% End:

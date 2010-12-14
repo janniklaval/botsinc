@@ -1,0 +1,151 @@
+\input{Common.tex}
+\input{macroes.tex}
+\newcommand{\underscore}{}
+
+%%% for separate compilation
+\let\wholebook=\relax
+%%\vspace*{-6cm}\centerline{\includegraphics{c5spiral91}}
+
+\title{
+%\rule{\linewidth}{1mm}
+\vspace{0.5cm}
+{\fontencoding{OT1}\selectfont\fonttitre Bots Inc.}\\[0.5cm]
+\hspace{1cm}\selectfont\fonttitrep Learning Programming \\[0.2cm] with Squeak\\ 
+%\vspace{0.5cm}\rule{\linewidth}{1mm} 
+\author{\LARGE Volume One --- Beta Version\\ St\'ephane Ducasse\\ ducasse@iam.unibe.ch\\
+\Pisymbol{psy}{211}-2004}}
+
+\begin{document}
+\maketitle
+\tableofcontents 
+%%%TD: CHECK ALL THE KEYBOARDS SHORTCUT
+
+
+%\end{document}
+
+
+\chapter*{}
+
+\begin{alltt} \textsf{
+     (Message 
+          to: Florence ; 
+          to: Quentin ; 
+          to: Thibaut) addToContents: 'All my love.' ; 
+                       addContents: 'I''m too busy, I know.';
+                       addContents: 'Continue to make noise, shout and run around!';
+                       send}
+\end{alltt}	
+
+\begin{alltt}\textsf{
+     (Message 
+          to: Stef parents ; 
+          to: Stef sister)  addContents: 'Love from Stef the Terrible' ; 
+                            send}
+\end{alltt}	
+
+\begin{alltt}\textsf{
+     (Message 
+          to: Daniel Villain) addContents: 'We miss you' ; send}
+\end{alltt}
+
+
+
+
+\input{GettingStarted/NoteLecteur.tex}  
+
+\part{Getting Started}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%1R
+\input{GettingStarted/GettingStarted.tex} %O+I + Dominic =>  TD figures
+%2R
+\input{GettingStarted/FirstScript.tex} %O+I + TD => TD figures
+
+
+%3 Released
+\input{TortueDef/TortueDef.tex}%O+I => final
+%4 Released
+\input{TournonsRelatif/TournonsRelatif.tex}%O+I + Dominic => final
+
+%5 Released
+\input{GettingStarted/TourOnCaro.tex}%%O+I + Dominic => final
+%=> release by Jon => David
+
+%6
+\input{GettingStarted/FunWithRobots.tex}%O + TD + Dominic => final
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\part{Elementary Programming Concepts}
+
+%7 Released
+\input{Bouclons/BouclonsD.tex}% O+I+D+Dominic => final
+
+%8 Released
+\input{Variables/Variables.tex}%O+I+Dominic => final
+
+%9 Released
+\input{Variables/FurtherVariables.tex}%O+I+Dominic => final
+
+
+%11 Released
+\input{VarAndLoops/VarAndLoopsD.tex}%O+I+D + Dominic => final
+
+%12 Released
+\input{Evaluating/Evaluating.tex}% O+I+ Dominic => final
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\part{Bringing Abstraction into Play}
+In this part you will learn how to define your own methods. This way you will be able to reuse the same sequence of messages and  you will be able to define complex methods out of simpler ones.
+
+%13 Released
+\input{Enseigner/Enseigner.tex}%% Daniel + dominic => Final
+
+%14 Released
+\input{Composons/Composons.tex}%Daniel + Dominic=> Final
+
+%15 Released
+\input{Argumentons/Argumentons.tex}%%Daniel + dominic => final
+
+%16 Released
+\input{Debugger/Debugger.tex} %
+
+%17R
+\input{Recomposing/Recomposing.tex}%%>>Daniel + Dominic => final
+
+%18R
+\input{String/String.tex}%%>>Dominic => final
+
+
+\input{Conditions/conditional}\label{part:condition}%%Dominic => final
+
+%19R
+\input{Conditions/Condition.tex}%%>>Dominic => final
+
+%20R
+\input{Conditions/ConditionalLoops.tex}%%>>Dominic => final
+
+
+%21R
+\input{Conditions/Boolean.tex}%%>>Dominic => final
+
+%22R
+\input{Points/Points.tex}%%>>Dominic => final
+
+%23
+\input{OtherBehavior/OtherBehavior.tex}%%>>Dominic => final
+
+%24
+\input{Conditions/SimulatingAnimalBehavior}%%>>Dominic => final
+
+\part{Other Squeak Worlds}
+
+%24 R
+\input{eToy/eToy.tex} %%DONE
+\input{Alice/Alice.tex}%%Done
+
+\end{document}
+
+
+

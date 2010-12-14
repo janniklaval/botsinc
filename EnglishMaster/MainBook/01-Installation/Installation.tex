@@ -1,0 +1,328 @@
+% $Author: stef $
+% $Date: 2008-04-04 17:14:31 +0200 (Fri, 04 Apr 2008) $
+% $Revision: 318 $
+%=================================================================
+\ifx\wholebook\relax\else
+% --------------------------------------------
+% Lulu:
+    \documentclass[a4paper,10pt,twoside]{book}
+    \usepackage[
+        papersize={6in,9in},
+        hmargin={.75in,.75in},
+        vmargin={.75in,1in},
+        ignoreheadfoot
+    ]{geometry}
+    \input{../common.tex}
+    \pagestyle{headings}
+    \setboolean{lulu}{true}
+% --------------------------------------------
+% A4:
+%   \documentclass[a4paper,11pt,twoside]{book}
+%   \input{../common.tex}
+%   \usepackage{a4wide}
+% --------------------------------------------
+    \graphicspath{{figures/} {../figures/}}
+    \begin{document}
+%   \renewcommand{\nnbb}[2]{} % Disable editorial comments
+    \sloppy
+\fi
+
+\chapter{Installation and Creating a Robot}\label{cha:installation}
+
+Set your stopwatch! Five minutes from now, the robot playground, called the environment, 
+that you will be using in this book will be up and running and ready for you to have fun in. In 
+this chapter you will learn how to install the environment, become acquainted with its different parts, 
+and begin interacting with the robots that live in this environment. You will learn 
+how to program these robots to accomplish challenging tasks by sending them messages. 
+So let us get started installing the environment and preparing for all the challenges ahead 
+in the rest of the book. If your environment is already installed, then turn off your stopwatch, 
+skip the first section, and plunge directly into the following sections, which give an overview 
+of the environment. After you have acquired some facility with robots in Chapters~\ref{cha:script} through~\ref{cha:turning}, 
+I will go into more detail on using the environment in Chapter \ref{cha:environment}. 
+
+
+\newpage
+\section{Installing the Environment}
+
+The environment used in this book has been developed to run on top of \Squeak. \Squeak is a 
+rich and powerful Open Source multimedia environment written entirely in Smalltalk and freely 
+available for most computer operating systems at \url{http://www.squeak.org}. Note, however, that 
+you will not be using the default \Squeak distribution. Rather, you will be using a distribution that 
+I have prepared for use with this book. It can be downloaded from the publisher of this book at 
+\url{http://www.apress.com} and \sd{fix}, in the Downloads section. 
+
+\Squeak runs exactly the same on all platforms. However, to make your life a little easier, I 
+have prepared several platform-dependent compressed files. The principle is exactly the same 
+on a Mac, PC, or any other platform. The only differences are in the tools for file decompression 
+and the way that you will invoke \Squeak. Once you have obtained a file named \ct{ReadyToUse.zip}, 
+you decompress it and then drag the file named \ct{Ready.image} (Mac) or Ready (PC) onto the 
+\Squeak application, and that does it! The file \ct{Ready[.image]} contains the complete environment 
+used in this book. Note that you may get files with slightly different names, but that 
+should have no effect on how everything works. 
+
+\subsection{Installation on a Macintosh}
+
+For installation on a Macintosh, you should have a ZIP archive file named \ct{readyToUse.zip}. 
+Normally, double clicking on the file’s icon should invoke the proper decompression software, 
+such as StuffIt Expander. Once this archive has been decompressed, you should end up with 
+four files, as shown in Figure~\ref{fig:macfiles}. You should identify two files: the file named \ct{Ready.image} 
+and the \emph{Squeak application} file (the one without a file extension in Figure~\ref{fig:macfiles}; it is named 
+\Squeak). 
+
+\begin{figure}[h]\centerline{\includegraphics{1-ReadyToUseMacZip2}\includegraphics[width=8cm]{2-macFiles2}}
+\caption{Ready-to-use files for the Macintosh. Left:the ZIP archive. Right:the decompressed files.\label{fig:macfiles}}\end{figure}
+
+\subsection{Installation under Windows}
+
+For installation under Windows, you should have a ZIP archive file named \ct{readyToUse.zip}. 
+Once this archive has been decompressed using WinZip, you should end up with four files, as 
+shown in Figure~\ref{fig:pcfiles}. You should identify two files: the file named \ct{Ready} and the \emph{Squeak application} 
+file (the one without a file extension in Figure~\ref{fig:pcfiles}; it is named \Squeak). 
+
+\begin{figure}[h]\centerline{\includegraphics{3-zipPC}\includegraphics[width=8cm]{4-readyPC}} 
+\caption{Ready-to-use files for Windows. Left:the ZIP archive. Right:the decompressed files. \label{fig:pcfiles}}
+\end{figure}
+
+
+\section{Opening the Environment}
+
+To open the environment, drag the file Ready[.image]onto the Squeak application,that is, 
+onto the file named Squeak, as shown in Figure~\ref{fig:dropImage}. You should obtain the environment shown 
+in Figure~\ref{fig:firstEnvironment}. If you do not get this environment, then read the section “Installation Trouble- 
+shooting” near the end of this chapter. 
+
+
+\begin{figure}[!h]\centerline{\includegraphics[width=6cm]{5-dropImage2} \hfill{ \  } \includegraphics[width=6cm]{6-readyDD}} 
+\caption{Dragging and dropping the \textit{image} file onto the 
+\textit{Squeak application file}  opens the environment on a Mac (left) or on PC (right).\label{fig:dropImage}}
+\end{figure}
+
+
+\subsection{Tips for Installation.}
+The environment can be opened simply by double clicking on the image file. However, there 
+are several disadvantages to this: You may have to identify the Squeak application,and sometimes another 
+application may interfere and try to use the image file. Moreover, you can find 
+yourself in trouble if you have multiple installations of different versions of Squeak. So I suggest that you 
+always open the environment by dragging and dropping the image file onto the 
+Squeak application file or an alias of it. 
+
+Note that if you do not have enough space for the installation on your hard drive, you can 
+use an alias to the \ct{SqueakV3.sources} file, which can be shared among several installations. 
+
+\important{To start the environment, drag and drop the file Ready (with the \ct{.image} extension for Mac) 
+onto the squeak application.} 
+
+
+
+
+\section{First Interactions with a Robot}
+
+Once you have opened the environment by dragging the file named \ct{Ready[.image]} onto the 
+Squeak application as explained previously, the environment that you obtain should look 
+something like the one presented in Figure~\ref{fig:firstEnvironment}. 
+
+\begin{figure}[!h]\centerline{\includegraphics[width=10cm]{7-firstEnvironmentAnnotated}} 
+\caption{The environment is ready to use.\label{fig:firstEnvironment}}
+\end{figure}
+
+The environment is composed of a robot factory and two flaps. A flap is a drawer contain- 
+ing programming tools. You will not need these for a while, and so I will put off describing 
+them until a later chapter. You should see a small blue robot in the middle of the screen. This 
+is not a robot made of wires and metal, but a software robot, imagined as seen from above, 
+pointing toward the right edge of the screen. A robot is a round blue circle; it has two wheels 
+and a small red head that points in its current direction. As you work through this book, you 
+will be sending orders to robots. These orders are called \emph{messages}, and we say that the robots 
+\emph{execute} these messages. 
+
+Place the mouse over the robot and wait a second. A balloon pops up with some information about the robot, 
+such as its current location and its direction, as shown in Figure ~\ref{fig:firstBalloon}. 
+Since computer monitors are of varying sizes and resolutions, your robot’s position may have 
+other values.
+
+
+\begin{figure}[h]\centerline{\includegraphics[width=5cm]{8-firstBalloon2}}
+\caption{Place the mouse over a robot to pop up a balloon with information about the robot. \label{fig:firstBalloon}}
+\end{figure}
+
+
+\subsection{Sending Messages to a Robot}
+
+You can interact directly with a robot by left clicking on the robot with the mouse (or just 
+clicking with a one-button mouse). A messaging balloon pops up, as shown in the left picture 
+in Figure~\ref{fig:go}. In this balloon you can type messages to be sent to the robot. After you type 
+your messages, you send them to the robot by pressing the return key, and the robot then 
+executes them. 
+
+\begin{figure}[h]\centerline{\includegraphics[width=\linewidth]{9-sendingAMsg2}}
+\caption{Step 1: Left-clicking on a robot causes a messaging balloon to appear. 
+Step 2: You can type a message to the robot to move 200 pixels forward and then press the return 
+key. Step 3: The robot executes the message; it has moved,leaving a trace on the screen behind it.\label{fig:go}}
+\end{figure}
+
+For example, if you type the message \ct{go: 200} followed by the return key, you have told the robot 
+to move forward 200 pixels in its current direction. If you type the message \ct{turnLeft: 20 + 70}, 
+you are instructing the robot to turn to its left (counterclockwise) 20 + 70 = 90 degrees, as shown 
+in Figure~\ref{fig:turned}. This second message is more complex than the previous one, because the value 
+representing the number of degrees that the robot is to turn is itself a message (as I will soon 
+explain), namely, \ct{20 + 70}. We will call such messages \emph{compound messages}. 
+
+
+\begin{figure}[h]\begin{center}{\hfill\includegraphics[width=4cm]{10-turn20+702}\hfill\includegraphics[width=1.6cm]{11-turned2}\hfill}\end{center}
+\caption{Left: sending a compound message. Right: The message has caused the robot to turn to its left by 90 degrees.\label{fig:turned}}
+\end{figure}
+
+When the message \ct{color: Color green} is sent to a robot, it changes its color, as shown in 
+Figure~\ref{fig:green}. (You will have to imagine the green color in the grayscale picture.) 
+
+
+\begin{figure}[!h]\centerline{\hfill\includegraphics[width=4cm]{12-colorGreen2}\hfill\includegraphics[width=1.6cm]{13-green2}\hfill}
+\caption{Left: Changing the color of a robot to another color. Right: its effect.\label{fig:green}}
+\end{figure}
+
+
+You may not understand the format of the messages that I have just presented. Some of 
+them may appear a bit complex. In fact, \ct{color: Color green} is another compound message. I 
+will explain later how you can develop your own messages. For now, simply type the messages 
+presented to you so that you can become familiar with the robot’s environment. If you want to 
+repeat a previous message, you do not have to retype it. Simply use the up and down arrows to 
+navigate over the previous messages that you have sent to the robot. In subsequent chapters, 
+you will learn step by step all the messages that a robot understands, and what is more, you 
+will learn how to define new behaviors for your robots. 
+
+%was note
+\important{To interact with a robot, click on it, type a message, and press the return key.}
+
+
+
+\section{Creating a New Robot}
+The environment already contains a robot, but now I am going to show you how to create new 
+robots. If you are not satisfied with having only one robot, you can create a new one by sending 
+the appropriate message to a robot \emph{factory}. A robot factory is graphically represented as an 
+orange box surrounded by a light blue box, in the middle of which the word Bot is written, 
+as shown in Figure~\ref{fig:classBalloon}. In Squeak jargon, and in general in the jargon of object-oriented 
+programming, a robot factory is called a \emph{class}. Classes (factories that produce objects, such as 
+robots) have a name starting with an uppercase letter. Hence this is the class \ct{Bot} and not \ct{bot}. 
+
+\begin{figure}[!h]\centerline{\includegraphics[width=6cm]{14-classBalloon2}}
+\caption{In Squeak jargon, a robot factory is called a class.Classes produce objects. The \ct{Bot} class produces new robots. 
+ \label{fig:classBalloon}}
+\end{figure}
+
+Just as you did for robots, you can interact with a robot factory by sending it messages. 
+The message to create a new robot is the message new, as shown in Figure~\ref{fig:turtleBoxNew}. Note that 
+newly created robots, like your original robot, point to the right of the screen. Each of the two 
+robots has an independent existence, and you can send messages to each of them in turn. 
+
+
+\begin{figure}[!h]\centerline{\includegraphics[width=14cm]{15-creatingARobot2}}
+\caption{Step 1: Start typing a message. Step 2: The message \ct{new} has been sent to the robot 
+factory. Step 3: In response, the factory has created a robot and delivered it to you. 
+\label{fig:turtleBoxNew}}
+\end{figure}
+
+
+
+
+%was ddouble bar
+\important{To create a new robot, send the message \emph{new} to the robot factory, which is the class \ct{Bot}. When a robot is 
+created, it is always pointing to the east, that is, to the right of the screen.}
+
+\section{Quitting and Saving}
+
+The background of the Squeak window application is called the World. The World has a menu 
+offering a number of different options. To display the World menu, just (left) click on the back- 
+ground. You should get a menu similar to the one shown in Figure~\ref{fig:worldMenu}. The last group of 
+options consists of all the actions that you can take to quit out of the environment or save 
+your work. 
+
+
+\begin{figure}[!h]
+\center{\includegraphics[width=8cm]{16-worldMenuAnnotated}}
+\caption{The World menu includes actions for quitting and saving.\label{fig:worldMenu}}
+\end{figure}
+
+Selecting the item \menu{quit} simply quits the environment without saving your work. The 
+result is that the next time you launch the environment, it will be in exactly the same state as 
+the last time you saved it. Selecting the item \menu{save} saves the complete environment. The next 
+time you start the environment, it will be in exactly the same state as the last time you saved it. 
+Finally, if you select the item \menu{save as \ldots}, the environment asks you to create a new name, and it 
+will then create two new files with that name: one with the extension .image and one with the 
+extension \ct{.changes}. That is how I created the files \ct{Ready[.image]} and \ct{Ready.changes}. To open 
+the environment that you saved with a new name, drag and drop the file with the new name 
+that has the extension \ct{.image} onto the squeak application file icon as you did to start the environment 
+by dragging and dropping the file \ct{Ready[.image]}. 
+
+
+\subsection{Installation Troubleshooting }
+Sometimes things don’t proceed just as they should, so in this section I will present some 
+information that should be of help if you encounter problems during installation. First, I will 
+explain the role of the principal files that you obtained when you decompressed the archive. 
+To run the environment provided with this book or with any Squeak distribution, four 
+files are necessary. Knowing about them can help in solving any problems you may encounter. 
+
+\begin{description}
+\item{\textbf{Image and changes.}} The file \ct{Ready[.image]}, called simply the image file, and the file 
+\ct{Ready.changes}, called simply the changes file, contain information about your current 
+\Squeak system. These two files are synchronized by \Squeak automatically and should be 
+writable (that is, not read-only). Each time you save your environment, these two files are 
+synchronized. You should not edit them with a file editor or change the name of the file 
+manually. If you want to use different names, just use the \menu{save as\ldots} menu item of the 
+World menu. \Squeak will then create a new pair of files for you. 
+
+\item{\textbf{Source.}} The file named \ct{SqueakV3.sources}, called the \emph{sources} file, contains the source code 
+of a part of the Squeak environment. You will not need it in working through this book, so 
+do not try to edit it manually. However, this file should always be in the same directory in 
+which the image file is located. 
+
+\item{\textbf{Application.}} The application files \ct{Squeak} for Mac and \ct{Squeak.exe} for PC are the \Squeak 
+application. Each of these files is the application that runs when you are programming in 
+\Squeak. It should be executable. This file is referred to as the \Squeak \emph{application}. In computer-science 
+jargon, this application is called a \emph{virtual machine}, or VM for short. 
+\end{description}
+
+Keep in mind that the image and changes files should be writable. Some operating systems 
+change the properties of files to “read only” when they are copied from an external source. If 
+that happens, Squeak warns you with a message, like that shown in Figure~\ref{fig:readonlyfile}. If you get such 
+a message, simply quit Squeak without saving, change the property of the file to permit write 
+access, and restart. 
+
+\begin{figure}[!h]\centerline{\includegraphics[width=\linewidth]{17-changesNotWritable}}\caption{This message appears if the image (\ct{Ready.[image]}) or changes (\ct{Ready.changes}) file is not writable.\label{fig:readonlyfile}}
+\end{figure}
+
+Another possible problem you may encounter is related to the sources file \ct{SqueakV3.sources}. 
+This file or an alias pointing to this file should be present in the directory in which the image file 
+is located. If the file itself is not present, you may get the message shown in Figure~\ref{fig:sourcesMissing}. To cure 
+this problem, create an alias to the sources file (\ct{SqueakV3.sources}) in the directory containing 
+the image file or simply copy the sources file into the directory that contains the image file. You 
+should not have this problem if you are using the distribution for this book. 
+
+\begin{figure}[!h]%\center{\includegraphics{sourcesMissing}}
+\center{\includegraphics[width=\linewidth]{18-sourcesmissing2}}\caption{Possible messages indicating that the sources file (SqueakV3.sources) is missing from the directory containing the image file.\label{fig:sourcesMissing}}
+\end{figure}
+
+
+\section{Summary}
+To start the environment, drag and drop the file \ct{Ready[.image]} or another file that you have 
+saved with the \ct{.image} extension into the squeak application. 
+
+\begin{itemize}
+\item To send a message to a robot, left click on it, type the message, and press the return key. 
+\item To create a new robot, send the message \ct{new} to the class \ct{Bot}, which is your robot factory. 
+\item When a robot is created, it is always pointing to the east, that is, to the right of the 
+screen. 
+\item To obtain the menu for saving the environment, click on the background. 
+\end{itemize}
+
+
+
+\ifx\wholebook\relax\else
+    \end{document}
+\fi
+
+%%% Local Variables:
+%%% coding: utf-8
+%%% mode: latex
+%%% TeX-master: t
+%%% TeX-PDF-mode: t
+%%% ispell-local-dictionary: "english"
+%%% End:

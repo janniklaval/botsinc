@@ -1,0 +1,21 @@
+
+Ducasse Ch9
+***********
+
+
+p86 diagram
+Make sure the diagram (a)-(d) clearly visually relate to the four lines of code at the top!
+
+p87
+Please remember to use "I" not "we"?
+
+p88
+too many scripts not enough visual break-outs?
+
+I think the chapter would just succeed more for the reader if that final sequence of scripts had some nice visuals here and there to break it up a little and reassure the reader they are understanding, visually?
+
+
+>> every script is commented step by step. 
+And I added some visuals.
+
+

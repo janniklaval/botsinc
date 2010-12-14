@@ -1,0 +1,266 @@
+Chapter 2
+*********
+
+p23
+Please note the "we" again - if possible please switch to Apress "I" for author first person, and "you" for the reader. This should chime with other TIA titles also...
+
+>> do not use acronisms with me I do not understand them. What is TIA?
+Then I would like to know whether this is important since it will take me a lot of time and I will have to carefully check the changes. Also I want to know if the automatic transformation makes sense in english since in french this would be a real nightmare with plural to singular changes.
+
+p23
+First sentence doesn't make sense... perhaps:
+"... is a bit limited, and so I introduce you to the notion of a script. A script is a sequence..."
+
+>> done
+
+
+p23
+please avoid "i.e." and go to "that is"
+>> an automatic replacement does not work, or I do not know english well enough.
+So I substitute
+	i.e., but that is, 
+because normally I have i.e., and a sentence (subject verbs....)
+so is it english to have 
+that is, and a sentence? 
+
+
+example
+binary messages i.e., messages mainly related to mathematical expressions. 
+=>
+binary messages that is, messages mainly related to mathematical expressions. 
+
+Is it correct? 
+
+It seems quite awkward to me so I had to change the text  (again) on stable parts on other chapter since ie is a macro in my book. Still I have the impression that I will
+have to check all the sentences using ie.
+
+
+
+p23
+concept: expressions, and infact "a sequence of expressions"- does your reader know what an expression is?? Could you introduce this idea with a gentler concept such as "command" or "request" or "statement" like we talk to people normally a little bit perhaps? Might help some of your readers imo
+
+p23
+"Cascading" - should explain clearly what this means up front?
+
+p23
+as you explain the repeated go:100 turnLeft: 90 etc. would it be easier to follow with more interim diagrams? Figure 2.1 does explain how to type the commands in but does not make it any clearer how the command sequence makes the robot draw a square... depends on your reader assumption Stephane, I guess... ALSO please note that the second part of 2.1 draws a Rectangle, as you talk about later, but is VERY confusing when looking at that diagram from when we're still drawing a square (in the text above diagram 2.1)
+
+p23
+"...using the character ; does not..."
+It is not totally clear that you are refering to the ";" character as a reference here? also you have not explained what it does exactly!! slow down for the reader here I advise and expain each component more carefully
+
+p23
+"does not scale for complex sequences..." -- why not? make more explicit? Are you assuming your reader understands scaling issues?
+
+>> fixed
+
+p23
+"In addition..." new paragraph I recommend, and slow down a little on this topic - I know you are "skirting" around it briefly here, but I think you need introduce these concepts more openly and slowly. Note that you suddenly use the "program" verb in this sequence without introducing what "program" means? or the relation of "program" to "script" etc. I prefer if you kept to "a sequence of messages" and avoid "program" at this point perhaps?
+
+
+p24
+"execution of your scripts" -- are you assuming your reader knows this means the "carrying out" of a script??
+
+p24
+"look at the functionality of the Bot Workspace in detail in Chapter 5" -> does your reader know what you mean by looking at the "functionality" of the Bot Workspace? How is that different from what we're doing now right here on p24, they might wonder?
+
+>>removed
+
+
+p24
+"define a script" -- does your reader know you "define" scripts... is it the same as writing or creating? they may wonder
+
+>> uh?
+
+
+p25
+"but still constitutes a program" ... again, "program" is flying around a little undefined here??
+
+p25
+"to express programs" ... what does that mean?
+
+p25
+"support the developer" ... developer new noun in the book unprepped? so far scripts/sequences of messages etc. have been more like "expressions" how now it is to "develop" ? explain to reader??
+
+>> ...........
+
+p25
+"fiability" -> viability (typo)
+
+p25"There are per se.... expressive power and properties" - WAY too technical imo, losing your reader?
+
+p25
+"Smalltalk" -- apart from the heading, Smalltalk is unintroduced?? how can the reader know what you are talking about necessarily? you did not even say Smalltalk was a programming language, or a method of putting sequences of messages together, etc?? {Ah - you do, but too late, by the time you talk about Smalltalk your reader has already despaired of their understanding)
+
+p26
+"such as .... AMD micro-processors that you may have..." WAY too technical and obscure reference imo??
+
+>> really a microprocessor name is the most concrete reference I can find. This is on the 
+computer in front of you under the box!!!
+
+p26
+"Smalltalk is an object-oriented language...step by step" --- I recommend a friendly, cheerful diagram showing some "objects" talking to each other? it's very conceptual/abstract just saying it like you have, how about a diagram to make it all more tangible and friendly and familiar??
+
+>> may be
+
+p26
+"the way you wrote your first program"... they did already? then let them know where they did, sure they can work it out, but why not just say "in the previous..." etc.
+
+p26
+"you typed a text" - this clarify or obscure? you HAVE told the reader it's "a sequence of expressions" so why not just say this? or to be clearer, go back to the "messages" description? "typed a text" is quite odd reference imo
+
+p26
+"Squeak executed the sequences..."
+1) there was only 1 sequence right?
+2) where did you prep the reader about Squeak "executing" things? you mean, did them? followed them? etc.??
+
+p26
+Vocabulary Point - hmm, after my prev comments, I feel this comes maybe a little late? Section 4.1 finally clarifies script, and program, and expressions. After the reader was left wondering earlier when you used them? 
+
+>> I added some references before
+
+
+p26
+"will use a variable named pica" ... undefined what a variable is at this stage? You do say "certain aspects like variables are treated in separate chapters" but this doesn't feel enough, given that you have introduced and are using the concept here now??
+
+>> Sorry but this is explain the best I can here:
+It tells the compiler (the application that translates the textual description of a program in a form that the computer can execute) that we want to use the name \caro to refer to an object.  Think of it as saying to a friend, from now on I will use the word \caro in my sentences\index{variable definition}\index{bar@\texttt{"|}|see{vertical bar}} to refer to a robot. You shall learn more on variables in Chapter~\ref{ch:variables}.
+
+
+p26
+"Script 2.1"... I would explicitly say "above" or "that we already looked at" so the reader doesn't think we're dealing with a new script here, and browse down until they hit Script 2.2, and wonder where 2.1 went ! I think it might even be worth repeating Script 2.1 right here in its entirety.
+
+>> done
+
+p27
+"compiler" -- too early to talk about compilers? it certainly distracts here from the topic
+
+
+>> put squeak instead
+
+p27
+"because it is a class, i.e. a factory of robots"
+1) "Class" ? Bit too soon?
+2) please avoid "i.e."
+
+>> no!
+
+
+
+p27
+"See Chapter 15" -- about what? what is in Ch15 from here? pixels? there is a note about pixels a few lines down though - do these relate?? be explicit imo
+
+>> removed
+
+
+p27 [in the box]
+"message name that terminates by a colon indicates" - reader may not appreciate the distinction between a command, or expression, and the "message name" here, since none of the *lines* end with a colon... they end with period :)
+
+>>done
+
+
+p27
+"further into the explanation" - explanation of what?
+
+>> fixed
+
+p27
+"assignment" - undefined?
+
+>> done
+
+p27
+"message send" - undefined?
+
+>> come on....
+
+p27
+"message... name... selector... method solector, message arguments...message receiver" - overload? suggest simplify, introduce less concepts on top of each other
+
+>> I cannot sorry. I removed method selector but I can do more.
+
+
+p28 {diagram}
+1) Caro? why confuse us now by changing names?
+2) message/method selector - the ambiguity does not help the reader
+3) arguments - undefined?
+
+>> The arrows are pointing to the numbers...
+
+In \ct{\caro go: 100}, the message \ct{go: 100}  is sent to a receiver a robot. It is composed of the method  name \ct{go:}, and an argument the number \ct{100}.
+And I have at least four examples.....
+
+
+
+p28 "See Chapter 15" --> this must be the 3rd or 4th time you've said this, and it is a little offputting? if you have something worth saying, let the reader know a little more about it here, or defer this treatment until later itself? Recommend less refs to Ch15 one way or the other...
+
+
+>> done
+
+
+p28
+"See Chapter 7" -- way way too many forward refs now imo. KEEP THE READER IN THE PRESENT CHAPTER
+
+>> But I can't because else the chapter will be 50 pages. 
+
+
+
+p28
+"Method... introduced in Ch??" - this forward referencing is just blowing the reader off the rails of this particular chapter now... please please please reduce these forward references!! Keep instead the body of this chapter coherent and more "to itself"
+
+>> I removed the method reference and paragraph
+
+
+p29
+"using the cascade" --- "cascade" may be a tricky concept? needs more work introducing?
+
+>> this is exactly what I explained in the first section of this chpater.
+
+
+
+p29
+"cancel the execution" ... how to do that?? what does that even mean? and why then, can we try and correct it? the whole debugging allusion seems a bit to vague imo here?
+
+p30
+"too many variables" --- the example you're giving though isn't that there are "too many" (literally) ... it's that you declare some that aren't used --- not quite the same thing surely??? 
+
+>> fixed
+
+
+p30
+Also please note that Figs 2.7-2.8 unfortunately break up a paragraph - I recommend you allow that paragraph to run unbroken, but moving Figs 2.7-2.8 to immediately next to their associated text?
+
+p31
+Final summary point - I'm not sure you really nailed that information about classes and factories at all - please consider making this more clear in the chapter
+
+>> added a subsection
+
+
+
+p32
+Fig 2.7 comes too late - after the summary! recommend you interlace it back into the body of the text, before the chapter itself closes out. Ditto Fig 2.8.
+
+>> not my fault but fixed
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

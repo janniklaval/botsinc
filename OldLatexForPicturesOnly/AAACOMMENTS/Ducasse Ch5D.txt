@@ -1,0 +1,76 @@
+
+Ducasse Ch5
+***********
+
+
+>>> I restructured everything in this chapter
+
+p50
+There is a real lurch between where you explain at the end of p49 the difference between executing messages that return values or not, and then suddenly crash bang into Figure 5.1, Figure 5.2 and a strange heading after those called "Text Selection" ... this is VERY DISORIENTING!! How does Text selection relate to executing messages, your reader may ask... sure, you execute text you select, but it takes maybe 10 seconds for the reader to work this out, it needs more explicit "signposting" or directions for the reader on where they are going next...
+
+I recommend to tidy this sequence up
+1) Move Figures 5.1 and 5.2 to immediately AFTER the text that relates to them
+2) Add a new subsection (perhaps "Executing a Script") heading or something explaining where you are going now - "Text Selection" leaves the reader horribly guessing and confused about its realtion to execution, and what the Figures 5.1 and 5.2 are all about, and how these all relate to the immediately previous material...
+
+
+>> Ok this was really bad. I fixed that!
+
+
+p50
+"to immediately select all the text" --- select WHAT text? text in the environment? you have jumped and you have not taken your reader with you - see previous note
+
+p50
+These three ways of executing a script - feel like screenshots would be good to me
+
+p50
+those "@@" symbols - scaring the reader?
+
+p51
+Figure 5.3 - better positioned straight after its text reference - where it is now, disrupts the next sentence etc.
+
+p51: "print"
+Many readers may think print means a printer. Maybe clarify??
+
+p52
+"Interacting with Squeak" -- maybe explain this section's link to the previous (via the chapter title/theme) 
+
+p52
+Let's make sure the table comes after the colon !!
+
+p52
+Need to explain the WHY of Halos??
+
+p52
+I wonder if you should give the reader more about these mouse clicks and functionality? It seems very cursory and unhelpful in its current form - like an instruction manual without any instructions? :)
+
+p53
+Fig 5.6 - please position relative to its text
+
+p53
+Perhaps a step-thru of copying text out of the Load dialog box and into the environment??
+
+>> no 
+
+
+p54
+"Note that if... black halos... 5.8" ---
+I'm not sure this works for the reader - recommend you are more explicit on this; partly, halos weren't introduced smoothly (for me at least)
+
+
+p54-55 Figure 5.9
+1) Please move this right next to its corresponding text on p54
+2) that "capture" corner graphic is floating there and might confuse readers... label it??
+
+p54-55 Figure 5.10
+1) Please position it right next ot its corresponding text
+2) This sequence isn't stepped through clearly enough imo... recommend a careful step through of each stage with more Figures if you want the reader to really get this straight in their mind.
+
+p55 The Summary
+You didn't summarise the good section on returning values etc. which I thought was majorly important to summarise?
+
+
+
+
+
+
+

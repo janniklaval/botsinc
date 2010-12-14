@@ -1,0 +1,467 @@
+% $Author: Luc $
+% $Date: 2008-11-09 11:14:31 +0200 (Sun, 09 Nov 2008) $
+% $Revision:  $
+%=================================================================
+\ifx\wholebook\relax\else
+% --------------------------------------------
+% Lulu:
+    \documentclass[a4paper,10pt,twoside]{book}
+    \usepackage[
+        papersize={6in,9in},
+        hmargin={.75in,.75in},
+        vmargin={.75in,1in},
+        ignoreheadfoot
+    ]{geometry}
+    \input{../common.tex}
+    \pagestyle{headings}
+    \setboolean{lulu}{true}
+% --------------------------------------------
+% A4:
+%   \documentclass[a4paper,11pt,twoside]{book}
+%   \input{../common.tex}
+%   \usepackage{a4wide}
+% --------------------------------------------
+    \graphicspath{{figures/} {../figures/}}
+    \begin{document}
+%   \renewcommand{\nnbb}[2]{} % Disable editorial comments
+    \sloppy
+\fi
+
+\chapter{Variables}\label{cha:variables}
+
+\noindent\hrule
+\includegraphics[width=0.9\linewidth]{varTitlePicture}
+\noindent\hrule\vspace{1.5cm}
+
+People are always giving names to things. For example, we give names to people, to dogs, 
+and to cars. When we do this, we are \emph{associating} some object, being, or idea with a word or a 
+symbol. Once this association has been made, we may then use the word or symbol to \emph{refer} to 
+or interact with the object associated with it. A name can last a lifetime, or it can be discarded 
+after a short period of time. Sometimes, names refer to other names. For example, an actor 
+generally has several names: a given name, a stage name, and the name of the character that 
+he or she is currently playing on stage or screen. In a programming language, we also need to 
+be able to name things, and \emph{variables} are used for this purpose. 
+
+
+In this chapter, you will learn about variables, which are placeholders for objects, and 
+how variables help to simplify programs. Indeed, variables are often necessary in programming. 
+Finally, as the complexity of the problems that you encounter increases, you will see that you will 
+need to express dependencies between variables. For example, the width of a rectangle might be 
+two-thirds its length. In this chapter I will show you how to use variables to express dependencies 
+between different quantities.
+
+\section{Brought to You by the Letter A} 
+
+As you did in Chapter~\ref{cha:robots}, suppose you want to use a robot to write letters of the alphabet. The 
+rather primitive letter A that we are going to draw is characterized by its \emph{height}, its \emph{width}, and a \emph{midheight}, which isthe height at which the midline of the A should be drawn, as shown in 
+Figure~\ref{fig:varannotated}.
+
+\begin{figure}
+\center{\includegraphics[width=5cm]{varAnnotated}}
+\caption{The shape of a letter A is characterized by its height, width, and midheight.\label{fig:varannotated}}
+\end{figure}
+
+\begin{exonofig}\label{xp:anA100x70}
+Write a script that draws a letter A of height 100 pixels,width 70 pixels,and midheight 60 pixels.
+\end{exonofig}
+
+
+\subsection{Variations on the Theme of A} 
+
+The script you wrote for Experiment 8-1 should resemble Script~\ref{scr:anA100x70}. 
+
+\begin{script}[anA100x70]{An A for Experiment~\ref{xp:anA100x70}.}
+| pica | 
+pica := Bot new. 
+pica north. 
+pica go: 100. 
+pica east. 
+pica go: 70. 
+pica south. 
+pica go: 100. 
+pica west. 
+pica jump: 70. 
+pica north. 
+pica go: 60. 
+pica east. 
+pica go: 70 
+\end{script}
+
+\begin{exofigwithsizeandtitle}[0.7]{\includegraphics[width=2cm]{varA200}}{frAnkenstein}\label{xp:frankenstein}
+Modify Script~\ref{scr:anA100x70} to draw a monstrous letter A of height 200 pixels,width 100 pixels,and midheight 70 pixels, as shown in the figure below.
+\end{exofigwithsizeandtitle}
+
+In modifying Script~\ref{scr:anA100x70} for Experiment~\ref{xp:frankenstein}, you found that in order to produce an A of a different size, you had to change the numbers that represent the height, the width, and the 
+midheight of the letter \emph{everywhere} they occur and \emph{synchronously}. By synchronously, I mean 
+“in the correct order”; that is, 100 should become 200, 70 should become 100, and 60 should 
+become 70 without any mixups. 
+
+
+\begin{exonofigtitle}{A Variety of A’s}\label{xp:varietya}
+Modify Script~\ref{scr:anA100x70} to draw other A’s of different sizes of your choice.Try to reproduce some of the A’s that appear in the picture at the start of this chapter. 
+\end{exonofigtitle}
+
+In doing Experiment~\ref{xp:varietya} you undoubtedly quickly came to the conclusion that changing 
+the values of an A’s characteristics everywhere is tedious. Moreover, it should be obvious that 
+in making such changes, you run the risk of becoming confused and forgetting to change a 
+value or making a change to an incorrect value. The result can be nothing like what you had in 
+mind for your script. You can imagine that in complex programs, changing values one by one 
+in this way can become highly problematic. 
+
+
+\section{Variables to the Rescue}
+
+Making large numbers of changes in producing letters of different sizes and shapes is both 
+tiresome and error-prone, and so we need a solution that will both keep us from mixing up the 
+numbers representing the various characteristics of a letter and enable us to make alterations 
+without having to change all the values everywhere. In fact, we would like to be able to do the 
+following: 
+
+\begin{itemize}
+	\item \emph{Declare} the height, width, and midheight of a letter A once for the entire script. 
+	\item \emph{Refer} to these values as needed.   
+	\item \emph{Change} the values if necessary.
+\end{itemize}
+
+
+These three things are exactly what a variable allows us to do! Amazing isn’t it? A variable 
+is a \emph{name} with which we \emph{associate a value}. We must \emph{declare} it and \emph{associate} a new value with it. Then we can \emph{refer} to a variable and obtain the \emph{value} associated with this variable. It is also possible to \emph{modify} the value associated with a variable and assign it a new value. The value of a variable value can be a number, a collection of objects, or even a robot. We now illustrate 
+how to declare, associate a value, and use a variable.
+
+
+\important{Important! A variable is a \emph{name} with which we associate a \emph{value}. We declare a variable and associate a value with it.Then we can \emph{refer} to a variable and obtain its \emph{value}.It is also possible to \emph{modify} the value associated with a variable and associate a new value with it.
+}
+
+\subsection{Declaring a Variable} 
+
+Before using a variable, we have to \emph{declare} it; that is, we must tell Squeak the name of the vari- 
+able that we want to use. We declare variables by enclosing them between vertical bars \ct{||}, 
+as shown in the following example, which declares the three variables \ct{height}, \ct{width}, and 
+\ct{midheight}: 
+
+\ct{| height width midheight |}
+
+To be precise, vertical bars \ct{||} declare \emph{temporary} variables, which are variables that exist only 
+during the execution of the script. 
+
+
+\subsection{Assigning a Value to a Variable} 
+
+Before using a variable it is almost always necessary to give it a value. Associating a value is 
+called \emph{assigning} a value to a variable. In Smalltalk, the symbol pair \ct{:=} is used in combination 
+to assign a value to a variable. In the following script, after declaring three variables we assign 
+$100$ to the variable \ct{height}, $70$ to the variable \ct{width}, and $60$ to the variable \ct{midheight}. When we assign a value to a variable for the first time, we say that we are \emph{initializing} it: 
+
+\begin{code}{}
+| height width midheight | 
+height := 100. 
+width := 70. 
+midheight := 60 
+\end{code}
+
+\important{Important! The symbol \ct{:=} assigns a value to a variable. For example, \ct{height := 120} assigns the value \ct{120} to the variable \ct{height}, while \ct{length := 120 + 30} assigns the result of the expression \ct{120 + 30}, that is, \ct{150}, to the variable \ct{length}. 
+}
+
+When we assign a value to a variable for the first time,we say that we are \emph{initializing} it. 
+
+\subsection{Referring to Variables} 
+
+To refer to the value assigned to a variable---we also say \emph{use} a variable---simply write its name 
+in a script. In the following script, after being \emph{declared} in line 1, the variable \ct{height} is \emph{initialized} with the value \ct{100} in line 3 and \emph{used} in line 5 to tell the created robot to go forward the number of pixels associated with the variable \ct{height}, which here is \ct{100}. 
+
+\begin{code}{}
+| pica height | 
+pica := Bot new. 
+height := 100 
+pica north. 
+pica go: !\textbf{height}!
+\end{code}
+
+\important{Important! In general, a variable must be \emph{declared} and \emph{initialized} before being used.}
+
+\subsection{And What About Pica?} 
+
+You guessed it! \ct{pica} is also a variable. It just happens to be a variable whose value is a robot. Hence, \ct{| pica |} declares a variable named \ct{pica}. The expression \ct{pica := Bot new} initializes the variable with a value, here a new robot. Then we use this robot by sending messages to it via the variable \ct{pica}, for example, \ct{pica go: 100}. 
+
+\section{Using Variables} 
+
+Now let us explore the benefits of using variables, and I will show you some powerful properties that variables possess. In particular, I will show you the power that comes from expressing relationships between variables. 
+
+By introducing variables into Script~\ref{scr:anA100x70}, we obtain Script~\ref{scr:anA100x70withvar}. 
+
+
+\begin{script}[anA100x70withvar]{An A with variables.}
+| pica !\textbf{height width midheight}!| 
+pica := Bot new. 
+!\textbf{height:= 100.}!              "initializes the variables" 
+!\textbf{width:= 70.}! 
+!\textbf{midheight:= 60.}! 
+pica north. 
+pica go: !\textbf{height}!.            "then we use the variables" 
+pica east. 
+pica go: !\textbf{width}!. 
+pica south. 
+pica go: !\textbf{height}!. 
+pica west. 
+pica jump: !\textbf{width}!. 
+pica north. 
+pica go: !\textbf{midheight}!. 
+pica east. 
+pica go: !\textbf{width}! 
+\end{script}
+
+You will agree that changing variable values once is easier than changing numbers scattered throughout the script. Change some values to convince yourself. You should be able to draw all the A’s that appear in the figure at the head of this chapter. Now if you want to change the characteristics of your letter A, you need only reinitialize the variables by changing the values in lines 3, 4, and 5, as shown in Script~\ref{scr:anA100x70changevalues}. The resulting drawing is presented in Figure~\ref{fig:varaflat}. 
+
+\begin{script}[anA100x70changevalues]{A modified letter A}
+| pica !\textbf{height width midheight}! | 
+pica := Bot new. 
+!\textbf{height:= 30.}!       "initializes the variables" 
+!\textbf{width:= 200.}! 
+!\textbf{midheight:= 10.}! 
+... 
+\end{script}
+
+
+\begin{figure}[h!]
+\centering\includegraphics[width=5cm]{varAFlat}
+\caption{A short and stout letter A simply created with height = 30, width = 200, and midheight = 10.\label{fig:varaflat}}
+\end{figure}
+
+Using variables, you can easily create many different letters, and in the future, you will be able to write programs to solve many challenging problems. Let us step back for a moment and consider the power provided by variables.
+
+\subsection{The Power of Variables}
+
+The experiments in the remainder of the chapter illustrate the power of variables. Variables let 
+you name a thing, whether a robot, a length, or practically anything else. Then you can use the 
+names instead of having to repeat the values that you associated with the names. Variables 
+make your scripts much easier to change, since you can simply reinitialize your variables to 
+different values. 
+
+
+In addition, a variable can hold a wide variety of types of values. Up to now, you have assigned robots and numbers to variables, but you can also assign colors (for example, \ct{robotColor := Color yellow}), a sound, or indeed any Squeak object. 
+
+Note also that variables make your scripts much more readable and easier to understand. To convince yourself of this, just compare Scripts~\ref{scr:anA100x70} and~\ref{scr:anA100x70withvar}. The simple fact of using variables with names such as “width” and “height” helps you to understand how the letter is drawn.
+
+
+\section{Expressing Relationships Between Variables} 
+
+In your experiments with the letter A, you probably found some of your letters easier to recognize than others. Letters of the alphabet should generally adhere to certain proportions to keep them readable. In particular, the dimensions that describe a particular letter are not chosen at random, but maintain certain proportions between them. 
+
+In our simple letter A, let us decide that the width should be two-thirds of the height, and 
+the midheight should be three-fifths of the height. We can express these relationships using 
+variables, as shown in Script~\ref{scr:84}. As you can see, the value of a variable does not have to be a 
+simple number, but can be the result of a complex computation. 
+
+
+\begin{script}[84]{Relations between variables:a first approximation.}
+| pica height width midheight | 
+pica := Bot new. 
+height := !\textbf{120}!. 
+width := !\textbf{120}! * 2 / 3. 
+midheight := !\textbf{120}! * 3 / 5. 
+\end{script}
+
+In looking over Script~\ref{scr:84}, you will soon realize that it is not optimal. The relationships 
+between the variables are expressed not between the variables themselves, but in terms of 
+the value \ct{120} (in lines 3, 4, and 5). This value would have to be changed manually whenever 
+you wanted to produce a different letter A with the same proportions. You want to be able to 
+change the value of \ct{height} and have the values of \ct{width} and \ct{midheight} change automatically. 
+The solution is to use the variable heightinstead of 120, as shown in Script 8-5. In this script, 
+the values of the variables widthandmidheighttruly depend on the value of height. What 
+makes this work is that the value of a variable can be expressed in terms of other variables. 
+The expression \ct{width := height * 2 / 3} expresses that the width of the letter is equal to 
+two-thirds of its height. 
+
+\begin{script}[85]{Relations between variables:The variables \ct{width} and \ct{midheight} depend on \ct{height}.}
+| pica height width midheight | 
+pica := Bot new. 
+!\textbf{height:= 120.}!
+width := !\textbf{height}! * 2 / 3. 
+midheight := !\textbf{height}! * 3 / 5. 
+pica north. 
+... 
+\end{script}
+
+\subsection{Initialize Before Using!} 
+
+The only constraint that you have to consider in expressing relationships between variables is 
+that a variable used in the definition of another variable should have a value. For example, in 
+Script~\ref{scr:85}, the variable \ct{height} has its initialized value \ct{120}, which is used by \ct{width} and \ct{midheight} in computing their initialized values. To see what can go wrong, in Script~\ref{scr:86} the variable \ct{height} has not been initialized, and so when an attempt is made to initialize the variable \ct{width} to \ct{height * 2/3},   this leads to an error, because there is no   value of \ct{height} to be used in the computation. I will have more to say about errors in Chapter~\ref{cha:15}.
+
+
+\begin{script}[86]{Problematic \ct{width} initialization.}
+| height width midheight | 
+width := height * 2 / 3. 
+height := 120. 
+midheight := height * 3 / 5.
+\end{script}
+
+
+\section{Experimenting with Variables}
+
+The experiments that follow will help you to gain experience with variables. 
+
+\begin{exofigwithsizeandtitle}[0.6]{\includegraphics[width=3.5cm]{varGoldenRec}}{Golden Rectangle}
+A golden rectangle is a rectangle one of whose sides is approximately 1.6 times the length of the other.The number 1.6 is an approximation of the “golden ratio”:the number. A nice property of such a rectangle is that if you cut off a square inside the rectangle,as shown in the figure below,then the part of the rectangle left over is again a golden rectangle.You can then cut a square off of this smaller golden rectangle and obtain an even smaller golden rectangle,and so on ad infinitum.The dimensions of a golden rectangle are pleasing to the eye,and since ancient times,artists and architects have used the golden ratio in their work.Write a script that draws a golden rectangle. You can express the number  in Smalltalk as \ct{1 + 5 sqrt / 2}.
+\end{exofigwithsizeandtitle}
+
+
+\begin{exonofigtitle}{Scripts That Don’t Work}
+\begin{code}{}
+| pica height |                      | pica height | 
+pica := Bot new.                     pica := Bot new. 
+height := 120.                       pica north. 
+pica north.                          pica go: height. 
+pica go: 100.                        pica east. 
+pica east.                           pica go: 70. 
+pica go: 70.                         pica south. 
+pica south.                          pica go: height. 
+pica go: 100.                        pica west. 
+pica west.                           pica jump: 70. 
+pica jump: 70.                       pica north. 
+pica north.                          pica jump: 50. 
+pica jump: 50.                       pica east. 
+pica east.                           pica go: 70 
+pica go: 70 	
+\end{code}
+\end{exonofigtitle}
+
+
+\subsection{The Pyramids Rediscovered}
+
+In Script~\ref{scr:75}, in Chapter~\ref{cha:looping}, we defined the outline of the step pyramid of Saqqara as in Script~\ref{scr:87}. 
+
+\begin{scriptfigwithsize}[0.4]{\includegraphics[width=5cm]{varPyramid}}{The pyramid of Saqqara}\label{scr:87}
+| pica | 
+pica := Bot new. 
+5 timesRepeat: 
+[ pica north. 
+pica go: 20. 
+pica east. 
+pica go: 20 ]. 
+5 timesRepeat: 
+[ pica go: 20. 
+pica south. 
+pica go: 20. 
+pica east ]. 
+pica west. 
+pica go: 200.	
+\end{scriptfigwithsize}
+
+
+\begin{exonofigtitle}{A Pyramid with a Variable Number of Terraces}\label{xp:86}
+Modify Script~\ref{scr:75}, introducing the variable \ct{terraceNumber} to represent the number of terraces that the pyramid should have. 
+\end{exonofigtitle}
+
+
+\begin{exonofigtitle}{A Pyramid with a Variable Number of Terraces}
+Modify the script from Experiment~\ref{xp:86} by introducing the variable \ct{terraceSize} to represent the size of a terrace. 
+\end{exonofigtitle}
+
+
+\section{Automated Polygons Using Variables}
+
+The use of variables greatly simplifies the definition of scripts in which some of the \emph{variables} 
+depend on other variables. In this section, you will see how the use of variables provides great 
+leverage in dealing with loops. Chapter~\ref{cha:loopsandvariables} will go more deeply into the power that the combination of variables and loops can give to your programs.
+
+Let us look again for a moment at Experiments~\ref{xp:73} and~\ref{xp:74}, in which a Bot was asked to 
+draw a regular pentagon and a regular hexagon. The requisite code appears here as Scripts~\ref{scr:88}
+and~\ref{scr:88}.
+
+\begin{scriptfigwithsize}[0.4]{\includegraphics[width=3cm]{varFPentagon}}{A regular pentagon}\label{scr:88}
+| pica | 
+pica := Bot new. 
+5 timesRepeat: 
+	[ pica go: 100. 
+	pica turnLeft: 72 ] 
+\end{scriptfigwithsize}
+
+\begin{scriptfigwithsize}[0.4]{\includegraphics[width=3cm]{varFHexagon}}{A regular hexagon}\label{scr:89}
+| pica | 
+pica := Bot new. 
+6 timesRepeat: 
+	[ pica go: 100. 
+	pica turnLeft: 60 ]
+\end{scriptfigwithsize}
+
+In order to transform the first script into the second, you must change the number of 
+sides (let us call it s) \emph{and} the magnitude of the turn (let us call it $T$) such that the product $s*T$ 
+is equal to 360. Wouldn’t it be nice if we could write a script in which we would have to change 
+only a single number, let us say the number of sides, since this is the easiest parameter to 
+choose? This can be done by introducing variables. Try to come up with your own solution. 
+
+Script~\ref{scr:810} solves the problem. It makes it possible to draw a regular polygon with any 
+number of sides by changing a single number. Try it before I discuss it further. 
+
+\begin{script}[810]{Drawing a regular polygon.}
+| pica sides angle | 
+pica := Bot new. 
+sides := 6. 
+angle := 360 / sides. 
+sides timesRepeat: 
+	[ pica go: 100. 
+	pica turnLeft: angle ]
+\end{script}
+
+This script introduces two new variables, sidesandangle, which are used to hold the 
+number of sides and the size of the angle. Then, the expression \ct{sides := 6} assigns the value 6 
+to the variable \ct{sides}, and the expression \ct{angle := 360 / sides} assigns a value to the variable 
+angle, which is the result of \ct{360} divided by the value held in the variable \ct{sides}. The value of 
+the variable angle is then used as the argument of the command \ct{turnLeft:} given to the robot 
+in the repeating block. 
+
+\section{Regular Polygons with Fixed Sizes} 
+
+You will notice that if Script~\ref{scr:810} is executed with a large number of sides, the resulting figure 
+does not fit on the screen. The next experiment asks you to fix this problem by reducing the 
+length of the sides as the number of sides increases. 
+
+
+\begin{exofigwithsizeandtitle}[0.65]{\includegraphics[width=3.5cm]{varSameLength}}{Controlling the Sides of the Polygon}
+Modify Script~\ref{scr:810} so that the size of the regular polygon stays roughly constant as the number of sides changes. 
+Hint:Introduce a variable \ct{totalLength} that is set to a fixed length,and let each side of your polygon have length equal to \ct{totalLength} divided by the number of sides.
+\end{exofigwithsizeandtitle}
+
+
+\section{Summary} 
+
+\begin{itemize}
+	\item A variable is a \emph{name} with which we \emph{associate a value}. We must \emph{declare} it and \emph{assign} a value to it. Then we can \emph{refer} to a variable and obtain the \emph{value} associated with this variable. It is also possible to \emph{modify} the value associated with a variable and assign 
+a new value to it. 
+\item A variable can be used at any place where its value can be used. 
+\item The first time that we assign a value to a variable, we say that we are \emph{initializing} it. 
+\item The symbol \ct{:=} assigns a value to a variable. For example, \ct{height := 120} assigns the 
+value \ct{120} to the variable \ct{height}, while \ct{length := 120 + 30} assigns the result of 
+the expression \ct{120 + 30}, that is, \ct{150}, to the variable \ct{length}. 
+\item A variable must generally be \emph{declared} and \emph{initialized} before being used. 
+\end{itemize}
+
+
+%%%%
+
+% \begin{exofigwithsizeandtitle}[0.7]{\includegraphics[width=3.5cm]{}}{}
+% \end{exofigwithsizeandtitle}
+
+
+% \begin{script}[label]{Title.}
+
+% \begin{figure}
+% \center{\includegraphics[width=10cm]{NOTFOUND}}
+% \caption{.\label{fig:}}
+% \end{figure}
+
+% \begin{exonofigtitle}{Title}
+% \end{exonofigtitle}
+
+\ifx\wholebook\relax\else
+    \end{document}
+\fi
+
+%%% Local Variables:
+%%% coding: utf-8
+%%% mode: latex
+%%% TeX-master: t
+%%% TeX-PDF-mode: t
+%%% ispell-local-dictionary: "english"
+%%% End:

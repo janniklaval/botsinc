@@ -1,0 +1,328 @@
+% $Author: Luc $
+% $Date: 2008-11-09 11:14:31 +0200 (Sun, 09 Nov 2008) $
+% $Revision:  $
+%=================================================================
+\ifx\wholebook\relax\else
+% --------------------------------------------
+% Lulu:
+    \documentclass[a4paper,10pt,twoside]{book}
+    \usepackage[
+        papersize={6in,9in},
+        hmargin={.75in,.75in},
+        vmargin={.75in,1in},
+        ignoreheadfoot
+    ]{geometry}
+    \input{../common.tex}
+    \pagestyle{headings}
+    \setboolean{lulu}{true}
+% --------------------------------------------
+% A4:
+%   \documentclass[a4paper,11pt,twoside]{book}
+%   \input{../common.tex}
+%   \usepackage{a4wide}
+% --------------------------------------------
+    \graphicspath{{figures/} {../figures/}}
+    \begin{document}
+%   \renewcommand{\nnbb}[2]{} % Disable editorial comments
+    \sloppy
+\fi
+
+\chapter{Looping}\label{cha:looping}
+
+\noindent\hrule
+\includegraphics[width=0.9\textwidth]{loopTitlePicture}
+\noindent\hrule\vspace{1.5cm}
+
+By now, you must think that the job of robot programmer is quite tedious. You probably 
+have a number of ideas for interesting drawings, but you just don’t have the heart to write 
+the scripts to draw them, since it appears that the number of lines that you have to type gets 
+larger and larger as the complexity of the drawing increases. In this chapter, you will learn how 
+to use loopsto reduce the number of expressions given to a robot. Loops allow you to repeat a 
+sequence of expressions. With a loop, the script for drawing a hexagon or an octagon is no 
+longer than the script for drawing a square. 
+
+\section{A Star Is Born} 
+
+We would like to instruct a robot to draw a star, similar to the one shown in the picture at the 
+beginning of this chapter. We will instruct pica to draw a star in the following way: starting at 
+what will be the center of the star, draw a line, return to the center, turn through a certain 
+angle, draw another line, and so on until the star is finished. Script~\ref{scr:71} creates a robot that 
+draws a line of length 70 pixels and then returns to its previous location. Note that after it has 
+returned to its starting point, the robot makes an about-face, so that it is pointing in its original direction. 
+
+\begin{script}[71]{Drawing a line and returning}
+| pica | 
+pica := Bot new. 
+pica go: 70. 
+pica turnLeft: 180. 
+pica go: 70. 
+pica turnLeft: 180.
+\end{script}
+
+To draw a star, we have to repeat part of Script~\ref{scr:71} and then instruct the robot to turn 
+through a given angle. Let’s draw a six-pointed star, and so the angle will be 60 degrees, since 
+turning 60 degrees each time will result in 360/60 = 6 branches. Script~\ref{scr:72} shows how this 
+should be done to obtain a star having 6 branches without using loops. 
+
+
+\begin{script}[72]{A six-pointed star without loops}
+| pica | 
+pica := Bot new. 
+pica go: 70. 
+pica turnLeft: 180. 
+pica go: 70. 
+pica turnLeft: 180. 
+pica turnLeft: 60. 
+pica go: 70. 
+pica turnLeft: 180. 
+pica go: 70. 
+pica turnLeft: 180. 
+pica turnLeft: 60. 
+pica go: 70. 
+pica turnLeft: 180. 
+pica go: 70. 
+pica turnLeft: 180. 
+pica turnLeft: 60. 
+pica go: 70. 
+pica turnLeft: 180. 
+pica go: 70. 
+pica turnLeft: 180. 
+pica turnLeft: 60. 
+pica go: 70. 
+pica turnLeft: 180. 
+pica go: 70. 
+pica turnLeft: 180. 
+pica turnLeft: 60. 
+pica go: 70. 
+pica turnLeft: 180. 
+pica go: 70. 
+pica turnLeft: 180. 
+pica turnLeft: 60.
+\end{script}
+
+As you can see, after pica is created, he repeats the same five lines of code six times (shown 
+in alternating roman and italic type). It seems wasteful to have to type the same code segment 
+over and over. Imagine the length of your script if you wanted a star with 60 branches, like the 
+one shown in Experiment~\ref{xp:71}. What we need is a way of repeating a sequence of expressions.
+
+\section{Loops to the Rescue} 
+
+The solution to our problem is to use a loop. There are different kinds of loops, and the one 
+that I will introduce here allows you to repeat a given sequence of messages a given number of 
+times. The method \ct{timesRepeat:} repeats a sequence of expressions a given number of times, 
+as shown in Script~\ref{scr:73}. This script defines the same star as the one in Script~\ref{scr:72}, but with 
+much less code. Notice that the expressions to be repeated are enclosed in square brackets. 
+Script~\ref{scr:73}.
+
+\begin{script}[73]{Drawing a six-pointed star using a loop}
+| pica | 
+pica := Bot new. 
+6 timesRepeat: 
+	!\textbf{[ pica go: 70.}!
+	!\textbf{pica turnLeft: 180. }!
+	!\textbf{pica go: 70. }!
+	!\textbf{pica turnLeft: 180. }!
+	!\textbf{pica turnLeft: 60 ] }!
+\end{script}
+
+
+\important{\ct{n timesRepeat: [ sequence of expressions ]} repeats a sequence of expressions 
+n times.}
+
+The method \ct{timesRepeat:} allows you to repeat a sequence of expressions, and in 
+Smalltalk, such a sequence of expressions, delimited by square brackets, is called a \emph{block}. 
+
+The message \ct{timesRepeat:} is sent to an integer, the number of times the sequence should 
+be repeated. In Script~\ref{scr:73} the message \ct{timesRepeat: [...]} is sent to the integer 6. There is 
+nothing new here; you have a message being sent to an integer when we looked at addition: 
+the second integer was sent to the first, which returned the sum. 
+
+Finally, note that the number receiving the message \ct{timesRepeat:} has to be a \emph{whole 
+number}, because in looping as in real life, it is not clear what would be meant by executing a 
+sequence of expressions, say, 0.2785 times. 
+
+The argument of \ct{timesRepeat:} is a block, that is, a sequence of expressions surrounded 
+by square brackets. Recall from Chapter 2 that an argument of a message consists of information needed by the receiving object for executing the message. For example, \ct{[ pica go: 70. pica turnLeft: 180. pica go: 70. ]} is a block consisting of the three expressions \ct{pica go: 70, pica turnLeft: 180, and pica go: 70}. 
+
+\important{The argument of \ct{timesRepeat:} is a block, that is, a sequence of expressions surrounded 
+by square brackets.} 
+
+
+\section{Loops at Work} 
+
+If you compare Script~\ref{scr:71} with the expressions in the loop of Script~\ref{scr:73}, you will see that 
+there is one extra expression: \ct{pica turnLeft: 60}, which creates the angle between adjacent 
+branches. There is a simple relationship between the number of branches and the angle 
+through which the robot should turn before drawing the next branch: For a complete star, 
+the relation between the angle and the number of repetitions should be $angle*n = 360$. 
+
+To adapt Script~\ref{scr:73} to draw a star with some other number of branches, you have to change 
+the number of times the loop is repeated by replacing $6$ with the appropriate integer. Note that 
+the angle $60$ should also be changed accordingly if you want to generate a complete star. 
+
+\begin{exofigwithsizeandtitle}[0.65]{\includegraphics[width=3.5cm]{loopStar60}}{A Star with Sixty Branches}\label{xp:71}
+Write a script that draws a star with 60 branches. 
+\end{exofigwithsizeandtitle}
+
+\section{Code Indentation} 
+
+Smalltalk code can be laid out in a variety of ways, and its indentation from the left margin has 
+no effect on how the code is executed. We say that indentation has no effect on the syntactic 
+``sense'' of the program. However, using clear and consistent indentation helps the reader to 
+understand the code. 
+
+
+I suggest that you follow the convention that was used in Script~\ref{scr:73} in formatting 
+\ct{timesRepeat:} expressions. The idea is that the repeated block of expressions delimited 
+by the characters [ and ] should form a visual and textual rectangle. That is why the block 
+begins with the left bracket on the line following \ct{timesRepeat:} and we align all the expressions 
+inside the block to one tab width. The right bracket at the end indicates that the block is finished. Figure~\ref{fig:71} should convince you that indented code is easier to read than unindented 
+code. 
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics[width=.9\linewidth]{indent}
+	\caption{Indenting blocks makes it much easier to identify loops. Left: unindented. 
+Right: indented}
+	\label{fig:71}
+\end{figure}
+
+
+Code formatting is a topic of endless discussion, because different people like to read their 
+code in different ways. The convention that I am proposing is focused primarily on helping in 
+the identification of repeated expressions.
+ 
+\section{Drawing Regular Geometric Figures} 
+
+Many figures can be obtained by simply repeating sequences of messages, such as the square 
+that was drawn in Chapter~\ref{cha:turning} (repeated here as Script~\ref{scr:74}). 
+
+\begin{script}[74]{Pica’s first square}
+| pica | 
+pica := Bot new. 
+pica go: 100. 
+pica turnLeft: 90. 
+pica go: 100. 
+pica turnLeft: 90. 
+pica go: 100. 
+pica turnLeft: 90. 
+pica go: 100. 
+pica turnLeft: 90
+\end{script}
+
+
+\begin{exonofigtitle}{A Square Using a Loop}
+Transform Script~\ref{scr:72} so that it draws the same square using the command \ct{timesRepeat:}. Now you should be able to draw other regular polygons, even those with a large number of sides.
+\end{exonofigtitle}
+
+
+\begin{exofigwithsizeandtitle}[0.65]{\includegraphics[width=3.5cm]{loopPentagon}}{A Regular Pentagon}\label{xp:73}
+Draw a regular pentagon using the method \ct{timesRepeat:}. 
+\end{exofigwithsizeandtitle}
+
+
+\begin{exofigwithsizeandtitle}[0.65]{\includegraphics[width=3.5cm]{loopHexagon}}{A Regular Hexagon}\label{xp:74}
+Draw a regular hexagon using the command \ct{timesRepeat:}.
+\end{exofigwithsizeandtitle}
+
+Once you have gotten the hang of it, try drawing a regular polygon with a very large number of sides. You may have to reduce the side length to make the figure fit on the screen. When the number of sides is large and the side length is small, the polygon will look like a circle.
+
+
+\section{Rediscovering the Pyramids} 
+
+Recall how you coded the outline of the pyramid of Saqqara in Experiment~\ref{xp:saqq}. You can simplify 
+your code by using a loop, as shown in Script~\ref{scr:75}. 
+
+
+\begin{scriptfigwithsize}[0.4]{\includegraphics[width=5cm]{loopPyramid}}{A looping pyramid script}\label{scr:75}
+| pica | 
+pica := Bot new. 
+5 timesRepeat: 
+	[pica north. 
+	pica go: 20. 
+	pica east. 
+	pica go: 20]. 
+5 timesRepeat: 
+	[pica go: 20. 
+	pica south. 
+	pica go: 20. 
+	pica east]. 
+pica west. 
+pica go: 200. 
+\end{scriptfigwithsize}
+
+Now you should be able to generate pyramids with an arbitrary number of terraces using 
+the same number of expressions, merely by changing the numbers in the script. 
+
+
+\begin{exofigwithsizeandtitle}[0.55]{\includegraphics[width=4.5cm]{loopPyramid10}}{A Ten-Step Pyramid}
+Draw a pyramid with 10 terraces using a variation of Script~\ref{scr:75}. 
+\end{exofigwithsizeandtitle}
+
+You may now want to generate pyramids with even larger numbers of terraces. The size of 
+the terraces will have to be adjusted if you want them to fit on the screen. 
+
+
+\section{Further Experiments with Loops} 
+
+As you have seen, generating a step pyramid involves the repetition of a block of code that 
+draws two line segments. Once you have identified the proper repeating element, you can 
+produce complex pictures from elementary drawings through repetition. The following 
+experiments illustrate this principle. 
+
+\begin{exofigwithsizeandtitle}[0.65]{\includegraphics[width=3.5cm]{loopCross}}{A Swiss Cross}
+Draw the outline of the Swiss cross shown on the right using \ct{turnLeft:} or \ct{turnRight:} and \ct{timesRepeat:}.
+\end{exofigwithsizeandtitle}
+
+\begin{exofigwithsizeandtitle}[0.65]{\includegraphics[width=3.5cm]{loopStair}}{A Staircase}
+Draw the staircase illustrated in the figure. 
+\end{exofigwithsizeandtitle}
+
+\begin{exofigwithsizeandtitle}[0.65]{\includegraphics[width=3.5cm]{loopStylisedStair}}{A Staircase Without Risers} 
+Draw the stylized staircase—with treads but without risers—illustrated in the figure.
+\end{exofigwithsizeandtitle}
+
+\begin{exofigwithsizeandtitle}[0.65]{\includegraphics[width=.5cm]{loopSimpleElement}}{A Staple} 
+Draw the illustrated graphical element that looks like a staple.
+\end{exofigwithsizeandtitle}
+
+\begin{exofigwithsizeandtitle}[0.55]{\includegraphics[width=4cm]{loopComb}}{A Comb} 
+Transform the graphical element that you produced in Experiment 7-9 to produce the comb shown in the figure.
+\end{exofigwithsizeandtitle}
+
+\begin{exofigwithsizeandtitle}[0.65]{\includegraphics[width=0.7cm]{loopLadder}}{A Ladder}
+Transform the graphical element from Experiment 7-9 to produce a ladder. 
+\end{exofigwithsizeandtitle}
+
+\begin{exonofigtitle}{Tumbling Squares} 
+Now that you have mastered loops using timesRepeat:,define a loop that draws the tumbling squares illus- 
+trated at the start of Chapter 4. 
+\end{exonofigtitle}
+
+
+\section{Summary} 
+
+In this chapter you learned how to program loops using the method \emph{n} \ct{timesRepeat:}. 
+
+\vspace*{5mm}
+\noindent
+\setlength{\extrarowheight}{1mm}
+{\small \begin{tabular}{p{14mm}p{23mm}p{45mm}p{22mm}}
+\hline
+\textbf{Method} & \textbf{Syntax} & \textbf{Description} & \textbf{Example}\\
+\hline
+\textsf{timesRepeat:} & \textsf{n timesRepeat: [a sequence of expressions]} & repeats a sequence of expressions n times & 
+\textsf{10 timesRepeat: [ pica go: 10. 
+pica jump: 10 ]}\\
+\hline
+\end{tabular}}
+
+
+
+
+
+
+
+
+
+\ifx\wholebook\relax\else\end{document}\fi

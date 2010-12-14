@@ -1,0 +1,88 @@
+Nothing left: 22 dec 2004
+
+Ducasse Ch7
+***********
+
+I love this chapter. I love it. I think showing the reader the fundamental "loop iteration" visually would help a lot of your readers though maybe.
+
+>> I do not understand what you mean here.
+I changed some text effects to emphasize the looping part
+
+
+p68 Script 7.2
+Oh that's suddenly quite a long script to make the point - I wonder if it would be better to have an intermediary step where you have a script that say draws two of the star's lines at an angle, to make the fundamental "repeatability" point (also show the visual equivalent) - and then the longer 7.2 script to show it happening again and again etc. And only then discuss scaling to loops etc. since you will have established the "basic looping unit" in the reader's mind etc. Notice that on p68 you say "...that does all the time the same thing" --- if you had the intermediary step I suggest, this "doing the same thing all the time" would be much clearer to the reader, in my opinion.
+
+That way, the crux of the repetition would be clearer:
+[pica go: 70.
+pica turnLeft: 180.
+pica go: 70.
+pica turnLeft: 180.
+pica turnLeft: 60
+
+>> I tried but it does not work that well since we have to explain that we should change the angle between the star part.
+so this would lower the impact. I think that this chapter works quite well so I prefer to focus on the chapters that are weaker.
+Because here I'm not even sure that the result you expect will happen. 
+
+p69
+This might confuse the reader without more clarity: "... is not sent to a robot but to an integer"
+I am not sure the reader will understand which line of the script you are referring to without more help from you on this... and also to explain how it is one can send to an integer etc.?
+
+>> I think that this is because you are thinking about other programming language. In Smalltalk this is exactly the same
+1+2 is a message sent to 1, 4 timesRepeat: is a message sent to 4. No magic nothing special. I changed a bit but there is nothing
+special to say. 
+
+
+p69
+the phrase "argument" - we raised this in previous chapter, but I would continue defining clearly what an argument is through the book, it's complex for some readers, this concept of an "argument" imo.
+
+>> I added some sentences. 
+
+
+p69: 60
+Perhaps explain more directly what the "60" is doing pertinent to how the star looks?
+I also recommend instead of saying "replace this with 60" etc. you actually show a new script to draw Experiment 7.1 with 60 branches etc.?
+
+>>No I want that people try and understand by themselves. In the past I got a lot of complains 
+because I was giving the solutions. I think that this is part of the experimentation.
+
+
+p69
+Because Figure 7.1 is making my eyes feel funny, I happily unleash this upon you Stephane:
+http://www.ritsumei.ac.jp/~akitaoka/rotate-e.html
+:)
+
+
+p69
+"delimited" - simpler word maybe? "surrounded" ?
+>> done
+
+
+
+p69-70 "About the code intentation"
+I recommend you have a visual looking at code indentation, perhaps pointing at indentations etc. if you really want to get this home to your reader? It is a little dry and "abstract" as it stands imo.
+
+>> I added a nice picture and I will do the same for the rest of the book. 
+
+
+p70
+You don't feel you need to let hte reader know how you generated different polygons? what they need to change to go from pentagon to hexagon etc.?
+
+>>No they should think about it. 
+
+
+p71
+I wonder if it is clear enough how the pyramid loop is working for the reader? Rather like with the star above, you don't ever show the visual results of the fundamental iteration... would it help your reader understand by travelling once around the loop carefully with them??
+
+>> same I like the idea that nobody tells me but I have to find it. 
+
+
+p72
+Some lines in those diagrams seem thicker than others... is that by design? I assume not
+
+>>
+No this is the resize of the generated postscript.
+All the turtle traces have been created by executing the code and producing directly postscript. 
+So may be a graphic illustrator could fix that. But they should not try to redo the 60 star :)
+
+
+
